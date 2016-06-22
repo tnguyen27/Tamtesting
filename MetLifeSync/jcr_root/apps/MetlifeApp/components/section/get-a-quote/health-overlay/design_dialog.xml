@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="550"
+    title="Health Overlay Dialog"
+    width="850"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Title and Subtitle">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Title"
+                        name="./titleoverlay"
+                        xtype="textfield"/>
+                    <subtitle
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Subtitle"
+                        name="./subtitleoverlay"
+                        xtype="richtext"/>
+                    <contentfield
+                        jcr:primaryType="nt:unstructured"
+                        ignoreData="true"
+                        name="./bodyoverlay@TypeHint"
+                        value="String[]"
+                        xtype="hidden"/>
+                </items>
+            </tab1>
+            <tab2
+                jcr:primaryType="cq:Panel"
+                title="Health Table Description">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <health-text
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Height Text"
+                        name="./healthText"
+                        xtype="richtext"/>
+                    <description-health
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Description Health"
+                        name="./descriptionHealth"
+                        xtype="richtext"/>
+                </items>
+            </tab2>
+            <tab3
+                jcr:primaryType="cq:Panel"
+                title="Height-Weight Description">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title-height
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Height/Weight Table Title"
+                        name="./titleHeight"
+                        xtype="textfield"/>
+                    <description-height
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Height/Weight Table Description"
+                        name="./descriptionHeight"
+                        xtype="textarea"/>
+                </items>
+            </tab3>
+        </items>
+    </items>
+</jcr:root>

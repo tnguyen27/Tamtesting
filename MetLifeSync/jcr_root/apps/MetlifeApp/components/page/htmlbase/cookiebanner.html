@@ -1,0 +1,43 @@
+
+<!--Cookie Banner Start -->
+<script type="text/javascript">
+    // Cookie is automatically added
+    // If false, cookie needs a required button press or navigation to be added
+    var createCookie = false;
+	var Allowimmediatesiteanalytics = false;
+	{%#if global.cookieBannerAcceptance%}
+    	var createCookie = true;
+    {%/if%}
+    var cookieName = "MLALUKCookiesAccepted";
+
+	{%#if global.cookieBannerAllowImmediateAnalytics%}
+    	var Allowimmediatesiteanalytics = true;
+    {%/if%}   
+
+	{%#if global.cookieBannerExpiryPeriod%}
+    	cookieExpiry = {%global.cookieBannerExpiryPeriod%};
+    {%else%}
+    	cookieExpiry = 365;
+    {%/if%};
+    var cookieDelete = false;
+    var cookieNamesDelete = '';
+</script>
+<div class="container-fluid cookieShell">
+    <div class="row">
+        <div class="container">
+                <div class="cookie-message-container row hidden">
+                    <div class="cookie-title col-sm-2 col-xs-9">
+                        <p>{%global.cookieBannerTitle%}</p>
+                    </div>
+                    <div class="cookie-body col-sm-8 col-xs-12">
+                        {%{global.cookieBannerDescription}%}
+                    </div>
+                    <div class="cookie-button col-sm-2 col-xs-2">
+                        <a href="JavaScript:setAcceptCookieDesktop(true);" class="btn-green btn cookie_submit">{%global.cookieBannerAcceptanceButtonLabel%}</a>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+
+<!--Cookie Banner End -->

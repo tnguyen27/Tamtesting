@@ -1,0 +1,22 @@
+
+    {%! 'type' is true only if the tile type is promotion %}
+    {%#each list.tiles%}
+        {%#if type%}
+            {%#if content.banner%}
+            	{%#include title as="MetlifeApp/components/section/banner2x"%}{%/include%}
+            {%else%}
+            	{%#include title as="MetlifeApp/components/section/promotion-tile"%}{%/include%}
+            {%/if%}
+            
+        {%else%}
+            {%#if content.onlyBanner%}
+                {%#include title as="MetlifeApp/components/section/banner2x"%}{%/include%}
+            {%else%}
+                {%#include title as="MetlifeApp/components/section/product-tile"%}{%/include%}
+            {%/if%}
+        {%/if%}
+    {%/each%}
+
+{%#if page.isEditMode%}
+    <div style="clear:both;"></div>
+{%/if%}

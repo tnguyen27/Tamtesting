@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Section Header Component"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Configuration">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <header
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Section Header Title"
+                        name="./sectionHeader"
+                        xtype="textfield"/>
+                    <contact jcr:primaryType="cq:Panel">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <contact-info
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="Click the '+' to add a new item"
+                                fieldLabel="Contact Info"
+                                name="./contactlist"
+                                xtype="multifield">
+                                <fieldConfig
+                                    jcr:primaryType="cq:Widget"
+                                    xtype="multifieldpanel">
+                                    <items jcr:primaryType="cq:WidgetCollection">
+                                        <contactName
+                                            jcr:primaryType="cq:Widget"
+                                            allowBlank="false"
+                                            anchor="90%"
+                                            fieldLabel="Contact Name"
+                                            key="name"
+                                            xtype="textfield"/>
+                                        <address1
+                                            jcr:primaryType="cq:Widget"
+                                            allowBlank="false"
+                                            anchor="90%"
+                                            fieldLabel="Address 1"
+                                            key="add1"
+                                            xtype="textfield"/>
+                                        <address2
+                                            jcr:primaryType="cq:Widget"
+                                            fieldLabel="Address 2"
+                                            key="add2"
+                                            xtype="textfield"/>
+                                        <address3
+                                            jcr:primaryType="cq:Widget"
+                                            fieldLabel="Address 3"
+                                            key="add3"
+                                            xtype="textfield"/>
+                                        <tel-label
+                                            jcr:primaryType="cq:Widget"
+                                            fieldLabel="Telephone Label"
+                                            key="telLabel"
+                                            xtype="textfield"/>
+                                        <tel-number
+                                            jcr:primaryType="cq:Widget"
+                                            allowBlank="false"
+                                            fieldLabel="Telephone Number"
+                                            key="telNumber"
+                                            xtype="textfield"/>
+                                    </items>
+                                </fieldConfig>
+                            </contact-info>
+                        </items>
+                    </contact>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>

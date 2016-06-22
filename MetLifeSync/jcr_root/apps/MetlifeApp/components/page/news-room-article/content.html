@@ -1,0 +1,77 @@
+<!-- Bread Crumb Begin -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col col-lg-12">
+            <!-- Component Begin -->
+            {%#include "bread-crumb" as="MetlifeApp/components/section/bread-crumb"%}{%/include%}
+            <!-- Component End -->
+        </div>
+    </div>
+</div>
+<!-- Bread Crumb End -->
+
+<!--Begin Page Title-->
+<div class="container">
+    <div class="row">
+        <div class="col col-lg-12">
+            <!--Begin Page Title Component-->
+            {%#include "design-title" as="MetlifeApp/components/section/newsroom-title"%}{%/include%}
+            <!--End Page Title Component-->
+        </div>
+    </div>
+</div>
+<!-- End Page Title-->
+<!--Beginning of Content Body-->
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="text_container">
+
+            <div class="searchable">
+                <!--Begin Article Title And Sub-Header-->
+                <div class="container">
+                    <div class="row">
+                        <!--Begin Back link-->
+                        {%#include "design-link" as="MetlifeApp/components/section/newsroom-link"%}{%/include%}
+                        <!--End Back Link-->
+                        {%#include "article-title-subheader" as="MetlifeApp/components/section/newsroom-article-title-subheader"%}{%/include%}
+                    </div>
+                </div>
+                <!--Begin Date/Location Article Text-->
+                <div class="container">
+                    <div class="row">
+
+                        {%#include "article-location" as="MetlifeApp/components/section/newsroom-article-location"%}{%/include%}
+                        <div class="article_text">
+                            {%#include "article-text" as="MetlifeApp/components/section/newsroom-article-text"%}{%/include%}
+                        </div>
+                    </div>
+                </div>
+                <!--End Date/Location Article Text-->
+
+
+
+
+                <!--Begin Optional PDF container-->
+                {%#include "content-parsys" as="foundation/components/parsys"%}{%/include%}
+                <!--End Optional PDF container-->
+
+
+                <!--Begin About MetLife/MetLife Division and Contact Information-->
+                <div class="container">
+                    <div class="row">
+
+                        {%#include "about-metlife" as="MetlifeApp/components/section/newsroom-about-metlife"%}{%/include%}
+
+                        {%#include "contact-info" as="MetlifeApp/components/section/newsroom-contact"%}{%/include%}
+                        <!--Begin Back link-->
+                        {%#include "design-link" as="MetlifeApp/components/section/newsroom-link"%}{%/include%}
+                        <!--End Back Link-->
+                    </div>
+                </div>
+                <!--End About MetLife/MetLife Division and Contact Information-->
+            </div>
+        </div>
+    </div>
+</div>
+<!--End of body content-->

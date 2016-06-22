@@ -1,0 +1,17 @@
+<div class="contact_list_row">
+    {%#if content.contacts %}
+        {%#each content.contacts %}
+        <div class="contact_list_contact col-xs-12 col-sm-3 col-md-3 col-xl-3">
+            <h3>{% this.company %} </h3>
+            <p>{% this.name %} </p>
+            <div>{% this.title %} </div>
+            <div>{% this.tel %} </div>
+            <div><a href="mailto:{% this.email %} ">{% this.email %}</a></div>
+        </div>
+        {%/each%}
+    {%else%}
+    
+    <img class="cq-ul-placeholder  cq-block-placeholder" src="/etc/designs/default/0.gif" />
+
+    {%/if%}
+</div>

@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="500"
+    title="Find an X"
+    width="650"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Configuration">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <locationsPath
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="false"
+                        fieldLabel="Locations Path"
+                        name="./locationsPath"
+                        referencePropertyName="content.locationsPath"
+                        rootPath="/etc/metlife/locations"
+                        rootTitle="Locations"
+                        xtype="pathfield"/>
+                    <units
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="false"
+                        fieldLabel="Units"
+                        name="./units"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <km
+                                jcr:primaryType="nt:unstructured"
+                                text="Kilometers"
+                                value="km"/>
+                            <mi
+                                jcr:primaryType="nt:unstructured"
+                                text="Miles"
+                                value="mi"/>
+                        </options>
+                    </units>
+                    <empty-text
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="false"
+                        fieldLabel="Empty Text"
+                        name="./emptyText"
+                        xtype="textfield"/>
+                    <search-placeholder
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="false"
+                        fieldLabel="Search Placeholder Text"
+                        name="./searchPlaceholderText"
+                        xtype="textfield"/>
+                    <invalid-zipcode
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Invalid Zip Code Message"
+                        name="./invalidZipCodeMessage"
+                        xtype="textfield"/>
+                    <display-results
+                        jcr:primaryType="cq:Widget"
+                        addItemLabel="Add Option"
+                        fieldDescription="The options for the 'displaying' dropdown. E.g. 10, 20, 30"
+                        fieldLabel="Display Results Options"
+                        minItems="{Long}1"
+                        name="./displayResultsOptions"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            xtype="numberfield"/>
+                    </display-results>
+                    <results-hint
+                        jcr:primaryType="nt:unstructured"
+                        ignoreData="true"
+                        name="./displayResultsOptions@TypeHint"
+                        value="String[]"
+                        xtype="hidden"/>
+                    <radius-options
+                        jcr:primaryType="cq:Widget"
+                        addItemLabel="Add Option"
+                        fieldDescription="The options for the radius dropdown. E.g. 1, 2, 10"
+                        fieldLabel="Radius Options"
+                        minItems="{Long}1"
+                        name="./radiusOptions"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            xtype="numberfield"/>
+                    </radius-options>
+                    <radius-hint
+                        jcr:primaryType="nt:unstructured"
+                        ignoreData="true"
+                        name="./radiusOptions@TypeHint"
+                        value="String[]"
+                        xtype="hidden"/>
+                </items>
+            </tab1>
+            <tab2
+                jcr:primaryType="cq:Panel"
+                title="Displaying Labels">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <find
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="'Find' Label"
+                        name="./findLabel"
+                        xtype="textfield"/>
+                    <displaying
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="'Displaying' Label"
+                        name="./displayingLabel"
+                        xtype="textfield"/>
+                    <of
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="'of' Label"
+                        name="./ofLabel"
+                        xtype="textfield"/>
+                    <more-map
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="'More map' Label"
+                        name="./moreMapLabel"
+                        xtype="textfield"/>
+                    <phone
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Phone Label"
+                        name="./phoneLabel"
+                        xtype="textfield"/>
+                    <alt-phone
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Alternate Phone Label"
+                        name="./alternatePhoneLabel"
+                        xtype="textfield"/>
+                    <fax
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Fax Label"
+                        name="./faxLabel"
+                        xtype="textfield"/>
+                    <email
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="E-mail Label"
+                        name="./emailLabel"
+                        xtype="textfield"/>
+                    <secondary-email
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Secondary E-mail Label"
+                        name="./secondaryEmailLabel"
+                        xtype="textfield"/>
+                    <main-contact
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Main Contact Label"
+                        name="./mainContactLabel"
+                        xtype="textfield"/>
+                    <hours
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Hours Label"
+                        name="./hoursLabel"
+                        xtype="textfield"/>
+                    <more-info
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Additional Info Label"
+                        name="./additionalInfoLabel"
+                        xtype="textfield"/>
+                </items>
+            </tab2>
+            <hidden-properties
+                jcr:primaryType="cq:Panel"
+                title="Interaction Labels">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <radious-unit
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="true"
+                        fieldLabel="Radious Unit"
+                        name="./radiusUnit"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <km
+                                jcr:primaryType="nt:unstructured"
+                                text="Kilometers"
+                                value="km"/>
+                            <mi
+                                jcr:primaryType="nt:unstructured"
+                                text="Miles"
+                                value="mi"/>
+                        </options>
+                    </radious-unit>
+                    <get-directions-text
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="true"
+                        anchor="98%"
+                        fieldLabel="Get Directions Text"
+                        name="./getDirectionsText"
+                        xtype="textfield"/>
+                    <error-message-server-busy
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="true"
+                        anchor="98%"
+                        fieldLabel="Error Message Server Busy"
+                        name="./errorMessageServerBusy"
+                        xtype="textfield"/>
+                    <error-message-no-office-found
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="true"
+                        anchor="98%"
+                        fieldLabel="Error Message No Office Found"
+                        name="./errorMessageNoOfficeFound"
+                        xtype="textfield"/>
+                    <error-message-no-location-entered
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="true"
+                        anchor="98%"
+                        fieldLabel="Error Message No Location Entered"
+                        name="./errorMessageNoLocationEntered"
+                        xtype="textfield"/>
+                    <get-direction-more-map
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="true"
+                        anchor="98%"
+                        fieldLabel="Get Direction More Map"
+                        name="./getDirectionMoreMap"
+                        xtype="textfield"/>
+                    <get-direction-less-map
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="true"
+                        anchor="98%"
+                        fieldLabel="Get Direction Less Map"
+                        name="./getDirectionLessMap"
+                        xtype="textfield"/>
+                </items>
+            </hidden-properties>
+            <get-directions-labels
+                jcr:primaryType="cq:Panel"
+                title="Get Directions Labels">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="false"
+                        anchor="98%"
+                        fieldLabel="Get Directions Title"
+                        name="./getDirectionsTitle"
+                        xtype="textfield"/>
+                    <back-button
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="false"
+                        anchor="98%"
+                        fieldLabel="Back Button Label"
+                        name="./getDirectionsBackButton"
+                        xtype="textfield"/>
+                    <get-directions-button
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="false"
+                        anchor="98%"
+                        fieldLabel="Get Directions Button Label"
+                        name="./getDirectionsButton"
+                        xtype="textfield"/>
+                    <from
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="false"
+                        anchor="98%"
+                        fieldLabel="From"
+                        name="./getDirectionsFrom"
+                        xtype="textfield"/>
+                    <to
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="false"
+                        anchor="98%"
+                        fieldLabel="To Label"
+                        name="./getDirectionsTo"
+                        xtype="textfield"/>
+                    <unable
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="false"
+                        anchor="98%"
+                        fieldLabel="Not Found Message"
+                        name="./getDirectionsUnableToFound"
+                        xtype="textarea"/>
+                </items>
+            </get-directions-labels>
+        </items>
+    </items>
+</jcr:root>

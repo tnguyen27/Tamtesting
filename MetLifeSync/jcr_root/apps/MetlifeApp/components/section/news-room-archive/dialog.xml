@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Press Release Archive Config"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Tab 1">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Title"
+                        name="./title"
+                        xtype="textfield"/>
+                    <yearLabel
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Year Label"
+                        name="./yearLabel"
+                        xtype="textfield"/>
+                    <monthLabel
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Month Label"
+                        name="./monthLabel"
+                        xtype="textfield"/>
+                    <months
+                        jcr:primaryType="cq:Widget"
+                        addItemLabel="Add a new month"
+                        fieldDescription="Click the '+' to add a new month"
+                        fieldLabel="Month"
+                        hideLabel="false"
+                        name="./month"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            xtype="multifieldpanel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <key
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="false"
+                                    anchor="95%"
+                                    fieldLabel="Key"
+                                    key="key"
+                                    validateOnBlur="true"
+                                    xtype="textfield"/>
+                                <value
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="false"
+                                    anchor="95%"
+                                    fieldLabel="Value"
+                                    key="value"
+                                    validateOnBlur="true"
+                                    xtype="textfield"/>
+                            </items>
+                        </fieldConfig>
+                    </months>
+                    <topicsPath
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Topics Path"
+                        name="./topicsPath"
+                        rootPath="/etc/tags/metlife"
+                        xtype="pathfield"/>
+                    <monthField
+                        jcr:primaryType="cq:Widget"
+                        ignoreData="true"
+                        name="./month@TypeHint"
+                        value="String[]"
+                        xtype="hidden"/>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>

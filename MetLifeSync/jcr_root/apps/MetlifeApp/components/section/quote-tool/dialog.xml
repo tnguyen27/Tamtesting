@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="500"
+    title="Related Content"
+    width="800"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Configuration">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="false"
+                        anchor="95%"
+                        fieldDescription="120 characters max."
+                        fieldLabel="Title"
+                        maxLength="120"
+                        name="./title"
+                        xtype="textfield"/>
+                    <submit_button_label
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="false"
+                        anchor="95%"
+                        fieldDescription="40 characters max."
+                        fieldLabel="Submit button label"
+                        maxLength="40"
+                        name="./submitBtnLabel"
+                        xtype="textfield"/>
+                    <submit_button_link
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="false"
+                        anchor="95%"
+                        fieldLabel="Submit button link"
+                        linkPattern="\{0}.html"
+                        maxLength="40"
+                        name="./submit_btn_link"
+                        rootPath="/content/metlife"
+                        rootTitle="MetLife"
+                        xtype="pathfield"/>
+                </items>
+            </tab1>
+            <tab2
+                jcr:primaryType="cq:Panel"
+                title="Quote Forms">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <quoteforms
+                        jcr:primaryType="cq:Widget"
+                        addItemLabel="Add Quote form"
+                        anchor="95%"
+                        fieldDescription="Click the '+' to add a new quote Forms"
+                        fieldLabel="Quote Types"
+                        key="type_options"
+                        maxItems="{Long}15"
+                        minItems="{Long}1"
+                        name="./forms"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            xtype="multifieldpanel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <label
+                                    jcr:primaryType="nt:unstructured"
+                                    allowBlank="false"
+                                    anchor="80%"
+                                    fieldLabel="Labe Quote"
+                                    key="label"
+                                    validateOnBlur="true"
+                                    xtype="textfield"/>
+                                <link
+                                    jcr:primaryType="nt:unstructured"
+                                    allowBlank="false"
+                                    anchor="80%"
+                                    fieldLabel="Path to form"
+                                    key="form"
+                                    rootPath="/etc/metlife/quote-forms"
+                                    rootTitle="MetLife"
+                                    xtype="pathfield"/>
+                            </items>
+                        </fieldConfig>
+                    </quoteforms>
+                    <quoteformTH
+                        jcr:primaryType="cq:Widget"
+                        ignoreData="true"
+                        name="./forms@TypeHint"
+                        value="String[]"
+                        xtype="hidden"/>
+                </items>
+            </tab2>
+        </items>
+    </items>
+</jcr:root>

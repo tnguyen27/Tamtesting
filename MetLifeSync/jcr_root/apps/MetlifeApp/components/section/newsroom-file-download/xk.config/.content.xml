@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    xk_clientAccesible="true"
+    xk_clientAccessible="true"
+    xk_containerClasses="[searchable,text_container,row,container_fluid]"
+    xk_placeholderTriggers="[content.imagePath,content.label,content.description]"
+    xk_spoolContentImages="pdflink"/>

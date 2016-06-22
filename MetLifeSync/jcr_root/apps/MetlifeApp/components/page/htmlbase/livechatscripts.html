@@ -1,0 +1,26 @@
+<!-- BEGIN LivePerson Custom Variables. -->
+<script type="text/javascript">
+   // Start by defining the required objects
+  var lpTag = lpTag || {};
+   lpTag.vars = lpTag.vars || [];
+   lpTag.dbs = lpTag.dbs || [];
+   lpTag.section = 'default';
+
+   var arrLPvars = [{
+      scope: 'page',
+      name: 'unit',
+      value: 'mlcom-sales'
+   }, {
+      scope: 'session',
+      name: 'language',
+      value: 'english'
+   }, ];
+   lpTag.vars.push(arrLPvars);
+    {%#each global.liveChatButtons %}
+        lpTag.dbs.push({
+              name: '{%this.name%}',
+              pid: '{%this.id%}'
+           });
+    {%/each%}
+</script>
+<!-- END LivePerson Custom Variables. -->

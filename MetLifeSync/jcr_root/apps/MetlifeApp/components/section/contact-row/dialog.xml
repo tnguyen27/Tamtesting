@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Contact Row Configuration"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Tab 1">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <contacs
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Contacts"
+                        name="./contacts"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            xtype="multifieldpanel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <company
+                                    jcr:primaryType="cq:Widget"
+                                    anchor="100%"
+                                    fieldLabel="Company"
+                                    hideLabel="false"
+                                    key="company"
+                                    title="Company"
+                                    xtype="textfield"/>
+                                <name
+                                    jcr:primaryType="cq:Widget"
+                                    anchor="100%"
+                                    fieldLabel="Name"
+                                    hideLabel="false"
+                                    key="name"
+                                    title="Name"
+                                    xtype="textfield"/>
+                                <title
+                                    jcr:primaryType="cq:Widget"
+                                    anchor="100%"
+                                    fieldLabel="Title"
+                                    hideLabel="false"
+                                    key="title"
+                                    xtype="textfield"/>
+                                <telephone
+                                    jcr:primaryType="cq:Widget"
+                                    anchor="100%"
+                                    fieldLabel="Telephone"
+                                    hideLabel="false"
+                                    key="tel"
+                                    xtype="textfield"/>
+                                <email
+                                    jcr:primaryType="cq:Widget"
+                                    anchor="100%"
+                                    fieldLabel="Email"
+                                    hideLabel="false"
+                                    key="email"
+                                    xtype="textfield"/>
+                            </items>
+                        </fieldConfig>
+                    </contacs>
+                    <categoriesfield
+                        jcr:primaryType="nt:unstructured"
+                        ignoreData="true"
+                        name="./contacts@TypeHint"
+                        value="String[]"
+                        xtype="hidden"/>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>

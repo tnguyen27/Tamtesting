@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col col-lg-12">
+        <div class="subcat-row">
+            {%#if content.headline%}
+                <div class="subcategory-image-product-card {%# if content.large%}subcategory-promo-large-card {%#if content.left%}{%else%}subcategory-promo-large-card-right{%/if%} {%/if%}
+                {%# unless content.large%}subcategory-promo-skinny-card {%#if content.left%}subcategory-promo-skinny-card-left{%else%}subcategory-promo-skinny-card-right{%/if%} {%/unless%}">
+                    <div class="subcat-image-top {%# if content.large%}subcat-image-min{%/if%} " style="background-image: url({%content.imagePath%}); background-size: cover;">
+                    </div>
+                    <div class="subcat-image-text {%# if content.large%}subcat-text-min{%/if%}">
+                        <div>
+                            <div class="promo-headline">
+                                <a href="{%content.link%}">{%content.headline%}</a>
+                            </div>
+                            <p>{%content.description%}</p>
+                        </div>
+                        <div>
+                            {%#if content.buttonText%}
+                                <a class="{%#if content.blue%}btn-blue{%else%}btn-green{%/if%}" href="{%content.link%}">{%content.buttonText%}</a>
+                            {%/if%}
+
+                        </div>
+                    </div>
+                </div>
+            {%/if%}
+        </div>
+    </div>
+</div>
+
+{%#if page.isEditMode%}
+    <div style="clear:both;"></div>
+{%/if%}

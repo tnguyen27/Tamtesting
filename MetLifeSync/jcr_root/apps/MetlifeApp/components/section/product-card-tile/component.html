@@ -1,0 +1,85 @@
+<!-- Product Card w/cta and company search Begin    -->
+    <div class="row">
+        <div class="col col-lg-12">
+            <!--Begin Product Card Component-->
+            <div class="product-card">
+                <div class="title">
+                    {% content.productTitle%}
+                </div>
+
+                <div class="content">
+                    <div class="content-body">
+                        <span class="hidden-xs intro">
+                        {%content.productIntro%}
+                        </span>					
+
+					<!--	{%#if content.productCardDisplayForm%}
+                        	{%#if content.productFormLabel%}
+                                        <p class="company-search-label"><b>{%content.productFormLabel%}</b></p>
+                                        <input type="search" id="{%content.productCompanyName%}" class="comapny_name_search"
+                                               placeholder="{%content.productFormPlaceholder%}">
+                                        <a class="btn-green" href="{%content.productFormPath%}">{%content.productFormButtonLabel%}</a>
+                          	{%/if%}
+                       	{%/if%}
+					-->
+
+
+                        {%{content.productContent}%}
+
+						{%#if content.productReadFaqsLabel %}
+							<a class="hidden-xs read-more" href="#">{%content.productReadFaqsLabel%}</a>
+                        {%/if%}
+
+                    </div>
+
+					{%#if content.productExpandLabel%}
+
+                        <!-- Expand & Close (optional) -->
+                            <div class="expand-open-close">
+                                <div class="expand-content">
+                                    <span class="intro">{%content.productExpandedIntroLabel%}</span>
+                                    {%{content.productExpandedContent}%}
+                                </div>
+                                <div class="expand-open hidden-xs">
+                                    <img src="/static/images/related_info/icon_arrow_expand.png" alt="expand arrow"/>
+                                    <span>{%content.productExpandLabel%}</span>
+                                </div>
+                                <div class="expand-close hidden-xs">
+                                    <img src="/static/images/related_info/icon_arrow_close.png" alt="expand arrow"/>
+                                    <span>{%content.productCloseLabel%}</span>
+                                </div>
+                            </div>
+                      	<!-- Expand & Close (optional) -->
+                    {%else%}
+
+                  	{%/if%}
+
+                </div>
+
+				{%#if content.productActionButtonLabel %}
+
+                    <div class="action">
+                        {%{content.productActionTopText}%}
+
+                        <a class="btn-green" href="{%content.productActionButtonLink%}">{%content.productActionButtonLabel%}</a>
+
+    
+                        {%#if content.productActionBottomText %}
+                            {%#if content.productActionBottomLink %}
+                                <p>
+                                    <a href="{%content.productActionBottomLink%}">{%content.productActionBottomText%}</a>
+                                </p>
+                            {%else%}
+                                <p>{%content.productActionBottomText%}</p>
+                            {%/if%}
+                        {%/if%}
+
+                    </div>
+
+                {%/if%}
+
+            </div>
+            <!--End Product Card Component-->
+        </div>
+    </div>
+<!-- Product Card w/cta and company search End -->

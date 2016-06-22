@@ -1,0 +1,53 @@
+<!-- Privacy/Legal Widget Begin -->
+<div class="container">
+    <div class="row">
+        <div class="col col-lg-12">
+            <div class="footer_logo_legal">
+                <div class="footer_logo_contact col-sm-3 col-md-2">
+                        <span class="footer_logo_wrapper col-sm-12 hidden-xs">
+                        <img class="lazy footer_metlife_logo col-xs-6"
+                             src="#" data-src="{%#if global.footerImagePath %} {% global.footerImagePath %} {%else%}/etc/designs/default/0.gif{%/if%}  "
+                             alt="{% global.footerlogoAltText %} ">
+                        <noscript><img class="footer_metlife_logo col-xs-6"
+                                       src="{% global.footerImagePath %}"
+                                       alt="{% global.footerlogoAltText %} "></noscript>
+                    </span>
+​
+                    <div class="footer_contact_number_wrapper col-sm-12 col-xs-12">
+                        <a href="{% global.footerlogoLink %} "
+                           id="privacyWidgetMetlifeNumberLink">
+                            {% global.footerLogoLabel %}
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-9 col-xs-12 col-md-8 footer_legal">
+                    <p class="legal_footer_links col-xs-12">
+                        
+                        {%#each global.footerbulletlinks %}
+                            <a  href="{% this.path %} ">{% this.navigationTitle %}</a>
+                            {%#if @last%}
+                                {%#if global.onlineOpinionIsActive %}
+                                    <span class="visible-xs-inline">&#8226;</span>
+                                {%/if%}
+                            {%else%}
+                                <span>&#8226;</span>
+                            {%/if%}
+                        {%/each%}
+                        {%#if global.onlineOpinionIsActive %}
+                            <a href="#" id="opinion_lab_link" class="visible-xs-inline">{%global.onlineOpinionMobileLabel%} </a>
+                        {%/if%}
+                        <span class="hidden-xs">{%{global.footerLegalDisclaimer}%}</span>
+                    </p>
+                    <div class="clearfix"></div>
+                    <p class="peanuts_disclaimer col-md-12">
+                        <span class="hidden-sm hidden-md hidden-lg">{%{global.footerLegalDisclaimer}%}</span>
+                        <br class="hidden-sm hidden-md hidden-lg" />
+                        <span>{%{global.footerPeanutsDisclaimer}%}</span>
+                    </p>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Privacy/Legal Widget End -->

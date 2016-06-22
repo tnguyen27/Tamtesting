@@ -1,0 +1,19 @@
+
+<!-- Begin Medium Product Module-->
+<div class="row">
+    <div class="col col-lg-12">
+        <!-- Begin Medium Product Component-->
+        <div class="medium_product_module_wrapper">
+
+            {%#each list.tiles%}
+                {%#include title as="MetlifeApp/components/section/medium-product-card"%}{%/include%}
+            {%/each%}
+        </div>
+        <!-- End Medium Product Component-->
+    </div>
+<!-- end Medium Product Module-->
+</div>
+{%#if page.isEditMode%}
+
+<div style="clear:both;"></div>
+{%/if%}

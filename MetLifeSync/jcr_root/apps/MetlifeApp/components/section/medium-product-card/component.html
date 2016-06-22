@@ -1,0 +1,29 @@
+<div>
+        <a href="{% content.link %}">
+            {%#if content.imagePath %}
+            
+            <img src="{% content.link %}"
+                 data-src="{% content.imagePath %}"
+                 alt="{% content.headline %} Image" class="lazy">
+            <noscript>
+                <img src="{% content.imagePath %}"
+                     alt="{% content.headline %}  Image">
+            </noscript>
+            {%/if%}
+        </a>
+    </div>
+    <div class="medium-product-card-top">
+        <a href="{% content.link %} "
+           id="mediumProductModuleDisabilityInsuranceTitleLink">{% content.headline %} </a>
+       {%#if content.bullets %}
+            <ul>
+        {%#each content.bullets %}
+                <li>{% this %} </li>
+           {%/each%}
+            </ul>
+        {%/if%}
+    </div>
+    <div class="medium-product-card-bottom">
+        <a href="{% content.link %} "
+           id="mediumProductModuleViewDisabilityInsuranceLink">{% content.buttonText %} </a>
+    </div>

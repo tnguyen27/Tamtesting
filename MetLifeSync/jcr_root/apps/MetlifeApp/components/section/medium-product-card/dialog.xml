@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="500"
+    title="Promotion Tile"
+    width="700"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Configuration">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <headline
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="false"
+                        fieldDescription="40 characters max."
+                        fieldLabel="Headline"
+                        maxLength="40"
+                        name="./headline"
+                        xtype="textfield"/>
+                    <button-text
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="false"
+                        fieldDescription="30 characters max."
+                        fieldLabel="Button Text"
+                        maxLength="30"
+                        name="./buttonText"
+                        xtype="textfield"/>
+                    <bullets
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Bullets Text"
+                        name="./bullets"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            xtype="textarea"/>
+                    </bullets>
+                    <link
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="false"
+                        fieldLabel="Link"
+                        linkPattern="\{0}.html"
+                        name="./link"
+                        rootPath="/content/metlife"
+                        rootTitle="MetLife"
+                        xtype="pathfield"/>
+                    <bulletsfield
+                        jcr:primaryType="nt:unstructured"
+                        ignoreData="true"
+                        name="./bullets@TypeHint"
+                        value="String[]"
+                        xtype="hidden"/>
+                </items>
+            </tab1>
+            <image
+                jcr:primaryType="cq:Widget"
+                cropParameter="./imageCrop"
+                ddGroups="[media]"
+                fileNameParameter="./fileName"
+                fileReferenceParameter="./fileReference"
+                mapParameter="./imageMap"
+                name="./file"
+                requestSuffix=".img.png"
+                rotateParameter="./imageRotate"
+                title="Background Image"
+                xtype="html5smartimage"/>
+        </items>
+    </items>
+</jcr:root>

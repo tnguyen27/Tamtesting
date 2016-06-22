@@ -1,0 +1,15 @@
+<div class="{%#if content.hidden%}form-hidden{%else%}form-focus{%/if%}">
+    <div class="form-user-grp">
+        <label for="{%content.web2LeadField%}" class="hidden" style="width:100%" placeholder="{%content.placeholder%}">{%content.label%}</label>
+        <select data-required="true"
+                aria-required="true"
+                id="{%content.web2LeadField%}"
+                name="{%content.web2LeadField%}"
+                class="form-control longSelect" >
+                    {%#if wcmmode.isEditOrDesignMode%}
+                            <option value=""  selected disabled>{%#unless content.optionsLabel%}Edit Label{%/unless%}{%content.optionsLabel%}</option>
+                    {%/if%}
+        </select>
+        <span class="errorSpan"><label class="errorLabel">{%content.errorMessage%}</label></span>
+    </div>
+</div>

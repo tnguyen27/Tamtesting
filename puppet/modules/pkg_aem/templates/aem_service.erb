@@ -1,0 +1,94 @@
+#!/bin/bash
+#
+### BEGIN INIT INFO
+# Provides: cqauthor
+# Required-Start: $local_fs $remote_fs $network $syslog $named
+# Required-Stop: $local_fs $remote_fs $network $syslog $named
+# Default-Start: 2 3 4 5
+# Default-Stop: 0 1 6
+# Short-Description: Start CQ Author instance.
+# Description: Start CQ Author instance.
+### END INIT INFO
+#
+#       /etc/rc.d/init.d/cqauthor
+#
+# Author: Jose Alfredo Alvarez Aldana jalvarez@xumak.com
+#
+# description: cqauthor calls the start/stop/status scripts from the
+# default location of the AEM Author instance. FTW!
+#
+
+SERVICE_PATH="<%= @install_dir %>/crx-quickstart/bin"
+SERVICE_NAME="AEM Author instance"
+USER_NAME="<%= @aem_os_user %>"
+GROUP_NAME="<%= @aem_os_group %>"
+
+PATH=/sbin:/usr/sbin:/bin:/usr/bin
+DESC="Description of $SERVICE_NAME"
+NAME=cqauthor
+DAEMON=$SERVICE_PATH/start
+DAEMON2=$SERVICE_PATH/stop
+DAEMON_ARGS=""
+PIDFILE=/var/run/$NAME.pid
+SCRIPTNAME=/etc/init.d/$NAME
+
+start() {
+        echo "Starting $SERVICE_NAME : "
+        # Return
+        #   0 if daemon has been started
+        #   1 if daemon was already running
+        #   2 if daemon could not be started
+        start-stop-daemon --start --quiet --pidfile $PIDFILE -c $USER_NAME -g $GROUP_NAME --exec $DAEMON -- \
+                || return 2
+        # Add code here, if necessary, that waits for the process to be ready
+        # to handle requests from services started subsequently which depend
+        # on this one.  As a last resort, sleep for some time.
+        # su -c "cqadm wait-for-start" "$USER_NAME"
+        cqadm wait-for-start
+        echo "$SERVICE_NAME service started. "
+}
+
+stop() {
+        echo "Shutting down $SERVICE_NAME : "
+        # Return
+        #   0 if daemon has been started
+        #   1 if daemon was already running
+        #   2 if daemon could not be started
+        start-stop-daemon --start --quiet --pidfile $PIDFILE -c $USER_NAME -g $GROUP_NAME --exec $DAEMON2 -- \
+                || return 2
+        # Add code here, if necessary, that waits for the process to be ready
+        # to handle requests from services started subsequently which depend
+        # on this one.  As a last resort, sleep for some time.
+        # su -c "cqctl wait-for-stop" "$USER_NAME"
+        cqctl wait-for-stop
+        echo "$SERVICE_NAME service stoped."
+        rm -f $PIDFILE
+        return
+}
+
+status() {
+        echo "Status $SERVICE_NAME : "
+        sudo su $USER_NAME -c "$SERVICE_PATH/status"
+        return
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    status)
+        status
+        ;;
+    restart)
+        stop
+        start
+        ;;
+    *)
+        echo "Usage: $SCRIPTNAME {start|stop|status|restart}"
+        exit 1
+        ;;
+esac
+exit $?

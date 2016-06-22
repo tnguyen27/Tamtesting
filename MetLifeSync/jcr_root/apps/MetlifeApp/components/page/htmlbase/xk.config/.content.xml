@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    imagesConfigList="[global::megaMenu/image::megaMenuImagePath,global::close/image::closeImagePath,global::home/image::homeImagePath,global::search/image::searchImagePath,global::logo/image::logoImagePath,global::search/imageForm::searchFormImagePath,global::footer/image::footerImagePath]"
+    xk_deserializeJSON="[global.footerbulletlinks,global.footersociallinks,global.homeSliderLinks,global.liveChatButtons]"
+    xk_spoolGlobalImages="footersocialimages"
+    xk_updatedMultifieldProperty="[global.footersocialimagesSpooled>global.footersociallinks.socialmediaimage,global.homeSliderImagesSpooled>global.homeSliderLinks.homeSliderImage]"/>

@@ -1,0 +1,8 @@
+Please note that the nexus module used in 
+the developer provisioning is different
+to any other module called nexus:
+https://github.com/cescoffier/puppet-nexus
+It is intended to install artifacts
+from a nexus repository
+(is not intended to install or configure
+the nexus server).

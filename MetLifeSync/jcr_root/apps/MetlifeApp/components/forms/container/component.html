@@ -1,0 +1,47 @@
+<form class="generic-form"
+      name="contact-us-form"
+      enctype="multipart/form-data"
+      action=""
+      method="POST"
+      data-fid="contact-image">
+    <input type="hidden" id="switch_form_fields" name="switch_form_fields" value="{%fields.ids%}"/>
+    <input type="hidden" id="switch_form_fieldID" name="switch_form_fieldID" value="00Ng0000000Wfoe"/>
+    <input type="hidden" id="switch_form_fieldValues" name="switch_form_fieldValues" value="AL"/>
+    <input type="hidden" id="switch_form_type" name="switch_form_type" value="Lead"/>
+    <input type="hidden" id="switch_post_url" name="switch_post_url" value="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"/>
+    <input type="hidden" id="switch_market" name="switch_market" value="00Ng0000000Wfol"/>
+    <input type="hidden" id="actual_market" name="actual_market" value="00Gg0000000GxpN"/>
+    <input type="hidden" id="form_fields" name="form_fields" value="first_name,00Ng0000000Wfnt,00Ng0000000Wfnu,00Ng0000000Wfnw,00Ng0000000Wfnx,00Ng0000000Wfny,,00Ng0000000Wfo7,00Ng0000000WfoM,last_name,00Ng0000000Wfnt,00Ng0000000Wfnu,00Ng0000000Wfnw,00Ng0000000Wfnx,00Ng0000000Wfny,,00Ng0000000Wfo7,00Ng0000000WfoM,00Ng0000000Wfox,00Ng0000000Wfnt,00Ng0000000Wfnu,00Ng0000000Wfnw,00Ng0000000Wfnx,00Ng0000000Wfny,,00Ng0000000Wfo7,00Ng0000000WfoM,city,00Ng0000000Wfnt,00Ng0000000Wfnu,00Ng0000000Wfnw,00Ng0000000Wfnx,00Ng0000000Wfny,,00Ng0000000Wfo7,00Ng0000000WfoM,00Ng0000000Wfoe,00Ng0000000Wfnt,00Ng0000000Wfnu,00Ng0000000Wfnw,00Ng0000000Wfnx,00Ng0000000Wfny,,00Ng0000000Wfo7,00Ng0000000WfoM,00Ng0000000Wfos,00Ng0000000Wfnt,00Ng0000000Wfnu,00Ng0000000Wfnw,00Ng0000000Wfnx,00Ng0000000Wfny,,00Ng0000000Wfo7,00Ng0000000WfoM"/>
+    <input type="hidden" id="oid" name="orgid" value="00Dg0000003L0CM"/>
+    <input type="hidden" name="retURL" value="http://igate.com"/>
+    <input type="hidden" id="00Gg0000000GxpN" name="00Gg0000000GxpN" value="RUSSIA"/>
+    <input type="hidden" id="post_url" name="post_url" value="https://cs8.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8"/>
+    <input type="hidden" id="success_url" name="success_url" value="http://metlife.com"/>
+    <input type="hidden" id="error_url" name="error_url" value="http://google.com"/>
+    <input type="hidden" id="Domain" name="Domain" value=""/>
+    <input type="hidden" id="xmlformname" name="xmlformname" value="SFDC-6-fields"/>
+    <input type="hidden" id="LanguageValue" name="LanguageValue" value="EN"/>
+    <input type="hidden" id="00Ng0000000Wfnt" name="00Ng0000000Wfnt" value=""/>
+    <input type="hidden" id="00Ng0000000Wfnu" name="00Ng0000000Wfnu" value=""/>
+    <input type="hidden" id="00Ng0000000Wfnw" name="00Ng0000000Wfnw" value=""/>
+    <input type="hidden" id="00Ng0000000Wfnx" name="00Ng0000000Wfnx" value=""/>
+    <input type="hidden" id="00Ng0000000Wfny" name="00Ng0000000Wfny" value=""/>
+    <input type="hidden" id="00Ng0000000Wfo7" name="00Ng0000000Wfo7" value=""/>
+    <input type="hidden" id="00Ng0000000WfoM" name="00Ng0000000WfoM" value=""/>
+
+    {%#include "fields" as="foundation/components/parsys" %}{%/include%}
+    <script type="text/javascript">
+        if (typeof SFDC === "undefined") {
+            var SFDC = {};
+            SFDC.form = [];
+        }
+
+        SFDC.form.push({%#if fields.config%}{%{fields.config}%}{%else%}{}{%/if%});
+        $(document).ready(function(){
+            $('*[data-valid-type="zip"]').keyup(function(){
+                maskInput(this.value,this,'3','#');
+            });
+        });
+    </script>
+</form>
+

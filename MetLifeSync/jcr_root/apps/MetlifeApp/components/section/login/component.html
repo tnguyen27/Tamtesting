@@ -1,0 +1,49 @@
+
+    <div class="loginOpen">
+        <form class="clearfix loginForm open" id="formLogin" name="formLogin"
+              action="https://dev.phoenix.ead.metlife.com/edge/web/public/identifyUser" method="POST">
+            <input class="border-radius-rounded input loginUsername" id="username" type="text" placeholder="{%global.usernamePlaceholder%}"
+                   name="username" data-required="true"/>
+            <input class="border-radius-rounded input loginUsername password" id="password" type="password"
+                   placeholder="{%global.passwordPlaceholder%}" name="password" data-required="true" data-name="Field 3">
+
+            <div class="loginMoreoptions">
+                <a class="loginOptions" target="_blank"
+                   href="{%global.moreLoginOptions%}">More login options</a>
+            </div>
+
+            <input id="headerLoginSubmit" class="loginformSubmit border-radius-green-buttons btn-green" type="submit"
+                   value="{%global.submitButtonText%}"/>
+
+
+            <div class=" login_open_reg_forgot hidden-xs">
+                <a id="headerLoginRegisterLinkDesktop" target="_blank" class="loginRegister"
+                   href="{%global.createNewAccount%}">Register</a>
+
+                <div class="loginForget"><a id="headerLoginForgotUsernameOrPasswordLinkDesktop" target="_blank"
+                                            class="forgotUsername"
+                                            href="{%global.forgotUsernamePassword%}">Forgot
+                    Username or Password</a>?
+                </div>
+            </div>
+            <div class=" login_open_reg_forgot visible-xs">
+                <a id="headerLoginRegisterLinkMobile" target="_blank" class="loginRegister"
+                   href="{%global.createNewAccount%}">Register</a>
+
+                <div class="loginForget"><a id="headerLoginForgotUsernameOrPasswordLinkMobile" target="_blank"
+                                            class="forgotUsername"
+                                            href="{%global.forgotUsernamePassword%}">Forgot
+                    Username or Password</a>?
+                </div>
+            </div>
+        </form>
+        <div class="formDone">
+            <p>Thank you! Your submission has been received!</p>
+        </div>
+        <div class="formFail">
+                <span class="errorSpanLogin"><img class="errorSpanImg"
+                                                  src="{%global.loginErrorImagePath%}"
+                                                  alt="! Error Image"/>{%global.errorImageAltText%}</span>
+        </div>
+    </div>
+    <!--Login open ends -->

@@ -1,0 +1,48 @@
+<!--Begin LifeStages-->
+<div class="white_background_container container-fluid searchable">
+    <div class="container" id="scroll_more">
+        <div class="row">
+            <div class="col-xs-12">
+                <!--Header Title-->
+                <div class="divider-snoopy">
+                    <img src="{%#if content.lifeStageImg  %} {% content.lifeStageImg %}   {%else%} /etc/designs/default/0.gif {%/if%} " class="hidden-xs"
+                         alt="Snoopy Image" />
+                    <h1>{% content.title %} </h1>
+                    <p>{% content.subTitle %} </p>
+                </div>
+                <!--End Header Title-->
+
+                <!--Begin Top carousel slide-->
+                <div class="carousel-with-tabs">
+                    <div class="carousel slide" id="carouselWithTabs" data-interval="false">
+                        <div class="carousel-inner">
+                            {%#each list.tiles %}
+                            <div class="col-xs-12 carousel-item" data-target="{%this.index%}">
+                                {%#include title as="MetlifeApp/components/section/life-stages-tab" prefix="tab" %}{%/include%}
+                            </div>
+                            {%/each%}
+                        </div>
+                        <a class="left carousel-control" href="#carouselWithTabs" data-slide="prev">
+                            <img src="/static/images/life_stages/icon_green_arrow_l.png" alt="Prev">
+                            <span class="sr-only">Prev</span>
+                        </a>
+                        <a class="right carousel-control" href="#carouselWithTabs" data-slide="next">
+                            <img src="/static/images/life_stages/icon_green_arrow_r.png" alt="Next">
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+
+                    <div class="carousel-tabs">
+                        {%#each list.tiles %}
+                            {%#include title as="MetlifeApp/components/section/life-stages-card" prefix="card" %}{%/include%}
+                        {%/each%}
+                        
+                     
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--End LifeStages-->
+

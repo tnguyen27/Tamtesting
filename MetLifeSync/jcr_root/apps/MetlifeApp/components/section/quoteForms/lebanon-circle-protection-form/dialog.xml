@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Tab 1">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <ageGroup
+                        jcr:primaryType="cq:Widget"
+                        collapsed="true"
+                        collapsible="true"
+                        title="Age"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <agePlaceholder
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Age Placeholder"
+                                name="./agePlaceHolder"
+                                xtype="textfield"/>
+                            <ageSelect
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Select the list to be used on the field."
+                                fieldLabeld="Age Select"
+                                name="./ageSelect"
+                                rootPath="/etc/acs-commons/lists/metlife/quote-tool"
+                                xtype="pathfield"/>
+                            <errorLabelAge
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Error Label Age"
+                                name="./errorAge"
+                                xtype="textfield"/>
+                        </items>
+                    </ageGroup>
+                    <ocupationGroup
+                        jcr:primaryType="cq:Widget"
+                        collapsed="true"
+                        collapsible="true"
+                        title="Occupation"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <ocupationPlaceholder
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Ocupation Class Placeholder"
+                                name="./ocupationClassPlaceHolder"
+                                xtype="textfield"/>
+                            <ocupationSelect
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Select the list to be used on the field."
+                                fieldLabeld="Ocupation Class List"
+                                name="./ocupationList"
+                                rootPath="/etc/acs-commons/lists/metlife/quote-tool"
+                                xtype="pathfield"/>
+                            <ocupationErrorLabel
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Ocupation Error Label"
+                                name="./ocupationErrorLabel"
+                                xtype="textfield"/>
+                        </items>
+                    </ocupationGroup>
+                    <AnualIncGroup
+                        jcr:primaryType="cq:Widget"
+                        collapsed="true"
+                        collapsible="true"
+                        title="Current anual Income fields"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <aiPlaceholder
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Placeholder"
+                                name="./currentAnnualPlaceholder"
+                                xtype="textfield"/>
+                            <aiErrorLabel
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Error Label"
+                                name="./anualIncomeErrorLabel"
+                                xtype="textfield"/>
+                        </items>
+                    </AnualIncGroup>
+                    <benefitGroup
+                        jcr:primaryType="cq:Widget"
+                        collapsed="true"
+                        collapsible="true"
+                        title="Benefit"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <placeholder
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Benefit Placeholder"
+                                name="./benefitPlaceholder"
+                                xtype="textfield"/>
+                            <select
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="Select the list to be used on the field."
+                                fieldLabel="Benefit List"
+                                fieldLabeld="Benefit List"
+                                name="./benefitList"
+                                rootPath="/etc/acs-commons/lists/metlife/quote-tool"
+                                xtype="pathfield"/>
+                            <errorLabel
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Benefit Error Label"
+                                name="./benefitErrorLabel"
+                                xtype="textfield"/>
+                        </items>
+                    </benefitGroup>
+                    <coverageGroup
+                        jcr:primaryType="cq:Widget"
+                        collapsed="true"
+                        collapsible="true"
+                        title="Coverage Amount"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <cvPlaceholder
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Placeholder"
+                                name="./coveragePlaceholder"
+                                xtype="textfield"/>
+                            <cvErrorLabel
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Error Label"
+                                name="./coverageErrorLabel"
+                                xtype="textfield"/>
+                        </items>
+                    </coverageGroup>
+                    <frecuencyGroup
+                        jcr:primaryType="cq:Widget"
+                        collapsed="true"
+                        collapsible="true"
+                        title="Premium Frecuency"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <placeholder
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Frecuency Placeholder"
+                                name="./frecuencyPlaceholder"
+                                xtype="textfield"/>
+                            <select
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="Select the list to be used on the field."
+                                fieldLabel="Premium Frecuency  List"
+                                name="./premiunFList"
+                                rootPath="/etc/acs-commons/lists/metlife/quote-tool"
+                                xtype="pathfield"/>
+                            <errorLabel
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Premium Frecuency Error Label"
+                                name="./premiumFErrorLabel"
+                                xtype="textfield"/>
+                        </items>
+                    </frecuencyGroup>
+                    <dataproduct
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="leb_circleOfProtection"
+                        name="./dataproduct"
+                        value="leb_circleOfProtection"
+                        xtype="hidden"/>
+                    <pathtoresults
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="false"
+                        anchor="95%"
+                        fieldLabel="Path to results"
+                        linkPattern="\{0}.html"
+                        name="./submit_btn_link"
+                        rootPath="/content/metlife"
+                        rootTitle="MetLife"
+                        xtype="pathfield"/>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>

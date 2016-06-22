@@ -1,0 +1,642 @@
+            <p>I want to get a quote:</p>
+
+    <div class="select_wrapper">
+        <!--For the tool the value of the selects match to the id's of each form. this should be on some counter that increaments with each product options.
+         WHen a new product option is created a div=class"quote-toolx should also be created as a 1 - 1 matching."-->
+        <select required="required" id="insurance-type">
+            <!--   The data-product will be injected my AEM based on the file that the content editor selects.
+               The Text in the options should editatble and should not change the data-product or the value of the option-->
+            <option value="" selected disabled>Please Select Insurance Type</option>
+            <option value="quote-tool1" data-product="leb_lifePlus">Lebanon Life Coverage Plus</option>
+            <option value="quote-tool2" data-product="arg_termLife">Argentina Term Life Insurance</option>
+            <option value="quote-tool3" data-product="us_gawli">US Term Life Insurance</option>
+            <option value="quote-tool4" data-product="us_term">US Guaranteed Accptance Whole Life</option>
+        </select>
+    </div>
+    <!--This go button exist for visual purposes only. -->
+    <div class="btn-green">Go</div>
+
+    <!--For each quote-toolX we will loop through the form-focus groups grabbing the values of the inputs and adding them to the string for the ajax request-->
+
+    <div class="quote-tool-form">
+        <div class="quote-tool1">
+            <!--The data-lan and data-domain should be set by aem and not changeable by editors.
+            We will uses these values along with data-product to construct the required parameters of the request.
+            The language attribute should be populated based on this folder the edtior selectes the product from-->
+            <form class="generic-form quote-tool1" name="quote-tool" method="post" data-quoteTool="quote-tool1" data-lan="es" data-domain="www.aem.metlife.com/somepathtofiles/">
+
+                <div class="form-focus">
+                    <div class="form-user-grp">
+                        <div class="button_group required">
+                            <div>
+                                <!--Each input and label will have quote-toolX + the input type which will be a list of pre-defined inputs.
+                                The content editor should be able to add a input and select the input type, text, select, radio etc.
+                                When they do we will concanitate the unique form id with the input id. -->
+                                <div class="radio_button"><input type="radio" id="quote-tool1Male" name="gender" value="Male"><label for="quote-tool1Male">Male</label></div>
+                                <div class="radio_button"><input type="radio" id="quote-tool1Female" name="gender" value="Female"><label for="quote-tool1Female">Female</label></div>
+                                <span class="errorSpan"><label class="errorLabel">Please Select a Gender</label></span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-focus">
+                    <div class="form-user-grp">
+                        <label for="quote-tool1userAge" class="hidden"  placeholder="Your Age">Age</label>
+                        <select data-required="true" aria-required="true" id="quote-tool1userAge" class="form-control">
+                            <option value="" selected disabled>Please Select Age</option>
+                            <option value="18 - 30">18 - 30</option>
+                            <option value="31 - 35">31 - 35</option>
+                            <option value="36 - 40">36 - 40</option>
+                            <option value="41 - 45">41 - 45</option>
+                            <option value="46 - 50">46 - 50</option>
+                            <option value="51 - 55">51 - 55</option>
+                        </select>
+                        <span class="errorSpan"><label class="errorLabel">Please Select an Age</label></span>
+                    </div>
+                </div>
+
+
+                <div class="form-focus">
+                    <div class="form-user-grp">
+                        <label for="quote-tool1coverageType" class="hidden" placeholder="CoverageType">Coverage</label>
+                        <select data-required="true" aria-required="true" id="quote-tool1coverageType" class="form-control">
+                            <option value="" selected disabled>Please Select Coverage</option>
+                            <option value="bronze">bronze</option>
+                            <option value="silver">silver</option>
+                            <option value="gold">gold</option>
+                            <option value="platinum">platinum</option>
+                        </select>
+                        <span class="errorSpan"><label class="errorLabel">Please Select A Coverage</label></span>
+                    </div>
+                </div>
+
+
+                <div class="form-button">
+                    <button type="submit" class="form-submit btn-green" data-fsubmit="quote-tool1">
+                        Get A Quote
+                    </button>
+                </div>
+
+
+            </form>
+        </div>
+
+        <div class="quote-tool2">
+            <form class="generic-form quote-tool2" name="quote-tool" method="post" data-quoteTool="quote-tool2" data-lan="es" data-domain="www.aem.metlife.com/somepathtofiles/">
+
+                <div class="form-focus">
+                    <div class="form-user-grp">
+                        <div class="button_group required">
+                            <div>
+                                <div class="radio_button"><input type="radio" id="quote-tool2Male" name="gender" value="Male"><label for="quote-tool2Male">Male</label></div>
+                                <div class="radio_button"><input type="radio" id="quote-tool2Female" name="gender" value="Female"><label for="quote-tool2Female">Female</label></div>
+                                <span class="errorSpan"><label class="errorLabel">Please Select a Gender</label></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-focus">
+                    <div class="form-user-grp">
+                        <label for="quote-tool2userAge" class="hidden"  placeholder="Your Age">Age</label>
+                        <select data-required="true" aria-required="true" id="quote-tool2userAge" class="form-control">
+                            <option value="" selected disabled>Please Select Age</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                        </select>
+                        <span class="errorSpan"><label class="errorLabel">Please Select an Age</label></span>
+                    </div>
+                </div>
+
+
+                <div class="form-focus">
+                    <div class="form-user-grp">
+                        <label for="quote-tool2coverageText" class="hidden" placeholder="Coverage Amount">Coverage Amount</label>
+                        <input type="text" class="form-user-ctrl" data-required="true" aria-required="true" id="quote-tool2coverageText" placeholder="Coverage Amount"/>
+                        <span class="errorSpan"><label class="errorLabel">Please Enter Coverage Amount</label></span>
+                    </div>
+                </div>
+
+                <div class="form-focus">
+                    <div class="form-user-grp">
+                        <label for="quote-tool2termLengthText" class="hidden" placeholder="Coverage Amount">Term Years</label>
+                        <input type="text" class="form-user-ctrl" data-required="true" aria-required="true" id="quote-tool2termLengthText" placeholder="Term Years"/>
+                        <span class="errorSpan"><label class="errorLabel">Please Enter Term Years</label></span>
+                    </div>
+                </div>
+
+
+                <div class="form-button">
+                    <button type="submit" class="form-submit btn-green" data-fsubmit="quote-tool2">
+                        Get A Quote
+                    </button>
+                </div>
+
+
+            </form>
+        </div>
+
+        <div class="quote-tool3">
+            <form class="generic-form quote-tool3" name="quote-tool" method="post" data-quoteTool="quote-tool3" data-lan="en" data-domain="www.aem.metlife.com/somepathtofiles/">
+
+
+                <div class="form-focus">
+                    <div class="form-user-grp">
+                        <label for="quote-tool3state" class="hidden"  placeholder="State">State</label>
+                        <select data-required="true" aria-required="true" id="quote-tool3state" class="form-control stateSelect">
+                            <option value="">State</option>
+                            <option value="AL">Alabama</option>
+                            <option value="AK">Alaska</option>
+                            <option value="AZ">Arizona</option>
+                            <option value="AR">Arkansas</option>
+                            <option value="CA">California</option>
+                            <option value="CO">Colorado</option>
+                            <option value="CT">Connecticut</option>
+                            <option value="DE">Delaware</option>
+                            <option value="DC">District of Columbia</option>
+                            <option value="FL">Florida</option>
+                            <option value="GA">Georgia</option>
+                            <option value="HI">Hawaii</option>
+                            <option value="ID">Idaho</option>
+                            <option value="IL">Illinois</option>
+                            <option value="IN">Indiana</option>
+                            <option value="IA">Iowa</option>
+                            <option value="KS">Kansas</option>
+                            <option value="KY">Kentucky</option>
+                            <option value="LA">Louisiana</option>
+                            <option value="ME">Maine</option>
+                            <option value="MD">Maryland</option>
+                            <option value="MA">Massachusetts</option>
+                            <option value="MI">Michigan</option>
+                            <option value="MN">Minnesota</option>
+                            <option value="MS">Mississippi</option>
+                            <option value="MO">Missouri</option>
+                            <option value="MT">Montana</option>
+                            <option value="NE">Nebraska</option>
+                            <option value="NV">Nevada</option>
+                            <option value="NH">New Hampshire</option>
+                            <option value="NJ">New Jersey</option>
+                            <option value="NM">New Mexico</option>
+                            <option value="NY">New York</option>
+                            <option value="NC">North Carolina</option>
+                            <option value="ND">North Dakota</option>
+                            <option value="OH">Ohio</option>
+                            <option value="OK">Oklahoma</option>
+                            <option value="OR">Oregon</option>
+                            <option value="PA">Pennsylvania</option>
+                            <option value="PR">Puerto Rico</option>
+                            <option value="RI">Rhode Island</option>
+                            <option value="SC">South Carolina</option>
+                            <option value="SD">South Dakota</option>
+                            <option value="TN">Tennessee</option>
+                            <option value="TX">Texas</option>
+                            <option value="UT">Utah</option>
+                            <option value="VT">Vermont</option>
+                            <option value="VA">Virginia</option>
+                            <option value="WA">Washington</option>
+                            <option value="WV">West Virginia</option>
+                            <option value="WI">Wisconsin</option>
+                            <option value="WY">Wyoming</option>
+                        </select>
+                        <span class="errorSpan"><label class="errorLabel">Please Select a State</label></span>
+                    </div>
+                </div>
+
+                <div class="form-focus">
+                    <div class="form-user-grp">
+                        <div class="dob-group">
+
+                            <label for="quote-tool3dobMonth" class="hidden" placeholder="DOB Month">DOB Month</label>
+                            <select class="form-user-ctrl dobSelect dobMonth" data-required="true" aria-required="true" id="quote-tool3dobMonth">
+                                <option value="">MM</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                            <span class="errorSpan"><label class="errorLabel">Please Select a Month</label></span>
+                            <label for="quote-tool3dobDay" class="hidden" placeholder="DOB Day">DOB Day</label>
+                            <select class="form-user-ctrl dobSelect dobDay" data-required="true" aria-required="true" id="quote-tool3dobDay">
+                                <option value="">DD</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                                <option value="25">25</option>
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+                                <option value="29">29</option>
+                                <option value="30">30</option>
+                                <option value="31">31</option>
+                            </select>
+                            <span class="errorSpan"><label class="errorLabel">Please Select a Day</label></span>
+                            <label for="quote-tool3dobYear" class="hidden" placeholder="DOB Year">DOB Year</label>
+                            <select class="form-user-ctrl dobSelect dobYear" data-required="true" aria-required="true" id="quote-tool3dobYear">
+                                <option value="">YYYY</option>
+
+                            </select>
+                            <span class="errorSpan"><label class="errorLabel">Please Select a Year</label></span>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-focus">
+                    <div class="form-user-grp">
+                        <label for="quote-tool3gender" class="hidden"  placeholder="Gender">Age</label>
+                        <select data-required="true" aria-required="true" id="quote-tool3gender" class="form-control genderSelect">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                        <span class="errorSpan"><label class="errorLabel">Please Select a Gender</label></span>
+                    </div>
+                </div>
+
+                <div class="form-focus">
+                    <div class="form-user-grp">
+                        <label for="quote-tool3coverage" class="hidden"  placeholder="Coverage Amount">Coverage Amount</label>
+                        <select data-required="true" aria-required="true" id="quote-tool3coverage" class="form-control">
+                            <option value="10000">$10,000</option>
+                            <option value="20000">$20,000</option>
+                            <option value="30000">$30,000</option>
+                            <option value="50000">$50,000</option>
+                            <option value="100000">$100,000</option>
+                            <option value="150000">$150,000</option>
+                            <option value="200000">$200,000</option>
+                            <option value="250000">$250,000</option>
+                            <option value="300000">$300,000</option>
+                            <option value="400000">$400,000</option>
+                            <option value="500000">$500,000</option>
+                            <option value="750000">$750,000</option>
+                            <option value="1000000">$1,000,000</option>
+                            <option value="1500000">$1,500,000</option>
+                            <option value="2000000">$2,000,000</option>
+                            <option value="2500000">$2,500,000</option>
+                            <option value="3000000">$3,000,000</option>
+                            <option value="3500000">$3,500,000</option>
+                            <option value="4000000">$4,000,000</option>
+                            <option value="4500000">$4,500,000</option>
+                            <option value="5000000">$5,000,000</option>
+                        </select>
+                        <span class="errorSpan"><label class="errorLabel">Please Select a Coverage Amount</label></span>
+                                <span>
+                                    <a href="https://www.metlife.com/financial-tools/insurance/life-insurance/life-insurance-calculator?source=qq"
+                                       target="_blank">
+                                        <img src="/static/images/quote_results_coverage_amount.png"
+                                             alt="Coverage Amount Image" data-quoteToolLink="calculator">
+                                    </a>
+                                </span>
+                    </div>
+                </div>
+
+                <div class="form-focus">
+                    <div class="form-user-grp">
+                        <label for="quote-tool3termLengthSelect" class="hidden"  placeholder="Term Length">Term Length</label>
+                        <select data-required="true" aria-required="true" id="quote-tool3termLengthSelect" class="form-control">
+                            <option value="">Term Length</option>
+                            <option value="10">10 Years</option>
+                            <option value="20">20 Years</option>
+                            <option value="30">30 Years</option>
+                        </select>
+                        <span class="errorSpan"><label class="errorLabel">Please Select a Term Length</label></span>
+                    </div>
+                </div>
+
+                <div class="form-focus">
+                    <div class="form-user-grp">
+                        <label for="quote-tool3optionalSelect1" class="hidden"  placeholder="Tobacco Use">Tobacco Use</label>
+                        <select data-required="true" aria-required="true" id="quote-tool3optionalSelect1" class="form-control">
+                            <option value="">Tobacco Use</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                        <span class="errorSpan"><label class="errorLabel">Please Select Tobacco Usage</label></span>
+                    </div>
+                </div>
+
+                <div class="form-focus">
+                    <div class="form-user-grp">
+                        <label for="quote-tool3optionalSelect2" class="hidden"  placeholder="Your Health">Your Health</label>
+                        <select data-required="true" aria-required="true" id="quote-tool3optionalSelect2" class="form-control">
+                            <option value="">Your Health</option>
+                            <option value="Excellent">Excellent: I could be a professional athlete</option>
+                            <option value="Very">Very Good: I usually work our and eat right</option>
+                            <option value="Good">Good: I take medication for minor health issues</option>
+                            <option value="Fair">Fair: My health could be much better</option>
+                        </select>
+                        <span class="errorSpan"><label class="errorLabel">Please Select Your Health</label></span>
+                                <span>
+                                    <a href="https://www.metlife.com/financial-tools/insurance/life-insurance/life-insurance-calculator?source=qq"
+                                       target="_blank">
+                                        <img src="/static/images/edit_quote_question_mark.png" alt="Question Mark Image" data-quoteToolLink="healthClass">
+                                    </a>
+                                </span>
+                    </div>
+                </div>
+
+                <div class="form-focus floatContentLeft">
+                    <div class="form-user-grp">
+                        <div class="button_group required">
+                            <div>
+                                <div class="radio_button"><input type="radio" id="quote-tool3radioGroup1radioValue1" name="contactType" value="Male"><label for="quote-tool3radioGroup1radioValue1">Online</label></div>
+                                <div class="radio_button"><input type="radio" id="quote-tool3radioGroup1radioValue2" name="contactType" value="Female"><label for="quote-tool3radioGroup1radioValue2">With A Rep<sup>†</sup></label></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-button">
+                    <button type="submit" class="form-submit btn-green" data-fsubmit="quote-tool2">
+                        Get A Quote
+                    </button>
+                </div>
+
+
+            </form>
+        </div>
+
+        <div class="quote-tool4">
+            <form class="generic-form quote-tool4" name="quote-tool" method="post" data-quoteTool="quote-tool14" data-lan="en" data-domain="www.aem.metlife.com/somepathtofiles/">
+
+
+                <div class="form-focus">
+                    <div class="form-user-grp">
+                        <label for="quote-tool4state" class="hidden"  placeholder="State">State</label>
+                        <select data-required="true" aria-required="true" id="quote-tool4state" class="form-control stateSelect">
+                            <option value="">State</option>
+                            <option value="AL">Alabama</option>
+                            <option value="AK">Alaska</option>
+                            <option value="AZ">Arizona</option>
+                            <option value="AR">Arkansas</option>
+                            <option value="CA">California</option>
+                            <option value="CO">Colorado</option>
+                            <option value="CT">Connecticut</option>
+                            <option value="DE">Delaware</option>
+                            <option value="DC">District of Columbia</option>
+                            <option value="FL">Florida</option>
+                            <option value="GA">Georgia</option>
+                            <option value="HI">Hawaii</option>
+                            <option value="ID">Idaho</option>
+                            <option value="IL">Illinois</option>
+                            <option value="IN">Indiana</option>
+                            <option value="IA">Iowa</option>
+                            <option value="KS">Kansas</option>
+                            <option value="KY">Kentucky</option>
+                            <option value="LA">Louisiana</option>
+                            <option value="ME">Maine</option>
+                            <option value="MD">Maryland</option>
+                            <option value="MA">Massachusetts</option>
+                            <option value="MI">Michigan</option>
+                            <option value="MN">Minnesota</option>
+                            <option value="MS">Mississippi</option>
+                            <option value="MO">Missouri</option>
+                            <option value="MT">Montana</option>
+                            <option value="NE">Nebraska</option>
+                            <option value="NV">Nevada</option>
+                            <option value="NH">New Hampshire</option>
+                            <option value="NJ">New Jersey</option>
+                            <option value="NM">New Mexico</option>
+                            <option value="NY">New York</option>
+                            <option value="NC">North Carolina</option>
+                            <option value="ND">North Dakota</option>
+                            <option value="OH">Ohio</option>
+                            <option value="OK">Oklahoma</option>
+                            <option value="OR">Oregon</option>
+                            <option value="PA">Pennsylvania</option>
+                            <option value="PR">Puerto Rico</option>
+                            <option value="RI">Rhode Island</option>
+                            <option value="SC">South Carolina</option>
+                            <option value="SD">South Dakota</option>
+                            <option value="TN">Tennessee</option>
+                            <option value="TX">Texas</option>
+                            <option value="UT">Utah</option>
+                            <option value="VT">Vermont</option>
+                            <option value="VA">Virginia</option>
+                            <option value="WA">Washington</option>
+                            <option value="WV">West Virginia</option>
+                            <option value="WI">Wisconsin</option>
+                            <option value="WY">Wyoming</option>
+                        </select>
+                        <span class="errorSpan"><label class="errorLabel">Please Select a State</label></span>
+                    </div>
+                </div>
+
+                <div class="form-focus">
+                    <div class="form-user-grp">
+                        <div class="dob-group">
+
+                            <label for="quote-tool4dobMonth" class="hidden" placeholder="DOB Month">DOB Month</label>
+                            <select class="form-user-ctrl dobSelect dobMonth" data-required="true" aria-required="true" id="quote-tool4dobMonth">
+                                <option value="">MM</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                            <span class="errorSpan"><label class="errorLabel">Please Select a Month</label></span>
+                            <label for="quote-tool4dobDay" class="hidden" placeholder="DOB Day">DOB Day</label>
+                            <select class="form-user-ctrl dobSelect dobDay" data-required="true" aria-required="true" id="quote-tool4dobDay">
+                                <option value="">DD</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                                <option value="25">25</option>
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+                                <option value="29">29</option>
+                                <option value="30">30</option>
+                                <option value="31">31</option>
+                            </select>
+                            <span class="errorSpan"><label class="errorLabel">Please Select a Day</label></span>
+                            <label for="quote-tool4dobYear" class="hidden" placeholder="DOB Year">DOB Year</label>
+                            <select class="form-user-ctrl dobSelect dobYear" data-required="true" aria-required="true" id="quote-tool4dobYear">
+                                <option value="">YYYY</option>
+
+                            </select>
+                            <span class="errorSpan"><label class="errorLabel">Please Select a Year</label></span>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-focus">
+                    <div class="form-user-grp">
+                        <label for="quote-tool4gender" class="hidden"  placeholder="Gender">Age</label>
+                        <select data-required="true" aria-required="true" id="quote-tool4gender" class="form-control genderSelect">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                        <span class="errorSpan"><label class="errorLabel">Please Select a Gender</label></span>
+                    </div>
+                </div>
+
+                <div class="form-focus">
+                    <div class="form-user-grp">
+                        <label for="quote-tool4coverage" class="hidden"  placeholder="Coverage Amount">Coverage Amount</label>
+                        <select data-required="true" aria-required="true" id="quote-tool4coverage" class="form-control">
+                            <option value="10000">$10,000</option>
+                            <option value="20000">$20,000</option>
+                            <option value="30000">$30,000</option>
+                            <option value="50000">$50,000</option>
+                            <option value="100000">$100,000</option>
+                            <option value="150000">$150,000</option>
+                            <option value="200000">$200,000</option>
+                            <option value="250000">$250,000</option>
+                            <option value="300000">$300,000</option>
+                            <option value="400000">$400,000</option>
+                            <option value="500000">$500,000</option>
+                            <option value="750000">$750,000</option>
+                            <option value="1000000">$1,000,000</option>
+                            <option value="1500000">$1,500,000</option>
+                            <option value="2000000">$2,000,000</option>
+                            <option value="2500000">$2,500,000</option>
+                            <option value="3000000">$3,000,000</option>
+                            <option value="3500000">$3,500,000</option>
+                            <option value="4000000">$4,000,000</option>
+                            <option value="4500000">$4,500,000</option>
+                            <option value="5000000">$5,000,000</option>
+                        </select>
+                        <span class="errorSpan"><label class="errorLabel">Please Select a Coverage Amount</label></span>
+                                <span>
+                                    <a href="https://www.metlife.com/financial-tools/insurance/life-insurance/life-insurance-calculator?source=qq"
+                                       target="_blank">
+                                        <img src="/static/images/quote_results_coverage_amount.png"
+                                             alt="Coverage Amount Image" data-quoteToolLink="calculator">
+                                    </a>
+                                </span>
+                    </div>
+                </div>
+
+                <div class="form-focus">
+                    <div class="form-user-grp">
+                        <label for="quote-tool4termLengthSelect" class="hidden"  placeholder="Coverage Amount">Term Length</label>
+                        <select data-required="true" aria-required="true" id="quote-tool4termLengthSelect" class="form-control">
+                            <option value="">Term Length</option>
+                            <option value="10">10 Years</option>
+                            <option value="20">20 Years</option>
+                            <option value="30">30 Years</option>
+                        </select>
+                        <span class="errorSpan"><label class="errorLabel">Please Select a Term Length</label></span>
+                    </div>
+                </div>
+
+                <div class="form-focus">
+                    <div class="form-user-grp">
+                        <label for="quote-tool4optionalSelect1" class="hidden"  placeholder="Tobacco Use">Tobacco Use</label>
+                        <select data-required="true" aria-required="true" id="quote-tool4optionalSelect1" class="form-control">
+                            <option value="">Tobacco Use</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                        <span class="errorSpan"><label class="errorLabel">Please Select Tobacco Usage</label></span>
+                    </div>
+                </div>
+
+                <div class="form-focus">
+                    <div class="form-user-grp">
+                        <label for="quote-tool4optionalSelect2" class="hidden"  placeholder="Your Health">Your Health</label>
+                        <select data-required="true" aria-required="true" id="quote-tool4optionalSelect2" class="form-control">
+                            <option value="">Your Health</option>
+                            <option value="Excellent">Excellent: I could be a professional athlete</option>
+                            <option value="Very">Very Good: I usually work our and eat right</option>
+                            <option value="Good">Good: I take medication for minor health issues</option>
+                            <option value="Fair">Fair: My health could be much better</option>
+                        </select>
+                        <span class="errorSpan"><label class="errorLabel">Please Select Your Health</label></span>
+                                <span>
+                                    <a href="https://www.metlife.com/financial-tools/insurance/life-insurance/life-insurance-calculator?source=qq"
+                                       target="_blank">
+                                        <img src="/static/images/edit_quote_question_mark.png" alt="Question Mark Image" data-quoteToolLink="healthClass">
+                                    </a>
+                                </span>
+                    </div>
+                </div>
+
+                <div class="form-focus floatContentLeft">
+                    <div class="form-user-grp">
+                        <div class="button_group required">
+                            <div>
+                                <div class="radio_button"><input type="radio" id="quote-tool4radioGroup1radioValue1 name="contactType" value="Male"><label for="quote-tool4radioGroup1radioValue1">Online</label></div>
+                                <div class="radio_button"><input type="radio" id="quote-tool4radioGroup1radioValue2" name="contactType" value="Female"><label for="quote-tool4radioGroup1radioValue2">With A Rep<sup>†</sup></label></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-button">
+                    <button type="submit" class="form-submit btn-green" data-fsubmit="quote-tool2">
+                        Get A Quote
+                    </button>
+                </div>
+
+
+            </form>
+        </div>
+    </div>

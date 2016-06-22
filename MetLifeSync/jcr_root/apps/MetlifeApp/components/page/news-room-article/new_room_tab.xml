@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Panel"
+    title="News Room Properties">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <publishedDate
+            jcr:primaryType="cq:Widget"
+            allowBlank="false"
+            fieldLabel="Published Date"
+            format="F d, Y"
+            name="./publishedDate"
+            xtype="datefield"/>
+        <location
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Location"
+            name="./location"
+            xtype="textfield"/>
+        <topic
+            jcr:primaryType="cq:Widget"
+            allowBlank="false"
+            fieldLabel="tags"
+            name="./topics"
+            namespaces="[]"
+            showPathInLabels="false"
+            xtype="tags">
+            <listeners
+                jcr:primaryType="nt:unstructured"
+                beforeloadcontent="function(field,record,path){Metlife.Components.NewsRoomArticle.TopicTags.beforeLoadContent(field,record,path);}"/>
+        </topic>
+    </items>
+</jcr:root>

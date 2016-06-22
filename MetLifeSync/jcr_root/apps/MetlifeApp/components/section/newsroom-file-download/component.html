@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+        <div class="file-container">
+            {%#if content.pdflinkSpooled%}
+            <div>
+                {%#each content.pdflinkSpooled %}
+                <a href="{%this%}">  <img src="{% content.imagePath %}"></a>
+                {%/each%}
+
+            </div>
+            {%/if%}
+            <div>
+                {%#each content.pdflinkSpooled %}
+                <a href="{% this %}" target="_blank" download>{%content.label%}</a><span>{%content.description%}</span>
+                {%/each%}
+            </div>
+
+        </div>
+    </div>
+</div>

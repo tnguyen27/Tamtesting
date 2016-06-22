@@ -1,0 +1,13 @@
+<div class="form ">
+    <div class="form_description_container">
+        <div>{%content.title%}</div>
+        <div><a href="{%content.filePath%}" target="_blank">{%content.filename%}</a></div>
+        <div>
+            {%{content.description}%}
+        </div>
+    </div>
+    {%#if content.filePath%}
+        <div class="form_download"><a href="{%content.filePath%}" target="_blank"><img src="/global-assets/images/icons/{%content.fileType%}.png" alt="{%content.fileType%}"></a><a href="{%content.filePath%}" target="_blank" class="hidden-xs">{%#if design.downloadText%}{%design.downloadText%}{%else%}Downloaad{%/if%}</a><span>{%content.downloadText%}</span></div>
+    {%/if%}
+    <div class="clearfix"></div>
+</div>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="500"
+    title="Form Library Download Item"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <configuration
+                jcr:primaryType="cq:Panel"
+                title="Configuration">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <itemTitle
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Title"
+                        name="./title"
+                        xtype="textfield"/>
+                    <description
+                        jcr:primaryType="cq:Widget"
+                        hideLabel="true"
+                        name="./description"
+                        xtype="richtext"/>
+                    <filename
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="false"
+                        fieldLabel="File Name"
+                        name="./filename"
+                        xtype="textfield"/>
+                    <filepath
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="false"
+                        fieldLabel="File Path"
+                        name="./filePath"
+                        xtype="pathfield"/>
+                    <filetype
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="false"
+                        fieldLabel="File Type"
+                        name="./fileType"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <pdf
+                                jcr:primaryType="nt:unstructured"
+                                text="PDF"
+                                value="pdf_icon"/>
+                            <xls
+                                jcr:primaryType="nt:unstructured"
+                                text="Excel"
+                                value="excel_icon"/>
+                            <doc
+                                jcr:primaryType="nt:unstructured"
+                                text="Word"
+                                value="document_icon"/>
+                            <ppt
+                                jcr:primaryType="nt:unstructured"
+                                text="Power Point"
+                                value="powerpoint_icon"/>
+                        </options>
+                    </filetype>
+                    <downloadText
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Short description to be shown below the Download Text"
+                        fieldLabel="Download Text Desc."
+                        name="./downloadText"
+                        xtype="textfield"/>
+                </items>
+            </configuration>
+        </items>
+    </items>
+</jcr:root>

@@ -1,0 +1,12 @@
+---
+nexus::url: 'http://52.6.164.143/nexus'
+nexus::username: 'nxdeveloper'
+nexus::password: 'ilfyud0ocZibAbtybrAff'
+pkg_aem::install_dir: '/home/vagrant/aem-author'
+pkg_aem::aem_backup_directory: '/home/vagrant/aem-author-backup'
+pkg_aem::aem_os_user: 'vagrant'
+pkg_aem::aem_os_group: 'vagrant'
+local_aptsource::key: '0C413418C515F4BD'
+local_aptsource::key_source: 'http://54.236.230.120/apt/public-key/public.key'
+local_aptsource::location: 'http://bedrock-apt:aksOblgIv5wab76b34@54.236.230.120/apt'
+local_aptsource::release: 'wheezy-pkgs'

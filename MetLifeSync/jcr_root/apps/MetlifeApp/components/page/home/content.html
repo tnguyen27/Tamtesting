@@ -1,0 +1,71 @@
+
+{%#include "dental_overlay" as="MetlifeApp/components/section/overlay-container"%}{%/include%}
+{%#include "vision_overlay" as="MetlifeApp/components/section/overlay-container"%}{%/include%}
+{%#include "health_overlay" as="MetlifeApp/components/section/health-overlay"%}{%/include%}
+<!--Begin homepage subnav section-->
+{%#include "home-subnav" as="MetlifeApp/components/section/home-subnav"%}{%/include%}
+<!--End homepage subnav section-->
+
+<!--Begin Carousel Banner section-->
+{%#include "hero-carousel" as="MetlifeApp/components/section/hero-carousel"%}{%/include%}
+<!--End Carousel Banner section-->
+
+
+<!--Begin CTA Header Quote & CTA Find an X-->
+<div class="container-fluid white_background_container">
+    <div class="row header_cta">
+
+        <!--Begin CTA Header Quote Tool -->
+		{%#include "get-a-quote" as="MetlifeApp/components/section/quote-tool"%}{%/include%}
+        <!--End CTA Header Quote Tool -->
+
+        <!--Begin FAX Tool -->
+
+        {%#include "faxtool" as="MetlifeApp/components/section/find-a-x"%}{%/include%}
+
+        <!--End FAX Tool -->
+
+    </div>
+</div>
+<!--End of CTA Header Quote & CTA Find an X-->
+
+
+<!-- Scroll More Line Begin -->
+<div class="container-fluid white_background_container">
+    <div class="row">
+        <div class="col col-lg-12">
+            <!-- Component Begin -->
+            <div class="scroll-for-more container">
+                <div class="divider"><span></span></div>
+                <a href="#scroll_more">
+                    <p>Scroll for More</p>
+                    <img src="/static/images/life_stages/icon_scroll.png" alt="Scroll More Image">
+                </a>
+                <div class="divider"><span></span></div>
+            </div>
+            <!-- Component End  -->
+        </div>
+    </div>
+</div>
+<!-- Scroll More Line End -->
+
+<!--Begin Life Stages Section-->
+{%#include "lifeStages" as="MetlifeApp/components/section/life-stages-container"%}{%/include%}
+
+<!--End Life Stages Section-->
+
+<!-- CTA Footer Begin -->
+{%#include "cta-footer-banner" as="MetlifeApp/components/section/category-banner"%}{%/include%}
+<!-- CTA Footer End -->
+
+<!-- Begin Disclaimer-->
+<div class="container">
+    <div class="row">
+        <div class="col col-lg-12">
+            <!-- Component Begin -->
+				{%#include "ref" as="foundation/components/reference"%}{%/include%}
+            <!-- Component End -->
+        </div>
+    </div>
+</div>
+<!-- End Disclaimer-->

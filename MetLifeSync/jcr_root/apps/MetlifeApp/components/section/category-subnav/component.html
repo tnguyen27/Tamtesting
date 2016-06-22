@@ -1,0 +1,20 @@
+<div class="row">
+        <div class="col col-lg-12">
+            <!--Begin Sub Nav Component-->
+            <nav class="sub_navigation_menu">
+                <ul class="sub_navigation_menu_nav">
+                    {%#each list.pages%}
+                        <li>
+                            <a  href="{%this.path%}.html" target="{%#if this.target%}{%this.target%}{%else%}_self{%/if%}">
+                                <div>
+                                    <p>{%this.navigationTitle%}</p>
+                                </div>
+                            </a>
+                        </li>
+                    {%/each%}
+                </ul>
+            </nav>
+            <!--End Sub Nav Component-->
+        </div>
+</div>
+

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Search Results"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Configuration">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <rootPath
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="false"
+                        fieldLabel="Root Path"
+                        name="./rootPath"
+                        rootPath="/content/metlife"
+                        rootTitle="MetLife"
+                        xtype="pathfield"/>
+                    <display-results
+                        jcr:primaryType="cq:Widget"
+                        addItemLabel="Add Option"
+                        fieldDescription="The options for the 'displaying' dropdown. E.g. 10, 20, 30"
+                        fieldLabel="Display Results Options"
+                        minItems="{Long}1"
+                        name="./displayResultsOptions"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            xtype="numberfield"/>
+                    </display-results>
+                    <results-hint
+                        jcr:primaryType="nt:unstructured"
+                        ignoreData="true"
+                        name="./displayResultsOptions@TypeHint"
+                        value="String[]"
+                        xtype="hidden"/>
+                </items>
+            </tab1>
+            <tab2
+                jcr:primaryType="cq:Panel"
+                title="Labels">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <displaying
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="'Displaying' Label"
+                        name="./displayingLabel"
+                        xtype="textfield"/>
+                    <of
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="'of' Label"
+                        name="./ofLabel"
+                        xtype="textfield"/>
+                    <search
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="'Search' Label"
+                        name="./searchLabel"
+                        xtype="textfield"/>
+                    <search-placeholder
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Search Placeholder Text"
+                        name="./searchPlaceholderText"
+                        xtype="textfield"/>
+                    <prev
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="'Prev' Label"
+                        name="./prevLabel"
+                        xtype="textfield"/>
+                    <next
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="'Next' Label"
+                        name="./nextLabel"
+                        xtype="textfield"/>
+                    <no-results-title
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="No Results Title"
+                        name="./noResultsTitle"
+                        xtype="textfield"/>
+                    <no-results-text
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="No Results Text"
+                        name="./noResultsText"
+                        xtype="richtext"/>
+                </items>
+            </tab2>
+        </items>
+    </items>
+</jcr:root>

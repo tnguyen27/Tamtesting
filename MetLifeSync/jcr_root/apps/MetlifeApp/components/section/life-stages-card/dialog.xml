@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Life Stage Card Configuration"
+    width="1050"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Stage Configuration">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Title"
+                        name="./titleCard"/>
+                    <description
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Description"
+                        name="./description"
+                        xtype="textarea"/>
+                    <promptext
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Prompt Text"
+                        name="./prompttext"
+                        xtype="textfield"/>
+                </items>
+            </tab1>
+            <tab2
+                jcr:primaryType="cq:Panel"
+                title="Buttons configuration">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <view
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="false"
+                        defaultValue="grid"
+                        fieldLabel="Arragement"
+                        name="./arragement"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <grid
+                                jcr:primaryType="nt:unstructured"
+                                text="Grid view"
+                                value="grid"/>
+                            <fullwidth
+                                jcr:primaryType="nt:unstructured"
+                                text="Full Width"
+                                value="full-width"/>
+                        </options>
+                    </view>
+                    <buttons
+                        jcr:primaryType="cq:Widget"
+                        addItemLabel="Add Button"
+                        fieldDescription="Click the '+' to add a new Button (Max: 4 buttons)"
+                        fieldLabel="Buttons"
+                        hideLabel="false"
+                        maxItems="2"
+                        name="./buttons"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            xtype="">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <A_title
+                                    jcr:primaryType="nt:unstructured"
+                                    allowBlank="false"
+                                    anchor="100%"
+                                    fieldLabel="Label"
+                                    key="buttonName"
+                                    validateOnBlur="true"
+                                    xtype="textfield"/>
+                                <C_pages
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="false"
+                                    anchor="100%"
+                                    fieldLabel="URL"
+                                    key="path"
+                                    linkPattern="\{0}.html"
+                                    rootPath="/content/metlife"
+                                    xtype="pathfield"/>
+                                <D_target
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="false"
+                                    defaultValue="_self"
+                                    fieldLabel="Target"
+                                    key="target"
+                                    type="select"
+                                    xtype="selection">
+                                    <options jcr:primaryType="cq:WidgetCollection">
+                                        <self
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Same Page"
+                                            value="_self"/>
+                                        <blank
+                                            jcr:primaryType="nt:unstructured"
+                                            text="New Page"
+                                            value="_blank"/>
+                                    </options>
+                                </D_target>
+                            </items>
+                        </fieldConfig>
+                    </buttons>
+                    <buttonsfield
+                        jcr:primaryType="nt:unstructured"
+                        ignoreData="true"
+                        name="./buttons@TypeHint"
+                        value="String[]"
+                        xtype="hidden"/>
+                </items>
+            </tab2>
+        </items>
+    </items>
+</jcr:root>

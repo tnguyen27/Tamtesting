@@ -1,0 +1,20 @@
+
+{%#each content.contacts%}
+    <div class="contact-us__result-group">
+        <div class="row contact-us__listing-row">
+
+            <div class="col-xs-6 col-md-9">
+               <span class="{%#if this.bold%}contact-results--large-heading{%else%}contact-results--small-heading{%/if%} semi-bold">
+                   {%this.name%}
+                </span>
+            </div>
+
+            <div class="col-xs-6 col-md-3 text-right">
+               <span class="{%#if this.bold%}contact-results--large-heading{%else%}contact-results--small-heading{%/if%}  semi-bold">
+                   {%this.phone%}
+               </span>
+            </div>
+
+        </div>
+    </div>
+{%/each%}

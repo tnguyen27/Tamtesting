@@ -1,0 +1,41 @@
+<!-- Begin Contacts-->
+<div class="container-fluid searchable">
+    <div class="row">
+        <div class="col col-lg-12">
+            <!-- Begin Contacts Component-->
+            <div class="text_container">
+                <div class="container">
+                    <!-- Begin Press Release Contact Component-->
+                    <div class="contacts">
+                        <h1>{% content.title %} </h1>
+
+                        <div class="contacts_region">
+                            {%#if content.categories %}
+                                {%#each content.categories %}
+                                <div class="contacts_region_container">
+                                    <div class="contacts_region">
+                                        <span>{% this.category %} </span>
+                                        <span class="expand"></span>
+                                    </div>
+                                    <div class="contacts_list">
+                                        {%#each this.categories-items %}
+                                        {%#include this as="MetlifeApp/components/section/contact-row"%}{%/include%}
+                                        {%/each%}
+                                    </div>
+                                </div>
+                                {%/each%}
+
+
+                            {%else%}
+                                 <img class="cq-list-placeholder  cq-block-lg-placeholder" src="/etc/designs/default/0.gif" />
+                            {%/if%}
+                        </div>
+                    </div>
+                    <!-- End Press Release Contact Compnent-->
+                </div>
+            </div>
+            <!-- End Contacts Component-->
+        </div>
+    </div>
+</div>
+<!-- End Contacts Contacts-->

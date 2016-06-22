@@ -1,0 +1,17 @@
+{%#if content.columnTitle%}
+<div class="sitemap-link--LinksTitle"><a href="{%content.columnPath%}">{%content.columnTitle%}</a></div>
+	{%#if content.isManual%}
+		{%#each list.manualPages%}
+		<a href="{%this.path%}.html">
+			<p>{%this.navigationTitle%}</p>
+		</a>
+		{%/each%}
+	{%else%}
+		{%#each list.pages%}
+			<a href="{%this.path%}.html">
+				<p>{%this.navigationTitle%}</p>
+			</a>
+		{%/each%}
+	{%/if%}
+{%/if%}
+{%#if page.isEditOrDesignMode%}<div style="clear:both;"></div>{%/if%}

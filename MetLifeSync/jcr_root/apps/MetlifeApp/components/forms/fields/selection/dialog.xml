@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="500"
+    title="Selection"
+    width="700"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab2
+                jcr:primaryType="cq:Panel"
+                itemId="observesTab"
+                title="Observes"/>
+            <basic
+                jcr:primaryType="cq:Widget"
+                path="/apps/MetlifeApp/components/forms/fields/base/basic-tab.infinity.json"
+                xtype="cqinclude"/>
+            <options
+                jcr:primaryType="cq:Panel"
+                itemId="optionsTab"
+                title="Options">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <label
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="false"
+                        fieldLabel="Label"
+                        name="./optionsLabel"
+                        xtype="textfield"/>
+                    <name
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="false"
+                        fieldLabel="Name"
+                        name="./optionsName"
+                        xtype="textfield"/>
+                    <options
+                        jcr:primaryType="cq:Widget"
+                        addItemLabel="Add Option"
+                        fieldDescription="Click the '+' to add a new option"
+                        fieldLabel="Options"
+                        hideLabel="false"
+                        minItems="{Long}1"
+                        name="./options"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            xtype="multifieldpanel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <A_text
+                                    jcr:primaryType="nt:unstructured"
+                                    allowBlank="false"
+                                    anchor="95%"
+                                    fieldLabel="Text"
+                                    key="text"
+                                    validateOnBlur="true"
+                                    xtype="textfield"/>
+                                <C_value
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="false"
+                                    anchor="95%"
+                                    fieldLabel="Value"
+                                    key="value"
+                                    xtype="textfield"/>
+                            </items>
+                        </fieldConfig>
+                    </options>
+                    <optionsTH
+                        jcr:primaryType="nt:unstructured"
+                        ignoreData="true"
+                        name="./options@TypeHint"
+                        value="String[]"
+                        xtype="hidden"/>
+                </items>
+            </options>
+            <observes
+                jcr:primaryType="cq:Widget"
+                path="/apps/MetlifeApp/components/forms/fields/base/observes-tab.infinity.json"
+                xtype="cqinclude"/>
+        </items>
+    </items>
+</jcr:root>

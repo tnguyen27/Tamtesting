@@ -1,0 +1,136 @@
+<!-- Begin Health Guidelines Overlay Section-->
+<div class="container-fluid health_guidelines_overlay">
+    <div class="row">
+        <div class="col col-lg-12">
+            <!-- Health Guidelines Overlay Component -->
+            <div class="health_guidelines container">
+                <div class="health_guidelines_title">
+                    <img class="close_health_overlay" src="/static/images/icons_header/icon_close_gray.png"
+                         alt="Close Image">
+
+                    <p class="title">{% design.titleoverlay %} </p>
+
+                    <div class="subtitle">
+                        {%{design.subtitleoverlay}%}
+                    </div>
+                </div>
+                <div class="health_guidelines_content col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="content_top">
+                        <div class="content_table">
+                            <div class="health_guidelines_nav">
+                                <ul class="nav nav-tabs">
+                                    <li class="active"><a data-toggle="tab" href=".excellent">Excellent</a>
+                                    </li>
+                                    <li><a data-toggle="tab" href=".very_good">Very Good</a>
+                                    </li>
+                                    <li><a data-toggle="tab" href=".good">Good</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tab-content">
+                                <div class="content_header hidden-xs">
+                                    <table class="health_guidelines_table">
+                                        <thead>
+                                        <tr>
+                                            <th class="title"></th>
+                                            <th class="excellent">Excellent</th>
+                                            <th class="very_good">Very Good</th>
+                                            <th class="good">Good</th>
+                                        </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                                <table class="health_guidelines_table table-striped" data-toggle="table"
+                                       data-url="/system/static/js/health_class_guidelines_description.json"
+                                       data-cache="false">
+                                    <thead>
+                                    <tr>
+                                        <th class="title" data-field="title"></th>
+                                        <th class="excellent content" data-field="excellent"></th>
+                                        <th class="very_good content hidden-xs" data-field="very_good"></th>
+                                        <th class="good content hidden-xs" data-field="good"></th>
+                                    </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                            <div class="footnotes">
+                                {%{design.healthText}%}
+                            </div>
+                            <div class="health_text">
+                                {%{design.descriptionHealth}%}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content_bottom">
+                        <div class="content_table">
+                            <div class="health_header">
+                                <p>{% design.titleHeight %}</p>
+
+                                <p class="health_text">{%{design.descriptionHeight}%}</p>
+                            </div>
+                            <div class="health_guidelines_nav">
+                                <ul class="nav nav-tabs">
+                                    <li class="active"><a data-toggle="tab" href=".excellent">Excellent</a>
+                                    </li>
+                                    <li><a data-toggle="tab" href=".very_good">Very Good</a>
+                                    </li>
+                                    <li><a data-toggle="tab" href=".good">Good</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tab-content">
+                                <div class="content_header hidden-xs">
+                                    <div class="content_header_top">
+                                        <table class="health_guidelines_table">
+                                            <thead>
+                                            <tr>
+                                                <th class="title"></th>
+                                                <th class="excellent">Excellent</th>
+                                                <th class="very_good">Very Good</th>
+                                                <th class="good">Good</th>
+                                            </tr>
+                                            </thead>
+                                        </table>
+                                    </div>
+                                    <div class="content_header_bottom">
+                                        <table class="health_guidelines_table">
+                                            <thead>
+                                            <tr>
+                                                <th class="title"></th>
+                                                <th class="excellent">M</th>
+                                                <th class="excellent">F</th>
+                                                <th class="very_good">M</th>
+                                                <th class="very_good">F</th>
+                                                <th class="good">M</th>
+                                                <th class="good">F</th>
+                                            </tr>
+                                            </thead>
+                                        </table>
+                                    </div>
+                                </div>
+                                <table class="health_guidelines_table table-striped" data-toggle="table"
+                                       data-url="system/static/js/health_class_guidelines_chart.json"
+                                       data-cache="false">
+                                    <thead>
+                                    <tr>
+                                        <th class="title" data-field="height"></th>
+                                        <th class="excellent content" data-field="excellent_male">M</th>
+                                        <th class="excellent content" data-field="excellent_female">F</th>
+                                        <th class="very_good content hidden-xs" data-field="very_good_male">M</th>
+                                        <th class="very_good content hidden-xs" data-field="very_good_female">F</th>
+                                        <th class="good content hidden-xs" data-field="good_male">M</th>
+                                        <th class="good content hidden-xs" data-field="good_female">F</th>
+                                    </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Health Guidelines Overlay Component-->
+        </div>
+    </div>
+
+</div>
+<!-- Health Guidelines Overlay Section-->

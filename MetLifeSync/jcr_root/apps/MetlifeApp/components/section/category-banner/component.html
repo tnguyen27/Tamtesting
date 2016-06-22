@@ -1,0 +1,31 @@
+<div class="row">
+        <div class="col col-lg-12">
+            <!-- Component Begin -->
+            {%#if content.headline%}
+                <div class="promo-card content-photo clearfix">
+                    <div class="photo">
+                        <img src="{%content.imagePath%}"
+                             data-src="{%content.imagePath%}"
+                             class="lazy-loaded">
+                    </div>
+                    <div class="content">
+                        <div class="vheight">
+                            <div class="vcenter">
+                                <h2>{%content.headline%}</h2>
+                                <span>
+                                    {%content.description%}
+                                </span>
+                                {%#if content.buttonText%}
+                                    <a class="{%#if content.blue%}btn-blue{%else%}btn-green{%/if%}" id="footerCtaSubmit">{%content.buttonText%}</a>
+                                {%/if%}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {%/if%}
+            <!-- Component End -->
+        </div>
+</div>
+{%#if page.isEditMode%}
+    <div style="clear:both;"></div>
+{%/if%}

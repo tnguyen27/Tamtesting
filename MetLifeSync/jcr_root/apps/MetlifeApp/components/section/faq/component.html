@@ -1,0 +1,37 @@
+
+{%#if content.expand%}
+    <div class="container-fluid white_background_container searchable">
+        <div class="row">
+            <div class="col col-lg-12">
+                <div class="accordion container life_insurance_faq" id="">
+                            <div class="toggle-all"><span class="expandAll">{%content.expand%}</span> 
+                                <span class="collapseAll">{%content.collapse%}</span></div>
+    
+                    {%#each content.qalist%}
+                        {%#if question%}
+                        <div>
+                            <div class="title">
+                                <span>{%question%}</span>
+                                <span class="expand"></span>
+                            </div>
+                            <div class="content">
+                                {%{answer}%}
+                            </div>
+                        </div>
+                        {%/if%}
+                    {%/each%}
+
+                </div>
+            </div>
+        </div>
+    </div>
+{%else%}
+	{%#if page.isEditOrDesignMode%}
+        <div style="text-align:center">
+            <spam   style="color: #999999;" >FAQ List<spam><br>
+            <img src="/etc/designs/default/0.gif" class="cq-list-placeholder"  style="width:80%;height:300px;">
+        </div>
+	{%/if%}
+{%/if%}
+
+

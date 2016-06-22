@@ -1,0 +1,48 @@
+<div id="myCarouselBanner" class="carousel slide carousel-fade" data-ride="carousel" data-interval="{% content.numberMultiplied %}">
+    <!-- Indicators -->
+    <ol class="carousel-indicators hidden">
+        <li data-target="#myCarouselBanner" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarouselBanner" data-slide-to="1"></li>
+        <li data-target="#myCarouselBanner" data-slide-to="2"></li>
+        <li data-target="#myCarouselBanner" data-slide-to="3"></li>
+    </ol>
+	{%#if content.homeSliderLinks %}
+        <div class="carousel-inner" role="listbox">
+            {%#each content.homeSliderLinks %}
+                <div class="item {%#if @first%}active" {%else%}"{%/if%} >
+                    <a href="{% this.path %}"  target="{% this.target %}">
+                        <img class="lazy img-responsive" src="{% this.homeSliderImageSpooled %}"
+                            data-src="{% this.homeSliderImageSpooled %}"
+                            alt="{% this.altText %}"/>
+                        <noscript><img class="img-responsive"
+                        src="{% this.homeSliderImageSpooled %}"
+                        alt="{% this.altText %}"></noscript>
+                        <div class="carousel-caption foundation_caption">
+                            <h1>{% this.firstLineImageCaption %}<span class="insert_newline"></span>{% this.secondLineImageCaption %}</h1>
+                        </div>
+                    </a>
+
+
+                </div>
+            {%/each%}
+        </div>
+    {%else%}
+		<img class="cq-carousel-placeholder cq-block-lg-placeholder" src="/etc/designs/default/0.gif" />
+    {%/if%}
+    <a class="home_banner_left left carousel-control hidden-xs" href="#myCarouselBanner" role="button"
+       data-slide="prev">
+            <span class="chevron_left" aria-hidden="true">
+                <img src="/static/images/lifestyle_home_prod_promo/white_arrow_l.png"
+                     alt="Home Banner Carousel Arrow Left">
+            </span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="home_banner_right right carousel-control hidden-xs" href="#myCarouselBanner" role="button"
+       data-slide="next">
+            <span class="chevron_right" aria-hidden="true">
+                <img src="/static/images/lifestyle_home_prod_promo/white_arrow_r.png"
+                     alt="Home Banner Carousel Arrow Left">
+            </span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>

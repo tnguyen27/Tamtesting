@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Contact Us Footer Dialog"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Configuration">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <footer jcr:primaryType="cq:Panel">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <footer-info
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="Click the '+' to add a new item"
+                                fieldLabel="Footer Info"
+                                name="./footerlist"
+                                xtype="multifield">
+                                <fieldConfig
+                                    jcr:primaryType="cq:Widget"
+                                    xtype="multifieldpanel">
+                                    <items jcr:primaryType="cq:WidgetCollection">
+                                        <category-label
+                                            jcr:primaryType="cq:Widget"
+                                            allowBlank="false"
+                                            fieldLabel="Category Title Label"
+                                            key="label"
+                                            xtype="textfield"/>
+                                        <category-link-label
+                                            jcr:primaryType="cq:Widget"
+                                            allowBlank="false"
+                                            fieldLabel="Link Label"
+                                            key="linkLabel"
+                                            xtype="textfield"/>
+                                        <category-link
+                                            jcr:primaryType="cq:Widget"
+                                            allowBlank="false"
+                                            fieldLabel="Category Link"
+                                            key="link"
+                                            linkPattern="\{0}.html"
+                                            rootPath="/content/metlife"
+                                            rootTitle="MetLife"
+                                            xtype="pathfield"/>
+                                        <description-label
+                                            jcr:primaryType="cq:Widget"
+                                            fieldLabel="Description"
+                                            key="description"
+                                            name="./descriptionLabel"
+                                            xtype="textfield"/>
+                                    </items>
+                                </fieldConfig>
+                            </footer-info>
+                        </items>
+                    </footer>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>

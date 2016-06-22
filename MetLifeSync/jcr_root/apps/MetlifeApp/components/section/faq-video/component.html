@@ -1,0 +1,94 @@
+
+
+
+    <div class="row">
+        <div class="col col-lg-12">
+			<div class="{%#if content.title%}faq_background{%else%}{%#if content.videotitle%}faq_background{%else%}{%#if content.faqtitle%}faq_background{%/if%}{%/if%}{%/if%}">
+                <div class="faq_container container">
+                    <div class="faq_and_video">
+                        {%#if content.title%}
+                        <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12 faq_header">
+                            <h1><h1>{%content.title%}</h1></h1>
+                        </div>
+                        {%/if%}
+
+                        <div class="faq_video col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                            <div class="help_video_text hidden-xs">
+                                {%content.videotitle%}
+                            </div>
+                            <div class="video_container">
+                                <div class="videoWrapper">
+                                    <!-- Start of Brightcove Player -->
+                                    <div style="display:none"></div>
+                                    <!-- By use of this code snippet, I agree to the Brightcove Publisher T and C
+                                    found at https://accounts.brightcove.com/en/terms-and-conditions/. -->
+
+
+                                    {%#if content.isBrightcove%}
+                                        {%#if content.brightcovevideoid%}
+                                        <script language="JavaScript" type="text/javascript" src="https://sadmin.brightcove.com/js/BrightcoveExperiences.js"></script>
+                                        <object id="myExperience3891257518001" class="BrightcoveExperience">
+                                            <param name="bgcolor" value="#FFFFFF"/>
+                                            <param name="width" value="480"/>
+                                            <param name="height" value="272"/>
+                                            <param name="playerID" value="2701241535001"/>
+                                            <param name="playerKey" value="AQ~~,AAAADvh-pwE~,v9t8LX0DjlsoW2DhueIG1jRpe9wXzNXL"/>
+                                            <param name="isVid" value="true"/>
+                                            <param name="isUI" value="true"/>
+                                            <param name="dynamicStreaming" value="true"/>
+                                            <param name="secureConnections" value="true"/>
+                                            <param name="secureHTMLConnections" value="true"/>
+                                            <param name="@videoPlayer" value="{%content.brightcovevideoid%}"/>
+                                        </object>
+                                        {%/if%}
+                                    {%else%}
+                                        {%#if content.youtubevideoid%}
+                                        <iframe width="420" height="345"
+                                                src="http://www.youtube.com/embed/{%content.youtubevideoid%}">
+                                        </iframe>
+                                        {%/if%}
+                                    {%/if%}
+                                    
+                                    <!-- End of Brightcove Player -->
+                                </div>
+                            </div>
+                            <div class="video_duration hidden-xs">{%content.videoduration%}</div>
+                            <div class="video_title hidden-xs">{%content.videodescription%}</div>
+                        </div>
+
+
+
+                        <div class="faq_list col-xs-12 col-sm-6 col-md-8 col-lg-8">
+                            <div class="faq_text">
+                                {%content.faqtitle%}
+                            </div>
+                            <div class="accordion">
+
+								{%#if content.faqtitle%}
+                                <div class="toggle-all"><span class="expandAll">Expand All</span> <span class="collapseAll">Collapse All</span></div>
+								{%/if%}	
+                                {%#each content.qalist%}
+                                    {%#if question%}
+
+                                        <div>
+                                            <div class="title">
+                                                <span>{%question%}</span>
+                                                <span class="expand"></span>
+                                            </div>
+                                            <div class="content">
+                                                {%{answer}%}
+                                            </div>
+                                        </div>
+                                    {%/if%}
+                                {%/each%}
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+

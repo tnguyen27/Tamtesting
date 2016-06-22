@@ -1,0 +1,15 @@
+#base=js
+
+authoring.js
+tilecontainer.js
+category-subnav.js
+cookie-banner.js
+multifieldpanel.js
+genericmultifield/genericgenericList.js
+genericmultifield/genericmultifield.js
+genericmultifield/genericcompositefield.js
+login.js
+news-room-article.js
+small-product-card.js
+forms.js
+country-selector.js

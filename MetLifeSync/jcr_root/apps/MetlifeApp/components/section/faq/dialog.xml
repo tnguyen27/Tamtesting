@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="620"
+    title="FAQ"
+    width="850"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <faq
+                jcr:primaryType="cq:Panel"
+                title="FAQ">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <qa-list
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Click the '+' to add a new item"
+                        fieldLabel="Q&amp;A List"
+                        name="./qalist"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            xtype="multifieldpanel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <question
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="false"
+                                    anchor="90%"
+                                    fieldLabel="Question"
+                                    key="question"
+                                    xtype="textfield"/>
+                                <answer
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="false"
+                                    anchor="90%"
+                                    fieldLabel="Answer"
+                                    height="160"
+                                    key="answer"
+                                    xtype="richtext">
+                                    <rtePlugins jcr:primaryType="nt:unstructured">
+                                        <subsuperscript
+                                            jcr:primaryType="nt:unstructured"
+                                            features="*"/>
+                                    </rtePlugins>
+                                </answer>
+                            </items>
+                        </fieldConfig>
+                    </qa-list>
+                </items>
+            </faq>
+            <button
+                jcr:primaryType="cq:Panel"
+                title="Button">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <expand
+                        jcr:primaryType="cq:Widget"
+                        anchor="90%"
+                        defaultValue="Expand All"
+                        fieldLabel="Expand"
+                        name="./expand"
+                        value="Expand All"
+                        xtype="textfield"/>
+                    <collapse
+                        jcr:primaryType="cq:Widget"
+                        anchor="90%"
+                        defaultValue="Collapse All"
+                        fieldLabel="Collapse"
+                        name="./collapse"
+                        value="Collapse All"
+                        xtype="textfield"/>
+                </items>
+            </button>
+        </items>
+    </items>
+</jcr:root>

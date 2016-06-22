@@ -1,0 +1,39 @@
+<ul class="col-sm-12">
+    {%#each global.topSection%}
+        <li class="col col-sm-4 accordionElement">
+            <a href="{%#if link%}{%link%}{%else%}#{%/if%}"
+               class="hidden-xs full_menu_Label">{%label%}
+                <span class="clickToOpen">&nbsp;</span></a>
+            <a href="#"
+               class="hidden-lg hidden-md hidden-sm full_menu_Label full_menu_mobile_label">{%label%}<span
+                    class="clickToOpen">&nbsp;</span></a>
+
+            <ul class="subCategories">
+            {%#each links%}
+                <li>
+                    <a href="{%link%}">{%label%}</a>
+                </li>
+            {%/each%}
+            </ul>
+        </li>
+    {%/each%}
+    <li class="col hidden-xs col-sm-12 mega-menu-divider"></li>
+
+    {%#each global.bottomSection%}
+    <li class="col col-sm-3 accordionElement">
+        <a href="{%#if link%}{%link%}{%else%}#{%/if%}"
+           class="hidden-xs full_menu_Label">{%label%}
+            <span class="clickToOpen">&nbsp;</span></a>
+        <a href="#"
+           class="hidden-lg hidden-md hidden-sm full_menu_Label full_menu_mobile_label">{%label%}<span
+                class="clickToOpen">&nbsp;</span></a>
+        <ul class="subCategories_bottom">
+            {%#each links%}
+            <li>
+                <a href="{%link%}">{%label%}</a>
+            </li>
+            {%/each%}
+        </ul>
+    </li>
+    {%/each%}
+</ul>

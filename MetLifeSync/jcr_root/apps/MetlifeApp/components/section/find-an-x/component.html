@@ -1,0 +1,149 @@
+{%#if content.locationsPath%}
+<div class="white_background_container container-fluid fao_container" data-fao-url="{%content.path%}.proximity">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="find_an_x_cta_search">
+					<a href="#" class="mobile_expand_close ">
+						<img src="/static/images/icons_header/icon_close_gray.png" alt="Close"/>
+					</a>
+
+					<div class="wrapper_container_cta_search">
+						<div class="input_field_container mobile_expand_open">
+							<input id="searchInput" class="cta_search" type="text"
+							       placeholder="{%content.searchPlaceholderText%}">
+							<a href="#" class="search_location_image"><img class="location_search_image"
+							                                               src="/static/images/related_info/icon_location.png"
+							                                               alt="Location Icon">
+							</a>
+						</div>
+						<div class="mobile_expand">
+							<select class="different_services_dropdown">
+								{%#each reference.specialties%}
+                                <option value="{%this%}">{%this%}</option>
+                                {%/each%}
+							</select>
+							<button class="btn-green directions_button" href="#" target="_self">{%content.findLabel%}</button>
+						</div>
+						<div class="errorSpan error_zip_code hidden">
+							<img class="error_arrow_img" src="/static/images/form/icon_form_error_up_arrow.png"
+							     alt="Arrow Image">
+							<img class="errorSpanImg" src="/static/images/form/icon_form_error.png" alt="">
+
+							<p>{%content.invalidZipCodeMessage%}</p>
+						</div>
+					</div>
+
+				</div>
+				<div class="fax-container">
+					<div class="fax-results-container clearfix">
+						<div class="maps-contact-form-container">
+							<div id="googleMapsContainer" class="google-maps-container hidden">
+							</div>
+							<button class="maps-button btn hidden hidden-lg hidden-md hidden-sm">{%content.moreMapLabel%}</button>
+							{%#include "contact-form" as="MetlifeApp/components/section/forms/contact-fao-search"%}{%/include%}
+						</div>
+						<div class="results_list_container">
+							<div class="display_container hidden">
+									<span>0</span> &nbsp; {%content.ofLabel%}
+									<span>0</span>
+									<span class="hidden-xs">&nbsp;| {%content.displayingLabel%}&nbsp;</span>
+								<select class="page-count drop-down form-control hidden-xs">
+									{%#each content.displayResultsOptions%}
+									<option value="{%this%}">{%this%}</option>
+                                    {%/each%}
+								</select>
+
+								<select class="find_an_office_radius form-control">
+                                    {%#each content.radiusOptions%}
+                                    <option value="{%this%}">{%this%} {%content.units%}</option>
+									{%/each%}
+								</select>
+								<div class="clearfix visible-xs"></div>
+							</div>
+
+							<div class="office_results_info">
+								<div class="default_results_text results_error_info">
+                                    {%content.emptyText%}
+								</div>
+							</div>
+							<div class="results_pagination hidden">
+								<ul class="pagination bootpag results_pagination_paginator">
+
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="directions-container clearfix hidden">
+						<div class="maps-contact-form-container">
+							<div id="googleDrivingMapsContainer" class="google-maps-container">
+							</div>
+						</div>
+						<div class="driving-direction-container">
+							<div class="hidden-xs get-directions-text">{%content.getDirectionsTitle%}</div>
+							<a href="#" class="back-click">< {%content.getDirectionsBackButton%}</a>
+
+							<div class="get-directions-buttons btn-group">
+								<button class="btn active" type="button" data-travel="DRIVING">
+									<img src="/static/images/Find_X/icon_car.png" class="gray-image hidden"
+									     alt="car button"/>
+									<img src="/static/images/Find_X/icon_car_white.png" class="white-image"
+									     alt="car button"/>
+								</button>
+								<button class="btn" type="button" data-travel="TRANSIT">
+									<img src="/static/images/Find_X/icon_train.png" class="gray-image"
+									     alt="train button"/>
+									<img src="/static/images/Find_X/icon_train_white.png"
+									     class="white-image hidden" alt="train button"/>
+								</button>
+								<button class="btn" type="button" data-travel="WALKING">
+									<img src="/static/images/Find_X/icon_walk.png" class="gray-image"
+									     alt="walk button"/>
+									<img src="/static/images/Find_X/icon_walk_white.png"
+									     class="white-image hidden" alt="walk button"/>
+								</button>
+							</div>
+							<!-- Directions Options Search Container-->
+							<div class="get-directions-form">
+								<div class="get-directions-from-address">
+									<div class="from-address-label">{%content.getDirectionsFrom%}</div>
+									<input type="text" class="from-address" placeholder="From"/>
+								</div>
+								<div class="get-directions-to-address">
+									<div class="to-address-label">{%content.getDirectionsTo%}</div>
+									<input type="text" class="to-address" placeholder="To" disabled/>
+								</div>
+								<div class="btn get_directions_button btn-green">{%content.getDirectionsButton%}</div>
+							</div>
+							<div class="clearfix"></div>
+							<div class="directions_error hidden">{%content.getDirectionsUnableToFound%}
+							</div>
+							<div class="driving-directions-panel hidden" id="drivingDirectionsPanel">
+								<!-- Directions Panel Container-->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="hidden">
+	<div class="G2_collection">{%content.g2Collection%}</div>
+	<div class="G2_collection_id">{%content.g2CollectionId%}</div>
+	<div class="G2_collection_type">{%content.g2CollectionType%}</div>
+	<div class="Radius_unit">{%content.radiusUnit%}</div>
+	<div class="getDirectionsText">{%content.getDirectionsText%}</div>
+	<div class="keywords_fax_error_server_busy">{%content.errorMessageServerBusy%}</div>
+	<div class="errorMsgtext_no_office_found">{%content.errorMessageNoOfficeFound%}</div>
+	<div class="keywords_fax_error_none_found">{%content.errorMessageNoOfficeFound%}</div>
+	<div class="errorMsgtext_no_location_entered">{%content.errorMessageNoLocationEntered%}</div>
+	<div class="pngPath_icon_locpin_blue">/static/images/Find_X/icon_locpin_blue.png</div>
+	<div class="pngPath_icon_locpin_blk">/static/images/Find_X/icon_locpin_blk.png</div>
+	<div class="get_direction_more_map">{%content.getDirectionMoreMap%}</div>
+	<div class="get_direction_less_map">{%content.getDirectionLessMap%}</div>
+	<div class="keywords_fax_get_directions_page_title">{%page.title%}</div>
+</div>
+
+{%/if%}

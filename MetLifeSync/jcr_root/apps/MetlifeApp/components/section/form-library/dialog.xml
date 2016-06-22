@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="700"
+    title="Form Library"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Configuration">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <header
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="false"
+                        fieldLabel="Header Text"
+                        name="./header"
+                        xtype="textfield"/>
+                    <most-downloaded
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="false"
+                        fieldLabel="Most Downloaded Text"
+                        name="./mostDownloadedText"
+                        xtype="textfield"/>
+                    <placeholder
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="false"
+                        fieldLabel="Select Placeholder"
+                        name="./placeholder"
+                        xtype="textfield"/>
+                    <products
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Products"
+                        name="./products"
+                        namespaces="[form-library-products]"
+                        xtype="tags"/>
+                </items>
+            </tab1>
+            <tab2
+                jcr:primaryType="cq:Panel"
+                title="Metadata">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <category_title
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="true"
+                        fieldDescription="500 characters max."
+                        fieldLabel="Category Title"
+                        maxLength="500"
+                        name="./category_title"
+                        xtype="textfield"/>
+                    <category_description
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="true"
+                        fieldDescription="500 characters max."
+                        fieldLabel="Category Description"
+                        maxLength="500"
+                        name="./category_description"
+                        xtype="textarea"/>
+                    <download_text
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="true"
+                        fieldDescription="500 characters max."
+                        fieldLabel="Download Text"
+                        maxLength="500"
+                        name="./download_text"
+                        xtype="textfield"/>
+                    <other_forms_title
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="true"
+                        fieldDescription="500 characters max."
+                        fieldLabel="Other Forms Title"
+                        maxLength="500"
+                        name="./other_forms_title"
+                        xtype="textfield"/>
+                    <other_forms_description
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="true"
+                        fieldDescription="500 characters max."
+                        fieldLabel="Other Forms Description"
+                        maxLength="500"
+                        name="./other_forms_description"
+                        xtype="textarea"/>
+                    <other_forms_details
+                        jcr:primaryType="cq:Widget"
+                        anchor="95%"
+                        hideLabel="{Boolean}true"
+                        name="./other_forms_details"
+                        removeSingleParagraphContainer="{Boolean}true"
+                        xtype="richtext">
+                        <rtePlugins jcr:primaryType="nt:unstructured">
+                            <subsuperscript
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                        </rtePlugins>
+                    </other_forms_details>
+                </items>
+            </tab2>
+        </items>
+    </items>
+</jcr:root>

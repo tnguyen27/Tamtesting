@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    xk_deserializeJSON="[content.leftLinks,content.rightLinks]"
+    xk_spoolContentImages="[leftLinksIcons,rightLinksIcons]"
+    xk_updatedMultifieldProperty="[content.leftLinksIconsSpooled>content.leftLinks.iconPath,content.rightLinksIconsSpooled>content.rightLinks.iconPath]"/>

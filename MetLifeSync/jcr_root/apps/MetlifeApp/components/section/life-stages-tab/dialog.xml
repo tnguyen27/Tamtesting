@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Life Stage Tab"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Stage Tab">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <titlefield
+                        jcr:primaryType="cq:Widget"
+                        title="Title"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <title
+                                jcr:primaryType="cq:Widget"
+                                anchor="95%"
+                                fieldLabel="First line"
+                                name="./titletab"
+                                xtype="textfield"/>
+                            <linetwo
+                                jcr:primaryType="cq:Widget"
+                                anchor="95%"
+                                fieldLabel="Second line"
+                                name="./lineTwotab"
+                                xtype="textfield"/>
+                        </items>
+                    </titlefield>
+                </items>
+            </tab1>
+            <image
+                jcr:primaryType="cq:Widget"
+                cropParameter="./imageCrop"
+                ddGroups="[media]"
+                fileNameParameter="./fileName"
+                fileReferenceParameter="./fileReference"
+                mapParameter="./imageMap"
+                name="./file"
+                requestSuffix=".img.png"
+                rotateParameter="./imageRotate"
+                title="Background Image"
+                xtype="html5smartimage"/>
+        </items>
+    </items>
+</jcr:root>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    twoLevelCuratedPathRefsKeyNames="[content.files]"
+    xk_containerClasses="[container searchable text-video-xk]"
+    xk_deserializeJSON="[content.files]"
+    xk_multiplyFactor="{Long}1000"
+    xk_placeholderTriggers="[content.title,content.subTitle,content.disclaimer]"
+    xk_spoolContentImages="fileIcons"
+    xk_updatedMultifieldProperty="[content.fileIconsSpooled>content.files.iconPath]"/>

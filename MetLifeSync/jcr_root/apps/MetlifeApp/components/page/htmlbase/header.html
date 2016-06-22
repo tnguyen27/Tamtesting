@@ -1,0 +1,113 @@
+{%>cookiebanner%}
+
+<!-- Global Header Begin ------------------------->
+<!-- Header Begin -->
+<header class="header">
+    <!-- Header starts -->
+    <div class="global_header col-xs-12">
+        <div class="headerLeft col-xs-4 col-sm-5">
+            <a class="mega_menu_open" href="#" title="fullMenu" data-menu-type="fullMenu">
+                <div class="icon pull-left">
+                    <img src="{%global.megaMenuImagePath%}" alt="{%global.megaMenuLabel%}">
+
+                </div>
+                <div class="label  hidden-xs hidden-sm">{%global.megaMenuLabel%}</div>
+            </a>
+            <a class="mega_menu_close hidden" href="#" title="close" data-menu-type="close">
+                <div class="icon pull-left">
+                    <img src="{%global.closeImagePath%}" alt="{%global.closeLabel%}">
+
+                </div>
+                <div class="label  hidden-xs hidden-sm">{%global.closeLabel%}</div>
+            </a>
+            <a id="headerHomeLink" class="globalHome hidden-xs" href="{%global.homeLink%}" title="close"
+               data-menu-type="globalHome">
+                <div class="icon pull-left">
+                    <img src="{%global.homeImagePath%}" alt="{%global.homeLabel%}">
+
+                </div>
+                <div class="label  hidden-sm">{%global.homeLabel%}</div>
+            </a>
+            <a class="search_open" href="#" title="search" data-menu-type="search_open" id="menuSearch">
+                <div class="icon pull-left">
+                    <img src="{%global.searchImagePath%}" alt="{%global.searchLabel%}"
+                         class="open_search_image">
+
+                </div>
+                <div class="label  hidden-xs hidden-sm">{%global.searchLabel%}</div>
+            </a>
+
+            <form name="metSearchForm" id="metSearchForm" action="{% global.searchLink %}" data-path-to-search-results="{% global.searchLink %} ">
+                <input type="text" id="searchInPage" class="searchBox hidden" placeholder="{% global.searchPlaceholderLabel %} " data-placeholder/>
+                <img src="{% global.searchFormImagePath %} "
+                     class="search_close search_close_not_mobile hidden search_submit" alt="Search Icon">
+            </form>
+
+        </div>
+        <div class="metlifeLogo col-xs-4 col-sm-2">
+            <div class="row">
+                <a id="headerLogoLink" href="{%global.logoLink%}">
+                    <img src="{%global.logoImagePath%}" alt="{%global.logoAltText%}"
+                         class="desktop-view"/>
+                </a>
+            </div>
+        </div>
+        <div class="headerRight col-xs-4 col-sm-5">
+            <div class="pull-right">
+                <a class="login_open {%#if global.redirectToLoginPage%} linkOnly {%/if%} pull-left" href="{%#if global.redirectToLoginPage%}{%global.loginPagePath%}{%else%}#{%/if%}" title="Login">
+                    <div class="label ">Log in</div>
+                    <div class="icon pull-right ">
+                        <img src="/static/images/icons_header/icon_lock.png" alt="Log In Icon">
+                    </div>
+                </a>
+                <a class="globalContact pull-left hidden-xs" href="#">
+                    <div class="label showContactBar" title="contact">Contact</div>
+
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Header ends -->
+
+    <!-- Search starts -->
+    <div class="hidden search_openTwoCon">
+        <form name="metSearchForm" id="metSearchFormMobile"  data-path-to-search-results="{% global.searchLink %}" >
+            <input type="text" id="Search" class="search_openTwo"  placeholder="{% global.searchPlaceholderLabel %} "
+                   data-placeholder />
+            <img src="{% global.searchFormImagePath %} "
+                 class="search_close search_close_mobile hidden search_submit" alt="Search Icon">
+        </form>
+    </div>
+    <!-- Search end -->
+
+    <!--Login open starts -->
+    {%#include "login" as="MetlifeApp/components/section/login"%}{%/include%}
+    <!--Login open ends -->
+
+    <!--Contact Sidebar starts -->
+    <div class="contactSliderOuterCon">
+        {%#include "contact-side-bar" as="MetlifeApp/components/section/forms/contact-sidebar-form"%}{%/include%}
+    </div>
+    <!--Contact Sidebar ends -->
+</header>
+<!-- Header End -->
+
+<!-- Mega Menu Begin -->
+<div class="megaMenu row">
+    <div class="fullMenu">
+        {%#include "mega-menu" as="MetlifeApp/components/section/mega-menu"%}{%/include%}
+    </div>
+
+</div>
+<!-- Mega Menu End -->
+
+<!-- Page Wrap Begin -->
+<div class="pageWrap"></div>
+<!-- Page Wrap End -->
+
+<!-- live chat script -->
+
+{%> livechatscripts %}
+
+<!-- end of live chat -->
+<!-- Global Header End ------------------------------>
