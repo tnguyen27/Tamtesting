@@ -1,0 +1,46 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Unsubscribe Customer Component
+* ------------------------------------------------------------------------------ *
+%}
+
+<div class="container bg-gray-1st email-unsub-wrapper" data-comp-spacing="email-unsub">
+    <div class="row wrapper email--unsubscribe">
+        <div class="email--unsubscribe--container">
+            <div class="email--unsubscribe-message">
+                {%{content.unsubscribeDescription}%}
+            </div>
+            <div class="email--unsubscribe-message email--unsubscribe--success-message hidden">
+                {%{content.thankYouMessage}%}
+            </div>
+            <div class="email--unsubscribe-form" data-url="/wps/faoproxy/MCDNSSService/emailPost.do">
+                <form id="unsubscribeForm" name="unsubscribeForm"
+                action="" method="post" enctype="multipart/form-data">
+                    <input type="hidden" name="pageFrom">
+                    <input type="hidden" value="email,pageFrom" name="sortOrder">
+                    <input type="hidden" id="id" value="dnss@metlife.com" name="id">
+                    <input type="hidden" id="subject" value="metlife.com unsubscribe email" name="subject">
+                    <input type="hidden" id="visitorID" name="visitorID">
+                    <input type="hidden" id="site" value="MetLife Online: Email Unsubscribe" name="site">
+                    <input type="hidden" name="thankYouPage">
+                    <input type="hidden" id="referrer" name="referrer">
+                    <input type="hidden" id="requestType">
+                    <input type="hidden" id="requiredFields" value="email" name="requiredFields">
+                    <input type="hidden" id="confirmationmailText"
+                    value="*****PLEASE DO NOT REPLY TO THIS AUTO-ACKNOWLEDGEMENT***** Dear 'Name', Thank You for contacting MetLife Online Support. We have received your inquiry, which will be personally reviewed by one of our consultants. Our normal response time is within 1-2 business days. We believe in world class service and will do everything we can to make sure that your inquiry is answered promptly and accurately. Should you wish to speak with a Customer Service Consultant you may call 866-881-0784 between the hours of 8am and 5pm, Central Time, Monday through Friday. Please be advised that some computers may have a firwewall or spam blocker, which may not allow our email to be received to you. Please be sure to add our email address to your address book, so that it will not be blocked. If you experience additional difficulties in receiving your email, we might suggest using a different computer. Your message identification number is 'MessageID'. Thank you, MetLife Online Customer Support 'Gurantees for the if in life.'"
+                    name="confirmationmailText">
+                    <input type="hidden" id="isLead" value="false" name="isLead">
+                    <div class="email--unsubscribe__form-fields">
+                        <label class="hidden" for="email">Email</label>
+                        <input name="email" id="email" type="text" class="form-user-ctrl"
+                        placeholder="{%content.emailPlaceholder%}"
+                        data-required="true" aria-required="true" data-valid-type="email">
+                        <button type="button" class="btn btn-brand-2nd js-emailUnsub">
+                            {%content.textOfButton%}
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

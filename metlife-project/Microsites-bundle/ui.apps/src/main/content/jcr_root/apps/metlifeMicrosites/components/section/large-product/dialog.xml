@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    activeTab="{Long}0"
+    helpPath="en/cq/current/wcm/default_components.html#Image"
+    xtype="tabpanel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <properties
+            jcr:primaryType="cq:Widget"
+            title="Properties"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <title
+                    jcr:primaryType="cq:Widget"
+                    anchor="95%"
+                    fieldLabel="Title"
+                    name="./title"
+                    xtype="textfield"/>
+                <buttonLink
+                    jcr:primaryType="cq:Widget"
+                    anchor="95%"
+                    fieldLabel="Link"
+                    linkPattern="\{0}.html"
+                    name="./buttonLink"
+                    rootPath="/content/metlife"
+                    rootTitle="MetLife"
+                    xtype="pathfield"/>
+                <link-target
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="false"
+                    anchor="95%"
+                    defaultValue="_self"
+                    fieldLabel="Open in"
+                    key="target"
+                    name="./targetQuote"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <self
+                            jcr:primaryType="nt:unstructured"
+                            text="Same Page"
+                            value="_self"/>
+                        <blank
+                            jcr:primaryType="nt:unstructured"
+                            text="New Page"
+                            value="_blank"/>
+                    </options>
+                </link-target>
+                <alt-text
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="false"
+                    anchor="95%"
+                    fieldLabel="Image Alt Text"
+                    name="./altText"
+                    xtype="textfield"/>
+                <config-list
+                    jcr:primaryType="cq:Widget"
+                    anchor="95%"
+                    collapsed="{Boolean}false"
+                    collapsible="{Boolean}true"
+                    title="List"
+                    xtype="dialogfieldset">
+                    <items jcr:primaryType="cq:WidgetCollection">
+                        <sections
+                            jcr:primaryType="cq:Widget"
+                            addItemLabel="Add Text"
+                            fieldDescription="Click the '+' to add a new text"
+                            fieldLabel="List"
+                            hideLabel="true"
+                            key="sections"
+                            maxItems="{Long}7"
+                            name="./texts"
+                            xtype="multifield">
+                            <fieldConfig
+                                jcr:primaryType="cq:Widget"
+                                xtype="multifieldpanel">
+                                <items jcr:primaryType="cq:WidgetCollection">
+                                    <text
+                                        jcr:primaryType="nt:unstructured"
+                                        anchor="95%"
+                                        fieldLabel="Item"
+                                        hideLabel="true"
+                                        key="itemList"
+                                        validateOnBlur="true"
+                                        xtype="textfield"/>
+                                </items>
+                            </fieldConfig>
+                        </sections>
+                        <sectionsfield
+                            jcr:primaryType="nt:unstructured"
+                            ignoreData="true"
+                            name="./texts@TypeHint"
+                            value="String[]"
+                            xtype="hidden"/>
+                    </items>
+                </config-list>
+            </items>
+        </properties>
+        <image
+            jcr:primaryType="cq:Widget"
+            cropParameter="./imageCrop"
+            ddGroups="media"
+            fileNameParameter="./fileName"
+            fileReferenceParameter="./fileReference"
+            mapParameter="./imageMap"
+            name="./file"
+            requestSuffix=".img.png"
+            rotateParameter="./imageRotate"
+            title="Image"
+            xtype="html5smartimage"/>
+    </items>
+</jcr:root>

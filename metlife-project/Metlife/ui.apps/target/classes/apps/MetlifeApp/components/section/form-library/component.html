@@ -1,0 +1,39 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Form Library Component
+* ------------------------------------------------------------------------------ *
+%}
+
+<div class="container-fluid">
+    <div class="row" >
+        <div class="col col-lg-12">
+            <div class="form_library_container searchable">
+                <div class="form_library_header">
+                    <div class="form_library_header_text">
+                        {%content.header%}
+                    </div>
+                    <select class="form_library_header_selector switch-objects form-control"
+                    data-forms-lib-url="{%content.path%}.results.product=">
+                        <option value="" selected disabled>{%content.placeholder%} </option>
+                        {%#each list.tags%}
+                        <option value="{%encodedId%}">{%title%}</option>
+                        {%/each%}
+                    </select>
+                </div>
+                <div class="results_content">
+                    <div class="form_library_forms_container_header life_insurance">{%content.mostDownloadedText%}</div>
+                    {%#include "form-library-most-downloaded" as="foundation/components/parsys"%}{%/include%}
+                </div>
+                <div class="results_pagination">
+                    <ul class="pagination bootpag results_pagination_paginator"></ul>
+                </div>
+                <div class="other-forms">
+                    <h1></h1>
+                    <span></span>
+                    <div></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>

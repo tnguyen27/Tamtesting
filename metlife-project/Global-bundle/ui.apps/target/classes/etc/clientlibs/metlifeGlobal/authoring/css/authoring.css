@@ -1,0 +1,42 @@
+/* Metlife Global authoring.css */
+
+/*
+    
+*/
+.contact-form.xk-placeholder:before {
+    content: 'Empty Contact Form';
+    font-size: 16px;
+    padding-left: 65px;
+}
+
+.contact-form.xk-placeholder > div{
+    display: none;
+}
+
+.form-user-grp.form-icon-wrapper > .icon{
+	display: none;
+}
+.pull-right.form-minimize > .icon.white {
+    display: none;
+}
+
+/*
+    Contact Us Container UK Component
+*/
+div.parbase.contactus-uk-container.xk-placeholder.xk-component:before {
+    content: 'Empty Contact Us variation 2 with filter';
+    font-size: 16px;
+    margin: 0 auto;
+}
+.contactus-uk-container.xk-placeholder{
+    height: 300px;
+    width: 1040px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: center;
+}
+.contactus-uk-container.xk-placeholder > div{
+    display: none;
+}

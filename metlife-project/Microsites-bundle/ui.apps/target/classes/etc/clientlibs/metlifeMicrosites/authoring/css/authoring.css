@@ -1,0 +1,175 @@
+.xk-placeholder {
+    background:#DDD;
+    border: 2px solid #A2A0A0;
+    color:#2377C5;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    padding: 10px;
+}
+
+/*
+    Microsites info module component
+*/
+.additional-info.xk-placeholder:before {
+    content: 'Empty Additional Info Module';
+    font-size: 16px;
+    padding-left: 65px;
+}
+.additional-info.xk-placeholder{
+    height: 100px;
+}
+.additional-info.xk-placeholder > div{
+    display: none;
+}
+
+/**
+Microsite disclaimer component
+**/
+.parbase.microsite-disclaimer.xk-placeholder:before {
+    content: 'Empty Microsite Disclaimer Component';
+    font-size: 15px;
+}
+.parbase.microsite-disclaimer.xk-placeholder {
+    width: 85%;
+    height: 100px;
+}
+
+/**
+Microsite Info Modules component
+**/
+.parbase.microsite-info-modules.xk-placeholder:before {
+    content: 'Empty Microsite Info Modules component';
+    font-size: 15px;
+}
+.parbase.microsite-info-modules.xk-placeholder {
+    width: 85%;
+    height: 100px;
+}
+
+/*
+    Microsites Banner Component
+*/
+.banner.xk-placeholder:before {
+    content: 'Empty Banner Component';
+    font-size: 16px;
+}
+.banner.xk-placeholder{
+    min-height: 250px;
+    margin-top: 20px;
+    width: 85%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: center;
+}
+.banner.xk-placeholder > div{
+    display: none;
+}
+
+/*
+    Microsites Two Column Bullets Component
+*/
+.sec-header.xk-placeholder:before {
+    content: 'Empty Two Column Bullets Component';
+    font-size: 16px;
+    padding-left: 170px;
+}
+.sec-header.xk-placeholder{
+    height: 269px;
+    width: 686px;
+    margin-left: 230px !important;
+}
+.sec-header.xk-placeholder > div{
+    display: none;
+}
+
+/*
+    Comparison Boxes Container
+*/
+.comparison-boxes-container.xk-placeholder:before {
+    content: 'Empty Comparison Boxes Container' !important;
+    font-size: 16px;
+}
+.comparison-boxes-container.xk-placeholder{
+    height: 269px;
+    width: 686px;
+    margin-left: 85px !important;
+}
+.comparison-boxes-container.xk-placeholder > div{
+    display: none;
+}
+
+/*
+    Large Product Container
+*/
+.large-product.xk-placeholder:before {
+    content: 'Empty Large Product Component' !important;
+    font-size: 16px;
+}
+.large-product.xk-placeholder{
+    height: 200px;
+    width: 286px;
+    margin-left: 85px !important;
+}
+.large-product.xk-placeholder > div{
+    display: none;
+}
+
+/*
+    Product Comparison Chart Container
+*/
+.prod-char-container.xk-placeholder:before {
+    content: 'Empty Comparison chart container' !important;
+    font-size: 16px;
+}
+
+.prod-char-container.xk-placeholder{
+    height: 250px !important;
+    width: 100% !important;
+    text-align: center;
+}
+.prod-char-container.xk-placeholder > div{
+    display: none;
+}
+
+/*
+    Product Comparison Chart
+*/
+
+.prod-comp-chart.xk-placeholder:before {
+    content: 'Empty Table' !important;
+    font-size: 16px;
+}
+.prod-comp-chart.xk-placeholder > div{
+    display: none;
+}
+
+/*
+    Microsites CTA Boxes
+*/
+.cta-boxes.xk-placeholder:before {
+    content: 'Empty Box';
+}
+.cta-boxes.xk-placeholder {
+    content: 'Empty Box';
+}
+
+/**
+    CTA Box Container
+*/
+.parbase.cta-boxes-container.base.subcategory-tile-container.xk-placeholder:before {
+    content: 'Empty CTA Box Container';
+}
+
+div.subcategory-tile-container.xk-placeholder {
+    height: 100px;
+	width:85%;
+
+}
+
+.cq-wcm-edit .cta-box-module > div[class*='cq-placeholder'] {
+    display: none;
+    border: none !important;
+    width: 0px;
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.0.0" localization="OSGI-INF/metatype/com.metlife.poc.servlets.SearchResultsServlet">
+    <OCD id="com.metlife.poc.servlets.SearchResultsServlet" name="%com.metlife.poc.servlets.SearchResultsServlet.name" description="%com.metlife.poc.servlets.SearchResultsServlet.description"/>
+    <Designate pid="com.metlife.poc.servlets.SearchResultsServlet">
+        <Object ocdref="com.metlife.poc.servlets.SearchResultsServlet"/>
+    </Designate>
+</metatype:MetaData>

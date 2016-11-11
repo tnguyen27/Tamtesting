@@ -1,0 +1,15 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Metlife HTML Base - Schema
+* ------------------------------------------------------------------------------ *
+%}
+
+{%#if page.disableBreadcrumb%}
+    {%#if content.EqualTo_4%}    {%! if page.disableBreadcrumb==enable  %}
+        {%#include "breadcrumb_schema" as="MetlifeApp/components/section/breadcrumb-schema"%}{%/include%}
+    {%/if%}
+{%else%}
+    {%#if content.EqualTo_5%}   {%! if global.disableBreadcrumb==enable  %}
+        {%#include "breadcrumb_schema" as="MetlifeApp/components/section/breadcrumb-schema"%}{%/include%}
+    {%/if%}
+{%/if%}

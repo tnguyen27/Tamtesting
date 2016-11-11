@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    imagesConfigList="[content::pdflink1::pdflinkSpooled1,content::pdflink2::pdflinkSpooled2,content::pdflink3::pdflinkSpooled3,content::pdflink4::pdflinkSpooled4,content::pdflink5::pdflinkSpooled5,content::pdflink6::pdflinkSpooled6,content::pdflink7::pdflinkSpooled7,content::pdflink8::pdflinkSpooled8,content::pdflink9::pdflinkSpooled9,content::pdflink10::pdflinkSpooled10,content::pdflink11::pdflinkSpooled11,content::pdflink12::pdflinkSpooled12]"
+    twoLevelCuratedPathRefsKeyNames="[content.newTable,content.buttonTitle]"
+    xk_addIdToElements="[content.buttonLink1,content.buttonLink2,content.buttonLink3,content.buttonLink4,content.buttonLink5,content.pdflink1,content.pdflink2,content.pdflink3,content.pdflink4,content.pdflink5,content.buttonLink6,content.buttonLink7,content.buttonLink8,content.buttonLink9,content.buttonLink10,content.buttonLink11,content.buttonLink12,content.pdflink6,content.pdflink7,content.pdflink8,content.pdflink9,content.pdflink10,content.pdflink11,content.pdflink12]"
+    xk_clientAccessible="{Boolean}false"
+    xk_containerClasses="[col-xs-6 col-sm-2 col-md-2 col-lg-2  carousel-item]"
+    xk_contentColumn="content.columnItems"
+    xk_copyToColumn="[content.button->buttonTitle,content.link->linkTitle,content.buttonLink->buttonLink,content.pdflinkSpooled->pdfLinkSpooled,content.targetButton->targetButton,content.targetLink->targetLink,content.buttonLinkId->buttonId,content.pdflinkId->linkId,content.optionLink->linkOption,content.enableLinks->enableLink]"
+    xk_deserializeJSON="[content.rows,content.buttonTitle]"
+    xk_numberOfColumns="content.numberOfColumns"
+    xk_outputTable="content.newTable"
+    xk_placeholderTriggers="[content.numberOfColumns,content.columnItems1]"/>

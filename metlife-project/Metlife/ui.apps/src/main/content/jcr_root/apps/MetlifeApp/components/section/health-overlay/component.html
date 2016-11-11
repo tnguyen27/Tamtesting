@@ -1,0 +1,232 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Health Overlay Component
+* ------------------------------------------------------------------------------ *
+%}
+
+<div class="container-fluid health_guidelines_overlay">
+    <div class="container rates-overlay health-guidelines-overlay">
+        <div class="row wrapper">
+            <div class="view-close">
+                <svg class="icon icon-close brand-gray-1st view-close">
+                    <use xlink:href="/static/images/icons-metlife.svg#icon-close"></use>
+                </svg>
+            </div>
+            <div class="view-header bg-gray-1st">
+                <h2>{% design.titleoverlay %}</h2>
+                <p>{%{design.subtitleoverlay}%}</p>
+            </div>
+            <div class="overlay-table-section bg-gray-1st">
+                <div class="view-nav view-nav--hidden bg-gray-1st text-center">
+                    <ul>
+                        <li class="active" data-target="health-class-1">Excellent</li>
+                        <li data-target="health-class-2">Very Good</li>
+                        <li data-target="health-class-3">Good</li>
+                    </ul>
+                </div>
+                <div class="view-content bg-white">
+                    <div class="overlay-table-layout active">
+                        <div class="overlay-table">
+                            <div class="rate_table rate_table--variation rate_table--variation-1 clearfix">
+                                <div class="content col-xs-12 col-sm-12 col-lg-12">
+                                    <div class="content_body--variation">
+                                        <div class="content_container">
+                                            <div class="window">
+                                                <table class="content_table table-striped">
+    
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content_temp">
+                                        <table>
+                                            <tbody>
+                                            <tr>
+                                                <td>Blood Pressure</td>
+                                                <td>130/80 or less, no medication</td>
+                                                <td>140/85 or less, no medication</td>
+                                                <td>145/90 or less, with medication</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Cholesterol</td>
+                                                <td>200 or less</td>
+                                                <td>220 or less</td>
+                                                <td>260 or less</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Substance Abuse</td>
+                                                <td>No history or treatment</td>
+                                                <td>No history or treatment</td>
+                                                <td>No history in past 10 years</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Family History</td>
+                                                <td>No death from cardiovascular disease or cancer in parents before age
+                                                    60,
+                                                    in siblings before age 65
+                                                </td>
+                                                <td>No death from cardiovascular disease or cancer in parents before age
+                                                    60,
+                                                    in siblings before age 65
+                                                </td>
+                                                <td>No death from cardiovascular disease or cancer in parents or
+                                                    siblings
+                                                    before age 60
+                                                </td>
+                                            </tr>
+    
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row bg-gray-1st view-content">
+                    <div class="disclaimer">
+                        {%{design.healthText}%}
+                    </div>
+                    <p class="overlay-table-section__description">{%{design.descriptionHealth}%}</p>
+                </div>
+            </div>
+            <div class="overlay-table-section bg-gray-1st">
+                <div class="row bg-gray-1st view-content">
+                    <overlay-table-section__title>{% design.titleHeight %}</overlay-table-section__title>
+                    <p class="overlay-table-section__subtitle">{%{design.descriptionHeight}%}</p>
+                </div>
+                <div class="view-nav view-nav--hidden bg-gray-1st text-center">
+                    <ul>
+                        <li class="active" data-target="health-class-1">Excellent</li>
+                        <li data-target="health-class-2">Very Good</li>
+                        <li data-target="health-class-3">Good</li>
+                    </ul>
+                </div>
+                <div class="view-content bg-white">
+                    <div class="overlay-table-layout active">
+                        <div class="overlay-table">
+                            <div class="rate_table rate_table--variation rate_table--variation-2 clearfix">
+                                <div class="content col-xs-12 col-sm-12 col-lg-12">
+                                    <div class="content_body--variation">
+                                        <div class="content_container">
+                                            <div class="window">
+                                                <table class="content_table table-striped">
+    
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content_temp">
+                                        <table>
+                                            <tbody>
+                                            <tr>
+                                                <td></td>
+                                                <td>M</td>
+                                                <td>F</td>
+                                                <td>M</td>
+                                                <td>F</td>
+                                                <td>M</td>
+                                                <td>F</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4'9"</td>
+                                                <td>125</td>
+                                                <td>121</td>
+                                                <td>132</td>
+                                                <td>125</td>
+                                                <td>143</td>
+                                                <td>137</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4'10"</td>
+                                                <td>130</td>
+                                                <td>125</td>
+                                                <td>136</td>
+                                                <td>130</td>
+                                                <td>148</td>
+                                                <td>141</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4'11"</td>
+                                                <td>135</td>
+                                                <td>130</td>
+                                                <td>141</td>
+                                                <td>135</td>
+                                                <td>153</td>
+                                                <td>146</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4'12"</td>
+                                                <td>139</td>
+                                                <td>134</td>
+                                                <td>146</td>
+                                                <td>139</td>
+                                                <td>158</td>
+                                                <td>152</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4'12"</td>
+                                                <td>139</td>
+                                                <td>134</td>
+                                                <td>146</td>
+                                                <td>139</td>
+                                                <td>158</td>
+                                                <td>152</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4'12"</td>
+                                                <td>139</td>
+                                                <td>134</td>
+                                                <td>146</td>
+                                                <td>139</td>
+                                                <td>158</td>
+                                                <td>152</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4'12"</td>
+                                                <td>139</td>
+                                                <td>134</td>
+                                                <td>146</td>
+                                                <td>139</td>
+                                                <td>158</td>
+                                                <td>152</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4'12"</td>
+                                                <td>139</td>
+                                                <td>134</td>
+                                                <td>146</td>
+                                                <td>139</td>
+                                                <td>158</td>
+                                                <td>152</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4'12"</td>
+                                                <td>139</td>
+                                                <td>134</td>
+                                                <td>146</td>
+                                                <td>139</td>
+                                                <td>158</td>
+                                                <td>152</td>
+                                            </tr>
+    
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row wrapper bg-gray-1st view-content">
+                    <div class="disclaimer">Use of cholesterol medications is acceptable provided cholesterol levels have
+                        been within range for 12 months.
+                    </div>
+                    <p class="overlay-table-section__description">Your health class is determined by medical history,
+                        current health and underwriting considerations. People in better health are judged to have a lower
+                        risk during their coverage periods and will pay lower premiums.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    imagesConfigList="[global::login/errorImage::loginErrorImagePath,global::logo/image::logoImagePath]"
+    twoLevelCuratedPathRefsKeyNames="[content.familyLinks3,content.familyLinks2,content.familyLinks1]"
+    xk_deserializeJSON="[content.familyLinks3,content.familyLinks2,content.familyLinks1,content.linksFirst,content.linksSecond,content.linksThird]"/>

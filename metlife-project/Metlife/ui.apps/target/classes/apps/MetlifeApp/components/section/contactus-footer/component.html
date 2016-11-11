@@ -1,0 +1,21 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Contact Us Footer Component
+* ------------------------------------------------------------------------------ *
+%}
+
+<div class="container">
+    <div class="row">
+        <div class="col col-lg-12">
+            <div class="contact-footer-wrapper">
+                {%#each content.footerlist%}
+                    <div class="contact-footer-category">
+                        <span class="category-title">{%label%}</span>
+                        <span class="category-link"><a href="{%link%}" target="{%target%}">{%linkLabel%}</a></span>
+                        <span class="category-description">{%description%}</span>
+                    </div>
+                {%/each%}
+            </div>
+        </div>
+    </div>
+</div>

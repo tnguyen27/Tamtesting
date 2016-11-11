@@ -1,0 +1,27 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Site Map Template
+* ------------------------------------------------------------------------------ *
+%}
+
+{%! Bread Crumb %}
+{%#include "bread-crumb" as="MetlifeApp/components/section/bread-crumb"%}{%/include%}
+
+{%! Click to Chat %}
+{%#include "click-to-chat-on-page-title" as="MetlifeApp/components/section/click-to-chat-on-page-title"%}{%/include%}
+
+{%! Page Title %}
+{%#include "page-title" as="MetlifeApp/components/section/page-title"%}{%/include%}
+
+{%! Site Map Component %}
+<div class="container no-link-farm">
+    <div class="row wrapper">
+        <div class="container">
+            <div class="sitemap--Links">
+                <div class="sitemap-link--Container">
+                    {%#include "sitemap-parsys" as="foundation/components/parsys"%}{%/include%}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

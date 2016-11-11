@@ -1,0 +1,18 @@
+{%!
+* Disclaimer Component for Press Article Template
+* ----------------------------------------------------------------------------- *
+* CHANGE HISTORY
+* -----------------------------------------------------------------------------
+* Version | Date       | Developer              | Changes
+* 1.0     | 2016/07/05 | Sergio Torres          | Initial Creation
+* 2.0     | 2016/08/26 | Sergio Torres          | Refactor
+* ----------------------------------------------------------------------------- *
+%}
+<!--Begin About Container-->
+<div class="row wrapper">
+    <div class="wrapper--news-article news-article__resources width-80">
+        {%#if content.disclaimerComponentText%}
+            {%{content.disclaimerComponentText}%}
+        {%/if%}
+    </div>
+</div>

@@ -1,0 +1,27 @@
+{%!
+*
+* -----------------------------------------------------------------------------
+* CHANGE HISTORY
+* -----------------------------------------------------------------------------
+* Version | Date       | Developer      | Changes
+* 1.0     | 05/12/2016 | Diego Tello | Phase 2 html update
+* -----------------------------------------------------------------------------
+%}
+<div class="{%#if content.hidden%}hidden-field{%else%}row form-row{%/if%}">
+    <div class="form-user-grp">
+        <label for="{%content.clrField%}" class="hidden">{%content.label%}</label>
+        <input type="text"
+               class="form-user-ctrl"
+               data-required="true"
+               aria-required="true"
+               id="{%content.clrField%}"
+               name="{%content.clrField%}"
+               title="{%content.title%}"
+               pattern=""
+               placeholder="{%content.placeholder%}"
+               data-valid-type="{%content.validType%}"/>
+        <span class="errorSpan"><img class="errorSpanImg"
+                                     src="/static/images/form/icon_form_error.png"
+                                     alt="! Error Image">{%content.errorMessage%}</span>
+    </div>
+</div>

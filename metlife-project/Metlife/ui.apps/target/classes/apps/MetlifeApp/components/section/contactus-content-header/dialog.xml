@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="600"
+    title="ContactUs/Content Header Dialog"
+    width="800"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Configuration">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <header
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Header"
+                        name="./header"
+                        xtype="textfield"/>
+                    <subHeading
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Sub-Heading"
+                        name="./subHeading"
+                        xtype="textarea"/>
+                    <paragraphHeader
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Paragraph Header"
+                        name="./paragraph"
+                        xtype="textfield"/>
+                    <body
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Body Text"
+                        height="600"
+                        name="./bodyText"
+                        xtype="richtext">
+                        <rtePlugins jcr:primaryType="nt:unstructured">
+                            <styles
+                                jcr:primaryType="nt:unstructured"
+                                features="*">
+                                <styles jcr:primaryType="cq:WidgetCollection">
+                                    <large-title
+                                        jcr:primaryType="nt:unstructured"
+                                        cssName="large-title"
+                                        text="Large Title Label"/>
+                                    <tel-right
+                                        jcr:primaryType="nt:unstructured"
+                                        cssName="tel-right-large"
+                                        text="Tel Right"/>
+                                    <tel-right-small
+                                        jcr:primaryType="nt:unstructured"
+                                        cssName="tel-right-small"
+                                        text="Tel Right Small"/>
+                                    <tel-category
+                                        jcr:primaryType="nt:unstructured"
+                                        cssName="tel-category"
+                                        text="Tel Category"/>
+                                </styles>
+                            </styles>
+                        </rtePlugins>
+                    </body>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>

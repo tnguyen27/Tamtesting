@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="550"
+    title="Contextual Links Home Dialog"
+    width="700"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Configuration">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        anchor="90%"
+                        fieldLabel="Title"
+                        maxLength="40"
+                        name="./title"
+                        width="414"
+                        xtype="textfield"/>
+                    <contextualLinksHome
+                        jcr:primaryType="cq:Widget"
+                        addItemLabel="Add a new Contextual Link"
+                        fieldDescription="Click the '+' to add a new link (Min:4, Max:4)"
+                        fieldLabel="Contextual Links Home"
+                        hideLabel="false"
+                        name="./contextualLinks"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            xtype="multifieldpanel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <description
+                                    jcr:primaryType="nt:unstructured"
+                                    allowBlank="false"
+                                    anchor="90%"
+                                    fieldLabel="Description"
+                                    key="description"
+                                    width="265"
+                                    xtype="textarea"/>
+                                <image
+                                    jcr:primaryType="nt:unstructured"
+                                    allowBlank="false"
+                                    anchor="90%"
+                                    fieldLabel="Image"
+                                    key="contextualLinkImage"
+                                    name="./contextualLinkImages/fileReferences"
+                                    rootPath="/content/dam"
+                                    validateOnBlur="true"
+                                    xtype="pathfield"/>
+                                <altText
+                                    jcr:primaryType="nt:unstructured"
+                                    allowBlank="false"
+                                    anchor="90%"
+                                    fieldLabel="Alt Text"
+                                    key="altText"
+                                    validateOnBlur="true"
+                                    xtype="textfield"/>
+                                <link
+                                    jcr:primaryType="nt:unstructured"
+                                    allowBlank="false"
+                                    anchor="90%"
+                                    fieldLabel="Link"
+                                    key="link"
+                                    linkPattern="\{0}.html"
+                                    rootPath="/content/metlife"
+                                    rootTitle="MetLife"
+                                    width="265"
+                                    xtype="pathfield"/>
+                                <link-target
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="false"
+                                    anchor="95%"
+                                    defaultValue="_self"
+                                    fieldLabel="Open in"
+                                    key="target"
+                                    type="select"
+                                    xtype="selection">
+                                    <options jcr:primaryType="cq:WidgetCollection">
+                                        <self
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Same Page"
+                                            value="_self"/>
+                                        <blank
+                                            jcr:primaryType="nt:unstructured"
+                                            text="New Page"
+                                            value="_blank"/>
+                                    </options>
+                                </link-target>
+                            </items>
+                        </fieldConfig>
+                    </contextualLinksHome>
+                    <contextualLinkImagesField
+                        jcr:primaryType="nt:unstructured"
+                        ignoreData="true"
+                        name="./contextualLinks@TypeHint"
+                        value="String[]"
+                        xtype="hidden"/>
+                    <imageNode
+                        jcr:primaryType="nt:unstructured"
+                        ignoreData="true"
+                        name="./contextualLinkImages/sling:resourceType"
+                        value="xumakbase/components/section/base"
+                        xtype="hidden"/>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>

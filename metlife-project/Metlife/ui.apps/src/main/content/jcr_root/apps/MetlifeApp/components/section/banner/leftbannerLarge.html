@@ -1,0 +1,25 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Promo Tile Component - Left Banner Large
+* ------------------------------------------------------------------------------ *
+%}
+
+<div class="product-row__tile__img-tile__img "
+     style="background-image: url({%content.imagePath%}); ">
+</div>
+<div class="product-row__tile--img-tile__text ">
+    <div class="product-row__tile--img-tile__text--left">
+        <div class="product-row__tile__promo white">{%content.headline%}
+        </div>
+        <p class="white">{%content.description%}</p>
+    </div>
+    <div  class="product-row__tile--img-tile__text--right">
+        {%#if content.buttonText%}
+            <a href="{%content.link%}" 
+            	class="btn-brand-2nd table" 
+                id="{%content.linkId%}LeftLarge"
+                target="{%content.target%}">{%content.buttonText%}</a>
+        {%/if%}
+
+    </div>
+</div>

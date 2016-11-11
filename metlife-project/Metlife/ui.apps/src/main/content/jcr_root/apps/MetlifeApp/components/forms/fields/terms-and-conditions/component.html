@@ -1,0 +1,25 @@
+{%!
+*
+* -----------------------------------------------------------------------------
+* CHANGE HISTORY
+* -----------------------------------------------------------------------------
+* Version | Date       | Developer      | Changes
+* 1.0     | 5/12/2016 | Diego Tello | Phase 2 html update
+* -----------------------------------------------------------------------------
+%}
+<div class="{%#if content.hidden%}hidden{%else%}row form-row{%/if%}">
+    <div class=" col-xs-12">
+        <div class="form-check-grp">
+            <label for="{%content.clrField%}">
+                <input name="{%content.clrField%}" id="{%content.clrField%}" type="checkbox"
+                       data-required="true" aria-required="true"
+                       class="user-checkbox" value="Terms and conditions"><span><a
+                    href="{%#if content.url%}{%content.url%}{%else%}#{%/if%}" title="{%content.title%}">{%content.label%}</a></span>
+            </label>
+            <span class="errorSpan">
+                <img class="errorSpanImg" src="/static/images/form/icon_form_error.png" alt="! Error Image">
+                {%content.errorMessage%}
+            </span>
+        </div>
+    </div>
+</div>

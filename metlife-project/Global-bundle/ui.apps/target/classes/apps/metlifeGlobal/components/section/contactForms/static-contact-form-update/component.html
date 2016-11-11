@@ -1,0 +1,427 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Static Contact Form Update
+* ------------------------------------------------------------------------------ *
+%}
+
+<div class="contact-us__contact-form">
+	<form class="userForm generic-form"
+		  name="contact-us-form"
+		  enctype="multipart/form-data"
+		  method="post"
+		  action=""
+		  data-fid="updateInfoForm"
+		  data-form-Type="glu"
+		  id="updateInfoForm"
+		  data-url="/MLGlobalLead/leadservice/ProcessGLUlead"
+		  data-domain="https://www.metlife.it/_Assets/">
+		<input type="hidden" id="form_fields" name="form_fields"
+			   value="FirstName,LastName,BirthDate,AddrLine,PhNum,MobileNumber,PrefComm,City,PartyTypeCode,LeadBasedOn,GovtID,PolicyNum,EmployerName,EmployerSize,LeadDesc,Line1,City,Zip,EmployerNatureOfBusiness">
+		<input type="hidden" id="request_type" name="request_type" value="Lead">
+		<input type="hidden" name="region" value="LATAM">
+		<input type="hidden" name="country" value="ARGENTINA">
+		<input type="hidden" id="post_url" name="post_url" value="">
+		<input type="hidden" name="PublishedDate" value="5/27/2016 3:24:03 PM">
+		<input type="hidden" id="Domain" name="Domain" value="">
+		<input type="hidden" id="xmlformname" name="xmlformname" value="Updatecontact">
+		<input type="hidden" id="LanguageValue" name="LanguageValue" value="">
+
+		<input type="hidden" id="AnalyticsChannelName" name="AnalyticsChannelName" value="">
+		<input type="hidden" id="AnalyticsSourceName" name="AnalyticsSourceName" value="">
+		<input type="hidden" id="AnalyticsCampnCont" name="AnalyticsCampnCont" value="">
+		<input type="hidden" id="AnalyticsCampnName" name="AnalyticsCampnName" value="">
+		<input type="hidden" id="AnalyticsCampnTermKey" name="AnalyticsCampnTermKey" value="">
+		<input type="hidden" id="actual_market" name="actual_market" value="00Nb0000006Nluy">
+		<input type="hidden" id="LeadAssociatedSourceDesc" name="LeadAssociatedSourceDesc" value="">
+		<input type="hidden" id="QuoteInfo" name="QuoteInfo" value="">
+
+		<input type="hidden" id="Form_submission_ReferralURL" name="Form_submission_ReferralURL" value="">
+		<input type="hidden" id="Form_submission_ReferralURL_type" name="Form_submission_ReferralURL_type" value="hidden">
+		<input type="hidden" id="Form_submission_ReferralURL_label" name="Form_submission_ReferralURL_label" value="Form submission ReferralURL">
+		<input type="hidden" id="Form_submission_ReferralURL_validationType" name="Form_submission_ReferralURL_validationType" value="none">
+		<input type="hidden" id="Form_submission_ReferralURL_state" name="Form_submission_ReferralURL_state" value="enabled">
+
+		<div class="required-section">
+
+			<div class="form-section">
+				<div class="form-section-header">
+					<span class="form-section-title">{%content.prodDetailTitle%}</span>
+					<span class="form-section-status">{%content.prodDetailStatus%}</span>
+				</div>
+
+				<div class="row form-row left-column">
+					<div class="col-xs-12">
+						<div class="form-user-grp">
+							<label for="PolicyNum" class="hidden">PolicyNum</label>
+							<input type="text" class="form-user-ctrl observe-PartyTypeCode observe-LeadBasedOn"
+								   data-required="true" aria-required="true" id="PolicyNum" name="PolicyNum"
+								   title="{%content.leadBasedOnPolicyNumber%}" placeholder="{%content.leadBasedOnPolicyNumber%}">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="form-section">
+				<div class="form-section-header">
+					<span class="form-section-title">{%content.personalInfoTitle%}</span>
+					<span class="form-section-status">{%content.personalInfoStatus%}</span>
+				</div>
+
+
+				<div class="row form-row left-column">
+					<div class="col-xs-12">
+						<div class="form-user-grp">
+							<label for="FirstName" class="hidden">First Name</label>
+							<input type="text" class="form-user-ctrl" data-required="true"
+								   aria-required="true"
+								   id="FirstName" name="FirstName" title="{%content.firstName%}" placeholder="{%content.firstName%}">
+						</div>
+					</div>
+				</div>
+				<div class="row form-row right-column">
+					<div class="col-xs-12">
+						<div class="form-user-grp">
+							<label for="LastName" class="hidden">Last Name</label>
+							<input type="text" class="form-user-ctrl" data-required="true"
+								   aria-required="true"
+								   id="LastName" name="LastName" title="{%content.lastName%}" placeholder="{%content.lastName%}">
+						</div>
+					</div>
+				</div>
+				<div class="row form-row left-column">
+					<div class="col-xs-12">
+						<div class="form-user-grp">
+							<label for="PhNum" class="hidden">Phone</label>
+							<input type="tel" class="form-user-ctrl required" data-required="true"
+								   aria-required="true"
+								   id="PhNum" name="PhNum" title="{%content.phone%}"
+								   placeholder="{%content.phone%}">
+						</div>
+					</div>
+				</div>
+
+				<div class="row form-row right-column">
+					<div class="col-xs-12">
+						<div class="form-user-grp">
+							<label for="MobileNumber" class="hidden">Mobile Phone</label>
+							<input type="tel" class="form-user-ctrl" data-required="true"
+								   aria-required="true"
+								   id="MobileNumber" name="MobileNumber"
+								   placeholder="{%content.mobilePhone%}">
+
+						</div>
+					</div>
+				</div>
+				<div class="row form-row left-column">
+					<div class="col-xs-12">
+						<div class="form-user-grp">
+							<label for="AddrLine" class="hidden">Email</label>
+							<input type="text" class="form-user-ctrl" data-required="true" aria-required="true"
+								   id="AddrLine" name="AddrLine" title="{%content.email%}"
+								   placeholder="{%content.email%}" data-valid-type="email">
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="optional-section">
+
+			<div class="form-section">
+				<div class="form-section-header">
+					<span class="form-section-title">{%content.optPersonalInfoTitle%}</span>
+					<span class="form-section-status">{%content.optPersonalInfoStatus%}</span>
+				</div>
+
+				<div class="row form-row">
+					<div class="col-xs-12">
+						<div class="form-user-grp">
+							<label for="Line1" class="hidden">Address</label>
+							<input type="text" name="Line1" id="Line1" class="form-user-ctrl" title="{%content.address%}"
+								   placeholder="{%content.address%}"
+								   data-required="true" aria-required="true">
+						</div>
+					</div>
+				</div>
+				<div class="row form-row left-column">
+					<div class="col-xs-12">
+						<div class="form-user-grp">
+							<label for="City" class="hidden">City</label>
+							<input type="text" class="form-user-ctrl" data-required="true"
+								   aria-required="true"
+								   id="City" name="City"
+								   placeholder="{%content.city%}">
+						</div>
+					</div>
+				</div>
+				<div class="row form-row right-column">
+					<div class="col-xs-12">
+						<div class="form-user-grp">
+							<label for="Zip" class="hidden">Zip</label>
+							<input name="Zip" id="Zip" type="text" class="form-user-ctrl"
+								   placeholder="{%content.zip%}"
+								   data-valid-type="zip">
+						</div>
+					</div>
+				</div>
+				<div class="row form-row left-column">
+					<div class="col-xs-12">
+						<div class="form-user-grp">
+							<label for="EmployerNatureOfBusiness" class="hidden">Nature of Business</label>
+							<input name="EmployerNatureOfBusiness" id="EmployerNatureOfBusiness" type="text"
+								   class="form-user-ctrl"
+								   placeholder="{%content.employerNatureOfBusiness%}">
+						</div>
+					</div>
+				</div>
+				<div class="row form-row right-column">
+					<div class="col-xs-12">
+						<div class="form-user-grp">
+							<label for="EmployerName" class="hidden">Company Name</label>
+							<input name="EmployerName" id="EmployerName" type="text" class="form-user-ctrl"
+								   placeholder="{%content.employerName%}">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="form-section">
+				<div class="form-section-header">
+					<span class="form-section-title">{%content.ref1Title%}</span>
+				</div>
+
+				<div class="row form-row left-column">
+					<div class="col-xs-12">
+						<div class="form-user-grp">
+							<label class="hidden">Name</label>
+							<input type="text" class="form-user-ctrl" data-required="true"
+								   aria-required="true"
+								   name="ref1Name"
+								   title="{%content.ref1Name%}" placeholder="{%content.ref1Name%}">
+						</div>
+					</div>
+				</div>
+
+				<div class="row form-row right-column">
+					<div class="col-xs-12">
+						<div class="form-user-grp">
+							<label class="hidden">Phone</label>
+							<input type="text" class="form-user-ctrl required" data-required="true"
+								   aria-required="true"
+								   title="{%content.ref1Phone%}"
+								   name="ref1Phone"
+								   placeholder="{%content.ref1Phone%}">
+						</div>
+					</div>
+				</div>
+
+				<div class="row form-row left-column">
+					<div class="col-xs-12">
+						<div class="form-user-grp">
+							<label class="hidden">Email</label>
+							<input type="text" class="form-user-ctrl" data-required="true"
+								   aria-required="true"
+								   title="{%content.ref1Email%}"
+								   name="ref1Email"
+								   placeholder="{%content.ref1Email%}" data-valid-type="email">
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="form-section">
+				<div class="form-section-header">
+					<span class="form-section-title">{%content.ref2Title%}</span>
+				</div>
+
+				<div class="row form-row left-column">
+					<div class="col-xs-12">
+						<div class="form-user-grp">
+							<label class="hidden">Name</label>
+							<input type="text" class="form-user-ctrl" data-required="true"
+								   aria-required="true"
+								   name="ref2Name" title="{%content.ref2Name%}" placeholder="{%content.ref2Name%}">
+						</div>
+					</div>
+				</div>
+				<div class="row form-row right-column">
+					<div class="col-xs-12">
+						<div class="form-user-grp ">
+							<label class="hidden">Phone</label>
+							<input type="text" class="form-user-ctrl required" data-required="true"
+								   aria-required="true"
+								   name="ref2Phone"
+								   title="{%content.ref2Phone%}"
+								   placeholder="{%content.ref2Phone%}">
+						</div>
+					</div>
+				</div>
+				<div class="row form-row left-column">
+					<div class="col-xs-12">
+						<div class="form-user-grp">
+							<label class="hidden">Email</label>
+							<input type="text" class="form-user-ctrl" data-required="true"
+								   aria-required="true"
+								   title="{%content.ref2Email%}"
+								   name="ref2Email"
+								   placeholder="{%content.ref2Email%}" data-valid-type="email">
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="contactSidebarBtns">
+			<button type="submit"
+					class="contatMeSidebarBtn form-submit border-radius-rounded btn btn-brand-2nd"
+					data-fsubmit="updateInfoForm"
+					data-proctext="Procesando"
+					data-submit-type="glu">{%content.buttonLabel%}
+			</button>
+		</div>
+		<script type="text/javascript">
+			if (typeof SFDC === "undefined") {
+				var SFDC = {};
+				SFDC.form = [];
+			}
+			// JSON data for form fields
+			SFDC.form.push({
+				// List of fields generated by the back-end
+				type: "updateInfoForm",
+				fields: [
+					{
+						id: 'PolicyNum',
+						type: 'text',
+						tooltip: '',
+						options: [],
+						description: '',
+						validator: 'required',
+						observes: [],
+						hidden: true
+					},
+					{
+						id: 'FirstName',
+						type: 'text',
+						tooltip: '',
+						options: [],
+						description: '',
+						validator: 'required',
+						observes: [],
+						hidden: false
+					},
+					{
+						id: 'LastName',
+						type: 'text',
+						tooltip: '',
+						options: [],
+						description: '',
+						validator: 'required',
+						observes: [],
+						hidden: false
+					},
+					{
+						id: 'PhNum',
+						type: 'tel',
+						tooltip: '',
+						options: [],
+						description: '',
+						validator: 'numeric_Req',
+						observes: [],
+						hidden: false
+					},
+					{
+						id: 'MobileNumber',
+						type: 'tel',
+						tooltip: '',
+						options: [],
+						description: '',
+						validator: 'numeric_Req',
+						observes: [],
+						hidden: false
+					},
+					{
+						id: 'AddrLine',
+						type: 'text',
+						tooltip: '',
+						options: [],
+						description: '',
+						validator: 'email_Req',
+						observes: [],
+						hidden: false
+					},
+					{
+						id: 'Line1',
+						type: 'text',
+						tooltip: '',
+						options: [],
+						description: '',
+						validator: false,
+						observes: [],
+						hidden: false
+					},
+					{
+						id: 'City',
+						type: 'text',
+						tooltip: '',
+						options: [],
+						description: '',
+						validator: false,
+						observes: [],
+						hidden: false
+					},
+					{
+						id: 'Zip',
+						type: 'text',
+						tooltip: '',
+						options: [],
+						description: '',
+						validator: 'numeric',
+						observes: [],
+						hidden: false
+					},
+					{
+						id: 'EmployerNatureOfBusiness',
+						type: 'text',
+						tooltip: '',
+						options: [],
+						description: '',
+						validator: false,
+						observes: [],
+						hidden: false
+					},
+					{
+						id: 'EmployerName',
+						type: 'text',
+						tooltip: '',
+						options: [],
+						description: '',
+						validator: false,
+						observes: [],
+						hidden: false
+					},
+					{
+						id: 'LeadDesc',
+						type: 'textArea',
+						tooltip: '',
+						options: [],
+						description: '',
+						validator: false,
+						observes: [],
+						hidden: false
+					}]
+			});
+		</script>
+	</form>
+	{%{content.disclaimer}%}
+</div>
+<div class="contactSideThankyou" id="contactus_lead_thankyou">
+	<div class="thanksHeaderText">{%content.thankYouMessageTitle%}</div>
+	<div class="thanksSubText">{%content.thankYouMessageContent%}</div>
+</div>
+<div class="contactSideSubmitError" id="contactus_lead_submit_error">
+	<div class="thanksHeaderText">{%content.errorMessageTitle%}</div>
+	<div class="thanksSubText">{%content.errorMessageContent%}</div>
+</div>

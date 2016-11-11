@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="450"
+    title="Letter List Dialog"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Configuration">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <letters
+                        jcr:primaryType="cq:Widget"
+                        addItemLabel="Add Letter"
+                        anchor="95%"
+                        fieldDescription="Click the '+' to add a new letter"
+                        fieldLabel="Letters List"
+                        key="letters"
+                        minItems="{Long}1"
+                        name="./lettersList"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            allowBlank="false"
+                            anchor="98%"
+                            key="letter"
+                            validateOnBlur="true"
+                            xtype="textfield"/>
+                    </letters>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>

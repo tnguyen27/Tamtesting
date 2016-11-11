@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Panel"
+    itemId="observesTab"
+    title="Observes">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <field
+            jcr:primaryType="nt:unstructured"
+            fieldLabel="Field"
+            itemId="observeField"
+            name="./observes"
+            optionsProvider="function(path,record) { return Metlife.Forms.Observes.observesOptionsProvider(path, record);}"
+            type="select"
+            xtype="selection">
+            <listeners
+                jcr:primaryType="nt:unstructured"
+                selectionchanged="function(selection, value, isChanged) { Metlife.Forms.Observes.observeFieldChange(selection, value, isChanged);}"/>
+        </field>
+        <value
+            jcr:primaryType="nt:unstructured"
+            fieldLabel="Value"
+            itemId="observeValue"
+            name="./observesValue"
+            type="select"
+            xtype="selection">
+            <listeners
+                jcr:primaryType="nt:unstructured"
+                beforeloadcontent="function(field,record,path){Metlife.Forms.Observes.beforeObserveValueLoad(field,record,path);}"/>
+        </value>
+    </items>
+</jcr:root>

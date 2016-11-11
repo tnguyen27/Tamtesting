@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    xk_addIdToElements="[content.homeSliderLinks]"
+    xk_deserializeJSON="[content.homeSliderLinks]"
+    xk_multiplyFactor="{Long}1000"
+    xk_multiplyNumberfieldProperty="content.rotationTime"
+    xk_spoolContentImages="homeSliderImages"
+    xk_updatedMultifieldProperty="[content.homeSliderImagesSpooled>content.homeSliderLinks.homeSliderImageSpooled]">
+    <homeSliderImages
+        jcr:primaryType="nt:unstructured"
+        xk_renditions="[1900,1280,1024,768,480]"/>
+</jcr:root>

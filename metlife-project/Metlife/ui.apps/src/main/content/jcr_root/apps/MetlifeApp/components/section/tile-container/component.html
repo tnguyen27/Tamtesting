@@ -1,0 +1,31 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Product Tiles Container Component
+* ------------------------------------------------------------------------------ *
+%}
+
+<div class="container bg-gray-1st product-tiles-wrapper" data-comp-spacing="product-tiles">
+    <div class="row wrapper in_view">
+        <div class="product-row">
+            {%! 'type' is true only if the tile type is promotion %}
+            {%#each list.tiles%}
+                {%#if type%}
+                    {%#if content.banner%}
+                        {%#include title as="MetlifeApp/components/section/banner2x"%}{%/include%}
+                    {%else%}
+                        {%#include title as="MetlifeApp/components/section/promotion-tile"%}{%/include%}
+                    {%/if%}
+                {%else%}
+                    {%#if content.onlyBanner%}
+                        {%#include title as="MetlifeApp/components/section/banner2x"%}{%/include%}
+                    {%else%}
+                        {%#include title as="MetlifeApp/components/section/product-tile"%}{%/include%}
+                    {%/if%}
+                {%/if%}
+            {%/each%}
+        </div>
+    </div>
+</div>
+{%#if page.isEditMode%}
+    <div style="clear:both;"></div>
+{%/if%}

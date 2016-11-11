@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Template"
+    jcr:title="Microsites Detail Page"
+    allowedChildren="[/apps/metlifeMicrosites/templates/page-detail]"
+    allowedParents="[/apps/metlifeMicrosites/templates/home,/apps/metlifeMicrosites/templates/page-detail]"
+    allowedPaths="[/content(/.*)?]"
+    ranking="{Long}100">
+    <jcr:content
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="metlifeMicrosites/components/page/microsite-page"/>
+</jcr:root>

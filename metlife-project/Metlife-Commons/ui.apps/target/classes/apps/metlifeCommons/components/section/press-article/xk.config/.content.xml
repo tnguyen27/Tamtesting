@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    xk_extractPageProperties="[cq:lastReplicated]"
+    xk_formatDate="[cq_lastReplicated::MMMM d\, yyyy]"
+    xk_placeholderTriggers="[page.publishDate,page.location,content.text,content.articlePrimaryHeading,content.articleSubtitle]"/>

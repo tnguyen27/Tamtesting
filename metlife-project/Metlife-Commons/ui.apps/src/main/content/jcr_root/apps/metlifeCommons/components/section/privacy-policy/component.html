@@ -1,0 +1,15 @@
+{%#if content.enableComponent%}
+{%#if content.policydescription%}
+{%{content.policydescription}%}
+{%else%}
+	{%#if page.isEditMode%}
+		<div class="privacy-policy-description xk-placeholder"></div>
+	{%/if%}
+{%/if%}
+{%#if content.date%}
+<p class="privacy-policies-section__lastupdated brand-gray-2nd">Last Update {%content.month%} {%content.day%}, {%content.year%}</p>
+{%/if%}
+<div class=" accordion">
+	{%#include "content-parsys" as="foundation/components/parsys"%}{%/include%}
+</div>
+{%/if%}

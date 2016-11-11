@@ -1,0 +1,72 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Metlife HTML Base - Footer Scripts
+* ------------------------------------------------------------------------------ *
+%}
+
+{%> googlemaps %}
+
+{%#if global.enableUSTheme%}
+	{% clientLibrary "metlife.usrebrand" type="js" cacheBuster="true" %}
+{%else%}
+	{% clientLibrary "metlife.all" type="js" cacheBuster="true" %}
+{%/if%}
+
+{%>extrafooterscripts%}
+
+<script>
+    function resizeHeroCarousel() {
+        if ($(window).width() > 1900)
+            $('#myCarouselBanner .carousel-inner .item img').width($(window).width());
+    }
+    $.lazyLoadXT.autoLoadTime = 5000;
+    resizeHeroCarousel();
+    $(window).resize(function () {
+        resizeHeroCarousel();
+        $(window).lazyLoadXT({
+            checkDuplicates: false
+        });
+    });
+</script>
+
+{%! Global Scripts %}
+{%#each global.footerExternalJavascript %}
+    {%#if scriptPath%}
+        <script src="{%scriptPath%}"></script>
+    {%/if%}
+{%/each%}
+
+{%#each global.footerExternalCss %}
+    {%#if scriptPath%}
+        <link rel="stylesheet" src="{%scriptPath%}">
+    {%/if%}
+{%/each%}
+
+{%#if global.footerJsCode%}
+    <script type="text/javascript">{%{global.footerJsCode}%}</script>
+{%/if%}
+
+{%#if global.footerCssCode%}
+    <style>{%{global.footerCssCode}%}</style>
+{%/if%}
+
+{%! Page Scripts %}
+{%#each page.footerExternalJavascript %}
+    {%#if scriptPath%}
+        <script src="{%scriptPath%}"></script>
+    {%/if%}
+{%/each%}
+
+{%#each page.footerExternalCss %}
+    {%#if scriptPath%}
+        <link rel="stylesheet" src="{%scriptPath%}">
+    {%/if%}
+{%/each%}
+
+{%#if page.footerJsCode%}
+    <script type="text/javascript">{%{page.footerJsCode}%}</script>
+{%/if%}
+
+{%#if page.footerCssCode%}
+    <style>{%{page.footerCssCode}%}</style>
+{%/if%}

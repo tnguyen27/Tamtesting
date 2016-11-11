@@ -1,0 +1,21 @@
+{%!
+* Microsite Product Module Container
+* -----------------------------------------------------------------------------
+* CHANGE HISTORY
+* -----------------------------------------------------------------------------
+* Version | Date        | Developer          | Changes
+* 1.0     | 6/6/2016    | Marco Cali         | Initial Creation
+* 2.0     | 2016-10-11  | Jon Ziefle         | Updated layout
+* -----------------------------------------------------------------------------
+%}
+
+<div class="container product-module-microsite-wrapper {%content.backgroundColor%} {%content.mobilePaddingTop%} {%content.mobilePaddingBottom%} {%content.tabletPaddingTop%} {%content.tabletPaddingBottom%} {%content.desktopPaddingTop%} {%content.desktopPaddingBottom%}">
+    <div class="row wrapper product-module">
+        {%#each list.tiles%}
+            {%#include title as="MetlifeApp/components/section/subcategory-tile"%}{%/include%}
+        {%/each%}
+    </div>
+    <div class="row wrapper brand-gray-2nd disclaimer--product-module">
+        <p class="disclaimer text-center">{%content.infoModuleDisclaimer%}</p>
+    </div>
+</div>

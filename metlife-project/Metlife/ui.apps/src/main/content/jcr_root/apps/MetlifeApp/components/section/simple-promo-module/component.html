@@ -1,0 +1,16 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Simple Promo Module Component
+* ------------------------------------------------------------------------------ *
+%}
+
+<div class="home-quote__container cta-promo__container">
+    <h3>{%{ content.headline }%}</h3>
+    <p>{%{ content.description }%}</p>
+    <a href="{% content.link %}"
+       target="{%content.target%}"
+       id="{%content.linkId%}"
+       class="btn {%#if content.buttonColor%}{%content.buttonColor%}{%else%}btn-brand-2nd{%/if%} btn_global js-productSelector">
+        {% content.buttonLabel %}
+    </a>
+</div>

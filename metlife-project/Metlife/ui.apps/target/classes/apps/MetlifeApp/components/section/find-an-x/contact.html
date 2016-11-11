@@ -1,0 +1,250 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Find an X Contact Component
+* ------------------------------------------------------------------------------ *
+%}
+
+<div class="contact-container contact-container--form-card">
+    <div class="contactCard">
+        <span class="pull-right form-minimize hidden-field hidden-xs hidden-sm hidden-md">
+            <svg class="icon white">
+                <use xlink:href="/static/images/icons-metlife.svg#icon-close"></use>
+            </svg>
+        </span>
+        <span class="form__title white">Have a rep contact me:</span>
+        <span class="form__subtitle hidden-field">All fields are required</span>
+        <form id="contactCard" name="contactCard" enctype="multipart/form-data"
+              method="post" class="userForm" data-fid="contactCard" data-product-url="/wps/proxy/MCWebForms5KSales/WebFormServletAction">
+
+            {%#each content.hiddfieldListContactSide %}
+                <input type="hidden" id="{%title%}" value="{%value%}" name="{%title%}">
+            {%/each%}
+            {%#each global.globalSideBarFormhiddfieldList %}
+                <input type="hidden" id="{%title%}" value="{%value%}" name="{%title%}">
+            {%/each%}
+            <input type="hidden" value="{%#if page.pageFrom %}{% page.pageFrom %}{%else%}ML_ST_PRODUCTS{%/if%}" name="pageFrom">
+
+
+            <input type="hidden" value="state,email,prodInt" name="lstPnPParameters">
+            <input type="hidden" name="bWFCompleted" value="Y">
+            <input type="hidden" value="firstName" name="lstPnPPreFillParameters">
+
+            <div class="row form-row">
+                <div class="col-xs-12">
+                    <div class="form-user-grp">
+                        <label for="firstName_Acc" class="hidden">First Name</label>
+                        <input name="firstName" id="firstName_Acc" type="text" class="form-user-ctrl"
+                               placeholder="First Name" data-required="true" aria-required="true" data-valid-type="text">
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="row form-row">
+                <div class="col-xs-12">
+                    <div class="form-user-grp">
+                        <label class="hidden" for="lastName_Acc">Last Name</label>
+                        <input name="lastName" id="lastName_Acc" type="text" class="form-user-ctrl"
+                               placeholder="Last Name" data-required="true" aria-required="true" data-valid-type="text">
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="row form-row hidden-field">
+                <div class="col-xs-12">
+                    <div class="form-user-grp">
+                        <label class="hidden" for="address_Acc">Address</label>
+                        <input name="address" id="address_Acc" type="text" class="form-user-ctrl" placeholder="Address"
+                               data-required="true" aria-required="true">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row form-row hidden-field">
+                <div class="col-xs-12">
+                    <div class="form-user-grp">
+                        <label class="hidden" for="city_Acc">City</label>
+                        <input name="city" id="city_Acc" type="text" class="form-user-ctrl" placeholder="City"
+                               data-required="true" aria-required="true" data-valid-type="text">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row form-row hidden-field">
+                <div class="col-xs-12 col-sm-7">
+                    <div class="form-user-grp form-icon-wrapper">
+                        <svg class="icon">
+                            <use xlink:href="/static/images/icons-metlife.svg#icon-select-arrows"></use>
+                        </svg>
+                        <select name="state" id="state_Acc" class="form-user-ctrl user-select" title="State"
+                                data-required="true" aria-required="true">
+                            <option value="" selected="selected">State</option>
+                            <option class="general" value="AL">AL</option>
+                            <option class="general" value="AK">AK</option>
+                            <option class="general" value="AZ">AZ</option>
+                            <option class="general" value="AR">AR</option>
+                            <option class="general" value="CA">CA</option>
+                            <option class="general" value="CO">CO</option>
+                            <option class="general" value="CT">CT</option>
+                            <option class="general" value="DC">DC</option>
+                            <option class="general" value="DE">DE</option>
+                            <option class="general" value="FL">FL</option>
+                            <option class="general" value="GA">GA</option>
+                            <option class="general" value="HI">HI</option>
+                            <option class="general" value="IA">IA</option>
+                            <option class="general" value="ID">ID</option>
+                            <option class="general" value="IL">IL</option>
+                            <option class="general" value="IN">IN</option>
+                            <option class="general" value="KS">KS</option>
+                            <option class="general" value="KY">KY</option>
+                            <option class="general" value="LA">LA</option>
+                            <option class="general" value="MA">MA</option>
+                            <option class="general" value="MD">MD</option>
+                            <option class="general" value="ME">ME</option>
+                            <option class="general" value="MI">MI</option>
+                            <option class="general" value="MN">MN</option>
+                            <option class="general" value="MO">MO</option>
+                            <option class="general" value="MS">MS</option>
+                            <option class="general" value="MT">MT</option>
+                            <option class="general" value="NC">NC</option>
+                            <option class="general" value="ND">ND</option>
+                            <option class="general" value="NE">NE</option>
+                            <option class="general" value="NH">NH</option>
+                            <option class="general" value="NJ">NJ</option>
+                            <option class="general" value="NM">NM</option>
+                            <option class="general" value="NV">NV</option>
+                            <option class="general" value="NY">NY</option>
+                            <option class="general" value="OH">OH</option>
+                            <option class="general" value="OK">OK</option>
+                            <option class="general" value="OR">OR</option>
+                            <option class="general" value="PA">PA</option>
+                            <option class="general" value="PR">PR</option>
+                            <option class="general" value="RI">RI</option>
+                            <option class="general" value="SC">SC</option>
+                            <option class="general" value="SD">SD</option>
+                            <option class="general" value="TN">TN</option>
+                            <option class="general" value="TX">TX</option>
+                            <option class="general" value="UT">UT</option>
+                            <option class="general" value="VA">VA</option>
+                            <option class="general" value="VT">VT</option>
+                            <option class="general" value="WA">WA</option>
+                            <option class="general" value="WI">WI</option>
+                            <option class="general" value="WV">WV</option>
+                            <option class="general" value="WY">WY</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-offset-1 col-sm-4">
+                    <div class="form-user-grp">
+                        <label class="hidden" for="zip_Acc">Zip</label>
+                        <input name="zip" id="zip_Acc" type="text" class="form-user-ctrl" placeholder="Zip"
+                               data-required="true" aria-required="true" data-valid-type="zip">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row form-row">
+                <div class="col-xs-12">
+                    <div class="form-user-grp">
+                        <label class="hidden" for="email_Acc">Email</label>
+                        <input name="email" id="email_Acc" type="text" class="form-user-ctrl" placeholder="Email"
+                               data-required="true" aria-required="true" data-valid-type="email">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row form-row">
+                <div class="col-xs-12">
+                    <div class="form-user-grp">
+                        <label class="hidden" for="phone_Acc">Phone</label>
+                        <input name="phone" id="phone_Acc" type="text" class="form-user-ctrl"
+                               placeholder="Phone (XXX-XXX-XXXX)" data-required="true" aria-required="true"
+                               data-valid-type="phone">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row form-row">
+                <div class="col-xs-12">
+                    <div class="form-user-grp form-icon-wrapper">
+                        <svg class="icon">
+                            <use xlink:href="/static/images/icons-metlife.svg#icon-select-arrows"></use>
+                        </svg>
+                        <select name="requestType" id="requestType" class="form-user-ctrl user-select"
+                                data-required="true" aria-required="true"
+                                data-valid-status="failed"
+                                data-request-type>
+                            <option value="">In reference to ...</option>
+                            <option value="New Product/Planning Services"  data-product-url="/wps/glsproxy/gls/processlead.do" >New Product/Planning Services</option>
+                            <option value="Existing Product/Policy" data-product-url="/wps/proxy/MCWebForms5KSales/WebFormServletAction">Existing Product/Policy</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row form-row" data-observes-id="requestType" data-observes-value="New Product/Planning Services">
+                <div class="col-xs-12">
+                    <div class="form-radio-grp">
+                        <label>
+                            <input name="prodInterest" id="prodInt_Acc_Auto_Home" type="radio"
+                                   class="user-radio whiteRadioDial" value="MPC" data-required="true"><span>Auto &amp; Home</span>
+                        </label>
+                        <label>
+                            <input name="prodInterest" id="prodInt_Acc_Life" type="radio"
+                                   class="user-radio whiteRadioDial" value="LIF" data-required="true"><span>Life Insurance</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row form-row" data-observes-id="requestType" data-observes-value="Existing Product/Policy">
+                <div class="col-xs-12">
+                    <div class="form-user-grp">
+                        <label class="hidden" for="policyNo_Acc">Policy/Contract #</label>
+                        <input name="policyNo" id="policyNo_Acc" type="text" class="form-user-ctrl"
+                               placeholder="Policy/Contract #" data-placeholder="" data-required="true" aria-required="true">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row form-row" data-observes-id="requestType" data-observes-value="Existing Product/Policy">
+                <div class="col-xs-12">
+                    <div class="form-user-grp">
+             <textarea name="questionOrComment" id="questionOrComment_Acc" placeholder="Question"
+                       rows="3" class="form-user-ctrl productUserQuestion"
+                       data-placeholder="" data-required="true" aria-required="true"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-right contactSidebarBtns">
+                <button id="" type="submit"
+                        class="contatMeSidebarBtn btn btn-brand-2nd"
+                        data-fsubmit="contactCard">SUBMIT
+                </button>
+            </div>
+
+
+        </form>
+        {%{content.contactDisclaimerAdvisory}%}
+    </div>
+    <div class="contactSideThankyou" id="contactus_lead_thankyou">
+        <div class="thanksHeaderText">Thank you for contacting us.</div>
+        <div class="thanksSubText">Someone from MetLife will be reaching shortly to provide you help.
+        </div>
+    </div>
+    <div class="contactOtherDetails">
+        <div class="contactSideCall">
+            <a class="disabled-anchor">CALL: 1-800-METLIFE</a>
+        </div>
+        <div class="otherContactOptions">
+            <a id="headerContactSideBarAllOtherOptionsLink"
+               href="https://www.metlife.com/about/corporate-profile/contact/metlife/index.html">ALL
+                OTHER CONTACT OPTIONS</a>
+        </div>
+    </div>
+</div>

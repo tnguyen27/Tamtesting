@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="500"
+    title="Static Contact Form Card"
+    width="700"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <configuration
+                jcr:primaryType="cq:Panel"
+                title="Form Fields">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <cardTitle
+                        jcr:primaryType="cq:Widget"
+                        allowedBlank="{Boolean}false"
+                        fieldLabel="Title"
+                        name="./cardTitle"
+                        xtype="textfield"/>
+                    <cardDescription
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Description"
+                        name="./cardDescription"
+                        xtype="textarea"/>
+                    <staticForm
+                        jcr:primaryType="nt:unstructured"
+                        fieldLabel="Static form path"
+                        name="./staticForm"
+                        rootPath="etc/metlife/static-forms"
+                        xtype="pathfield"/>
+                </items>
+            </configuration>
+            <image
+                jcr:primaryType="cq:Widget"
+                allowUpload="{Boolean}false"
+                cropParameter="./imageCrop"
+                ddGroups="[media]"
+                fileNameParameter="./fileName"
+                fileReferenceParameter="./fileReference"
+                mapParameter="./imageMap"
+                name="./file"
+                requestSuffix=".img.png"
+                rotateParameter="./imageRotate"
+                title="Background Image"
+                xtype="html5smartimage"/>
+        </items>
+    </items>
+</jcr:root>

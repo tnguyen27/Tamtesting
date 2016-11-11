@@ -1,0 +1,14 @@
+<div class="container wrapper cta-box-component">
+    <div class="row cta-box-module">
+
+        <!-- Microsites CTA Box Component Begin -->
+		{%#each list.tiles%}
+        	{%#include title as="metlifeMicrosites/components/section/cta-boxes"%}{%/include%}
+        {%/each%}
+    </div>
+    <!-- Microsites CTA Box Component End -->
+</div>
+{%#if page.isEditMode%}
+
+<div style="clear:both;"></div>
+{%/if%}

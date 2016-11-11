@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Panel"
+    title="Vendor scripts">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <header
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}false"
+            collapsible="{Boolean}true"
+            title="Vendor Scripts Header"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <externalJavascript
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="External Javascript"
+                    name="./headerExternalJavascript"
+                    xtype="multifield">
+                    <fieldConfig
+                        jcr:primaryType="cq:Widget"
+                        xtype="multifieldpanel">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <scriptPath
+                                jcr:primaryType="nt:unstructured"
+                                allowBlank="false"
+                                anchor="100%"
+                                fieldLabel="Path"
+                                key="scriptPath"
+                                xtype="pathfield"/>
+                        </items>
+                    </fieldConfig>
+                </externalJavascript>
+                <externalCss
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="External CSS"
+                    name="./headerExternalCss"
+                    xtype="multifield">
+                    <fieldConfig
+                        jcr:primaryType="cq:Widget"
+                        xtype="multifieldpanel">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <scriptPath
+                                jcr:primaryType="nt:unstructured"
+                                allowBlank="false"
+                                anchor="100%"
+                                fieldLabel="Path"
+                                key="scriptPath"
+                                xtype="pathfield"/>
+                        </items>
+                    </fieldConfig>
+                </externalCss>
+                <jsCode
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Custom Javascript"
+                    name="./headerJsCode"
+                    xtype="textarea"/>
+                <cssCode
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Custom CSS"
+                    name="./headerCssCode"
+                    xtype="textarea"/>
+            </items>
+        </header>
+        <footer
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}false"
+            collapsible="{Boolean}true"
+            title="Vendor Scripts Footer"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <externalJavascript
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="External Javascript"
+                    name="./footerExternalJavascript"
+                    xtype="multifield">
+                    <fieldConfig
+                        jcr:primaryType="cq:Widget"
+                        xtype="multifieldpanel">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <scriptPath
+                                jcr:primaryType="nt:unstructured"
+                                allowBlank="false"
+                                anchor="100%"
+                                fieldLabel="Path"
+                                key="scriptPath"
+                                xtype="pathfield"/>
+                        </items>
+                    </fieldConfig>
+                </externalJavascript>
+                <externalCss
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="External CSS"
+                    name="./footerExternalCss"
+                    xtype="multifield">
+                    <fieldConfig
+                        jcr:primaryType="cq:Widget"
+                        xtype="multifieldpanel">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <scriptPath
+                                jcr:primaryType="nt:unstructured"
+                                allowBlank="false"
+                                anchor="100%"
+                                fieldLabel="Path"
+                                key="scriptPath"
+                                xtype="pathfield"/>
+                        </items>
+                    </fieldConfig>
+                </externalCss>
+                <jsCode
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Custom Javascript"
+                    name="./footerJsCode"
+                    xtype="textarea"/>
+                <cssCode
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Custom CSS"
+                    name="./footerCssCode"
+                    xtype="textarea"/>
+            </items>
+        </footer>
+    </items>
+</jcr:root>

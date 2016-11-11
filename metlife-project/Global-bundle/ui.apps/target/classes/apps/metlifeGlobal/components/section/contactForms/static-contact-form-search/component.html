@@ -1,0 +1,298 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Static Contact Form Search
+* ------------------------------------------------------------------------------ *
+%}
+
+<!--Form card Form only-->
+<div class="contact-container contact-container--form-card contactAdvisorSingle pull-right">
+	<div class="contactCard contact-us__contact-form">
+                <span class="pull-right form-minimize hidden-field hidden-xs">
+                    <svg class="icon white">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink"
+							 xlink:href="/static/images/icons-metlife.svg#icon-close"></use>
+                    </svg>
+                </span>
+		<span class="form__title white">{%content.title%}</span>
+		<span class="form__subtitle hidden-field">{%content.subtitle%}</span>
+
+		<form class="generic-form userForm"
+			  id="contactAdvisorSingle"
+			  name="contact-us-form"
+			  enctype="multipart/form-data"
+			  action=""
+			  method="post"
+			  data-fid="contactAdvisorSingle"
+			  data-form-Type="glu"
+			  data-url="/MLGlobalLead/leadservice/ProcessGLUlead"
+			  data-domain="https://www.metlife.it/_Assets/">
+			<input type="hidden" id="form_fields" name="form_fields"
+				   value="FirstName,LastName,BirthDate,AddrLine,PhNum,MobileNumber,PrefComm,City,PartyTypeCode,LeadBasedOn,GovtID,PolicyNum,EmployerName,EmployerSize,LeadDesc">
+			<input type="hidden" id="request_type" name="request_type" value="Lead">
+			<input type="hidden" name="region" value="LATAM">
+			<input type="hidden" name="country" value="ARGENTINA">
+			<input type="hidden" id="post_url" name="post_url" value="">
+			<input type="hidden" name="PublishedDate" value="5/27/2016 3:24:03 PM">
+			<input type="hidden" id="Domain" name="Domain" value="">
+			<input type="hidden" id="xmlformname" name="xmlformname" value="Contactenos">
+			<input type="hidden" id="LanguageValue" name="LanguageValue" value="">
+
+			<input type="hidden" id="AnalyticsChannelName" name="AnalyticsChannelName" value="">
+			<input type="hidden" id="AnalyticsSourceName" name="AnalyticsSourceName" value="">
+			<input type="hidden" id="AnalyticsCampnCont" name="AnalyticsCampnCont" value="">
+			<input type="hidden" id="AnalyticsCampnName" name="AnalyticsCampnName" value="">
+			<input type="hidden" id="AnalyticsCampnTermKey" name="AnalyticsCampnTermKey" value="">
+			<input type="hidden" id="actual_market" name="actual_market" value="00Nb0000006Nluy">
+			<input type="hidden" id="LeadAssociatedSourceDesc" name="LeadAssociatedSourceDesc" value="">
+			<input type="hidden" id="QuoteInfo" name="QuoteInfo" value="">
+
+			<input type="hidden" id="Form_submission_ReferralURL" name="Form_submission_ReferralURL" value="">
+			<input type="hidden" id="Form_submission_ReferralURL_type" name="Form_submission_ReferralURL_type"
+				   value="hidden">
+			<input type="hidden" id="Form_submission_ReferralURL_label" name="Form_submission_ReferralURL_label"
+				   value="Form submission ReferralURL">
+			<input type="hidden" id="Form_submission_ReferralURL_validationType"
+				   name="Form_submission_ReferralURL_validationType" value="none">
+			<input type="hidden" id="Form_submission_ReferralURL_state" name="Form_submission_ReferralURL_state"
+				   value="enabled">
+
+			<div class="row form-row">
+				<div class="col-xs-12">
+					<div class="form-user-grp">
+						<label for="FirstName" class="hidden">First Name</label>
+						<input type="text" class="form-user-ctrl" data-required="true" aria-required="true"
+							   id="FirstName" name="FirstName" title="{%content.firstName%}" placeholder="{%content.firstName%}">
+					</div>
+				</div>
+			</div>
+
+			<div class="row form-row">
+				<div class="col-xs-12">
+					<div class="form-user-grp">
+						<label for="LastName" class="hidden">Last Name</label>
+						<input type="text" class="form-user-ctrl" data-required="true" aria-required="true"
+							   id="LastName" name="LastName" title="{%content.lastName%}" placeholder="{%content.lastName%}">
+					</div>
+				</div>
+			</div>
+
+			<div class="row form-row">
+				<div class="col-xs-12">
+					<div class="form-user-grp">
+						<input class="hidden" name="BirthDate" id="BirthDateInput">
+
+						<div class="BirthDate input-group triple-input" id="BirthDate">
+							<input class="form-control birthDateMonth required" data-required="true"
+								   aria-required="true"
+								   id="BirthDated" type="text" placeholder="{%content.birthdateDay%}" maxlength="2" size="2">
+							<label class="form-control sectionBar">-</label>
+							<input class="form-control birthDateDay required" data-required="true"
+								   aria-required="true"
+								   id="BirthDatem" type="text" placeholder="{%content.birthdateMonth%}" maxlength="2" size="2">
+							<label class="form-control sectionBar">-</label>
+							<input class="form-control birthDateYear required" data-required="true"
+								   aria-required="true"
+								   id="BirthDatey" type="text" placeholder="{%content.birthdateYear%}" maxlength="4" size="4">
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row form-row form-hidden">
+				<div class="col-xs-12">
+					<div class="form-user-grp">
+						<label for="AddrLine" class="hidden">Email</label>
+						<input type="text" class="form-user-ctrl" data-required="true" aria-required="true"
+							   id="AddrLine" name="AddrLine" title="{%content.email%}"
+							   placeholder="{%content.email%}" data-valid-type="email">
+					</div>
+				</div>
+			</div>
+
+			<div class="row form-row form-hidden hidden-field">
+				<div class="col-xs-12">
+					<div class="form-user-grp">
+						<label for="PhNum" class="hidden">Phone</label>
+						<input type="tel" class="form-user-ctrl required" data-required="true"
+							   aria-required="true"
+							   id="PhNum" name="PhNum" title="{%content.phone%}"
+							   placeholder="{%content.phone%}">
+					</div>
+				</div>
+			</div>
+
+			<div class="row form-row form-hidden hidden-field">
+				<div class="col-xs-12">
+					<div class="form-user-grp">
+						<label for="MobileNumber" class="hidden">Mobile Phone</label>
+						<input type="tel" class="form-user-ctrl" data-required="true" aria-required="true"
+							   id="MobileNumber" name="MobileNumber"
+							   placeholder="{%content.mobilePhone%}">
+					</div>
+				</div>
+			</div>
+
+			<div class="row form-row form-hidden hidden-field">
+				<div class="col-xs-12">
+					<div class="form-user-grp form-icon-wrapper">
+						<svg class="icon">
+							<use xlink:href="/static/images/icons-metlife.svg#icon-select-arrows"></use>
+						</svg>
+						<select name="PrefComm" id="PrefComm" class="form-user-ctrl user-select"
+								data-required="true" aria-required="true">
+
+						</select>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="row form-row form-hidden hidden-field">
+				<div class="col-xs-12">
+					<div class="form-user-grp form-icon-wrapper">
+						<svg class="icon">
+							<use xlink:href="/static/images/icons-metlife.svg#icon-select-arrows"></use>
+						</svg>
+						<select name="City" id="City" class="form-user-ctrl user-select"
+								data-required="true" aria-required="true">
+						</select>
+					</div>
+				</div>
+			</div>
+
+			<div class="row form-row hidden-field">
+				<div class="col-xs-12">
+					<div class="form-radio-grp">
+						<label for="PartyTypeCode">{%content.partyTypeCode%}</label>
+
+						<div class="button_group required" id="PartyTypeCode">
+							<label for="PartyTypeCode" class="hidden">{%content.partyTypeCode%}</label>
+							<label>
+								<div class="radio_button two-columns" id="PartyTypeCode">
+									<input type="radio" id="PartyTypeCode" name="PartyTypeCode" value="no"
+										   checked="" class="user-radio whiteRadioDial" data-required="true">
+									<span>{%content.partyTypeCodeNo%}</span>
+								</div>
+							</label>
+							<label>
+								<div class="radio_button two-columns" id="PartyTypeCode">
+									<input type="radio" id="PartyTypeCode" name="PartyTypeCode" value="si"
+										   class="user-radio whiteRadioDial" data-required="true">
+									<span>{%content.partyTypeCodeYes%}</span>
+								</div>
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row form-row form-hidden hidden-field">
+				<div class="col-xs-12">
+					<div class="form-radio-grp">
+						<label for="LeadBasedOn">{%content.leadBasedOn%}</label>
+
+						<div class="button_group required" id="LeadBasedOn">
+							<label for="LeadBasedOn" class="hidden">{%content.leadBasedOn%}</label>
+							<label>
+								<div class="radio_button two-columns" id="LeadBasedOn">
+									<input type="radio" id="LeadBasedOn" name="LeadBasedOn" value="individual"
+										   checked="" class="user-radio whiteRadioDial">
+									<span>{%content.leadBasedOnIndividual%}</span>
+								</div>
+							</label>
+							<label>
+								<div class="radio_button two-columns" id="LeadBasedOn">
+									<input type="radio" id="LeadBasedOn" name="LeadBasedOn" value="empresa"
+										   class="user-radio whiteRadioDial">
+									<span>{%content.leadBasedOnCompany%}</span>
+								</div>
+							</label>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row form-row form-hidden hidden-field observer">
+				<div class="col-xs-12">
+					<div class="form-user-grp">
+						<label for="GovtID" class="hidden">GovtID</label>
+						<input type="text" class="form-user-ctrl observe-PartyTypeCode" data-required="true"
+							   aria-required="true" id="GovtID" name="GovtID" title="{%content.partyTypeCodeId%}"
+							   placeholder="{%content.partyTypeCodeId%}">
+
+						<div class="form__item--description">{%{content.partyTypeCodeDescription}%}</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row form-row form-hidden hidden-field observer">
+				<div class="col-xs-12">
+					<div class="form-user-grp">
+						<label for="PolicyNum" class="hidden">PolicyNum</label>
+						<input type="text" class="form-user-ctrl observe-PartyTypeCode observe-LeadBasedOn"
+							   data-required="true" aria-required="true" id="PolicyNum" name="PolicyNum"
+							   title="{%content.leadBasedOnPolicyNumber%}" placeholder="{%content.leadBasedOnPolicyNumber%}">
+					</div>
+				</div>
+			</div>
+
+			<div class="row form-row form-hidden hidden-field observer">
+				<div class="col-xs-12">
+					<div class="form-user-grp">
+						<label for="EmployerName" class="hidden">EmployerName</label>
+
+						<input type="text" class="form-user-ctrl observe-LeadBasedOn observe-PartyTypeCode"
+							   data-required="true" aria-required="true" id="EmployerName" name="EmployerName"
+							   title="{%content.leadBasedOnEmployerName%}" placeholder="{%content.leadBasedOnEmployerName%}">
+					</div>
+				</div>
+			</div>
+
+			<div class="row form-row form-hidden hidden-field observer">
+				<div class="col-xs-12">
+					<div class="form-user-grp">
+						<label for="EmployerSize" class="hidden">EmployerSize</label>
+						<input type="text" class="form-user-ctrl observe-LeadBasedOn observe-PartyTypeCode"
+							   data-required="true" aria-required="true" id="EmployerSize" name="EmployerSize"
+							   title="{%content.leadBasedOnEmployerSize%}"
+							   placeholder="{%content.leadBasedOnEmployerSize%}">
+					</div>
+				</div>
+			</div>
+
+			<div class="row form-row form-hidden hidden-field">
+				<div class="col-xs-12">
+					<div class="form-user-grp">
+						<label for="LeadDesc" class="hidden">LeadDesc</label>
+							 <textarea name="LeadDesc" id="LeadDesc"
+									   placeholder="{%content.leadBasedOnDescription%}"
+									   rows="3" class="form-user-ctrl"
+									   data-placeholder="" data-required="true"
+									   aria-required="true"></textarea>
+					</div>
+				</div>
+			</div>
+
+			<div class="contactSidebarBtns">
+				<button type="submit" class="form-submit contatMeSidebarBtn btn btn-brand-2nd"
+						data-fsubmit="contactAdvisorSingle"
+						data-proctext="Procesando" data-submit-type="glu">
+					{%content.buttonLabel%}
+				</button>
+			</div>
+			{%> jsonData %}
+		</form>
+		{%{content.disclaimer}%}
+	</div>
+	<div class="contactSideThankyou" id="contactus_lead_thankyou">
+		<div class="thanksHeaderText">{%content.thankYouMessageTitle%}</div>
+		<div class="thanksSubText">{%content.thankYouMessageContent%}</div>
+	</div>
+	<div class="contactSideSubmitError" id="contactus_lead_submit_error">
+		<div class="thanksHeaderText">{%content.errorMessageTitle%}</div>
+		<div class="thanksSubText">{%content.errorMessageContent%}</div>
+	</div>
+
+</div>

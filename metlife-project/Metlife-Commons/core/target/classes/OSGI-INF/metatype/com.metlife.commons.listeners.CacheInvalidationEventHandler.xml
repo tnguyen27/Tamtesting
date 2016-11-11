@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.0.0" localization="OSGI-INF/metatype/com.metlife.commons.listeners.CacheInvalidationEventHandler">
+    <OCD id="com.metlife.commons.listeners.CacheInvalidationEventHandler" name="%com.metlife.commons.listeners.CacheInvalidationEventHandler.name" description="%com.metlife.commons.listeners.CacheInvalidationEventHandler.description">
+        <AD id="event.topics" type="String" default="com/day/cq/replication" name="%com.metlife.commons.listeners.CacheInvalidationEventHandler.event.topics.name" description="%com.metlife.commons.listeners.CacheInvalidationEventHandler.event.topics.description"/>
+    </OCD>
+    <Designate pid="com.metlife.commons.listeners.CacheInvalidationEventHandler">
+        <Object ocdref="com.metlife.commons.listeners.CacheInvalidationEventHandler"/>
+    </Designate>
+</metatype:MetaData>

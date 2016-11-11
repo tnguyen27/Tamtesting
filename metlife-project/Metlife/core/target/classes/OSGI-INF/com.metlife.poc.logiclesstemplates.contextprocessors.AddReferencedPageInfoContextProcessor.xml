@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0">
+    <scr:component name="com.metlife.poc.logiclesstemplates.contextprocessors.AddReferencedPageInfoContextProcessor" activate="activate">
+        <implementation class="com.metlife.poc.logiclesstemplates.contextprocessors.AddReferencedPageInfoContextProcessor"/>
+        <service servicefactory="false">
+            <provide interface="com.xumak.base.templatingsupport.ContextProcessor"/>
+        </service>
+        <property name="service.vendor" value="Adobe"/>
+        <property name="service.pid" value="com.metlife.poc.logiclesstemplates.contextprocessors.AddReferencedPageInfoContextProcessor"/>
+        <reference name="assetPathService" interface="com.xumak.base.assets.AssetPathService" cardinality="0..1" policy="static" bind="bindAssetPathService" unbind="unbindAssetPathService"/>
+    </scr:component>
+</components>

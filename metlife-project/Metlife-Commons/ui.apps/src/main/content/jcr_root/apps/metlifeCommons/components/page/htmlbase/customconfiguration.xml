@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Panel"
+    title="Template Configuration">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <activateconfig
+            jcr:primaryType="cq:Widget"
+            collapsible="{Boolean}true"
+            title="Activate or deactivate elements"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <disableBreadcrumb
+                    jcr:primaryType="cq:Widget"
+                    defaultValue=""
+                    fieldLabel="Breadcrumb options"
+                    name="./disableBreadcrumb"
+                    type="select"
+                    value=""
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <ebable
+                            jcr:primaryType="nt:unstructured"
+                            text="Enable"
+                            value="enable"/>
+                        <disabled
+                            jcr:primaryType="nt:unstructured"
+                            text="Disabled"
+                            value="disabled"/>
+                        <auto
+                            jcr:primaryType="nt:unstructured"
+                            text="Auto"/>
+                    </options>
+                </disableBreadcrumb>
+                <disableFarmsite
+                    jcr:primaryType="cq:Widget"
+                    defaultValue=""
+                    fieldLabel="Footer Farm Links"
+                    name="./disableFarmsite"
+                    type="select"
+                    value=""
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <enable
+                            jcr:primaryType="nt:unstructured"
+                            text="Enable"
+                            value="enable"/>
+                        <disable
+                            jcr:primaryType="nt:unstructured"
+                            text="Disable"
+                            value="disable"/>
+                        <auto
+                            jcr:primaryType="nt:unstructured"
+                            text="Auto"/>
+                    </options>
+                </disableFarmsite>
+                <homeDisclaimer
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="auto"
+                    fieldLabel="Disclaimer configuration"
+                    name="./homeDisclaimer"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <enable
+                            jcr:primaryType="nt:unstructured"
+                            text="Enable"
+                            value="enable"/>
+                        <disable
+                            jcr:primaryType="nt:unstructured"
+                            text="Disable"
+                            value="disable"/>
+                        <auto
+                            jcr:primaryType="nt:unstructured"
+                            text="Auto"
+                            value="auto"/>
+                    </options>
+                </homeDisclaimer>
+            </items>
+        </activateconfig>
+        <contactconfig
+            jcr:primaryType="cq:Widget"
+            collapsible="{Boolean}true"
+            title="Contact configuration"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <departmentName
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Department Name"
+                    name="./departmentName"
+                    xtype="textfield"/>
+                <contactName
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Contact Name"
+                    name="./contactName"
+                    xtype="textfield"/>
+                <designationContact
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Designation of the Contact"
+                    name="./designationContact"
+                    xtype="textfield"/>
+                <phoneNumber
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Phone Number of the Contact"
+                    name="./phoneNumber"
+                    xtype="textfield"/>
+                <emailId
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Email ID of the Contact"
+                    name="./emailId"
+                    xtype="textfield"/>
+            </items>
+        </contactconfig>
+        <analyticsconfig
+            jcr:primaryType="cq:Widget"
+            collapsible="{Boolean}true"
+            title="Analytics configurations"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <analytics
+                    jcr:primaryType="cq:Widget"
+                    defaultValue=""
+                    fieldDescription="Activate Analytics Tag Code"
+                    fieldLabel="Analytics Tag"
+                    name="./analyticsTag"
+                    type="select"
+                    value=""
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <enable
+                            jcr:primaryType="nt:unstructured"
+                            text="Enable"
+                            value="enable"/>
+                        <disable
+                            jcr:primaryType="nt:unstructured"
+                            text="Disable"
+                            value="disable"/>
+                        <auto
+                            jcr:primaryType="nt:unstructured"
+                            text="Auto"/>
+                    </options>
+                </analytics>
+                <environmentType
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="staging"
+                    fieldDescription="You can enable on Staging or Production environments."
+                    fieldLabel="Environment Type"
+                    name="./environmentType"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <staging
+                            jcr:primaryType="nt:unstructured"
+                            text="Staging"
+                            value="staging"/>
+                        <production
+                            jcr:primaryType="nt:unstructured"
+                            text="Production"
+                            value="production"/>
+                    </options>
+                </environmentType>
+            </items>
+        </analyticsconfig>
+        <livePerson
+            jcr:primaryType="cq:Widget"
+            collapsible="{Boolean}true"
+            title="Live Person Configuration"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <livePersonPageId
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Live Person ID"
+                    name="./livePersonPageId"
+                    xtype="textfield"/>
+            </items>
+        </livePerson>
+        <clickToChatOnPageTitle
+            jcr:primaryType="cq:Widget"
+            collapsible="{Boolean}true"
+            title="Click to chat on page title"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <enableClickToChat
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Enable"
+                    name="./enableClickToChat"
+                    type="checkbox"
+                    xtype="selection"/>
+                <isLivePersonChat
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Is Live Person Button"
+                    name="./isLivePersonChat"
+                    type="checkbox"
+                    xtype="selection">
+                    <listeners
+                        jcr:primaryType="nt:unstructured"
+                        loadcontent="function(field, record, path) {Metlife.Components.ProductCardTileChatButton.loadContent(field, record, path);}"
+                        selectionchanged="function(selection, value, isChanged) { Metlife.Components.ProductCardTileChatButton.selectionChanged(selection, value, isChanged);}"/>
+                </isLivePersonChat>
+                <button-label
+                    jcr:primaryType="nt:unstructured"
+                    allowBlank="true"
+                    fieldLabel="Button Label"
+                    itemId="productActionThirdButtonLabel"
+                    name="./clickToChatButtonLabel"
+                    xtype="textfield"/>
+                <button-link
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="true"
+                    fieldLabel="Button Link"
+                    itemId="productActionThirdButtonLink"
+                    linkPattern="\{0}.html"
+                    name="./clickToChatButtonLink"
+                    rootPath="/content/metlife"
+                    rootTitle="MetLife"
+                    xtype="pathfield"/>
+                <link-target
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="_self"
+                    fieldLabel="Open in"
+                    itemId="targetThird"
+                    name="./clickToChatTarget"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <_self
+                            jcr:primaryType="nt:unstructured"
+                            text="Same Page"
+                            value="_self"/>
+                        <blank
+                            jcr:primaryType="nt:unstructured"
+                            text="New Page"
+                            value="_blank"/>
+                    </options>
+                </link-target>
+                <chatLivePerson
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Live Person ID"
+                    itemId="chatLivePerson"
+                    name="./clickToChatLivePersonId"
+                    xtype="textfield"/>
+            </items>
+        </clickToChatOnPageTitle>
+    </items>
+</jcr:root>

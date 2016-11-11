@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    twoLevelCuratedPathRefsKeyNames="[page.headerExternalJavascript,page.headerExternalCss,page.footerExternalJavascript,page.footerExternalCss,global.headerExternalJavascript,global.headerExternalCss,global.footerExternalJavascript,global.footerExternalCss]"
+    xk_clientAccessible="{Boolean}true"
+    xk_clientModelProperties="[content,page,global,statistics,design]"/>

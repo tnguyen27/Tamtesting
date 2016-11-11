@@ -1,0 +1,39 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Location Component
+* ------------------------------------------------------------------------------ *
+%}
+
+<li>
+    {%#if content.officeName%}
+        <p><strong>{%content.officeName%}</strong></p>
+        {%#if content.address%}<p><strong>Address:</strong> {%content.address%}</p>{%/if%}
+        {%#if content.city%}<p><strong>City:</strong> {%content.city%}</p>{%/if%}
+        {%#if content.state%}<p><strong>State:</strong> {%content.state%}</p>{%/if%}
+        {%#if content.zip%}<p><strong>Zip:</strong> {%content.zip%}</p>{%/if%}
+        {%#if content.country%}<p><strong>Country:</strong> {%content.country%}</p>{%/if%}
+        {%#if content.phone%}<p><strong>Phone:</strong> {%content.phone%}</p>{%/if%}
+        {%#if content.phone%}<p><strong>Alternate Phone:</strong> {%content.alternatePhone%}</p>{%/if%}
+        {%#if content.fax%}<p><strong>Fax:</strong> {%content.fax%}</p>{%/if%}
+        {%#if content.email%}<p><strong>E-mail:</strong> {%content.email%}</p>{%/if%}
+        {%#if content.secondaryEmail%}<p><strong>Secondary E-mail:</strong> {%content.secondaryEmail%}</p>{%/if%}
+        {%#if content.url%}<p><strong>URL:</strong> {%content.url%}</p>{%/if%}
+        {%#if content.mainContact%}<p><strong>Main Contact:</strong> {%content.mainContact%}</p>{%/if%}
+        {%#if content.workingHours%}<p><strong>Working Hours:</strong> {%content.workingHours%}</p>{%/if%}
+        {%#if content.workingHours%}<p><strong>Additional Info:</strong> {%content.additionalInfo%}</p>{%/if%}
+        {%#if content.latitude%}<p><strong>Latitude:</strong> {%content.latitude%}</p>{%/if%}
+        {%#if content.longitude%}<p><strong>Longitude:</strong> {%content.longitude%}</p>{%/if%}
+        {%#if content.initialZoom%}<p><strong>Initial Zoom:</strong> {%content.initialZoom%}</p>{%/if%}
+        {%#if content.ctgyCd%}<p><strong>ctgy_cd:</strong> {%content.ctgyCd%}</p>{%/if%}
+        {%#if content.specialties%}
+            <p>
+                <strong>Specialties:</strong>
+                        {%#each content.specialties%}
+                            {%this%}{%#if @last%}{%else%}, {%/if%}
+                        {%/each%}
+            </p>
+    	{%/if%}
+    {%else%}
+        <p><strong>Please edit this location.</strong></p>
+    {%/if%}
+</li>

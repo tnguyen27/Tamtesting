@@ -1,0 +1,18 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Campaign Container Component
+* ------------------------------------------------------------------------------ *
+%}
+
+<div class="container bg-gray-1st campaign-card-wrapper" data-comp-spacing="campaign-card">
+    <div class="row wrapper campaign-card">
+        <div class="campaign-card-section bg-white {%#if page.isEditOrDesignMode%}campaign-author-mode{%/if%}">
+			{%#include "campaign-page-image" as="metlifeCampaigns/components/section/campaign-page-image"%}{%/include%}
+            <div class="campaign-card-content">
+                {%#include "campaign-page-titles" as="metlifeCampaigns/components/section/campaign-page-titles"%}{%/include%}
+				{%#include "content-parsys" as="foundation/components/parsys"%}{%/include%}
+            </div>
+        </div>
+		{%#include "contact-me-form" as="metlifeCampaigns/components/section/contact-me-form"%}{%/include%}
+	</div>
+</div>

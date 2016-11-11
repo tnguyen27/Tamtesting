@@ -1,0 +1,202 @@
+@media screen and (min-width: 768px) {
+	.row.campaign-card .campaign-card-section.bg-white.campaign-author-mode:first-child {
+        width: 66.66666667%;
+
+    }
+        .row.campaign-card .campaign-card-section.bg-gray-5th:last-child {
+        width: 33.33333333%;
+
+    }
+}
+
+/*
+    Footer Component
+*/
+.footer.xk-placeholder:before {
+    content: 'Empty Footer Component';
+
+    padding-left: 65px;
+}
+.footer.xk-placeholder{
+    height: 50px;
+    width: 800px;
+    margin-left: 200px;
+}
+
+.footer.xk-placeholder > div{
+    display: none;
+}
+
+/*
+    Campaign Page Titles Component
+*/
+.campaign-page-titles.xk-placeholder:before {
+    content: 'Empty Page Titles Component';
+    padding-left: 65px;
+}
+.campaign-page-titles.xk-placeholder{
+    height: 75px;
+    width: 600px;
+    margin-left: 0px;
+    margin-top: 10px;
+}
+
+.campaign-page-titles.xk-placeholder > div{
+    display: none;
+}
+
+/*
+    call-us Component
+*/
+.call-us.xk-placeholder:before {
+    content: 'Empty Call Us Now';
+    padding-left: 5px;
+    font-size:medium;
+}
+.call-us.xk-placeholder{
+    height: 50px;
+    width: 200px;
+    margin-left: 100px;
+}
+
+.call-us.xk-placeholder > div{
+    display: none;
+}
+
+/*
+    call-me Component
+*/
+.call-me.xk-placeholder:before {
+    content: 'Empty Call Me Now';
+    padding-left: 5px;
+    font-size:medium;
+}
+.call-me.xk-placeholder{
+    height: 50px;
+    width: 200px;
+    margin-left: 220px;
+}
+
+.call-me.xk-placeholder > div{
+    display: none;
+}
+
+/*
+    Header Icon Component
+*/
+.header-icon.xk-placeholder:before {
+    content: 'Empty Header Icon';
+    padding-left: 5px;
+    font-size:medium;
+}
+.header-icon.xk-placeholder{
+    height: 50px;
+    width: 200px;
+    margin-left: 20px;
+    margin-top:10px;
+}
+
+.header-icon.xk-placeholder > div{
+    display: none;
+}
+
+/*
+    File Download Campaigns Component
+*/
+.download-file.xk-placeholder:before {
+    content: 'Empty File Download Campaigns';
+    font-size: 16px;
+}
+.download-file.xk-placeholder{
+    height: 50px;
+    width: 682px;
+}
+
+.download-file.xk-placeholder > div{
+    display: none;
+}
+
+/*
+   Richtext Campaigns Component
+*/
+.richtext-campaign.xk-placeholder:before {
+    content: 'Empty Richtext Campaigns';
+    font-size: 16px;
+    margin-left: 230px;
+}
+.richtext-campaign.xk-placeholder{
+    height: 300px;
+    width: 682px;
+}
+
+.richtext-campaign.xk-placeholder > div{
+    display: none;
+}
+
+/**
+Campaing Links section component
+**/
+.parbase.links-section.xk-placeholder:before {
+    content: 'Empty Links Section Component';
+    font-size: 15px;
+}
+.parbase.links-section.xk-placeholder {
+    width: 100%;
+    height: 100px;
+}
+
+/*
+    Login Component
+*/
+.login.xk-placeholder:before {
+    content: 'Empty Login Component';
+
+    padding-left: 65px;
+}
+.login.xk-placeholder{
+    height: 50px;
+    width: 400px;
+    margin-left: 800px;
+    margin-top: 10px;
+}
+
+.login.xk-placeholder > div{
+    display: none;
+}
+
+/*
+    Campaign Page Titles Component
+*/
+.title-subtitle.xk-placeholder:before {
+    content: 'Empty Alternative Page Titles Component';
+    padding-left: 65px;
+}
+.title-subtitle.xk-placeholder{
+    height: 75px;
+    width: 600px;
+    margin-left: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.title-subtitle.xk-placeholder > div{
+    display: none;
+}
+
+/*
+    Campaign Page Titles Component
+*/
+.campaign-page-image.xk-placeholder:before {
+    content: 'Empty Image Page Component';
+    padding-left: 65px;
+}
+.campaign-page-image.xk-placeholder{
+    height: 75px;
+    width: 600px;
+    margin-left: 40px;
+    margin-top: 10px;
+}
+
+.campaign-page-image.xk-placeholder > div{
+    display: none;
+}

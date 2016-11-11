@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    xk_addIdToElements="[content.primaryCtaLink,content.secondaryCtaLink]"
+    xk_containerClasses="[container,content,content--microsite]"
+    xk_placeholderTriggers="[content.title,content.subtitle,content.FPText,content.primaryCtaLinkText,content.secondaryCtaLinkText,content.bottomText]"/>

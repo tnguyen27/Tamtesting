@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.0.0">
+    <scr:component name="com.metlife.commons.servlet.PurgeAkamaiServlet">
+        <implementation class="com.metlife.commons.servlet.PurgeAkamaiServlet"/>
+        <service servicefactory="false">
+            <provide interface="javax.servlet.Servlet"/>
+        </service>
+        <property name="sling.servlet.paths">
+            /bin/akamaiConnector/purge
+        </property>
+        <property name="sling.servlet.methods">
+            POST
+        </property>
+        <property name="service.vendor" value="Adobe"/>
+        <property name="service.pid" value="com.metlife.commons.servlet.PurgeAkamaiServlet"/>
+        <reference name="ccuManager" interface="com.xumak.aem.akamai.ccu.CcuManager" cardinality="1..1" policy="static" bind="bindCcuManager" unbind="unbindCcuManager"/>
+        <reference name="flushAkamaiItemsJob" interface="com.xumak.aem.akamai.ccu.impl.FlushAkamaiItemsJob" cardinality="1..1" policy="static" bind="bindFlushAkamaiItemsJob" unbind="unbindFlushAkamaiItemsJob"/>
+        <reference name="cacheInvalidationService" interface="com.metlife.commons.services.CacheInvalidationService" cardinality="1..1" policy="static" bind="bindCacheInvalidationService" unbind="unbindCacheInvalidationService"/>
+    </scr:component>
+</components>

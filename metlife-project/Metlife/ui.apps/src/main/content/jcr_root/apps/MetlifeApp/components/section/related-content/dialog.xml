@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Related Content Container"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Configuration">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <type
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Type"
+                        name="./type"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <one-item
+                                jcr:primaryType="nt:unstructured"
+                                text="One Item"
+                                value="1-item"/>
+                            <two-items
+                                jcr:primaryType="nt:unstructured"
+                                text="Two Items"
+                                value="2-items"/>
+                            <three-items
+                                jcr:primaryType="nt:unstructured"
+                                text="Three Items"
+                                value="3-items"/>
+                        </options>
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            loadcontent="function(field,record,path){Metlife.Components.RelatedContent.loadContent(field,record,path);}"
+                            selectionchanged="function(selection, value, isChanged) { Metlife.Components.RelatedContent.selectionChanged(selection, value, isChanged);}"/>
+                    </type>
+                    <one-items
+                        jcr:primaryType="cq:Widget"
+                        collapsible="{Boolean}false"
+                        hidden="true"
+                        item-id="1-item"
+                        title="Related Content Type"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <tile1
+                                jcr:primaryType="cq:Widget"
+                                anchor="90%"
+                                fieldLabel="Tile 1"
+                                name="./tile1-1Type"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <image
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Image"
+                                        value="image"/>
+                                    <links
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Links"
+                                        value="links"/>
+                                </options>
+                            </tile1>
+                        </items>
+                    </one-items>
+                    <two-items
+                        jcr:primaryType="cq:Widget"
+                        collapsible="{Boolean}false"
+                        hidden="true"
+                        item-id="2-items"
+                        title="Related Content Type"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <tile1
+                                jcr:primaryType="cq:Widget"
+                                anchor="90%"
+                                fieldLabel="Tile 1"
+                                name="./tile2-1Type"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <image
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Image"
+                                        value="image"/>
+                                    <links
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Links"
+                                        value="links"/>
+                                </options>
+                            </tile1>
+                            <tile2
+                                jcr:primaryType="cq:Widget"
+                                anchor="90%"
+                                fieldLabel="Tile 2"
+                                name="./tile2-2Type"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <image
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Image"
+                                        value="image"/>
+                                    <links
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Links"
+                                        value="links"/>
+                                </options>
+                            </tile2>
+                        </items>
+                    </two-items>
+                    <three-items
+                        jcr:primaryType="cq:Widget"
+                        collapsible="{Boolean}false"
+                        hidden="true"
+                        item-id="3-items"
+                        title="Related Content Type"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <tile1
+                                jcr:primaryType="cq:Widget"
+                                anchor="90%"
+                                fieldLabel="Tile 1"
+                                name="./tile3-1Type"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <image
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Image"
+                                        value="image"/>
+                                    <links
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Links"
+                                        value="links"/>
+                                </options>
+                            </tile1>
+                            <tile2
+                                jcr:primaryType="cq:Widget"
+                                anchor="90%"
+                                fieldLabel="Tile 2"
+                                name="./tile3-2Type"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <image
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Image"
+                                        value="image"/>
+                                    <links
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Links"
+                                        value="links"/>
+                                </options>
+                            </tile2>
+                            <tile3
+                                jcr:primaryType="cq:Widget"
+                                anchor="90%"
+                                fieldLabel="Tile 3"
+                                name="./tile3-3Type"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <image
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Image"
+                                        value="image"/>
+                                    <links
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Links"
+                                        value="links"/>
+                                </options>
+                            </tile3>
+                        </items>
+                    </three-items>
+                </items>
+            </tab1>
+        </items>
+    </items>
+    <xk.config
+        jcr:primaryType="nt:unstructured"
+        xk_containerClasses="[large_product_module_wrapper col-md-12]"
+        xk_placeholderTriggers="[list.tiles]"/>
+</jcr:root>

@@ -1,0 +1,27 @@
+{%!
+* Section Header Component for Microsites Detail Page
+* ----------------------------------------------------------------------------- *
+* CHANGE HISTORY
+* -----------------------------------------------------------------------------
+* Version | Date       | Developer              | Changes
+* 1.0     | 2016/06/16 | Sergio Torres          | Initial Creation
+* ----------------------------------------------------------------------------- *
+%}
+
+<!-- Section Header Section-->
+<div class="row wrapper">
+    <div class="section-header">
+        <h2 class="text-center">{% content.header %}</h2>
+        {%#each content.columnLinks%}
+            {%#if @last%}
+                {%{content.bottomText}%}
+            {%else%}
+                <ul>
+                    {%#each links%}
+                    <li>{%label%}</li>
+                    {%/each%}
+                </ul>
+            {%/if%}
+        {%/each%}
+    </div>
+</div>

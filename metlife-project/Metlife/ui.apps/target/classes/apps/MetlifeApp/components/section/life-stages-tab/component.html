@@ -1,0 +1,11 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Life Stages Tab Component
+* ------------------------------------------------------------------------------ *
+%}
+
+<img class="item_image {%#unless content.imagePath %} cq-image-placeholder {%/unless%}" src="{%#if content.imagePath %} {% content.imagePath %}  {%else%} /etc/designs/default/0.gif {%/if%}" alt="{% content.altText %} Image">
+<p>{% content.titletab %}</p>
+<svg class="icon brand-5th carousel--tabs__icon">
+    <use xlink:href="/static/images/icons-metlife.svg#icon-arrow-down-triangle"></use>
+</svg>

@@ -1,0 +1,117 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Product Comparison Chart
+* ------------------------------------------------------------------------------ *
+%}
+
+<div class="container bg-white product-comparison-chart-wrapper" data-comp-spacing="product-comparison-chart">
+    {%#if content.disclaimerText%}
+        <div class="container hidden-xs">
+            <div class="row wrapper product-comparison-chart-description">
+                <p>
+                    {%{content.disclaimerText}%}
+                </p>
+            </div>
+        </div>
+    {%/if%}
+    <div class="container-fluid searchable">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="product_chart_background">
+                    <div class="row">
+                        {%#if content.coverageLastsLabel%}
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <!--put height here-->
+    
+                            <div class="product_chart">
+                                <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2 life_insurance_col1">
+                                    <div class="product_chart_key0"></div>
+                                    <div class="product_chart_key1 column-cell">
+                                        <span>{%content.coverageLastsLabel%}</span>
+                                    </div>
+                                    <div class="product_chart_key1 column-cell">
+                                        <span>{%content.availableOnlineLabel%}</span>
+                                    </div>
+                                    <div class="product_chart_key1 column-cell">
+                                        <span>{%content.buildCashValueLabel%}</span>
+                                    </div>
+                                    <div class="product_chart_key1 column-cell">
+                                        <span>{%content.medicalExamRequiredLabel%}</span>
+                                    </div>
+                                    <div class="product_chart_key1 column-cell">
+                                        <span>{%content.coverageAmountsLabel%}</span>
+                                    </div>
+                                </div>
+                                <div class="carousel slide carousel--microsite" id="productComparisonChartCarousel" data-interval="false" data-ride="carousel">
+                                    <div class="carousel-inner">
+                                        {%#each list.pages%}
+                                        <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2  carousel-item" data-target="{%counter%}">
+                                            <div class="life_product_info top-column ">
+                                                <a  class="product_link_top"
+                                                    id="{%elementId%}"
+                                                    href="{%link%}">{%productName%} {%#if productSubName%} <span class="insert_newline"></span>{%productSubName%} {%/if%}
+                                                    <div class="suptag">{%counter%}</div>
+                                                </a>
+                                                <div class="life_chart_product_price">
+                                                    <div class="price">{%priceText%}</div>
+                                                    {%#if productFrequency%}
+                                                    <div class="sub">&nbsp;/ {%productFrequency%}</div>
+                                                    {%/if%}
+                                                </div>
+                                                <div class="coverage_amount">{%coverageAmountDescriptionTop%}<span
+                                                        class="insert_newline"></span>{%coverageAmountDescriptionBottom%}
+                                                </div>
+                                            </div>
+                                            <div class="life_chart_coverage column-cell">{%coverageLasts%}</div>
+                                            <div class="life_check_online column-cell">{%{availableOnline}%}</div>
+                                            <div class="life_chart_cash column-cell">{%{buildCashValueValue}%}</div>
+                                            <div class="life_chart_exam column-cell">{%{medicalExamRequiredValue}%}</div>
+                                            <div class="life_chart_coverage column-cell">{%coverageAmounts%}</div>
+                                            <div class="life_chart_learn ">
+                                                {%#if content.learnMoreButtonLabel%}
+                                                <div>
+                                                    <a class="btn-brand-2nd" 
+                                                        id="{%elementId%}MoreButton"
+                                                        href="{%link%}">{%content.learnMoreButtonLabel%}</a>
+                                                </div>
+                                                {%/if%}
+                                                {%#if bottomLinkLabel%}
+                                                <a class="textlink" 
+                                                    id="{%elementId%}BottomLink"
+                                                    href="{%bottomLink%}">{%bottomLinkLabel%}</a>
+                                                {%/if%}
+                                            </div>
+                                        </div>
+                                        {%/each%}
+                                    </div>
+                                    <a class="left carousel-control hidden-sm hidden-lg" href="#productComparisonChartCarousel" data-slide="prev">
+                                        <svg class="icon icon-chevron-left blue">
+                                            <use xlink:href="/static/images/icons-metlife.svg#icon-chevron-left"></use>
+                                        </svg>
+                                        <span class="sr-only">Prev</span>
+                                    </a>
+                                    <a class="right carousel-control hidden-sm hidden-lg" href="#productComparisonChartCarousel" data-slide="next">
+                                        <svg class="icon icon-chevron-right blue">
+                                            <use xlink:href="/static/images/icons-metlife.svg#icon-chevron-right"></use>
+                                        </svg>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        {%/if%}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {%#if content.text%}
+        <div class="container product-comparison-chart-disclaimer">
+            <div class="row wrapper metlife-brand-9">
+                <p class="disclaimer text-center">
+                    {%{content.text}%}
+                </p>
+            </div>
+        </div>
+    {%/if%}
+</div>

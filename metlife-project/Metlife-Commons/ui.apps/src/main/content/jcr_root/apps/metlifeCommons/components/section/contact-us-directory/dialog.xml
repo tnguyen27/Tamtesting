@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="600"
+    title="Contact Us Directory Dialog"
+    width="1000"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <text-configuration
+                jcr:primaryType="cq:Panel"
+                title="Text Configuration">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <header
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Header"
+                        name="./header"
+                        xtype="textfield"/>
+                    <subHeading
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Sub-Heading"
+                        name="./subHeading"
+                        xtype="textarea"/>
+                    <paragraphHeader
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Paragraph Header"
+                        name="./paragraphHeader"
+                        xtype="textfield"/>
+                    <body
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Body Text"
+                        height="350"
+                        name="./bodyText"
+                        xtype="richtext"/>
+                </items>
+            </text-configuration>
+            <directory
+                jcr:primaryType="cq:Panel"
+                title="Directory Configuration">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <group
+                        jcr:primaryType="cq:Widget"
+                        addItemLabel="Add Group"
+                        fieldDescription="Click the '+' to add a new group"
+                        fieldLabel="Groups"
+                        name="./group"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            xtype="multifieldpanel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <contacts
+                                    jcr:primaryType="cq:Widget"
+                                    addItemLabel="Add Contact"
+                                    fieldDescription="Click the '+' to add a new contact"
+                                    fieldLabel="Contacts"
+                                    key="contacts"
+                                    xtype="multifield">
+                                    <fieldConfig
+                                        jcr:primaryType="cq:Widget"
+                                        xtype="multifieldpanel">
+                                        <items jcr:primaryType="cq:WidgetCollection">
+                                            <leftText
+                                                jcr:primaryType="cq:Widget"
+                                                anchor="95%"
+                                                fieldLabel="Left Text"
+                                                key="leftText"
+                                                minLength="5"
+                                                xtype="textfield"/>
+                                            <phonenumber
+                                                jcr:primaryType="cq:Widget"
+                                                anchor="95%"
+                                                fieldLabel="Phone Number"
+                                                key="phone"
+                                                minLength="5"
+                                                xtype="textfield"/>
+                                            <type-of-bold
+                                                jcr:primaryType="cq:Widget"
+                                                allowBlank="false"
+                                                anchor="95%"
+                                                fieldLabel="Header Level"
+                                                key="typeOfBold"
+                                                type="select"
+                                                xtype="selection">
+                                                <options jcr:primaryType="cq:WidgetCollection">
+                                                    <level-one
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Level One"
+                                                        value="contact-results--large-heading semi-bold"/>
+                                                    <level-two
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Level Two"
+                                                        value="contact-results--small-heading semi-bold"/>
+                                                    <level-three
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Level Three"
+                                                        value=""/>
+                                                </options>
+                                            </type-of-bold>
+                                        </items>
+                                    </fieldConfig>
+                                </contacts>
+                                <specialties-hint
+                                    jcr:primaryType="nt:unstructured"
+                                    ignoreData="true"
+                                    name="./contacts@TypeHint"
+                                    value="String[]"
+                                    xtype="hidden"/>
+                            </items>
+                        </fieldConfig>
+                    </group>
+                </items>
+            </directory>
+        </items>
+    </items>
+</jcr:root>

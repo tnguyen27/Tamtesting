@@ -1,0 +1,156 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Akamai Configuration - Body
+* ------------------------------------------------------------------------------ *
+%}
+
+<body>
+<div class="ui grid">
+    <div class="row">
+        <div class="column padding-reset">
+            <div class="ui huge message page grid">
+                <h1 class="ui huge header">Akamai/Dispatcher Cache Purge</h1>
+                <p>
+                    This tool it's intended to flush the <b>Dispatcher Cache</b> and the <b>Akamai Cache</b> from a
+                    given URL.
+                    It'll find the corresponding resource based on the Akamai bundles configuration listed below as
+                    Domain/Path Mapping.
+                    If the options "Childs" is selected, it will flush the <b>Dispatcher Cache</b> and the <b>Akamai
+                    Cache</b> for that resource and all of it's child, keep in mind that due to security concerns it'll
+                    only allow a resource with no more than {% content.childlimit %} childs.
+                </p>
+                <br>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="ui hidden divider"></div>
+<div class="ui page grid">
+    <div class="row">
+        <div class="column">
+            <h2 class="ui header">Domain/Path Mapping</h2>
+            <p>
+                {%#each content.akamaimapping %}
+                {%this%}<br>
+                {%/each%}
+            </p>
+            <div class="ui divider"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <h2 class="ui header">Dispatchers</h2>
+            <p>
+                {%#each content.dispatchers %}
+                {%this%}<br>
+                {%/each%}
+            </p>
+            <div class="ui divider"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <form class="ui form">
+                <h4 class="ui dividing header">URL Information</h4>
+                <div class="one field">
+                    <div class="field">
+                        <label>URL
+                            <br><br>
+                            <small>URL Format: http://%domain%/path/to/purge.html</small>
+                        </label>
+                        <div class="field">
+                            <input name="path" id="path" placeholder="http://www.metlife.com/insurance.html (example)"
+                                   type="text">
+                        </div>
+                    </div>
+                </div>
+                <h5 class="ui header">Childs</h5>
+                <div class="field">
+                    <div class="ui toggle checkbox">
+                        <input name="child" id="child" type="radio">
+                        <label>Purge child pages</label>
+                    </div>
+                </div>
+                <div class="ui hidden divider"></div>
+            </form>
+            <button id="purgeButton" class="ui submit button">Purge</button>
+            <div class="ui divider"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <div id="result"></div>
+            <div class="ui divider"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <span>&copy; XumaK 2016</span>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    //<![CDATA[
+    $('.ui.checkbox').checkbox();
+
+    var onlyOneClick = true;
+    $("#purgeButton").click(function () {
+        if (onlyOneClick) {
+            onlyOneClick = false;
+            $('#purgeButton').attr('disabled', 'disabled');
+            $('#purgeButton').html('Loading...');
+
+            var jqxhr = $.post("/bin/akamaiConnector/purge", {
+                        path: $('#path').val(),
+                        child: $('#child').parent().attr('class')
+                    }, function (data) {
+                        console.log("success");
+                        var obj = jQuery.parseJSON(data);
+                        var d = new Date();
+                        var n = d.toString();
+
+                        var results = "";
+                        if (typeof obj.results != 'undefined') {
+                            results += "-----<br><br>";
+                            results += "<b>Responses: </b><br><br>";
+
+                            $.each(obj.results, function (key, value) {
+                                results +=
+                                        value.url + " <br> " +
+                                        value.response + "<br><br>";
+                            });
+
+                            results += "<br>";
+                        }
+
+                        $("#result").html(
+                                "<b>Time:</b> " + n + '<br>' +
+                                "<b>Childs:</b> " + obj.childs + '<br>' +
+                                "<b>URL Sent:</b> " + obj.path + '<br>' +
+                                "<b>Domain from URL:</b> " + obj.urlHost + '<br>' +
+                                "<b>Path from URL:</b> " + obj.urlPath + '<br><br>' +
+                                "<b>Status:</b> " + obj.status + '<br><br>' +
+                                "<b>Message:</b> <br>" + obj.message + '<br><br>' +
+                                results + '<br>' +
+                                ""
+                        );
+                    })
+                    .done(function () {
+                        console.log("second success");
+                    })
+                    .fail(function () {
+                        alert("error");
+                    })
+                    .always(function () {
+                        console.log("finished");
+                        $('#purgeButton').html('Purge');
+                        $('#purgeButton').removeAttr('disabled');
+                        onlyOneClick = true;
+                    });
+        }
+    });
+    //]]>
+</script>
+</body>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Panel"
+    title="Product Information">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <general
+            jcr:primaryType="cq:Widget"
+            anchor="100%"
+            collapsible="true"
+            title="General Information"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <name
+                    jcr:primaryType="cq:Widget"
+                    anchor="95%"
+                    fieldLabel="Product Name"
+                    name="./productName"
+                    xtype="textfield"/>
+                <sub-name
+                    jcr:primaryType="cq:Widget"
+                    anchor="95%"
+                    fieldLabel="Product Sub Name"
+                    name="./productSubName"
+                    xtype="textfield"/>
+                <price
+                    jcr:primaryType="cq:Widget"
+                    anchor="95%"
+                    fieldDescription="E.g. $4.75"
+                    fieldLabel="Price Text"
+                    name="./priceText"
+                    xtype="textfield"/>
+                <frequency
+                    jcr:primaryType="cq:Widget"
+                    anchor="95%"
+                    fieldDescription="E.g. daily, weekly, monthly, annually."
+                    fieldLabel="Frequency"
+                    name="./productFrequency"
+                    options="/etc/acs-commons/lists/metlife/product/duration/_jcr_content.list.json"
+                    type="select"
+                    xtype="selection"/>
+                <coverage-amount-description-top
+                    jcr:primaryType="cq:Widget"
+                    anchor="95%"
+                    fieldDescription="E.g. for $10,000 of coverage"
+                    fieldLabel="Coverage Amount Description Top"
+                    name="./coverageAmountDescriptionTop"
+                    xtype="textfield"/>
+                <coverage-amount-description-bottom
+                    jcr:primaryType="cq:Widget"
+                    anchor="95%"
+                    fieldDescription="(30 year old female) &lt;br>&lt;br>"
+                    fieldLabel="Coverage Amount Description Bottom"
+                    name="./coverageAmountDescriptionBottom"
+                    xtype="textfield"/>
+                <link-text
+                    jcr:primaryType="cq:Widget"
+                    anchor="95%"
+                    fieldDescription="E.g. APPLY ONLINE"
+                    fieldLabel="Bottom Link Label"
+                    name="./bottomLinkLabel"
+                    xtype="textfield"/>
+                <link-path
+                    jcr:primaryType="cq:Widget"
+                    anchor="95%"
+                    fieldLabel="Bottom Link"
+                    linkPattern="\{0}.html"
+                    name="./bottomLink"
+                    rootPath="/content/metlife"
+                    rootTitle="MetLife"
+                    xtype="pathfield"/>
+            </items>
+        </general>
+        <questions-fieldset
+            jcr:primaryType="cq:Widget"
+            anchor="100%"
+            collapsible="true"
+            title="Questions"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <coverage-last-answer
+                    jcr:primaryType="cq:Widget"
+                    anchor="95%"
+                    fieldLabel="Coverage Lasts"
+                    name="./coverageLasts"
+                    xtype="textfield"/>
+                <available-online
+                    jcr:primaryType="cq:Widget"
+                    anchor="95%"
+                    fieldLabel="Available Online"
+                    name="./availableOnline"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <yes
+                            jcr:primaryType="nt:unstructured"
+                            text="Check"
+                            value="&lt;img class=&quot;chart_check&quot; src=&quot;/static/images/icon_check_green.png&quot; alt=&quot;Check Image&quot;>"/>
+                        <no
+                            jcr:primaryType="nt:unstructured"
+                            text="—"
+                            value="&lt;div class=&quot;chart_cash_check&quot;> —&lt;/div>"/>
+                    </options>
+                </available-online>
+                <build-cash-value
+                    jcr:primaryType="cq:Widget"
+                    anchor="95%"
+                    fieldLabel="Build Cash Value"
+                    name="./buildCashValue"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <yes
+                            jcr:primaryType="nt:unstructured"
+                            text="Yes"
+                            value="&lt;img class=&quot;chart_check&quot; src=&quot;/static/images/icon_check_green.png&quot; alt=&quot;Check Image&quot;>"/>
+                        <no
+                            jcr:primaryType="nt:unstructured"
+                            text="No"
+                            value="—"/>
+                    </options>
+                </build-cash-value>
+                <medical-exam
+                    jcr:primaryType="cq:Widget"
+                    anchor="95%"
+                    fieldLabel="Medical Exam Required"
+                    name="./medicalExamRequired"
+                    type="combobox"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <yes
+                            jcr:primaryType="nt:unstructured"
+                            text="Yes"/>
+                        <no
+                            jcr:primaryType="nt:unstructured"
+                            text="No"/>
+                    </options>
+                    <listeners
+                        jcr:primaryType="nt:unstructured"
+                        selectionchanged="function(){&#xa;  var selected = &quot;&quot;;&#xa;  var currentValue = this.getValue();&#xa;  if(currentValue === 'Yes' || currentValue === 'yes'){&#xa;    selected = &quot;&lt;img class='chart_check' src='/static/images/icon_check_green.png' alt='Check Image'>&quot;;&#xa;  }else if(currentValue === 'No' || currentValue === 'no'){&#xa;    selected = &quot;&lt;div class='chart_cash_check'> —&lt;/div>&quot;;&#xa;  }else {&#xa;    selected = currentValue;&#xa;  }&#xa;&#x9;this.findParentByType(&quot;panel&quot;).getComponent(6).setValue(selected)&#xa;}"/>
+                </medical-exam>
+                <coverage-amounts
+                    jcr:primaryType="cq:Widget"
+                    anchor="95%"
+                    fieldLabel="Coverage Amounts Answer"
+                    name="./coverageAmounts"
+                    xtype="textfield"/>
+                <medical-exam-value
+                    jcr:primaryType="nt:unstructured"
+                    name="./medicalExamRequiredValue"
+                    xtype="hidden"/>
+            </items>
+        </questions-fieldset>
+    </items>
+</jcr:root>

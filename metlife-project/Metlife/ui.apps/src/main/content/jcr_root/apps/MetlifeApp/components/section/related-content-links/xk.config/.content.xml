@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    xk_addIdToElements="[content.relatedContentLinks]"
+    xk_containerClasses="media-card"
+    xk_deserializeJSON="[content.relatedContentLinks]"
+    xk_placeholderTriggers="[content.title,content.titleLink,content.labelsLinks]"
+    xk_spoolContentImages="sectionImages"
+    xk_updatedMultifieldProperty="[content.sectionImagesSpooled>content.relatedContent.imagePath]"/>

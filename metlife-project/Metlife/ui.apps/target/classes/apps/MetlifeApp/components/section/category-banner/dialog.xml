@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="500"
+    title="Banner"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Configuration">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <headline
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="false"
+                        fieldDescription="40 characters max."
+                        fieldLabel="Headline"
+                        maxLength="40"
+                        name="./headline"
+                        xtype="textfield"/>
+                    <description
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="500 characters max."
+                        fieldLabel="Description"
+                        height="150"
+                        maxLength="500"
+                        name="./description"
+                        xtype="textarea"/>
+                    <button-text
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="false"
+                        fieldDescription="30 characters max."
+                        fieldLabel="Button Text"
+                        maxLength="30"
+                        name="./buttonText"
+                        xtype="textfield"/>
+                    <link
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="false"
+                        fieldLabel="Link"
+                        linkPattern="\{0}.html"
+                        name="./link"
+                        rootPath="/content/metlife"
+                        rootTitle="MetLife"
+                        xtype="pathfield"/>
+                    <link-target
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="false"
+                        anchor="95%"
+                        defaultValue="_self"
+                        fieldLabel="Open in"
+                        key="target"
+                        name="./target"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <self
+                                jcr:primaryType="nt:unstructured"
+                                text="Same Page"
+                                value="_self"/>
+                            <blank
+                                jcr:primaryType="nt:unstructured"
+                                text="New Page"
+                                value="_blank"/>
+                        </options>
+                    </link-target>
+                </items>
+            </tab1>
+            <appearance
+                jcr:primaryType="cq:Panel"
+                title="Appearance">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <buttoncolor
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="green"
+                        fieldLabel="Button Color"
+                        name="./buttonColor"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <blue
+                                jcr:primaryType="nt:unstructured"
+                                text="Blue"
+                                value="btn-brand-1st"/>
+                            <green
+                                jcr:primaryType="nt:unstructured"
+                                text="Green"
+                                value="btn-brand-2nd"/>
+                            <darkerblue
+                                jcr:primaryType="nt:unstructured"
+                                text="Darker Blue"
+                                value="btn-brand-3rd"/>
+                            <lightblue
+                                jcr:primaryType="nt:unstructured"
+                                text="Light Blue"
+                                value="btn-brand-4th"/>
+                        </options>
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            loadcontent="function(field,record,path){}"
+                            selectionchanged="function(selection, value, isChanged) { }"/>
+                    </buttoncolor>
+                    <imagePosition
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Image to left"
+                        inputValue="true"
+                        name="./imagePosition"
+                        type="checkbox"
+                        xtype="selection"/>
+                </items>
+            </appearance>
+            <image
+                jcr:primaryType="cq:Widget"
+                cropParameter="./imageCrop"
+                ddGroups="[media]"
+                fileNameParameter="./fileName"
+                fileReferenceParameter="./fileReference"
+                mapParameter="./imageMap"
+                name="./file"
+                requestSuffix=".img.png"
+                rotateParameter="./imageRotate"
+                title="Image"
+                xtype="html5smartimage"/>
+        </items>
+    </items>
+</jcr:root>

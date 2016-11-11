@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.0.0" localization="OSGI-INF/metatype/com.metlife.commons.sso.SSOAuthenticationHandler">
+    <OCD id="com.metlife.commons.sso.SSOAuthenticationHandler" name="%com.metlife.commons.sso.SSOAuthenticationHandler.name" description="%com.metlife.commons.sso.SSOAuthenticationHandler.description">
+        <AD id="path" type="String" default="/" name="%com.metlife.commons.sso.SSOAuthenticationHandler.path.name" description="%com.metlife.commons.sso.SSOAuthenticationHandler.path.description" cardinality="100"/>
+        <AD id="sso.url" type="String" default="/sso" name="%com.metlife.commons.sso.SSOAuthenticationHandler.sso.url.name" description="%com.metlife.commons.sso.SSOAuthenticationHandler.sso.url.description"/>
+        <AD id="sso.enabled" type="String" default="false" name="%com.metlife.commons.sso.SSOAuthenticationHandler.sso.enabled.name" description="%com.metlife.commons.sso.SSOAuthenticationHandler.sso.enabled.description"/>
+        <AD id="idpUrl" type="String" default="https://ssofed-qa.metlife.com/affwebservices/public/saml2sso?SPID=https://author.metlife.xumak.com" name="%com.metlife.commons.sso.SSOAuthenticationHandler.idpUrl.name" description="%com.metlife.commons.sso.SSOAuthenticationHandler.idpUrl.description"/>
+        <AD id="idpUrls" type="String" default="" name="%com.metlife.commons.sso.SSOAuthenticationHandler.idpUrls.name" description="%com.metlife.commons.sso.SSOAuthenticationHandler.idpUrls.description" cardinality="100"/>
+        <AD id="sso.redirect" type="String" default="/siteadmin" name="%com.metlife.commons.sso.SSOAuthenticationHandler.sso.redirect.name" description="%com.metlife.commons.sso.SSOAuthenticationHandler.sso.redirect.description"/>
+        <AD id="authtype" type="String" default="SAML" name="%com.metlife.commons.sso.SSOAuthenticationHandler.authtype.name" description="%com.metlife.commons.sso.SSOAuthenticationHandler.authtype.description"/>
+        <AD id="userIDAttribute" type="String" default="Email" name="%com.metlife.commons.sso.SSOAuthenticationHandler.userIDAttribute.name" description="%com.metlife.commons.sso.SSOAuthenticationHandler.userIDAttribute.description"/>
+        <AD id="sso.cookieDomain" type="String" default="" name="%com.metlife.commons.sso.SSOAuthenticationHandler.sso.cookieDomain.name" description="%com.metlife.commons.sso.SSOAuthenticationHandler.sso.cookieDomain.description"/>
+        <AD id="userAttributes" type="String" default="" name="%com.metlife.commons.sso.SSOAuthenticationHandler.userAttributes.name" description="%com.metlife.commons.sso.SSOAuthenticationHandler.userAttributes.description" cardinality="100"/>
+        <AD id="defaultLogin" type="String" default="/libs/granite/core/content/login.html" name="%com.metlife.commons.sso.SSOAuthenticationHandler.defaultLogin.name" description="%com.metlife.commons.sso.SSOAuthenticationHandler.defaultLogin.description"/>
+        <AD id="sso.logoutRedirect" type="String" default="" name="%com.metlife.commons.sso.SSOAuthenticationHandler.sso.logoutRedirect.name" description="%com.metlife.commons.sso.SSOAuthenticationHandler.sso.logoutRedirect.description" cardinality="100"/>
+    </OCD>
+    <Designate pid="com.metlife.commons.sso.SSOAuthenticationHandler">
+        <Object ocdref="com.metlife.commons.sso.SSOAuthenticationHandler"/>
+    </Designate>
+</metatype:MetaData>

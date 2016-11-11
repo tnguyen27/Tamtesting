@@ -1,0 +1,26 @@
+<div>
+        <label>Select the CSV file to upload.  (File must be selected in the component configuration dialog)</label>
+    	<br><br>
+		<input size="100"
+			   type="text"
+			   id="fileInput"
+			   disabled
+			   value="{%content.locationsFile%}" />
+
+		<input id="fileUploadButton"
+			   type="button"
+			   value="Upload locations"
+			   csv-uploader-url="{% content.path %}.csv-locations"
+			   csv-uploader-extension=".json"
+			   onClick="uploadLocationsCSV($('#fileInput').val());" />
+
+		<br><br>
+		<div id="resultDiv" style="">
+		</div>
+		<div id="errorDiv" style="color:red">
+		</div>
+		<br><br>
+		<!--<div id="locationsDiv" >-->
+		<!--</div>-->
+
+    </div>

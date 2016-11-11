@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Panel"
+    title="Basic Configuration">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <field
+            jcr:primaryType="nt:unstructured"
+            allowBlank="true"
+            fieldLabel="Web2Lead Field"
+            hidden="true"
+            name="./web2LeadField"
+            options="/etc/acs-commons/lists/metlife/form-configuration/web2lead-fields/_jcr_content.list.json"
+            type="select"
+            xtype="selection"/>
+        <clrOptions
+            jcr:primaryType="nt:unstructured"
+            allowBlank="false"
+            fieldLabel="CLR"
+            name="./clrField"
+            options="/etc/acs-commons/lists/metlife/form-configuration/webLead-fields-clr/_jcr_content.list.json"
+            type="select"
+            xtype="selection"/>
+        <title
+            jcr:primaryType="nt:unstructured"
+            allowBlank="false"
+            fieldLabel="Title"
+            name="./title"
+            xtype="textfield"/>
+        <label
+            jcr:primaryType="nt:unstructured"
+            allowBlank="false"
+            fieldLabel="Label"
+            name="./label"
+            xtype="textfield"/>
+        <placeholder
+            jcr:primaryType="nt:unstructured"
+            allowBlank="false"
+            fieldLabel="Placeholder"
+            name="./placeholder"
+            xtype="textfield"/>
+        <error
+            jcr:primaryType="nt:unstructured"
+            allowBlank="true"
+            fieldLabel="Error Message"
+            name="./errorMessage"
+            xtype="textarea"/>
+        <data-type
+            jcr:primaryType="nt:unstructured"
+            allowBlank="true"
+            fieldLabel="Input Valid Type"
+            name="./validType"
+            options="/etc/acs-commons/lists/metlife/form-configuration/valid-types/_jcr_content.list.json"
+            type="select"
+            xtype="selection"/>
+        <validator
+            jcr:primaryType="nt:unstructured"
+            allowBlank="true"
+            fieldLabel="Post Validator"
+            name="./validator"
+            options="/etc/acs-commons/lists/metlife/form-configuration/validator/_jcr_content.list.json"
+            type="select"
+            xtype="selection"/>
+        <hidden
+            jcr:primaryType="nt:unstructured"
+            allowBlank="true"
+            fieldLabel="Hidden"
+            name="./hidden"
+            type="checkbox"
+            xtype="selection"/>
+        <observes
+            jcr:primaryType="nt:unstructured"
+            allowBlank="true"
+            fieldLabel="Observes"
+            name="./observesEnabled"
+            type="checkbox"
+            xtype="selection">
+            <listeners
+                jcr:primaryType="nt:unstructured"
+                loadcontent="function(field,record,path){Metlife.Forms.Observes.loadContent(field,record,path);}"
+                selectionchanged="function(selection, value, isChanged) { Metlife.Forms.Observes.selectionChanged(selection, value, isChanged);}"/>
+        </observes>
+        <hiddenTH
+            jcr:primaryType="nt:unstructured"
+            ignoreData="true"
+            name="./hidden@TypeHint"
+            value="Boolean"
+            xtype="hidden"/>
+        <observesTH
+            jcr:primaryType="nt:unstructured"
+            ignoreData="true"
+            name="./observesEnabled@TypeHint"
+            value="Boolean"
+            xtype="hidden"/>
+    </items>
+</jcr:root>

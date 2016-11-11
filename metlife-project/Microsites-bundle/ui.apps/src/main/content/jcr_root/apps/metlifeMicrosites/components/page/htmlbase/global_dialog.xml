@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="cq:Dialog"
+    height="600"
+    title="Global Properties"
+    width="950"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <google-analytics
+                jcr:primaryType="cq:Panel"
+                title="Vendor Config">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <apply
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="true"
+                        fieldLabel="Apply"
+                        name="./apply"
+                        type="checkbox"
+                        xtype="selection"/>
+                    <trackingId
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="false"
+                        anchor="95%"
+                        fieldDescription="Add the UA-XXXXX-Y Key"
+                        fieldLabel="Tracking ID"
+                        name="./trackingId"
+                        xtype="textfield"/>
+                    <googleanalytics
+                        jcr:primaryType="cq:Widget"
+                        collapsed="{Boolean}false"
+                        collapsible="{Boolean}true"
+                        title="Google Analytics"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <apply
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="true"
+                                fieldLabel="Apply"
+                                name="./apply"
+                                type="checkbox"
+                                xtype="selection"/>
+                            <trackingId
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="false"
+                                anchor="95%"
+                                fieldDescription="Add the UA-XXXXX-Y Key"
+                                fieldLabel="Tracking ID"
+                                name="./trackingId"
+                                xtype="textfield"/>
+                        </items>
+                    </googleanalytics>
+                    <vendorconfig
+                        jcr:primaryType="cq:Widget"
+                        collapsed="{Boolean}false"
+                        collapsible="{Boolean}true"
+                        title="Vendor configurations"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <testing
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="Vendor for A/B testing"
+                                fieldLabel="Optimost"
+                                name="./vendorABTesting"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <enable
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Enable"
+                                        value="enable"/>
+                                    <disable
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Disable"
+                                        value="disable"/>
+                                </options>
+                            </testing>
+                            <journey
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="Vendor for user journey recordings"
+                                fieldLabel="Click Tale"
+                                name="./vendorJourney"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <enable
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Enable"
+                                        value="enable"/>
+                                    <disable
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Disable"
+                                        value="disable"/>
+                                </options>
+                            </journey>
+                            <feedback
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="Vendor for capturing user feedback"
+                                fieldLabel="Opinion lab"
+                                name="./vendorFeedback"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <enable
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Enable"
+                                        value="enable"/>
+                                    <disable
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Disable"
+                                        value="disable"/>
+                                </options>
+                            </feedback>
+                            <measuring
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="Vendor for measuring performance of pages"
+                                fieldLabel="Dynatrace"
+                                name="./vendorMeasuring"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <enable
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Enable"
+                                        value="enable"/>
+                                    <disable
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Disable"
+                                        value="disable"/>
+                                </options>
+                            </measuring>
+                            <tagging
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="Vendor for tagging"
+                                fieldLabel="Ensighten"
+                                name="./vendorTagging"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <enable
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Enable"
+                                        value="enable"/>
+                                    <disable
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Disable"
+                                        value="disable"/>
+                                </options>
+                            </tagging>
+                            <analytics
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="Activate Analytics Tag Code"
+                                fieldLabel="Analytics Tag"
+                                name="./analyticsTag"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <enable
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Enable"
+                                        value="enable"/>
+                                    <disable
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Disable"
+                                        value="disable"/>
+                                </options>
+                            </analytics>
+                        </items>
+                    </vendorconfig>
+                </items>
+            </google-analytics>
+            <scroll-for-more
+                jcr:primaryType="cq:Panel"
+                title="Scroll for more">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <enable
+                        jcr:primaryType="cq:Widget"
+                        collapsed="{Boolean}false"
+                        collapsible="{Boolean}false"
+                        title="Enable"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <activeScroll
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Enable Scroll For More"
+                                name="./activeScrollForMore"
+                                type="checkbox"
+                                xtype="selection"/>
+                        </items>
+                    </enable>
+                    <configuration
+                        jcr:primaryType="cq:Widget"
+                        collapsed="{Boolean}false"
+                        collapsible="{Boolean}false"
+                        title="Configuration"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <text
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="false"
+                                anchor="95%"
+                                fieldLabel="Text"
+                                name="./scrollForMoreText"
+                                xtype="textfield"/>
+                        </items>
+                    </configuration>
+                </items>
+            </scroll-for-more>
+            <online-opinion
+                jcr:primaryType="cq:Panel"
+                title="Online Opinion">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <online-opinion-config
+                        jcr:primaryType="cq:Widget"
+                        collapsed="{Boolean}false"
+                        collapsible="{Boolean}true"
+                        title="Online Opinion Configuration"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <active
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Active"
+                                name="./onlineOpinionIsActive"
+                                type="checkbox"
+                                xtype="selection"/>
+                            <feedbackMobileLabel
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="false"
+                                anchor="90%"
+                                fieldLabel="Mobile Feedback Label"
+                                name="./onlineOpinionMobileLabel"
+                                xtype="textfield"/>
+                            <link-feedback
+                                jcr:primaryType="cq:Widget"
+                                anchor="95%"
+                                fieldLabel="Link Feedback"
+                                linkPattern="\{0}.html"
+                                name="./linkFeedback"
+                                rootPath="/content/metlife"
+                                rootTitle="MetLife"
+                                xtype="pathfield"/>
+                        </items>
+                    </online-opinion-config>
+                </items>
+            </online-opinion>
+            <vendor-scripts
+                jcr:mixinTypes="[rep:AccessControllable]"
+                jcr:primaryType="cq:Widget"
+                path="/apps/metlifeCommons/components/page/htmlbase/tab_vendorscripts.infinity.json"
+                xtype="cqinclude"/>
+        </items>
+    </items>
+</jcr:root>

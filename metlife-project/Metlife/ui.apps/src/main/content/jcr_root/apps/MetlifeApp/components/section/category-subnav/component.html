@@ -1,0 +1,22 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Category Page Sub Navigation
+* ------------------------------------------------------------------------------ *
+%}
+
+<div class="container hidden-xs">
+    <nav class="row subnav bg-brand-1st-inv">
+        <ul class="subnav__list">
+            {%#each list.pages%}
+                <li class="subnav__list__item">
+                    <a href="{%this.path%}.html" 
+                       target="{%#if this.target%}{%this.target%}{%else%}_self{%/if%}" 
+                       class="subnav__list__item__anchor" 
+                       id="{%this.elementId%}">
+                        <p class="subnav__list__item__anchor__label">{%this.navigationTitle%}</p>
+                    </a>
+                </li>
+            {%/each%}
+        </ul>
+    </nav>
+</div>

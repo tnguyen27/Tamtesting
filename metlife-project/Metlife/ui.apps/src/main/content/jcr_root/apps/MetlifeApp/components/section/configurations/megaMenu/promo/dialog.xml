@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Promo"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <configurations
+                jcr:primaryType="cq:Panel"
+                title="Configurations">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <image
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Image"
+                        fileNameParameter="./image/fileName"
+                        fileReferenceParameter="./image/fileReference"
+                        name="./image/fileReference"
+                        rootPath="/content/dam"
+                        xtype="pathfield"/>
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Title"
+                        name="./title"
+                        xtype="textfield"/>
+                    <description
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Description"
+                        name="./description"
+                        xtype="textarea"/>
+                    <label
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Link Label"
+                        name="./label"
+                        xtype="textfield"/>
+                    <link
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Link"
+                        linkPattern="\{0}.html"
+                        name="./link"
+                        rootPath="/content/metlife"
+                        rootTitle="MetLife"
+                        xtype="pathfield"/>
+                    <links-target
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="false"
+                        anchor="95%"
+                        defaultValue="_self"
+                        fieldLabel="Open in"
+                        key="promoLinkTarget"
+                        name="./promoLinkTarget"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <self
+                                jcr:primaryType="nt:unstructured"
+                                text="Same Page"
+                                value="_self"/>
+                            <blank
+                                jcr:primaryType="nt:unstructured"
+                                text="New Page"
+                                value="_blank"/>
+                        </options>
+                    </links-target>
+                    <imageNode
+                        jcr:primaryType="cq:Widget"
+                        ignoreData="{Boolean}true"
+                        name="./image/sling:resourceType"
+                        value="foundation/components/image"
+                        xtype="hidden"/>
+                </items>
+            </configurations>
+        </items>
+    </items>
+</jcr:root>

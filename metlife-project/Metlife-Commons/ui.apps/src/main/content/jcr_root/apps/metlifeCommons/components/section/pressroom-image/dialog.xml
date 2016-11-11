@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="300"
+    title="Image"
+    width="500"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <main-content
+                jcr:primaryType="cq:Panel"
+                title="Main Content">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <image-description
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="true"
+                        anchor="98%"
+                        fieldLabel="Image Description"
+                        name="./imageDescription"
+                        xtype="textarea"/>
+                    <alt-text
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="false"
+                        anchor="98%"
+                        fieldLabel="Image Alt Text"
+                        name="./altText"
+                        xtype="textfield"/>
+                    <imageNode
+                        jcr:primaryType="nt:unstructured"
+                        ignoreData="true"
+                        name="./sectionImages/sling:resourceType"
+                        value="xumakbase/components/section/base"
+                        xtype="hidden"/>
+                </items>
+            </main-content>
+            <image
+                jcr:primaryType="cq:Widget"
+                cropParameter="./imageCrop"
+                ddGroups="media"
+                fileNameParameter="./fileName"
+                fileReferenceParameter="./fileReference"
+                mapParameter="./imageMap"
+                name="./file"
+                requestSuffix=".img.png"
+                rotateParameter="./imageRotate"
+                title="Image"
+                xtype="html5smartimage"/>
+        </items>
+    </items>
+</jcr:root>

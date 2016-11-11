@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0">
+    <scr:component immediate="true" name="com.metlife.commons.sso.SSOAuthenticationHandler" activate="activate">
+        <implementation class="com.metlife.commons.sso.SSOAuthenticationHandler"/>
+        <service servicefactory="false">
+            <provide interface="org.apache.sling.auth.core.spi.AuthenticationHandler"/>
+        </service>
+        <property name="path">
+            /
+        </property>
+        <property name="sso.url" value="/sso"/>
+        <property name="sso.enabled" value="false"/>
+        <property name="service.ranking" type="Integer" value="5002"/>
+        <property name="idpUrl" value="https://ssofed-qa.metlife.com/affwebservices/public/saml2sso?SPID=https://author.metlife.xumak.com"/>
+        <property name="idpUrls">
+            
+        </property>
+        <property name="sso.redirect" value="/siteadmin"/>
+        <property name="authtype" value="SAML"/>
+        <property name="userIDAttribute" value="Email"/>
+        <property name="sso.cookieDomain" value=""/>
+        <property name="userAttributes">
+            
+        </property>
+        <property name="defaultLogin" value="/libs/granite/core/content/login.html"/>
+        <property name="sso.logoutRedirect">
+            
+        </property>
+        <property name="service.vendor" value="Adobe"/>
+        <property name="service.pid" value="com.metlife.commons.sso.SSOAuthenticationHandler"/>
+        <reference name="repository" interface="org.apache.sling.jcr.api.SlingRepository" cardinality="1..1" policy="static" bind="bindRepository" unbind="unbindRepository"/>
+    </scr:component>
+</components>

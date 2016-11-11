@@ -1,0 +1,5 @@
+MetlifeMicrosites = {
+    Components: {},
+    Forms: {},
+    Global: {}
+};

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0">
+    <scr:component name="com.metlife.poc.logiclesstemplates.contextprocessors.GetChildrenFromPathContextProcessor" activate="activate">
+        <implementation class="com.metlife.poc.logiclesstemplates.contextprocessors.GetChildrenFromPathContextProcessor"/>
+        <service servicefactory="false">
+            <provide interface="com.xumak.base.templatingsupport.ContextProcessor"/>
+        </service>
+        <property name="service.vendor" value="Adobe"/>
+        <property name="service.pid" value="com.metlife.poc.logiclesstemplates.contextprocessors.GetChildrenFromPathContextProcessor"/>
+    </scr:component>
+</components>

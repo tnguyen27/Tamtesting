@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Contact Us Configuration Dialog"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <configuration
+                jcr:primaryType="cq:Panel"
+                title="Configuration">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <contactName
+                        jcr:primaryType="cq:Widget"
+                        anchor="90%"
+                        fieldLabel="Contact Name"
+                        name="./nameContact"
+                        xtype="textfield"/>
+                    <address1
+                        jcr:primaryType="cq:Widget"
+                        anchor="90%"
+                        fieldLabel="Address 1"
+                        name="./address1"
+                        xtype="textfield"/>
+                    <address2
+                        jcr:primaryType="cq:Widget"
+                        anchor="90%"
+                        fieldLabel="Address 2"
+                        name="./address2"
+                        xtype="textfield"/>
+                    <address3
+                        jcr:primaryType="cq:Widget"
+                        anchor="90%"
+                        fieldLabel="Address 3"
+                        name="./address3"
+                        xtype="textfield"/>
+                    <tel-label
+                        jcr:primaryType="cq:Widget"
+                        anchor="90%"
+                        fieldLabel="Telephone Label"
+                        name="./telephoneLabel"
+                        xtype="textfield"/>
+                    <tel-number
+                        jcr:primaryType="cq:Widget"
+                        anchor="90%"
+                        fieldLabel="Telephone Number"
+                        name="./telephoneNumber"
+                        xtype="textfield"/>
+                </items>
+            </configuration>
+        </items>
+    </items>
+</jcr:root>

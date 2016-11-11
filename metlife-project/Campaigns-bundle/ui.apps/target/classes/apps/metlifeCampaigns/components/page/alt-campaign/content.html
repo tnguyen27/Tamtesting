@@ -1,0 +1,36 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Alternative Campaign Page Template
+* ------------------------------------------------------------------------------ *
+%}
+
+{%! Campaign Login %}
+{%#include "login" as="metlifeCampaigns/components/section/login"%}{%/include%}
+
+{%! Campaign Card %}
+<div class="container bg-gray-1st">
+    <div class="row campaign-card margin-auto">
+        <div class="campaign-card-section bg-white">
+            {%#include "campaign-page-image" as="metlifeCampaigns/components/section/campaign-page-image"%}{%/include%}
+            <div class="campaign-card-content page__d">
+                {%#include "title-subtitle" as="metlifeCampaigns/components/section/title-subtitle"%}{%/include%}
+                {%#include "links-section" as="metlifeCampaigns/components/section/links-section"%}{%/include%}
+                {%#include "text-styles" as="metlifeCampaigns/components/section/richtext-with-styles"%}{%/include%}
+            </div>
+        </div>
+    </div>
+</div>
+
+{%! Disclaimer %}
+{%#if content.EqualTo_0%}
+    {%#include "disclaimer" as="metlifeCampaigns/components/section/disclaimer"%}{%/include%}
+{%else%}
+    {%#if content.EqualTo_1%}
+        {%#if global.enableLegalDisclaimer%}
+            {%#include "disclaimer" as="metlifeCampaigns/components/section/disclaimer"%}{%/include%}
+        {%/if%}
+    {%/if%}
+{%/if%}
+
+
+

@@ -1,0 +1,17 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Large Product Module Container Component
+* ------------------------------------------------------------------------------ *
+%}
+
+<div class="container bg-gray-1st product-module-large-wrapper" data-comp-spacing="product-module-large">
+    <div class="row wrapper product-module in_view">
+        {%#each list.tiles%}
+            {%#include title as="MetlifeApp/components/section/subcategory-tile"%}{%/include%}
+        {%/each%}
+    </div>
+</div>
+
+{%#if page.isEditMode%}
+<div style="clear:both;"></div>
+{%/if%}

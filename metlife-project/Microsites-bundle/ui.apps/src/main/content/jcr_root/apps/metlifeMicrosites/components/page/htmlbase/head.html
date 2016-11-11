@@ -1,0 +1,49 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Microsite HTML Base - Head
+* ------------------------------------------------------------------------------ *
+%}
+
+<head>
+    {%> metas %}
+    {%> styles %}
+    {% initWCMScript "" %}
+
+    <!-- GLOBAL SCRIPTS START -->
+    {%! Global Scripts %}
+    {%#each global.headerExternalJavascript %}
+        {%#if scriptPath%}
+            <script src="{%scriptPath%}"></script>
+        {%/if%}
+    {%/each%}
+    {%#each global.headerExternalCss %}
+        {%#if scriptPath%}
+            <link rel="stylesheet" src="{%scriptPath%}">
+        {%/if%}
+    {%/each%}
+    {%#if global.headerJsCode%}
+        <script type="text/javascript">{%{global.headerJsCode}%}</script>
+    {%/if%}
+    {%#if global.headerCssCode%}
+        <style>{%{global.headerCssCode}%}</style>
+    {%/if%}
+    
+    <!-- PAGE SCRIPTS START -->
+    {%! Page Scripts %}
+    {%#each page.headerExternalJavascript %}
+        {%#if scriptPath%}
+            <script src="{%scriptPath%}"></script>
+        {%/if%}
+    {%/each%}
+    {%#each page.headerExternalCss %}
+        {%#if scriptPath%}
+            <link rel="stylesheet" src="{%scriptPath%}">
+        {%/if%}
+    {%/each%}
+    {%#if page.headerJsCode%}
+        <script type="text/javascript">{%{page.headerJsCode}%}</script>
+    {%/if%}
+    {%#if page.headerCssCode%}
+        <style>{%{page.headerCssCode}%}</style>
+    {%/if%}
+</head>

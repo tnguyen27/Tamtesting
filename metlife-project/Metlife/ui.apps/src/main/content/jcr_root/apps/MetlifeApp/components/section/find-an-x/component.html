@@ -1,0 +1,157 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Find an X Component
+* ------------------------------------------------------------------------------ *
+%}
+
+{%#if content.units%}
+    <div class="container bg-gray-1st find-an-x-search-wrapper" data-comp-spacing="find-an-x-search">
+        <div class="row wrapper">
+            <div class="find-an-x-search__container">
+                <a href="#" class="mobile_expand_close">
+                    <svg class="icon brand-gray-5th icon-close">
+                        <use xlink:href="/static/images/icons-metlife.svg#icon-close"></use>
+                    </svg>
+                </a>
+                <div class="cta_search__container">
+                    <div class="find-an-x-input__container">
+                        <input id="searchInput" class="cta_search" type="text" placeholder="{%content.searchPlaceholderText%}">
+                        <a href="#" class="search_location_image">
+                            <svg class="icon brand-gray-4th icon-crosshair location_search_image">
+                                <use xlink:href="/static/images/icons-metlife.svg#icon-crosshair"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="find-an-x-search--expand hidden-xs">
+                        {%#if content.activeInformationOptions%}
+                            <div class="form-icon-wrapper">
+                                <svg class="icon">
+                                    <use xlink:href="/static/images/icons-metlife.svg#icon-select-arrows"></use>
+                                </svg>
+                                <select class="different_services_dropdown">
+                                {%#each content.informationOptions%}
+                                    {%#if this.option%}
+                                        <option value="{%this.option%}">{%this.option%}</option>
+                                    {%/if%}
+                                {%/each%}
+                                </select>
+                            </div>
+                        {%else%}
+                            <select class="different_services_dropdown" style="display:none !important">
+                                <option value="">all</option>
+                            </select>
+                        {%/if%}
+                        {%#if content.EqualTo_0%}
+                            <a class="btn btn-brand-2nd directions_button" data-fao-market="{%global.countrycode%}"
+                                data-fao-url="{%config.metLifeServicePath%}" href="#" target="_self">{%content.findLabel%}</a>
+                        {%/if%}
+                        {%#if content.EqualTo_1%}
+                            <a class="btn btn-brand-2nd directions_button" data-fao-market="{%global.countrycode%}"
+                                data-fao-url="{%content.path%}.proximity.json?" href="#" target="_self">{%content.findLabel%}</a>
+                        {%/if%}
+                    </div>
+                </div>
+            </div>
+            <div class="fax__container">
+                <div class="fax-results__container ">
+                    <div class="maps-contact-form-container">
+                        <div id="googleMapsContainer" class="google-maps-container hidden"></div>
+                        <button class="maps-button btn hidden hidden-lg hidden-md hidden-sm">{%content.moreMapLabel%}</button>
+                        {%> contact %}
+                    </div>
+                    <div class="results_list_container">
+                        <div class="display_container hidden">
+                            <div class="display-text">
+                                <span>0</span> &nbsp; {%content.ofLabel%}
+                                <span>0</span>
+                                <span class="hidden-xs">&nbsp;| {%content.displayingLabel%}&nbsp;</span>
+                            </div>
+                            <div class="form-icon-wrapper hidden-xs">
+                                <svg class="icon">
+                                    <use xlink:href="/static/images/icons-metlife.svg#icon-select-arrows"></use>
+                                </svg>
+                                <select class="page-count drop-down form-control hidden-xs">
+                                    {%#each content.displayResultsOptions%}
+                                        <option value="{%this%}">{%this%}</option>
+                                    {%/each%}
+                                </select>
+                            </div>
+                            <div class="form-icon-wrapper pull-right">
+                                <svg class="icon">
+                                    <use xlink:href="/static/images/icons-metlife.svg#icon-select-arrows"></use>
+                                </svg>
+                                <select class="find_an_office_radius form-control">
+                                    {%#each content.radiusOptions%}
+                                        <option value="{%this%}">{%this%} {%content.units%}</option>
+                                    {%/each%}
+                                </select>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="office_results_info">
+                            <div class="default_results_text results_error_info">{%content.emptyText%}</div>
+                        </div>
+                        <div class="results_pagination hidden"></div>
+                    </div>
+                </div>
+                <div class="fax-directions__container ">
+                    <div class="maps-contact-form-container">
+                        <div id="googleDrivingMapsContainer" class="google-maps-container"></div>
+                    </div>
+                    <div class="driving-direction-container hidden">
+                        <a href="#" class="back-click">{%content.getDirectionsBackButton%}</a>
+                        <div class="get-directions-buttons btn-group btn-group-fax">
+                            <button class="fax-btn btn btn-brand-5th" type="button" data-travel="DRIVING">
+                                <svg class="icon icon-car"><use xlink:href="/static/images/icons-metlife.svg#icon-car"></use></svg>
+                            </button>
+                            <button class="fax-btn btn btn-brand-5th" type="button" data-travel="TRANSIT">
+                                <svg class="icon icon-train"><use xlink:href="/static/images/icons-metlife.svg#icon-train"></use></svg>
+    
+                            </button>
+                            <button class="fax-btn btn btn-brand-5th " type="button" data-travel="WALKING">
+                                <svg class="icon icon-train"><use xlink:href="/static/images/icons-metlife.svg#icon-walk"></use></svg>
+                            </button>
+                        </div>
+                        <div class="get-directions-form">
+                            <div class="get-directions-from-address">
+                                <div class="from-address-label">{%content.getDirectionsFrom%}</div>
+                                <input type="text" class="from-address" placeholder="{%content.getDirectionsFrom%}"/>
+                            </div>
+                            <div class="get-directions-to-address">
+                                <div class="to-address-label">{%content.getDirectionsTo%}</div>
+                                <input type="text" class="to-address" disabled/>
+                            </div>
+                            <div class="btn get_directions_button btn-brand-2nd">{%content.getDirectionsButton%}</div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="directions_error hidden">{%content.getDirectionsUnableToFound%}</div>
+                        <div class="driving-directions-panel hidden" id="drivingDirectionsPanel"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hidden">
+            <div class="label_education">{%content.education%}</div>
+            <div class="label_languages">{%content.languages%}</div>
+            <div class="label_gender">{%content.gender%}</div>
+            <div class="label_phone">{%content.phoneLabel%}</div>
+            <div class="label_alt_phone">{%content.alternatePhoneLabel%}</div>
+            <div class="label_fax">{%content.faxLabel%}</div>
+            <div class="label_email">{%content.emailLabel%}</div>
+            <div class="label_sec_email">{%content.secondaryEmailLabel%}</div>
+            <div class="label_hours">{%content.hoursLabel%}</div>
+            <div class="label_contact">{%content.mainContactLabel%}</div>
+            <div class="findOfficeText">{%page.title%}</div>
+            <div class="label_info">{%content.additionalInfoLabel%}</div>
+            <div class="label_radius_unit">{%content.units%}</div>
+            <div class="getDirectionsText">{%content.getDirectionsText%}</div>
+            <div class="errorMsgText_server_busy">{%content.errorMessageServerBusy%}</div>
+            <div class="errorMsgtext_no_office_found">{%content.errorMessageNoOfficeFound%}</div>
+            <div class="pngPath_icon_locpin_blue">/static/images/Find_X/icon_locpin_blue.png</div>
+            <div class="pngPath_icon_locpin_blk">/static/images/Find_X/icon_locpin_blk.png</div>
+            <div class="get_direction_more_map">{%content.getDirectionMoreMap%}</div>
+            <div class="get_direction_less_map">{%content.getDirectionLessMap%}</div>
+        </div>
+    </div>
+{%/if%}
+<script src="//maps.googleapis.com/maps/api/js?v=3&amp;sensor=false&libraries=places"></script>

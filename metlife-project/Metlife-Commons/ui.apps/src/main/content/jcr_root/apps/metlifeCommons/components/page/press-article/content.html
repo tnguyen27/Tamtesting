@@ -1,0 +1,36 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Press Article Page Template
+* ------------------------------------------------------------------------------ *
+%}
+
+{%! Bread Crumb %}
+{%#if page.disableBreadcrumb%}  {%! if page.disableBreadcrumb==enable  %}
+    {%#if content.EqualTo_4%}
+        {%#include "bread-crumb" as="MetlifeApp/components/section/bread-crumb"%}{%/include%}
+    {%/if%}
+{%else%}
+    {%#if content.EqualTo_5%}  {%! if global.disableBreadcrumb==enable  %}
+        {%#include "bread-crumb" as="MetlifeApp/components/section/bread-crumb"%}{%/include%}
+    {%/if%}
+{%/if%}
+
+{%! Click to Chat %}
+{%#include "click-to-chat-on-page-title" as="MetlifeApp/components/section/click-to-chat-on-page-title"%}{%/include%}
+
+{%! Page Title %}
+{%#include "page-title" as="MetlifeApp/components/section/page-title"%}{%/include%}
+
+{%! Press Article Container %}
+<div class="container article">
+    {%#include "design-link" as="metlifeCommons/components/section/back-link"%}{%/include%}
+    <div class="row wrapper">
+        <div class="width-80">
+            {%#include "press-component" as="metlifeCommons/components/section/press-article"%}{%/include%}
+            {%#include "content-parsys" as="foundation/components/parsys"%}{%/include%}
+        </div>
+    </div>
+    {%#include "about" as="metlifeCommons/components/section/disclaimer-article"%}{%/include%}
+    {%#include "contact" as="metlifeCommons/components/section/pressroom-contact"%}{%/include%}
+    {%#include "design-link" as="metlifeCommons/components/section/back-link"%}{%/include%}
+</div>
