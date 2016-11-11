@@ -1,0 +1,36 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Product Card with Image Component
+* ------------------------------------------------------------------------------ *
+%}
+
+
+{%#if content.imageProductCardIntro%}
+    <div class="container bg-gray-1st product-card-wrapper" data-comp-spacing="product-card">
+        <div class="row wrapper in_view">
+            <div class="product-card">
+                {%#if content.secondImagePath%}
+                    <div class="title text-center product-card__img bg-brand-1st white" data-backgroundmobile-src="{%content.secondImagePath%}" data-backgrounddesktop-src="{%content.imagePath%}"></div>
+                {%else%}
+                    <div class="title text-center product-card__img bg-brand-1st white" data-backgroundmobile-src="{%content.imagePath%}" data-backgrounddesktop-src="{%content.imagePath%}"></div>
+                {%/if%}
+                <div class="content">
+                    <div class="content-body">
+                        <span class="hidden-xs intro">
+                            {%content.imageProductCardIntro%}
+                        </span>
+                        {%{content.imageProductCardContent}%}
+                        {%#if content.imageProductCardButtonLabel%}
+                            <div class="content-body__action">
+                                <a href="{%content.imageProductCardPath%}" 
+                                    class="btn-brand-2nd" 
+                                    id="{%content.imageProductCardPathId%}"
+                                    target="{%content.target%}">{%content.imageProductCardButtonLabel%}</a>
+                            </div>
+                        {%/if%}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{%/if%}

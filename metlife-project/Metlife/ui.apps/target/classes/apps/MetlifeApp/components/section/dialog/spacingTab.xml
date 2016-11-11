@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Panel"
+    title="Spacing Configurations">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <background
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}false"
+            collapsible="{Boolean}false"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <background
+                    jcr:primaryType="nt:unstructured"
+                    defaultValue="bg-color"
+                    fieldLabel="Background Color:"
+                    name="./backgroundColor"
+                    type="select"
+                    value="bg-color"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <option0
+                            jcr:primaryType="nt:unstructured"
+                            text="Default"
+                            value="bg-color"/>
+                        <option1
+                            jcr:primaryType="nt:unstructured"
+                            text="White (#FFFFFF)"
+                            value="bg-color-white"/>
+                        <option2
+                            jcr:primaryType="nt:unstructured"
+                            text="Gray (#F2F2F2)"
+                            value="bg-color-gray"/>
+                    </options>
+                </background>
+            </items>
+        </background>
+        <mobile
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}true"
+            collapsible="{Boolean}true"
+            fieldSubLabel="Blank space is default"
+            title="Mobile Spacing"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <mobileTop
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="pad-t-sm"
+                    fieldLabel="Top Padding:"
+                    name="./mobilePaddingTop"
+                    type="select"
+                    value="pad-t-sm"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <option0
+                            jcr:primaryType="nt:unstructured"
+                            text="Default"
+                            value="pad-t-sm"/>
+                        <option1
+                            jcr:primaryType="nt:unstructured"
+                            text="0 px"
+                            value="pad-t-sm-0"/>
+                        <option2
+                            jcr:primaryType="nt:unstructured"
+                            text="10 px"
+                            value="pad-t-sm-10"/>
+                        <option3
+                            jcr:primaryType="nt:unstructured"
+                            text="20 px"
+                            value="pad-t-sm-20"/>
+                        <option4
+                            jcr:primaryType="nt:unstructured"
+                            text="30 px"
+                            value="pad-t-sm-30"/>
+                        <option5
+                            jcr:primaryType="nt:unstructured"
+                            text="40 px"
+                            value="pad-t-sm-40"/>
+                        <option6
+                            jcr:primaryType="nt:unstructured"
+                            text="50 px"
+                            value="pad-t-sm-50"/>
+                    </options>
+                </mobileTop>
+                <mobileBottom
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="pad-b-sm"
+                    fieldLabel="Bottom Padding:"
+                    name="./mobilePaddingBottom"
+                    type="select"
+                    value="pad-b-sm"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <option0
+                            jcr:primaryType="nt:unstructured"
+                            text="Default"
+                            value="pad-b-sm"/>
+                        <option1
+                            jcr:primaryType="nt:unstructured"
+                            text="0 px"
+                            value="pad-b-sm-0"/>
+                        <option2
+                            jcr:primaryType="nt:unstructured"
+                            text="10 px"
+                            value="pad-b-sm-10"/>
+                        <option3
+                            jcr:primaryType="nt:unstructured"
+                            text="20 px"
+                            value="pad-b-sm-20"/>
+                        <option4
+                            jcr:primaryType="nt:unstructured"
+                            text="30 px"
+                            value="pad-b-sm-30"/>
+                        <option5
+                            jcr:primaryType="nt:unstructured"
+                            text="40 px"
+                            value="pad-b-sm-40"/>
+                        <option6
+                            jcr:primaryType="nt:unstructured"
+                            text="50 px"
+                            value="pad-b-sm-50"/>
+                    </options>
+                </mobileBottom>
+            </items>
+        </mobile>
+        <tablet
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}true"
+            collapsible="{Boolean}true"
+            fieldSubLabel="Blank space is default"
+            title="Tablet Spacing"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <tabletTop
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="pad-t-md"
+                    fieldLabel="Top Padding:"
+                    name="./tabletPaddingTop"
+                    type="select"
+                    value="pad-t-md"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <option0
+                            jcr:primaryType="nt:unstructured"
+                            text="Default"
+                            value="pad-t-md"/>
+                        <option1
+                            jcr:primaryType="nt:unstructured"
+                            text="0 px"
+                            value="pad-t-md-0"/>
+                        <option2
+                            jcr:primaryType="nt:unstructured"
+                            text="10 px"
+                            value="pad-t-md-10"/>
+                        <option3
+                            jcr:primaryType="nt:unstructured"
+                            text="20 px"
+                            value="pad-t-md-20"/>
+                        <option4
+                            jcr:primaryType="nt:unstructured"
+                            text="30 px"
+                            value="pad-t-md-30"/>
+                        <option5
+                            jcr:primaryType="nt:unstructured"
+                            text="40 px"
+                            value="pad-t-md-40"/>
+                        <option6
+                            jcr:primaryType="nt:unstructured"
+                            text="50 px"
+                            value="pad-t-md-50"/>
+                    </options>
+                </tabletTop>
+                <tabletBottom
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="pad-b-md"
+                    fieldLabel="Bottom Padding:"
+                    name="./tabletPaddingBottom"
+                    type="select"
+                    value="pad-b-md"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <option0
+                            jcr:primaryType="nt:unstructured"
+                            text="Default"
+                            value="pad-b-md"/>
+                        <option1
+                            jcr:primaryType="nt:unstructured"
+                            text="0 px"
+                            value="pad-b-md-0"/>
+                        <option2
+                            jcr:primaryType="nt:unstructured"
+                            text="10 px"
+                            value="pad-b-md-10"/>
+                        <option3
+                            jcr:primaryType="nt:unstructured"
+                            text="20 px"
+                            value="pad-b-md-20"/>
+                        <option4
+                            jcr:primaryType="nt:unstructured"
+                            text="30 px"
+                            value="pad-b-md-30"/>
+                        <option5
+                            jcr:primaryType="nt:unstructured"
+                            text="40 px"
+                            value="pad-b-md-40"/>
+                        <option6
+                            jcr:primaryType="nt:unstructured"
+                            text="50 px"
+                            value="pad-b-md-50"/>
+                    </options>
+                </tabletBottom>
+            </items>
+        </tablet>
+        <desktop
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}true"
+            collapsible="{Boolean}true"
+            fieldSubLabel="Blank space is default"
+            title="Desktop Spacing"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <desktopTop
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="pad-t-lg"
+                    fieldLabel="Top Padding:"
+                    name="./desktopPaddingTop"
+                    type="select"
+                    value="pad-t-lg"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <option0
+                            jcr:primaryType="nt:unstructured"
+                            text="Default"
+                            value="pad-t-lg"/>
+                        <option1
+                            jcr:primaryType="nt:unstructured"
+                            text="0 px"
+                            value="pad-t-lg-0"/>
+                        <option2
+                            jcr:primaryType="nt:unstructured"
+                            text="10 px"
+                            value="pad-t-lg-10"/>
+                        <option3
+                            jcr:primaryType="nt:unstructured"
+                            text="20 px"
+                            value="pad-t-lg-20"/>
+                        <option4
+                            jcr:primaryType="nt:unstructured"
+                            text="30 px"
+                            value="pad-t-lg-30"/>
+                        <option5
+                            jcr:primaryType="nt:unstructured"
+                            text="40 px"
+                            value="pad-t-lg-40"/>
+                        <option6
+                            jcr:primaryType="nt:unstructured"
+                            text="50 px"
+                            value="pad-t-lg-50"/>
+                    </options>
+                </desktopTop>
+                <desktopBottom
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="pad-b-lg"
+                    fieldLabel="Bottom Padding:"
+                    name="./desktopPaddingBottom"
+                    type="select"
+                    value="pad-b-lg"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <option0
+                            jcr:primaryType="nt:unstructured"
+                            text="Default"
+                            value="pad-b-lg"/>
+                        <option1
+                            jcr:primaryType="nt:unstructured"
+                            text="0 px"
+                            value="pad-b-lg-0"/>
+                        <option2
+                            jcr:primaryType="nt:unstructured"
+                            text="10 px"
+                            value="pad-b-lg-10"/>
+                        <option3
+                            jcr:primaryType="nt:unstructured"
+                            text="20 px"
+                            value="pad-b-lg-20"/>
+                        <option4
+                            jcr:primaryType="nt:unstructured"
+                            text="30 px"
+                            value="pad-b-lg-30"/>
+                        <option5
+                            jcr:primaryType="nt:unstructured"
+                            text="40 px"
+                            value="pad-b-lg-40"/>
+                        <option6
+                            jcr:primaryType="nt:unstructured"
+                            text="50 px"
+                            value="pad-b-lg-50"/>
+                    </options>
+                </desktopBottom>
+            </items>
+        </desktop>
+        <defaultButton
+            jcr:primaryType="cq:Widget"
+            autoWidth="{Boolean}true"
+            buttonAlign="center"
+            handler="function(b,e){&#xa;&#x9;var dlg = b.findParentByType('panel');&#xa;&#x9;var selectBox = dlg.findByType('selection');&#xa;&#xa;&#x9;for(var i =0; i&lt; selectBox.length; i++){&#xa;&#x9;&#x9;selectBox[i].setValue(selectBox[i].defaultValue);&#xa;&#x9;}&#xa;};"
+            text="Restore to Defaults"
+            xtype="button"/>
+    </items>
+</jcr:root>

@@ -1,0 +1,38 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Newsroom Image Component
+* ------------------------------------------------------------------------------ *
+%}
+
+<div class="container">
+    <div class="row">
+        <div class="image_container">
+            {%#if content.imagePath%}
+            <!--data-target must match id of the modal window -->
+            <a href="#" data-toggle="modal" data-target="#myModal">
+                <img src="{%content.imagePath%}"
+                alt="{% content.altText %}" />
+            </a>
+            <!--same id as data-target above.  -->
+            <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-lg">
+                    <!--modal content -->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><img src="/static/images/icons_header/icon_close_gray.png" alt="Close" /></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="{%content.imagePath%}"
+                            alt="{% content.altText %}" />
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <p>{%content.imageDescription%}</p>
+            {%else%}
+            <img class="cq-image-placeholder cq-block-lg-placeholder" alt="Empty Newsroom Image" src="/etc/designs/default/0.gif" />
+            {%/if%}
+        </div>
+    </div>
+</div>

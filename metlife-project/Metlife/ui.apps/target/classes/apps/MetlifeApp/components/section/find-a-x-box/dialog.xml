@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Find a x box configuration"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Configuration">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Title"
+                        name="./title"
+                        xtype="textfield"/>
+                    <placeholder
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Placeholder"
+                        name="./placeholder"
+                        xtype="textfield"/>
+                    <buttonLabel
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Button label"
+                        name="./buttonLabel"
+                        xtype="textfield"/>
+                    <linkToResults
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Link to results"
+                        linkPattern="\{0}.html"
+                        name="./linkToResults"
+                        rootPath="/content/metlife"
+                        rootTitle="MetLife"
+                        xtype="pathfield"/>
+                    <link-target
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="false"
+                        anchor="90%"
+                        defaultValue="_self"
+                        fieldLabel="Open in"
+                        key="target"
+                        name="./target"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <self
+                                jcr:primaryType="nt:unstructured"
+                                text="Same Page"
+                                value="_self"/>
+                            <blank
+                                jcr:primaryType="nt:unstructured"
+                                text="New Page"
+                                value="_blank"/>
+                        </options>
+                    </link-target>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>

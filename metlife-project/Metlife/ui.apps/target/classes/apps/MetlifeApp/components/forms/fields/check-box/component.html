@@ -1,0 +1,30 @@
+{%!
+*
+* -----------------------------------------------------------------------------
+* CHANGE HISTORY
+* -----------------------------------------------------------------------------
+* Version | Date       | Developer      | Changes
+* 1.0     | 05/13/2016 | Diego Tello | Phase 2 html update
+* -----------------------------------------------------------------------------
+%}
+<div class="{%#if content.hidden%}hidden{%else%}row form-row{%/if%}">
+    <div class="form-check-grp">
+        <label class="" for="{%content.clrField%}">{%content.label%}</label>
+        {%#unless content.label%}
+        <label>
+            <input type="checkbox" class="user-checkbox" value=""><span>Empty checkbox</span>
+        </label>
+        {%/unless%}
+        {%#each content.options%}
+        {%#if text%}
+        <label>
+            <input name="{%content.clrField%}" id="{%content.clrField%}" type="checkbox"
+                   class="user-checkbox" value="{%value%}"><span>{%text%}</span>
+        </label>
+        {%/if%}
+        {%/each%}
+        <span class="errorSpan">
+            <img class="errorSpanImg" src="/static/images/form/icon_form_error.png" alt="! Error Image">{%content.errorMessage%}
+        </span>
+    </div>
+</div>

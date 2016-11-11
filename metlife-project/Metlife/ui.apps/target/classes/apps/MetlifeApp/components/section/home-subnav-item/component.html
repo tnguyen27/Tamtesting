@@ -1,0 +1,46 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Home Page Sub Nav Item Component
+* ------------------------------------------------------------------------------ *
+%}
+
+<a href="{% content.mainlink %}" target="{%content.target%}" class="homepage-nav__link">{%#if page.isEditOrDesignMode%}{%#unless content.label%}Empty Label{%/unless%}{%/if%}{%content.label%}</a>
+<svg class="icon icon-arrow-up-triangle homepage-nav__icon">
+    <use xlink:href="/static/images/icons-metlife.svg#icon-arrow-up-triangle"></use>
+</svg>
+<div class="homepage-sub">
+    <div class="row homepage-sub__container box-shadow">
+        <div class="{%#if content.rightLinks%}col-sm-9{%else%}col-sm-12{%/if%}">
+            {%#each content.leftLinks%}
+            <a class="homepage-sub__link" 
+            href="{%this.path%}" 
+            target="{%this.target%}" 
+            id="{% this.elementId %}">
+                <img src="{%this.iconPath%}"
+                alt="{%this.altText%}" 
+                class="homepage--sub__icon--first block img-responsive"/>
+                <div>{%this.firstLineText%} <span class="newline"></span> {%this.secondLineText%}</div>
+            </a>
+            {%/each%}
+        </div>
+        {%#if content.rightLinks%}
+        <div class="col-sm-3">
+            <div class="homepage-sub-side">
+                <div class="homepage-sub-side__grid">
+                    {%#each content.rightLinks%}
+                    <a class="row homepage-sub-side__link"
+                    href="{%this.path%}"
+                    target="{%this.target%}">
+                        <img class="homepage-sub-side__icon" 
+                        src="{%this.iconPath%}"
+                        alt="{%this.altText%}">
+                        <span class="homepage-sub-side__label">{%this.label%}</span>
+                    </a>
+                    {%/each%}                        
+                </div>
+            </div>
+        </div>
+        {%/if%}
+    </div>
+</div>
+

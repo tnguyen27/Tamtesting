@@ -1,0 +1,34 @@
+{%!
+* Contact Us Component.
+* -----------------------------------------------------------------------------
+* CHANGE HISTORY
+* -----------------------------------------------------------------------------
+* Version | Date       | Developer      | Changes
+* 1.0     | 08/16/2016 | Sergio Torres  | Initial Creation
+* -----------------------------------------------------------------------------
+%}
+
+<div class="container container--no-margin-bottom bg-gray-1st contact-us">
+    <div class="wrapper wrapper__contact-us__bottom-box">
+        {%#each content.informationList%}
+            <div class="wrapper__contact-us__bottom-box__links side-padding-60">
+                <p class="no-margin-bottom">
+                    <span class="contact-us--medium-size-font">
+                        {%informationLabel%}
+                    </span>
+                    <a class="contact-us--small-size-font"
+                       href="{%informationLink%}"
+                       target="{%target%}"
+                       id="{%elementId%}">
+                        {%informationLinkLabel%}
+                    </a>
+                    {%#if this.descriptionLabel%}
+                        <span class="clearfix clearfix--margin-top">
+                            {%descriptionLabel%}
+                        </span>
+                    {%/if%}
+                </p>
+            </div>
+        {%/each%}
+    </div>
+</div>

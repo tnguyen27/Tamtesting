@@ -1,0 +1,19 @@
+{%!
+* Location and Date Component for Press Article Template
+* ----------------------------------------------------------------------------- *
+* CHANGE HISTORY
+* -----------------------------------------------------------------------------
+* Version | Date       | Developer              | Changes
+* 1.0     | 2016/07/05 | Sergio Torres          | Initial Creation
+* ----------------------------------------------------------------------------- *
+%}
+
+<h3 class="article-date">
+    {%#if page.location %}
+        {%page.location%}
+        {%#if page.publishedDate%}
+            ,
+        {%/if%}
+        {%page.publishedDate%}
+    {%/if%}
+</h3>

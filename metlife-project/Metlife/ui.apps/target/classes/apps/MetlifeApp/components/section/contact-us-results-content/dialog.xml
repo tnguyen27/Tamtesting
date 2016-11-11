@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="600"
+    title="ContactUs/Content Header Dialog"
+    width="800"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <config
+                jcr:primaryType="cq:Panel"
+                title="Configuration">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <contacts
+                        jcr:primaryType="cq:Widget"
+                        addItemLabel="Add Contact"
+                        fieldDescription="Click the '+' to add a new contact"
+                        fieldLabel="Contacts"
+                        name="./contacts"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            xtype="multifieldpanel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <name
+                                    jcr:primaryType="cq:Widget"
+                                    anchor="95%"
+                                    fieldLabel="Name"
+                                    key="name"
+                                    maxLength="65"
+                                    minLength="5"
+                                    xtype="textfield"/>
+                                <phonenumber
+                                    jcr:primaryType="cq:Widget"
+                                    anchor="95%"
+                                    fieldLabel="Phone"
+                                    key="phone"
+                                    maxLength="35"
+                                    minLength="5"
+                                    xtype="textfield"/>
+                                <isBond
+                                    jcr:primaryType="cq:Widget"
+                                    fieldLabel="Add Bold"
+                                    key="bold"
+                                    type="checkbox"
+                                    xtype="selection"/>
+                            </items>
+                        </fieldConfig>
+                    </contacts>
+                    <specialties-hint
+                        jcr:primaryType="nt:unstructured"
+                        ignoreData="true"
+                        name="./contacts@TypeHint"
+                        value="String[]"
+                        xtype="hidden"/>
+                </items>
+            </config>
+        </items>
+    </items>
+</jcr:root>

@@ -1,0 +1,25 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Site Map Category Column Component
+* ------------------------------------------------------------------------------ *
+%}
+
+<div class="col col-xs-12 col-sm-3">
+    {%#if content.columnTitle%}
+        <div class="sitemap-link--LinksTitle"><a href="{%content.columnPath%}" target="{%content.target%}">{%content.columnTitle%}</a></div>
+        {%#if content.isManual%}
+            {%#each list.manualPages%}
+                <a href="{%this.path%}.html" target="{%target%}">
+                    <p>{%this.navigationTitle%}</p>
+                </a>
+            {%/each%}
+        {%else%}
+            {%#each list.pages%}
+                <a href="{%this.path%}.html" target="{%target%}">
+                    <p>{%this.navigationTitle%}</p>
+                </a>
+            {%/each%}
+        {%/if%}
+    {%/if%}
+</div>
+{%#if page.isEditOrDesignMode%}<div style="clear:both;"></div>{%/if%}

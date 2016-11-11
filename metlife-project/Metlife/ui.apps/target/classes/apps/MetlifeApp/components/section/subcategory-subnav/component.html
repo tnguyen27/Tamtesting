@@ -1,0 +1,37 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Sub Category Sub Nav Component
+* ------------------------------------------------------------------------------ *
+%}
+
+<div class="container">
+    <nav class="row subnav-go-back bg-brand-1st-inv">
+        {%#if content.goBackNavigationTitle%}
+            <div class="subnav-go-back__menu">
+                <a href="{%content.goBackPath%}.html" 
+                    target="{%content.goBackTarget%}"
+                    id="{%content.goBackPathId%}">
+                    <span><img class="hidden-xs" src="/static/images/icons_subnav/subnav_back_arrow.png" alt="back arrow"></span>
+                    <span class="subnav-go-back__desktop--title">{%content.goBackNavigationTitle%}</span>
+                    <span class="subnav-go-back__mobile--title">{%content.goBackNavigationMobileTitle%}</span>
+                    <span><img class="hidden-sm hidden-md hidden-lg" src="/static/images/icons_subnav/icon_selectionarrows_white.png"
+                    alt="back arrow"></span>
+                </a>
+            </div>
+        {%/if%}
+        <ul class="subnav-go-back__list" id='subnav-goback'>
+            {%#each list.pages%}
+                <li class="subnav-go-back__list__item">
+                    <a href="{%this.path%}.html" 
+                        class="subnav-go-back__list__item__anchor" 
+                        target="{%#if this.target%}{%this.target%}{%else%}_self{%/if%}"
+                        id="{%elementId%}">
+                        <div>
+                            <p class="subnav-go-back__list__item__anchor__label">{%this.navigationTitle%}</p>
+                        </div>
+                    </a>
+                </li>
+            {%/each%}            
+        </ul>
+    </nav>
+</div>

@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="500"
+    title="Static contact in card configurations"
+    width="700"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <placeholders
+                jcr:primaryType="cq:Panel"
+                title="Placeholders">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <firstName
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Nombre*"
+                        fieldLabel="Name"
+                        name="./firstName"
+                        xtype="textfield"/>
+                    <lastName
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Apellido*"
+                        fieldLabel="Last name"
+                        name="./lastName"
+                        xtype="textfield"/>
+                    <birthdate
+                        jcr:primaryType="cq:Widget"
+                        collapsed="{Boolean}false"
+                        collapsible="{Boolean}true"
+                        title="Birthdate"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <birtthdateDay
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="DD"
+                                fieldLabel="Day"
+                                name="./birthdateDay"
+                                xtype="textfield"/>
+                            <birthdateMonth
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="MM"
+                                fieldLabel="Month"
+                                name="./birthdateMonth"
+                                xtype="textfield"/>
+                            <birthdateYear
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="AAAA"
+                                fieldLabel="Year"
+                                name="./birthdateYear"
+                                xtype="textfield"/>
+                        </items>
+                    </birthdate>
+                    <email
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Dirección de email*"
+                        fieldLabel="Email"
+                        name="./email"
+                        xtype="textfield"/>
+                    <phone
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Número telefónico"
+                        fieldLabel="Phone"
+                        name="./phone"
+                        xtype="textfield"/>
+                    <mobilePhone
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Número telefónico alternativo"
+                        fieldLabel="Mobile Phone"
+                        name="./mobilePhone"
+                        xtype="textfield"/>
+                    <contactMethod
+                        jcr:primaryType="cq:Widget"
+                        collapsed="{Boolean}false"
+                        collapsible="{Boolean}true"
+                        title="Configuration for contact method"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <contactMethod
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="Método de contacto preferido"
+                                fieldLabel="Default value"
+                                name="./contactMethod"
+                                xtype="textfield"/>
+                            <methodsPath
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="false"
+                                fieldLabel="Methods path"
+                                name="./contactMethodList"
+                                rootPath="/etc/acs-commons/lists/metlife/form-configuration/static-forms"
+                                xtype="pathfield"/>
+                        </items>
+                    </contactMethod>
+                    <city
+                        jcr:primaryType="cq:Widget"
+                        collapsed="{Boolean}false"
+                        collapsible="{Boolean}true"
+                        title="Configuration for cities content"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <cityLabel
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="Tu ubicación"
+                                fieldLabel="Default value"
+                                name="./cityLabel"
+                                xtype="textfield"/>
+                            <citiesPath
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="false"
+                                fieldLabel="Cities path"
+                                name="./cityList"
+                                rootPath="/etc/acs-commons/lists/metlife/form-configuration/static-forms"
+                                xtype="pathfield"/>
+                        </items>
+                    </city>
+                    <partyTypeCode
+                        jcr:primaryType="cq:Widget"
+                        collapsed="{Boolean}false"
+                        collapsible="{Boolean}true"
+                        title="Placeholder configuration for Party Type Code"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <partyTypeCode
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="¿Sos cliente de MetLife ya?"
+                                fieldLabel="Label"
+                                name="./partyTypeCode"
+                                xtype="textfield"/>
+                            <partyTypeCodeYes
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="Sí, ya soy cliente."
+                                fieldLabel="Option yes"
+                                name="./partyTypeCodeYes"
+                                xtype="textfield"/>
+                            <partyTypeCodeNo
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="No, aún no lo soy."
+                                fieldLabel="Option no"
+                                name="./partyTypeCodeNo"
+                                xtype="textfield"/>
+                            <partyTypeCodeId
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="Documento de identidad*"
+                                fieldLabel="ID Number"
+                                name="./partyTypeCodeId"
+                                xtype="textfield"/>
+                            <partyTypeCodeDescription
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="Message displayed if &quot;Yes&quot; option is selected"
+                                fieldLabel="Message"
+                                name="./partyTypeCodeDescription"
+                                xtype="textarea"/>
+                        </items>
+                    </partyTypeCode>
+                    <leadBasedOn
+                        jcr:primaryType="cq:Widget"
+                        collapsed="{Boolean}false"
+                        collapsible="{Boolean}true"
+                        title="Configuration for placeholders for lead based on"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <leadBasedOn
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="Tu contacto refiere a"
+                                fieldLabel="Label"
+                                name="./leadBasedOn"
+                                xtype="textfield"/>
+                            <leadBasedOnIndividual
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="Una póliza individual."
+                                fieldLabel="Option Individual"
+                                name="./leadBasedOnIndividual"
+                                xtype="textfield"/>
+                            <leadBasedOnCompany
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="Una póliza a través de tu empresa."
+                                fieldLabel="Option Company"
+                                name="./leadBasedOnCompany"
+                                xtype="textfield"/>
+                            <leadBasedOnPolicyNumber
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="Nro. de póliza"
+                                fieldLabel="Policy Number"
+                                name="./leadBasedOnPolicyNumber"
+                                xtype="textfield"/>
+                            <leadBasedOnEmployerName
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="Nombre de tu organización"
+                                fieldLabel="Company name"
+                                name="./leadBasedOnEmployerName"
+                                xtype="textfield"/>
+                            <leadBasedOnEmployerSize
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="Cantidad apróximada de empleados"
+                                fieldLabel="Employer Size"
+                                name="./leadBasedOnEmployerSize"
+                                xtype="textfield"/>
+                            <leadBasedOnDescription
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="Inquietudes, comentarios o preguntas de Producto*"
+                                fieldLabel="Description"
+                                name="./leadBasedOnDescription"
+                                xtype="textfield"/>
+                        </items>
+                    </leadBasedOn>
+                </items>
+            </placeholders>
+            <labels
+                jcr:primaryType="cq:Panel"
+                title="Labels">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Contactanos"
+                        fieldLabel="Title"
+                        name="./title"
+                        xtype="textfield"/>
+                    <subtitle
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="*campos obligatorios"
+                        fieldLabel="Subtitle"
+                        name="./subtitle"
+                        xtype="textfield"/>
+                    <buttonLabel
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Enviar"
+                        fieldLabel="Button label"
+                        name="./buttonLabel"
+                        xtype="textfield"/>
+                    <disclaimer
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Disclaimer"
+                        name="./disclaimer"
+                        xtype="richtext">
+                        <rtePlugins jcr:primaryType="nt:unstructured">
+                            <styles
+                                jcr:primaryType="nt:unstructured"
+                                features="*">
+                                <styles jcr:primaryType="cq:WidgetCollection">
+                                    <title
+                                        jcr:primaryType="nt:unstructured"
+                                        cssName="contactDisclaimer hidden-field"
+                                        text="Contact disclaimer style"/>
+                                </styles>
+                            </styles>
+                        </rtePlugins>
+                    </disclaimer>
+                    <thanksMessage
+                        jcr:primaryType="cq:Widget"
+                        collapsed="{Boolean}false"
+                        collapsible="{Boolean}true"
+                        title="Configuration for thank you messages after submitted"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <thankYouMessageTitle
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="Thank you for contacting us."
+                                fieldLabel="Title"
+                                name="./thankYouMessageTitle"
+                                xtype="textfield"/>
+                            <thankYouMessageContent
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="Someone from MetLife will be reaching shortly to provide you help."
+                                fieldLabel="Subtitle"
+                                name="./thankYouMessageContent"
+                                xtype="textfield"/>
+                        </items>
+                    </thanksMessage>
+                    <errorsMessage
+                        jcr:primaryType="cq:Widget"
+                        collapsed="{Boolean}false"
+                        collapsible="{Boolean}true"
+                        title="Configuration for error messages after submitted"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <errorMessageTitle
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="Error!"
+                                fieldLabel="Title"
+                                name="./errorMessageTitle"
+                                xtype="textfield"/>
+                            <errorMessageContent
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="An error occured while submitting your information."
+                                fieldLabel="Subtitle"
+                                name="./errorMessageContent"
+                                xtype="textfield"/>
+                        </items>
+                    </errorsMessage>
+                </items>
+            </labels>
+        </items>
+    </items>
+</jcr:root>

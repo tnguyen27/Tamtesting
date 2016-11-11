@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.0.0" localization="OSGI-INF/metatype/com.xumak.aem.akamai.ccu.impl.CcuManagerImpl">
+    <OCD id="com.xumak.aem.akamai.ccu.impl.CcuManagerImpl" name="%com.xumak.aem.akamai.ccu.impl.CcuManagerImpl.name" description="%com.xumak.aem.akamai.ccu.impl.CcuManagerImpl.description">
+        <AD id="rootCcuUrl" type="String" default="https://api.ccu.akamai.com" name="%com.xumak.aem.akamai.ccu.impl.CcuManagerImpl.rootCcuUrl.name" description="%com.xumak.aem.akamai.ccu.impl.CcuManagerImpl.rootCcuUrl.description"/>
+        <AD id="userName" type="String" name="%com.xumak.aem.akamai.ccu.impl.CcuManagerImpl.userName.name" description="%com.xumak.aem.akamai.ccu.impl.CcuManagerImpl.userName.description"/>
+        <AD id="password" type="String" name="%com.xumak.aem.akamai.ccu.impl.CcuManagerImpl.password.name" description="%com.xumak.aem.akamai.ccu.impl.CcuManagerImpl.password.description"/>
+        <AD id="defaultPurgeAction" type="String" default="remove" name="%com.xumak.aem.akamai.ccu.impl.CcuManagerImpl.defaultPurgeAction.name" description="%com.xumak.aem.akamai.ccu.impl.CcuManagerImpl.defaultPurgeAction.description"/>
+        <AD id="defaultPurgeDomain" type="String" default="production" name="%com.xumak.aem.akamai.ccu.impl.CcuManagerImpl.defaultPurgeDomain.name" description="%com.xumak.aem.akamai.ccu.impl.CcuManagerImpl.defaultPurgeDomain.description"/>
+    </OCD>
+    <Designate pid="com.xumak.aem.akamai.ccu.impl.CcuManagerImpl">
+        <Object ocdref="com.xumak.aem.akamai.ccu.impl.CcuManagerImpl"/>
+    </Designate>
+</metatype:MetaData>

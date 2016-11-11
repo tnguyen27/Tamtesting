@@ -1,0 +1,42 @@
+{%!
+*
+* -----------------------------------------------------------------------------
+* CHANGE HISTORY
+* -----------------------------------------------------------------------------
+* Version | Date       | Developer      | Changes
+* 1.0     | 05/13/2016 | Diego Tello | Phase 2 html update
+* -----------------------------------------------------------------------------
+%}
+<div class="{%#if content.hidden%}hidden{%else%}row form-row{%/if%}">
+    <div class="radio-row">
+        <div class="form-user-grp">
+            <label class="" for="{%content.clrField%}_Acc">{%content.label%}</label>
+            {%#each content.options%}
+            {%#if text%}
+                <span class="form-radio-grp">
+                    {%#if checked%}
+                        <svg class="icon icon-radio-on">
+                            <use xlink:href="/static/images/icons-metlife.svg#icon-radio-on"></use>
+                        </svg>
+                        <svg class="icon icon-radio-off form-radio-icon--hidden">
+                            <use xlink:href="/static/images/icons-metlife.svg#icon-radio-off"></use>
+                        </svg>
+                    {%else%}
+                        <svg class="icon icon-radio-on form-radio-icon--hidden">
+                            <use xlink:href="/static/images/icons-metlife.svg#icon-radio-on"></use>
+                        </svg>
+                        <svg class="icon icon-radio-off">
+                            <use xlink:href="/static/images/icons-metlife.svg#icon-radio-off"></use>
+                        </svg>
+                    {%/if%}
+                    <input name="{%content.clrField%}" value="{%value%}" type="radio" {%#if checked%}checked{%/if%}>
+                    <span>{%text%}</span>
+                </span>
+            {%/if%}
+            {%/each%}
+            <span class="errorSpan">
+                <img class="errorSpanImg" src="/static/images/form/icon_form_error.png" alt="! Error Image">{%content.errorMessage%}
+            </span>
+        </div>
+    </div>
+</div>

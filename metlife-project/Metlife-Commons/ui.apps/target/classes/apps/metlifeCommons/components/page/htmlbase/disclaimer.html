@@ -1,0 +1,20 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Commons HTML Base - Disclaimer
+* ------------------------------------------------------------------------------ *
+%}
+
+{%#if content.EqualTo_0%}
+    {%#include "disclaimer" as="MetlifeApp/components/section/disclaimer"%}{%/include%}
+{%else%}
+    {%#if content.EqualTo_1%}
+        {%#if global.enableLegalDisclaimer%}
+            {%#include "disclaimer" as="MetlifeApp/components/section/disclaimer"%}{%/include%}
+        {%/if%}
+    {%/if%}
+    {%#if content.EqualTo_2%}
+        {%#if global.enableLegalDisclaimer%}
+            {%#include "disclaimer" as="MetlifeApp/components/section/disclaimer"%}{%/include%}
+        {%/if%}
+    {%/if%}
+{%/if%}

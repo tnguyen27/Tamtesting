@@ -1,0 +1,54 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Home Page Template
+* ------------------------------------------------------------------------------ *
+%}
+
+{%! Home Page Subnav %}
+{%#include "home-subnav" as="MetlifeApp/components/section/home-subnav"%}{%/include%}
+
+{%! Hero Carousel %}
+{%#include "hero-carousel" as="MetlifeApp/components/section/hero-carousel"%}{%/include%}
+
+{%! CTA Header Quote and Find an X %}
+<div class="quote-office">
+    <div class="row no-padding-top">
+        {%#if page.enablePromo%}
+            {%#if content.EqualTo_25%}
+                <div class="quote-office--left">
+                    {%#include "home-simple-promo" as="MetlifeApp/components/section/simple-promo-module"%}{%/include%}
+                </div>
+                <div class="quote-office--right">
+                    {%#include "faxtool" as="MetlifeApp/components/section/find-a-x"%}{%/include%}
+                </div>
+            {%/if%}
+            {%#if content.EqualTo_26%}
+                <div class="quote-office--left">
+                    {%#include "find-product" as="MetlifeApp/components/section/find-product"%}{%/include%}
+                </div>
+                <div class="quote-office--right">
+                    {%#include "home-simple-promo" as="MetlifeApp/components/section/simple-promo-module"%}{%/include%}
+                </div>
+            {%/if%}
+        {%else%}
+            <div class="quote-office--left">
+                {%#include "find-product" as="MetlifeApp/components/section/find-product"%}{%/include%}
+            </div>
+            <div class="quote-office--right">
+                {%#include "faxtool" as="MetlifeApp/components/section/find-a-x"%}{%/include%}
+            </div>
+        {%/if%}
+    </div>
+</div>
+
+{%! Scroll for More %}
+{%#include "scroll-for-more" as="MetlifeApp/components/section/scroll-for-more"%}{%/include%}
+
+{%! Content Parsys %}
+{%#include "content-parsys" as="foundation/components/parsys"%}{%/include%}
+
+{%! Dental Overlay %}
+{%#include "dental_overlay" as="MetlifeApp/components/section/overlay-container"%}{%/include%}
+
+{%! Vision Overlay %}
+{%#include "vision_overlay" as="MetlifeApp/components/section/overlay-container"%}{%/include%}

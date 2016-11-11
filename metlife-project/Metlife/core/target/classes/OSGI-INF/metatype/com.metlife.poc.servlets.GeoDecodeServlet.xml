@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.0.0" localization="OSGI-INF/metatype/com.metlife.poc.servlets.GeoDecodeServlet">
+    <OCD id="com.metlife.poc.servlets.GeoDecodeServlet" name="%com.metlife.poc.servlets.GeoDecodeServlet.name" description="%com.metlife.poc.servlets.GeoDecodeServlet.description"/>
+    <Designate pid="com.metlife.poc.servlets.GeoDecodeServlet">
+        <Object ocdref="com.metlife.poc.servlets.GeoDecodeServlet"/>
+    </Designate>
+</metatype:MetaData>

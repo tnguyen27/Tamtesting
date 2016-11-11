@@ -1,0 +1,20 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Metlife HTML Base - Disclaimer
+* ------------------------------------------------------------------------------ *
+%}
+
+{%#if content.EqualTo_23%}
+    {%#include "disclaimer" as="MetlifeApp/components/section/disclaimer"%}{%/include%}
+{%else%}
+    {%#if content.EqualTo_24%}
+        {%#if global.enableDisclaimer%}
+            {%#include "disclaimer" as="MetlifeApp/components/section/disclaimer"%}{%/include%}
+        {%/if%}
+    {%/if%}
+    {%#if content.EqualTo_27%}
+        {%#if global.enableDisclaimer%}
+            {%#include "disclaimer" as="MetlifeApp/components/section/disclaimer"%}{%/include%}
+        {%/if%}
+    {%/if%}
+{%/if%}

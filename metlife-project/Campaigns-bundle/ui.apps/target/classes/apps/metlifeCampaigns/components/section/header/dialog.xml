@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="{Long}500"
+    title="Header Configuration"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab3
+                jcr:primaryType="cq:Panel"
+                title="Login">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <logo
+                        jcr:primaryType="cq:Widget"
+                        collapsed="{Boolean}false"
+                        collapsible="{Boolean}true"
+                        title="Logo"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <imageNode
+                                jcr:primaryType="nt:unstructured"
+                                ignoreData="true"
+                                name="./homeSliderImages/sling:resourceType"
+                                value="xumakbase/components/section/base"
+                                xtype="hidden"/>
+                            <activeLogo
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Active Logo"
+                                name="./activeLogo"
+                                type="checkbox"
+                                xtype="selection"/>
+                            <link
+                                jcr:primaryType="cq:Widget"
+                                anchor="95%"
+                                fieldLabel="Link"
+                                linkPattern="\{0}.html"
+                                name="./logoLink"
+                                rootPath="/content/metlife"
+                                rootTitle="MetLife"
+                                xtype="pathfield"/>
+                            <alt
+                                jcr:primaryType="cq:Widget"
+                                anchor="95%"
+                                fieldLabel="Alt Text"
+                                name="./logoAltText"
+                                xtype="textfield"/>
+                            <imageresourcetype
+                                jcr:primaryType="cq:Widget"
+                                ignoreData="true"
+                                name="./logo/sling:resourceType"
+                                value="foundation/components/image"
+                                xtype="hidden"/>
+                        </items>
+                    </logo>
+                </items>
+            </tab3>
+            <image
+                jcr:primaryType="cq:Widget"
+                cropParameter="./imageCrop"
+                ddGroups="media"
+                fileNameParameter="./fileName"
+                fileReferenceParameter="./fileReference"
+                mapParameter="./imageMap"
+                name="./file"
+                requestSuffix=".img.png"
+                rotateParameter="./imageRotate"
+                title="Image"
+                xtype="html5smartimage"/>
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Button Call Us">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <enabledComponent
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="{Boolean}true"
+                        fieldLabel="Enable Call Us Now"
+                        name="./enableButton1"
+                        type="checkbox"
+                        xtype="selection"/>
+                    <title-call-us
+                        jcr:primaryType="cq:Widget"
+                        anchor="100%"
+                        defaultValue="Life Insurance Quotes"
+                        fieldLabel="Title"
+                        name="./title-call-us"
+                        xtype="textfield"/>
+                    <phoneLabel
+                        jcr:primaryType="cq:Widget"
+                        anchor="100%"
+                        defaultValue="Call us now"
+                        fieldLabel="Phone Label"
+                        name="./phoneLabel"
+                        xtype="textfield"/>
+                    <phone-value
+                        jcr:primaryType="cq:Widget"
+                        anchor="100%"
+                        defaultValue="1-800-MET-LIFE"
+                        fieldLabel="Phone Value"
+                        name="./phone-value"
+                        xtype="textfield"/>
+                </items>
+            </tab1>
+            <tab2
+                jcr:primaryType="cq:Panel"
+                title="Button Call Me">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <enabledComponent
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="{Boolean}true"
+                        fieldLabel="Enable Call Me Now"
+                        name="./enableButton2"
+                        type="checkbox"
+                        xtype="selection"/>
+                    <text-call-me
+                        jcr:primaryType="cq:Widget"
+                        anchor="100%"
+                        defaultValue="Call Me Now"
+                        fieldLabel="Text Button Call Me"
+                        name="./text-call-me"
+                        xtype="textfield"/>
+                    <title-modal
+                        jcr:primaryType="cq:Widget"
+                        anchor="100%"
+                        defaultValue="Enter your number below:"
+                        fieldLabel="Title Modal Call Me"
+                        name="./title-modal-call-me"
+                        xtype="textfield"/>
+                    <placeholder-phone-modal
+                        jcr:primaryType="cq:Widget"
+                        anchor="100%"
+                        defaultValue="Phone (XXX-XXX-XXXX)"
+                        fieldLabel="Placeholder Phone Modal"
+                        name="./placeholder-phone-modal"
+                        xtype="textfield"/>
+                    <text-button-modal
+                        jcr:primaryType="cq:Widget"
+                        anchor="100%"
+                        defaultValue="Call Me Now"
+                        fieldLabel="Text Button Modal Call Me"
+                        name="./text-button-modal-call-me"
+                        xtype="textfield"/>
+                    <link-button-modal
+                        jcr:primaryType="cq:Widget"
+                        anchor="100%"
+                        defaultValue="#"
+                        fieldLabel="Link Button Modal Call Me"
+                        name="./link-button-modal-call-me"
+                        xtype="pathfield"/>
+                    <disclaimer
+                        jcr:primaryType="cq:Widget"
+                        anchor="90%"
+                        defaultValue="By clicking [Button Name], you agree that we* may contact you at the number you’ve provided, possibly using automated technology or a prerecorded voice, to talk about our products and services. If you don’t want to give this permission, you can still get a quote or make a purchase by calling us directly at [number].&#xa;&#xa;*A MetLife company or third party acting on MetLife’s behalf."
+                        fieldLabel="Disclaimer"
+                        height="{Long}200"
+                        name="./disclaimer"
+                        xtype="richtext">
+                        <rtePlugins jcr:primaryType="nt:unstructured">
+                            <styles
+                                jcr:primaryType="nt:unstructured"
+                                features="*">
+                                <styles jcr:primaryType="cq:WidgetCollection">
+                                    <color-text
+                                        jcr:primaryType="nt:unstructured"
+                                        cssName="brand-6th"
+                                        text="Color text"/>
+                                </styles>
+                            </styles>
+                        </rtePlugins>
+                    </disclaimer>
+                </items>
+            </tab2>
+        </items>
+    </items>
+</jcr:root>

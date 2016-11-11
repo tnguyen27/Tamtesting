@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="500"
+    title="Unsubscribe Customer Dialog"
+    width="600"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <configuration
+                jcr:primaryType="cq:Panel"
+                title="Configuration">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <unsubscribeDescription
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="false"
+                        fieldLabel="Unsubscribe Text Description"
+                        name="./unsubscribeDescription"
+                        xtype="richtext"/>
+                    <emailPlaceholder
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="false"
+                        fieldLabel="Email placeholder"
+                        name="./emailPlaceholder"
+                        xtype="textfield"/>
+                    <textOfButton
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="false"
+                        fieldLabel="Button text"
+                        name="./textOfButton"
+                        xtype="textfield"/>
+                    <thankYouMessage
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="false"
+                        fieldLabel="Thank you message"
+                        name="./thankYouMessage"
+                        xtype="richtext"/>
+                </items>
+            </configuration>
+        </items>
+    </items>
+</jcr:root>

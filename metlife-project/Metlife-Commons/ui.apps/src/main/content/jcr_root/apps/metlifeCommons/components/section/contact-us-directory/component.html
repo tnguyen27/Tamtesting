@@ -1,0 +1,59 @@
+{%!
+* Contact Us Component.
+* -----------------------------------------------------------------------------
+* CHANGE HISTORY
+* -----------------------------------------------------------------------------
+* Version | Date       | Developer      | Changes
+* 1.0     | 08/11/2016 | Sergio Torres  | Initial Creation
+* -----------------------------------------------------------------------------
+%}
+<!--Select Dropdown -->
+<div class="container container--no-margin-bottom contact-us contact-us__result">
+    <div class=" wrapper contact-us__results__wrapper">
+
+        <div class="normal contact-us__header contact-us__header--large text-center">
+            {%content.header%}
+        </div>
+
+        <div class="normal contact-us__sub-header brand-gray-2nd text-center">
+            {%content.subHeading%}
+        </div>
+
+        <div class="contact-us__paragraph-header semi-bold">
+            {%content.paragraphHeader%}
+        </div>
+
+        <div class="contact-us__single-result__paragraph">
+            {%{content.bodyText}%}
+        </div>
+    </div>
+</div>
+<!--Contact results-->
+<div class="container container--no-margin-bottom ">
+    <div class="wrapper contact-us__results__wrapper">
+
+        {%#each content.group %}
+        <div class="contact-us__result-group">
+            {%#each contacts%}
+            <div class="row contact-us__listing-row">
+
+                    {%#if this.leftText%}
+                        <div class="col-xs-6 col-md-9">
+                            <span class="{%typeOfBold%}">
+                                {%leftText%}
+                            </span>
+                        </div>
+                    {%/if%}
+                    {%#if this.phone%}
+                        <div class="col-xs-6 col-md-3 text-right">
+                            <a href="tel:{%phone%}" class="{%typeOfBold%}">
+                                {%phone%}
+                            </a>
+                        </div>
+                    {%/if%}
+            </div>
+            {%/each%}
+        </div>
+        {%/each%}
+    </div>
+</div>

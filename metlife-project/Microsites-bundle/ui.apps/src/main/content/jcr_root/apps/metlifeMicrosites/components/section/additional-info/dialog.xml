@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="600"
+    title="Additional info module"
+    width="900"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <basic
+                jcr:primaryType="cq:Widget"
+                anchor="100%"
+                title="Basic"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        fieldLabel="Title"
+                        name="./title"
+                        xtype="textfield"/>
+                    <subtitle
+                        jcr:primaryType="nt:unstructured"
+                        fieldLabel="Subtitle"
+                        name="./subtitle"
+                        xtype="textfield"/>
+                    <paragraph
+                        jcr:primaryType="cq:Widget"
+                        collapsed="{Boolean}false"
+                        collapsible="{Boolean}true"
+                        title="Paragraph"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <text
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Content"
+                                hideLabel="{Boolean}true"
+                                name="./FPText"
+                                xtype="richtext">
+                                <rtePlugins jcr:primaryType="nt:unstructured">
+                                    <paraformat
+                                        jcr:primaryType="nt:unstructured"
+                                        features="*">
+                                        <formats jcr:primaryType="cq:WidgetCollection">
+                                            <paragraph
+                                                jcr:primaryType="nt:unstructured"
+                                                description="Paragraph"
+                                                tag="p"/>
+                                            <heading1
+                                                jcr:primaryType="nt:unstructured"
+                                                description="Heading 1"
+                                                tag="h1"/>
+                                            <heading2
+                                                jcr:primaryType="nt:unstructured"
+                                                description="Heading 2"
+                                                tag="h2"/>
+                                            <heading3
+                                                jcr:primaryType="nt:unstructured"
+                                                description="Heading 3"
+                                                tag="h3"/>
+                                            <heading4
+                                                jcr:primaryType="nt:unstructured"
+                                                description="Heading 4"
+                                                tag="h4"/>
+                                        </formats>
+                                    </paraformat>
+                                </rtePlugins>
+                            </text>
+                        </items>
+                    </paragraph>
+                    <primary-cta
+                        jcr:primaryType="cq:Widget"
+                        collapsed="{Boolean}true"
+                        collapsible="{Boolean}true"
+                        title="Primary CTA"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <primary-cta-link
+                                jcr:primaryType="nt:unstructured"
+                                fieldLabel="Link"
+                                linkPattern="\{0}.html"
+                                name="./primaryCtaLink"
+                                rootPath="/content/metlife"
+                                rootTitle="MetLife"
+                                xtype="pathfield"/>
+                            <primary-cta-link-text
+                                jcr:primaryType="nt:unstructured"
+                                fieldLabel="Text"
+                                name="./primaryCtaLinkText"
+                                xtype="textfield"/>
+                            <primary-cta-target
+                                jcr:primaryType="cq:Widget"
+                                anchor="95%"
+                                defaultValue="_self"
+                                fieldLabel="Open in"
+                                key="target"
+                                name="./primaryCtaTarget"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <self
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Same Page"
+                                        value="_self"/>
+                                    <blank
+                                        jcr:primaryType="nt:unstructured"
+                                        text="New Page"
+                                        value="_blank"/>
+                                </options>
+                            </primary-cta-target>
+                        </items>
+                    </primary-cta>
+                    <secondary-cta
+                        jcr:primaryType="cq:Widget"
+                        collapsed="{Boolean}true"
+                        collapsible="{Boolean}true"
+                        title="Secondary CTA"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <secondary-cta-link
+                                jcr:primaryType="nt:unstructured"
+                                fieldLabel="Link"
+                                linkPattern="\{0}.html"
+                                name="./secondaryCtaLink"
+                                rootPath="/content/metlife"
+                                rootTitle="MetLife"
+                                xtype="pathfield"/>
+                            <secondary-cta-link-text
+                                jcr:primaryType="nt:unstructured"
+                                fieldLabel="Text"
+                                name="./secondaryCtaLinkText"
+                                xtype="textfield"/>
+                            <secondary-cta-target
+                                jcr:primaryType="cq:Widget"
+                                anchor="95%"
+                                defaultValue="_self"
+                                fieldLabel="Open in"
+                                key="target"
+                                name="./secondaryCtaTarget"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <self
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Same Page"
+                                        value="_self"/>
+                                    <blank
+                                        jcr:primaryType="nt:unstructured"
+                                        text="New Page"
+                                        value="_blank"/>
+                                </options>
+                            </secondary-cta-target>
+                        </items>
+                    </secondary-cta>
+                    <bottom-text
+                        jcr:primaryType="cq:Widget"
+                        collapsed="{Boolean}true"
+                        collapsible="{Boolean}true"
+                        title="Bottom text"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <text
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Content"
+                                hideLabel="{Boolean}true"
+                                name="./bottomText"
+                                xtype="richtext">
+                                <rtePlugins jcr:primaryType="nt:unstructured">
+                                    <styles
+                                        jcr:primaryType="nt:unstructured"
+                                        features="*">
+                                        <styles jcr:primaryType="cq:WidgetCollection">
+                                            <content-action-copy
+                                                jcr:primaryType="nt:unstructured"
+                                                cssName="content__action--copy"
+                                                text="Content action copy"/>
+                                        </styles>
+                                    </styles>
+                                </rtePlugins>
+                            </text>
+                        </items>
+                    </bottom-text>
+                </items>
+            </basic>
+        </items>
+    </items>
+</jcr:root>

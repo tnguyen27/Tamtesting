@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0">
+    <scr:component name="com.metlife.poc.servlets.FormProxyServlet" activate="activate">
+        <implementation class="com.metlife.poc.servlets.FormProxyServlet"/>
+        <service servicefactory="false">
+            <provide interface="javax.servlet.Servlet"/>
+        </service>
+        <property name="sling.servlet.paths">
+            /bin/forms/formService
+        </property>
+        <property name="sling.servlet.extensions">
+            json
+        </property>
+        <property name="sling.servlet.methods">
+            POST
+        </property>
+        <property name="service.description" value="MetLife Forms Proxy Servlet"/>
+        <property name="web2LeadUrl" value="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"/>
+        <property name="service.vendor" value="Adobe"/>
+        <property name="service.pid" value="com.metlife.poc.servlets.FormProxyServlet"/>
+    </scr:component>
+</components>

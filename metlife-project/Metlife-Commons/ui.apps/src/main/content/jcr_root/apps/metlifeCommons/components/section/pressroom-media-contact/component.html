@@ -1,0 +1,25 @@
+<!--Begin Pressroom Media Contact -->
+<div class="container">
+    <div class="media-contact wrapper row">
+
+
+
+        <div class="media-contact__list">
+            {%#if content.categories %}
+                {%#each content.categories %}
+                    <div class="media-contact__list__section">
+                        <div class="media-contact__list__section__title">
+                            {%this.category%}
+                        </div>
+                        <div class="media-contact__list__section__content">
+                            {%#each this.categories-items %}
+                                {%#include this as="metlifeCommons/components/section/pressroom-media-contact-row"%}{%/include%}
+                            {%/each%}
+                        </div>
+                    </div>
+                {%/each%}
+            {%/if%}
+        </div>
+    </div>
+</div>
+<!--End Pressroom Media Contact -->

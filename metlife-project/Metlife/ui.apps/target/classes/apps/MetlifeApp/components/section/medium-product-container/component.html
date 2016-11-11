@@ -1,0 +1,17 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Medium Product Container Component
+* ------------------------------------------------------------------------------ *
+%}
+
+<div class="container bg-gray-1st product-module-medium-wrapper" data-comp-spacing="product-module-medium">
+    <div class="row wrapper product-module in_view">
+        {%#each list.tiles%}
+        	{%#include title as="MetlifeApp/components/section/medium-product-card"%}{%/include%}
+        {%/each%}
+    </div>
+</div>
+
+{%#if page.isEditMode%}
+<div style="clear:both;"></div>
+{%/if%}

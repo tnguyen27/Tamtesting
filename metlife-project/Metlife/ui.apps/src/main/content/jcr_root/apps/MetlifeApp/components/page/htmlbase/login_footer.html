@@ -1,0 +1,114 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Metlife HTML Base - Login Footer
+* ------------------------------------------------------------------------------ *
+%}
+
+<div class="login-types bg-white">
+    <div class="login-type-trigger">
+        <a href="#"
+           id="{%global.loginConfigurationPathResourcePropertieslogin.loginFooterTitleId%}"
+           class="login-type-trigger__title">
+            <h2>
+                {%#if global.loginConfigurationPathResourcePropertieslogin.loginFooterTitle%}
+                    {%global.loginConfigurationPathResourcePropertieslogin.loginFooterTitle%}
+                {%else%}
+                    Other account types
+                {%/if%}
+                <svg class="icon icon-plus">
+                    <use xlink:href="/static/images/icons-metlife.svg#icon-plus"></use>
+                </svg>
+            </h2>
+        </a>
+    </div>
+    <div class="row login-type__details">
+        <div class="col-xs-12 col-sm-4">
+            {%#each global.loginConfigurationPathResourcePropertieslogin.familyLinks1%}
+                {%#if this.subItemTitle%}
+                    <div class="login-type__detail">
+                        <h3 class="login-type__title">{%subItemTitle%}</h3>
+                        <svg class="icon icon-chevron-right">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                 xlink:href="/static/images/icons-metlife.svg#icon-chevron-right"></use>
+                        </svg>
+                        <ul>
+                            {%#each this.links%}
+                                {%#if this.link%}
+                                    <li class="login-type__link">
+                                        <a href="{%link%}" 
+                                           target="{%target%}"
+                                           id="{%elementId%}">
+                                            {%linkText%}
+                                        </a>
+                                    </li>
+                                {%/if%}
+                            {%/each%}
+                        </ul>
+                    </div>
+                {%/if%}
+            {%/each%}
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            {%#each global.loginConfigurationPathResourcePropertieslogin.familyLinks2%}
+                {%#if this.subItemTitle%}
+                    <div class="login-type__detail">
+                        <h3 class="login-type__title">{%subItemTitle%}</h3>
+                        <svg class="icon icon-chevron-right">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                 xlink:href="/static/images/icons-metlife.svg#icon-chevron-right"></use>
+                        </svg>
+                        <ul>
+                            {%#each links%}
+                                {%#if this.link%}
+                                    <li class="login-type__link">
+                                        <a href="{%link%}"
+                                           target="{%target%}"
+                                           id="{%elementId%}">{%linkText%}
+                                        </a>
+                                    </li>
+                                {%/if%}
+                            {%/each%}
+                        </ul>
+                    </div>
+                {%/if%}
+            {%/each%}
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            {%#each global.loginConfigurationPathResourcePropertieslogin.familyLinks3%}
+                {%#if this.subItemTitle%}
+                    <div class="login-type__detail">
+                        <h3 class="login-type__title">{%subItemTitle%}</h3>
+                        <svg class="icon icon-chevron-right">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                 xlink:href="/static/images/icons-metlife.svg#icon-chevron-right"></use>
+                        </svg>
+                        <ul>
+                            {%#each this.links%}
+                                {%#if this.link%}
+                                    <li class="login-type__link">
+                                        <a href="{%link%}"
+                                           target="{%target%}"
+                                           id="{%elementId%}">
+                                            {%linkText%}
+                                        </a>
+                                    </li>
+                                {%/if%}
+                            {%/each%}
+                        </ul>
+                    </div>
+                {%/if%}
+            {%/each%}
+        </div>
+    </div>
+    <div class="login-type__contact">
+        {%{global.loginConfigurationPathResourcePropertieslogin.loginFooterContactText}%}
+        <p class="hidden-sm hidden-md hidden-lg">
+            {%global.loginConfigurationPathResourcePropertieslogin.footerMobileText%}
+            <a href="{%global.loginConfigurationPathResourcePropertieslogin.footerMobileLink%}"
+               class="login-popout__action"
+               data-popout-msg="for_individuals"
+               target="{%global.loginConfigurationPathResourcePropertieslogin.target%}"
+               id="{%global.loginConfigurationPathResourcePropertieslogin.footerMobileLinkTextId%}">{%global.loginConfigurationPathResourcePropertieslogin.footerMobileLinkText%}</a>
+        </p>
+    </div>
+</div>

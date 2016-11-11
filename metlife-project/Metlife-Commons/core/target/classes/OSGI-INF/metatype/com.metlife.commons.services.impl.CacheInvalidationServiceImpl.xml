@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.0.0" localization="OSGI-INF/metatype/com.metlife.commons.services.impl.CacheInvalidationServiceImpl">
+    <OCD id="com.metlife.commons.services.impl.CacheInvalidationServiceImpl" name="%com.metlife.commons.services.impl.CacheInvalidationServiceImpl.name" description="%com.metlife.commons.services.impl.CacheInvalidationServiceImpl.description">
+        <AD id="purgeByComponents" type="String" default="metlifeCommons/components/section/forms-library|results" name="%com.metlife.commons.services.impl.CacheInvalidationServiceImpl.purgeByComponents.name" description="%com.metlife.commons.services.impl.CacheInvalidationServiceImpl.purgeByComponents.description" cardinality="2147483647"/>
+        <AD id="templatesList" type="String" default="/apps/metlifeCommons/templates/forms-library" name="%com.metlife.commons.services.impl.CacheInvalidationServiceImpl.templatesList.name" description="%com.metlife.commons.services.impl.CacheInvalidationServiceImpl.templatesList.description" cardinality="2147483647"/>
+    </OCD>
+    <Designate pid="com.metlife.commons.services.impl.CacheInvalidationServiceImpl">
+        <Object ocdref="com.metlife.commons.services.impl.CacheInvalidationServiceImpl"/>
+    </Designate>
+</metatype:MetaData>

@@ -1,0 +1,43 @@
+<!-- Carousel Hero -->
+<div class="carousel slide carousel--microsite" id="carouselMicrosite" data-ride="carousel" data-interval="{% content.numberMultiplied %}">
+    {%#if content.homeSliderLinks %}
+        <div class="carousel-inner" role="listbox">
+            {%#each content.homeSliderLinks %}
+                <div class="item {%#if @first%}active{%/if%} item--microsite">
+                    <img
+                            data-srcset-base=""
+                            data-srcset="{%homeSliderImageSpooled%}"
+                            alt="{%altText%}"
+                    />
+                    {%#if @first%}
+                        <noscript>&lt;img class="img-responsive" src="{%homeSliderImageSpooled%}" alt="{%altText%}"/&gt;</noscript>
+                    {%/if%}
+                </div>
+            {%/each%}
+            <div class="carousel-caption carousel-caption--bottom">
+                <!-- Indicators -->
+                <ol class="carousel-indicators carousel-indicators--visible">
+                    {%#each content.homeSliderLinks %}
+                    <li data-target="#carouselMicrosite" data-slide-to="{% @index %}" class="{%#if @first%}active{%/if%}"></li>
+                    {%/each%}
+                </ol>
+                <h2>{% content.firstLineImageCaption %}</h2>
+                <h3>{% content.secondLineImageCaption %}</h3>
+            </div>
+        </div>
+    {%else%}
+        <img class="cq-carousel-placeholder cq-block-lg-placeholder" src="/etc/designs/default/0.gif" alt="Empty Carousel" />
+    {%/if%}
+    <a class="left carousel-control hidden-xs" href="#carouselMicrosite" role="button" data-slide="prev">
+        <svg class="icon">
+            <use xlink:href="/static/images/icons-metlife.svg#icon-prev"></use>
+        </svg>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control hidden-xs" href="#carouselMicrosite" role="button" data-slide="next">
+        <svg class="icon">
+            <use xlink:href="/static/images/icons-metlife.svg#icon-next"></use>
+        </svg>
+        <span class="sr-only">Next</span>
+    </a>
+</div>

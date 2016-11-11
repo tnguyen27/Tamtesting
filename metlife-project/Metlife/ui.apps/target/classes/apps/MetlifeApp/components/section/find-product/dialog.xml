@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="500"
+    title="Find Product configuration"
+    width="900"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Configuration">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="I am interested in:"
+                        fieldLabel="Title"
+                        name="./title"
+                        xtype="textfield"/>
+                    <textselection
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Please Select Insurance Type"
+                        fieldLabel="Placeholder for Product"
+                        name="./placeholderproduct"
+                        xtype="textfield"/>
+                    <secondplaceholder
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="I want protection my"
+                        fieldLabel="Placeholder for Subproduct"
+                        name="./placeholdersubproduct"
+                        xtype="textfield"/>
+                    <buttonLabel
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="GO"
+                        fieldLabel="Button label"
+                        name="./buttonLabel"
+                        xtype="textfield"/>
+                    <isSimpleDropdown
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="One dropdown for product selector"
+                        name="./isSimpleDropdown"
+                        type="checkbox"
+                        xtype="selection">
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            loadcontent="function(field, record, path) {Metlife.Components.findProduct.loadContent(field, record, path);}"
+                            selectionchanged="function(selection, value, isChanged) { Metlife.Components.findProduct.selectionChanged(selection, value, isChanged);}"/>
+                    </isSimpleDropdown>
+                    <products
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Click the '+' to add a new item"
+                        fieldLabel="Products"
+                        itemId="products"
+                        name="./products"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            xtype="multifieldpanel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <product
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="false"
+                                    anchor="90%"
+                                    fieldLabel="Product"
+                                    key="product"
+                                    linkPattern="\{0}.html"
+                                    rootPath="/content/metlife"
+                                    xtype="pathfield"/>
+                                <textproduct
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="{Boolean}false"
+                                    anchor="90%"
+                                    fieldLabel="Title Product"
+                                    key="titleproduct"
+                                    xtype="textfield"/>
+                                <subproducts
+                                    jcr:primaryType="cq:Widget"
+                                    fieldLabel="SubProducts"
+                                    key="subproduct"
+                                    xtype="multifield">
+                                    <fieldConfig
+                                        jcr:primaryType="cq:Widget"
+                                        xtype="multifieldpanel">
+                                        <items jcr:primaryType="cq:WidgetCollection">
+                                            <product
+                                                jcr:primaryType="cq:Widget"
+                                                allowBlank="false"
+                                                anchor="90%"
+                                                fieldLabel="Product"
+                                                key="subproduct"
+                                                linkPattern="\{0}.html"
+                                                rootPath="/content/metlife"
+                                                xtype="pathfield"/>
+                                            <textproduct
+                                                jcr:primaryType="cq:Widget"
+                                                allowBlank="{Boolean}false"
+                                                anchor="90%"
+                                                fieldLabel="Title Product"
+                                                key="titlesubproduct"
+                                                xtype="textfield"/>
+                                        </items>
+                                    </fieldConfig>
+                                </subproducts>
+                            </items>
+                        </fieldConfig>
+                    </products>
+                    <simpleProducts
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Click the '+' to add a new item"
+                        fieldLabel="Products"
+                        itemId="simpleProducts"
+                        name="./simpleProducts"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            xtype="multifieldpanel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <product
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="false"
+                                    anchor="99%"
+                                    fieldLabel="Product"
+                                    key="simpleProduct"
+                                    linkPattern="\{0}.html"
+                                    rootPath="/content/metlife"
+                                    xtype="pathfield"/>
+                                <titleProduct
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="{Boolean}false"
+                                    anchor="99%"
+                                    fieldLabel="Title Product"
+                                    key="simpleTitleProduct"
+                                    xtype="textfield"/>
+                            </items>
+                        </fieldConfig>
+                    </simpleProducts>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>

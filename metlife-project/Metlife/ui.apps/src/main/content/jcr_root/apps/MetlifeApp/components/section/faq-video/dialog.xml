@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="620"
+    title="FAQ &amp; Video"
+    width="850"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <general
+                jcr:primaryType="cq:Panel"
+                title="General">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="true"
+                        fieldLabel="Title"
+                        name="./title"
+                        xtype="textfield"/>
+                </items>
+            </general>
+            <faq
+                jcr:primaryType="cq:Panel"
+                title="FAQ">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <view-all
+                        jcr:primaryType="cq:Widget"
+                        collapsed="{Boolean}false"
+                        collapsible="{Boolean}false"
+                        title="View all configuration"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <link-label
+                                jcr:primaryType="nt:unstructured"
+                                allowBlank="true"
+                                fieldLabel="Link label"
+                                name="./linklabel"
+                                xtype="textfield"/>
+                            <link-url
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="true"
+                                fieldLabel="Link URL"
+                                itemId="productActionThirdButtonLink"
+                                linkPattern="\{0}.html"
+                                name="./linkurl"
+                                rootPath="/content/metlife"
+                                rootTitle="MetLife"
+                                xtype="pathfield"/>
+                            <view-all-text
+                                jcr:primaryType="nt:unstructured"
+                                allowBlank="true"
+                                fieldDescription="This text will be concatenated to the link URL (eg: /content/metlife/find-a-dentist.html/#view_all_text)"
+                                fieldLabel="View all text"
+                                name="./viewalltext"
+                                xtype="textfield"/>
+                            <opening
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="_blank"
+                                fieldLabel="Open in"
+                                name="./viewall"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <this-page
+                                        jcr:primaryType="nt:unstructured"
+                                        text="This page"
+                                        value="_self"/>
+                                    <new-page
+                                        jcr:primaryType="nt:unstructured"
+                                        text="New page"
+                                        value="_blank"/>
+                                </options>
+                            </opening>
+                        </items>
+                    </view-all>
+                    <faqtitle
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="true"
+                        fieldLabel="FAQ Title"
+                        name="./faqtitle"
+                        xtype="textfield"/>
+                    <qa-list
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Click the '+' to add a new item"
+                        fieldLabel="Q&amp;A List"
+                        name="./qalist"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            xtype="multifieldpanel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <question
+                                    jcr:primaryType="cq:Widget"
+                                    anchor="90%"
+                                    fieldLabel="Question"
+                                    key="question"
+                                    xtype="textfield"/>
+                                <answer
+                                    jcr:primaryType="cq:Widget"
+                                    anchor="90%"
+                                    fieldLabel="Answer"
+                                    key="answer"
+                                    xtype="richtext">
+                                    <rtePlugins jcr:primaryType="nt:unstructured">
+                                        <subsuperscript
+                                            jcr:primaryType="nt:unstructured"
+                                            features="*"/>
+                                    </rtePlugins>
+                                </answer>
+                            </items>
+                        </fieldConfig>
+                    </qa-list>
+                </items>
+            </faq>
+            <video
+                jcr:primaryType="cq:Panel"
+                title="Video">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <video-title
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="Enter some text for the title."
+                        fieldLabel="Video Title"
+                        maxLength="150"
+                        name="./videotitle"
+                        xtype="textfield"/>
+                    <video-type
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="option_a"
+                        fieldLabel="Video Type"
+                        name="./videotype"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <brightcove
+                                jcr:primaryType="nt:unstructured"
+                                text="Brightcove"
+                                value="option_a"/>
+                            <youtube
+                                jcr:primaryType="nt:unstructured"
+                                text="Youtube"
+                                value="option_b"/>
+                        </options>
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            loadcontent="function(field,record,path){MetlifeCommons.Components.HideFieldTexts.loadContent(field,record,path);}"
+                            selectionchanged="function(selection, value, isChanged) {MetlifeCommons.Components.HideFieldTexts.selectionChanged(selection, value, isChanged);}"/>
+                    </video-type>
+                    <brightcove-video-id
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="Enter the video id for brightcove. (eg: 3891257518001 )"
+                        fieldLabel="Brightcove video ID"
+                        hidden="{Boolean}true"
+                        item-id="1-item"
+                        maxLength="150"
+                        name="./brightcovevideoid"
+                        xtype="textfield"/>
+                    <brightcove-video-account
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="Enter the video account for brightcove. (eg: 64298592001 )"
+                        fieldLabel="Brightcove video account"
+                        hidden="{Boolean}false"
+                        item-id="3-items"
+                        maxLength="150"
+                        name="./brightcovevideoaccount"
+                        xtype="textfield"/>
+                    <youtubevideoid
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="Enter the video id for youtube. (eg: https://www.youtube.com/watch?v=&lt;b>CMkeicTX0Tc&lt;/b>)"
+                        fieldLabel="Youtube video ID"
+                        hidden="{Boolean}true"
+                        item-id="2-items"
+                        maxLength="150"
+                        name="./youtubevideoid"
+                        xtype="textfield"/>
+                    <videoDuration
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Enter duration video (e.g. Duration: 1:47)"
+                        fieldLabel="Duration"
+                        maxLength="25"
+                        name="./videoDuration"
+                        xtype="textfield"/>
+                    <video_description_title
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="Enter the video description title."
+                        fieldLabel="Description title"
+                        maxLength="150"
+                        name="./videodescriptiontitle"
+                        xtype="textfield"/>
+                    <video_description
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="Enter short description."
+                        fieldLabel="Description"
+                        maxLength="150"
+                        name="./videodescription"
+                        xtype="textfield"/>
+                    <isBrightcove
+                        jcr:primaryType="nt:unstructured"
+                        name="./isBrightcove"
+                        xtype="hidden"/>
+                </items>
+            </video>
+        </items>
+    </items>
+</jcr:root>

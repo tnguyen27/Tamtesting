@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Tile Container"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Configuration">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <type
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Type"
+                        name="./type"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <one-item
+                                jcr:primaryType="nt:unstructured"
+                                text="Banner Only"
+                                value="1-item"/>
+                            <two-items
+                                jcr:primaryType="nt:unstructured"
+                                text="Tile and Banner"
+                                value="2-items"/>
+                            <three-items
+                                jcr:primaryType="nt:unstructured"
+                                text="Three Tiles"
+                                value="3-items"/>
+                        </options>
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            loadcontent="function(field,record,path){Metlife.Components.TileContainer.loadContent(field,record,path);}"
+                            selectionchanged="function(selection, value, isChanged) { Metlife.Components.TileContainer.selectionChanged(selection, value, isChanged);}"/>
+                    </type>
+                    <two-items
+                        jcr:primaryType="cq:Widget"
+                        collapsible="{Boolean}false"
+                        hidden="true"
+                        item-id="2-items"
+                        title="Tile and Banner"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <order
+                                jcr:primaryType="cq:Widget"
+                                anchor="90%"
+                                defaultValue="tile-first"
+                                fieldLabel="Order"
+                                hidden="true"
+                                name="./order"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <banner-first
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Banner First"
+                                        value="banner-first"/>
+                                    <tile-first
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Tile First"
+                                        value="tile-first"/>
+                                </options>
+                            </order>
+                        </items>
+                    </two-items>
+                    <three-items
+                        jcr:primaryType="cq:Widget"
+                        collapsible="{Boolean}false"
+                        hidden="true"
+                        item-id="3-items"
+                        title="Tile types"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <tile1
+                                jcr:primaryType="cq:Widget"
+                                anchor="90%"
+                                defaultValue="product"
+                                fieldLabel="Tile 1"
+                                hidden="true"
+                                name="./tile1Type"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <product
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Product"
+                                        value="product"/>
+                                </options>
+                            </tile1>
+                            <tile2
+                                jcr:primaryType="cq:Widget"
+                                anchor="90%"
+                                defaultValue="product"
+                                fieldLabel="Tile 2"
+                                hidden="true"
+                                name="./tile2Type"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <product
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Product"
+                                        value="product"/>
+                                </options>
+                            </tile2>
+                            <tile3
+                                jcr:primaryType="cq:Widget"
+                                anchor="90%"
+                                fieldLabel="Tile 3"
+                                name="./tile3Type"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <product
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Product"
+                                        value="product"/>
+                                    <promotion
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Promotion"
+                                        value="promotion"/>
+                                </options>
+                            </tile3>
+                        </items>
+                    </three-items>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>

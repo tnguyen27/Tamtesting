@@ -1,0 +1,26 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Campaign Footer Component
+* ------------------------------------------------------------------------------ *
+%}
+
+<div class="container bg-gray-1st">
+    <div class="row campaign-footer margin-auto">
+        <div class="campaign-footer__linkswrapper text-center">
+			{%#if content.enableFooter%}
+                {%#each content.footer%}
+                    {%#if footerlink%}
+                        <div class="campaign-footer-link brand-1st">
+                            <a id="{%elementId%}" class="text-bold" href="{%footerlink%}" target="{%target%}">{%footerlabel%}</a>
+                        </div>
+                    {%/if%}
+                {%/each%}
+			{%/if%}
+            <div class="clearfix"></div>
+        </div>
+        <div class="campaign-footer__legal text-center">
+            {%{content.legalText}%}
+            {%page.legalDocId%} {%content.customLegalDateValue%}
+        </div>
+    </div>
+</div>

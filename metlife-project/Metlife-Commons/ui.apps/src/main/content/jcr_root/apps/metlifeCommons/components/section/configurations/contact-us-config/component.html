@@ -1,0 +1,18 @@
+{%!
+* Configuration - Contact Us.
+* -----------------------------------------------------------------------------
+* CHANGE HISTORY
+* -----------------------------------------------------------------------------
+* Version | Date       | Developer      | Changes
+* 1.0     | 08/02/2016 | Sergio Torres  | Initial Creation
+* -----------------------------------------------------------------------------
+%}
+{%#unless content.nameContact%}<h4>Double Click to edit the contact.</h4>{%/unless%}
+<div class="col-xs-12 col-sm-4 col-sm-offset-2 contact-us__phone-block">
+    <div><b>Name:</b> {%content.nameContact%}</div>
+    <div><b>Address1:</b> {%content.address1%}</div>
+    <div><b>Address2:</b> {%content.address2%}</div>
+    <div><b>Address3:</b> {%content.address3%}</div>
+    <div><b>Telephone Label:</b> {%content.telephoneLabel%}</div>
+    <div><b>Telephone Number:</b> {%content.telephoneNumber%}</div>
+</div>

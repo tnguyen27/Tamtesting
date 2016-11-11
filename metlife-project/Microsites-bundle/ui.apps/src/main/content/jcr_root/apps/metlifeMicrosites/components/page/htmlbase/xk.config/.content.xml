@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    twoLevelCuratedPathRefsKeyNames="[page.headerExternalJavascript,page.headerExternalCss,page.footerExternalJavascript,page.footerExternalCss,global.headerExternalJavascript,global.headerExternalCss,global.footerExternalJavascript,global.footerExternalCss]"
+    xk_addIdToElements="[page.footerImagePath,page.footerbulletlinks,page.footerlabelLink,page.footerlogoLink,page.logoLinkMetLife,page.logoLinkOther,global.linkFeedback]"
+    xk_clientAccessible="{Boolean}true"
+    xk_clientModelProperties="[content,page,global,statistics,design]"
+    xk_containerClasses="[xk-component,xk-page]"
+    xk_deserializeJSON="[page.footerbulletlinks]"
+    xk_evaluateEqualsCondition="[global.selectsearch==internalsearch,global.selectsearch==legacysearch,page.disableFarmsite==enable,global.disableFarmsite==enable,page.disableBreadcrumb==enable,global.disableBreadcrumb==enable,page.vendorABTesting==enable,global.vendorABTesting==enable,page.vendorJourney==enable,global.vendorJourney==enable,page.vendorFeedback==enable,global.vendorFeedback==enable,page.vendorMeasuring==enable,global.vendorMeasuring==enable,page.vendorTagging==enable,global.vendorTagging==enable,page.analyticsTag==enable,global.analyticsTag==enable]"
+    xk_imagesFromParentConfigList="[metlifeMicrosites/components/page/homepage::page::footer/image::footerImagePath,metlifeMicrosites/components/page/homepage::page::logo-metlife/image::logoMetlifeImagePath,metlifeMicrosites/components/page/homepage::page::logo-other/image::logoOtherImagePath]"
+    xk_replaceTexts="[page.footerPeanutsDisclaimer::xxYEARxx::content.currentYear,page.footerLegalDisclaimer::xxYEARxx::content.currentYear]"
+    xk_setDateFormat="page.legalDocExpDate::page.dateFormat::content.customLegalDateValue"/>

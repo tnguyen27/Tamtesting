@@ -1,0 +1,44 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Metlife HTML Base - Cookie Banner
+* ------------------------------------------------------------------------------ *
+%}
+
+<script type="text/javascript">
+    // Cookie is automatically added
+    // If false, cookie needs a required button press or navigation to be added
+    {%#if global.cookieBannerAcceptance%}
+    var createCookie = true;
+    {%/if%}
+    var cookieName = "MLALUKCookiesAccepted";
+
+    {%#if global.cookieBannerAllowImmediateAnalytics%}
+    var Allowimmediatesiteanalytics = true;
+    {%else%}
+    var Allowimmediatesiteanalytics = false;
+    {%/if%}
+
+    {%#if global.cookieBannerExpiryPeriod%}
+    cookieExpiry = {%global.cookieBannerExpiryPeriod%};
+    {%else%}
+    cookieExpiry = 365;
+    {%/if%}
+
+    var cookieDelete = false;
+    var cookieNamesDelete = '';
+</script>
+<div class="container">
+    <div class="row cookieShell">
+        <div class="wrapper">
+            <div class="inline-block col-sm-2 col-xs-9 cookieShell--title">
+                <p>{%global.cookieBannerTitle%}</p>
+            </div>
+            <div class="inline-block col-sm-8 col-xs-12 cookieShell--description">
+                {%{global.cookieBannerDescription}%}
+            </div>
+            <div class="inline-block col-sm-2 col-xs-2 cookieShell--button">
+                <a href="JavaScript:setAcceptCookieDesktop(true);" class="btn btn-brand-2nd js-cookieAccept">{%global.cookieBannerAcceptanceButtonLabel%}</a>
+            </div>
+        </div>
+    </div>
+</div>

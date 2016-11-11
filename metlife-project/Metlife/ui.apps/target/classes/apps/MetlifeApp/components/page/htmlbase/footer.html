@@ -1,0 +1,65 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Metlife HTML Base - Footer
+* ------------------------------------------------------------------------------ *
+%}
+
+<div class="container bg-gray-1st global-footer">
+    <div class="wrapper">
+        {%#if page.disableFarmsite%}
+            {%#if content.EqualTo_2%} {%! if page.disableFarmsite==enable %}
+                {%#include "farm-links" as="MetlifeApp/components/section/footer-farm-links"%}{%/include%}
+            {%/if%}
+        {%else%}
+            {%#if global.activeFarmsite%}
+                {%#include "farm-links" as="MetlifeApp/components/section/footer-farm-links"%}{%/include%}
+            {%/if%}
+        {%/if%}
+        <div class="row footer-country-language-social">
+            {%#if global.enableCountrySelector %}
+                {%#include "country-selector" as="MetlifeApp/components/section/country-selector"%}{%/include%}
+            {%/if%}
+            
+            {%#if global.enableLanguageSelector %}
+                {%#include "language-selector" as="MetlifeApp/components/section/language-selector"%}{%/include%}
+            {%/if%}
+            <div class="clearfix hidden-sm hidden-md hidden-lg"></div>
+
+            {%#if global.enableLogoFooter %}
+                <div class="col-xs-6 footer-logo">
+                    <img class="img-responsive" src="#"
+                         data-src="{%#if global.footerImagePath %} {% global.footerImagePath %} {%else%}/etc/designs/default/0.gif{%/if%}"
+                         alt="{% global.footerlogoAltText %}">
+                </div>
+            {%/if%}
+            
+            {%#if global.enableSocialMedia %}
+            <div class="col-xs-6 col-sm-4 col-md-4 footer-social">
+                <div class="social-alignment">
+                    <span class="social__label">{% global.followuslabel %}</span>
+                    {%#each global.footersociallinks %}
+                    <a class="social__link" 
+                       href="{% this.path %}" 
+                       title="{% this.titleText %}" 
+                       target="{% this.target %}">
+                        <svg class="icon brand-1st">
+                            <use xlink:href="/static/images/icons-metlife.svg#{% this.iconTag %}"></use>
+                        </svg>
+                    </a>
+                    {%/each%}
+                </div>
+            </div>
+            {%/if%}
+        </div>
+        {%> privacylegal %}
+    </div>
+</div>
+
+<div id="suggestionsbox" class="suggestionsbox ">
+    <table cellpadding="0" cellspacing="0" class="ss-gac-table" id="search_suggest_table">
+        <tbody class="ss-gac-m" id="search_suggest" style="visibility: hidden;">
+        </tbody>
+    </table>
+</div>
+
+{%>footerscripts %}

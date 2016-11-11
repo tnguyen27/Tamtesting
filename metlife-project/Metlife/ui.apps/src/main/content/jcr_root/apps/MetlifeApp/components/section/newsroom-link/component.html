@@ -1,0 +1,10 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Newsroom Link Component
+* ------------------------------------------------------------------------------ *
+%}
+
+{%#if design.link%}
+	<span class="bread_crumb_backslash"><</span>
+	<a href="{%design.link%}" class="style_for_press_room_back top_back_press_room" target="{%design.target%}">{%design.title%}</a>
+{%/if%}

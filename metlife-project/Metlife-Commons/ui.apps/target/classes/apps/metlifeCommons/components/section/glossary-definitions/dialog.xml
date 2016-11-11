@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="600"
+    title="Glossary Definitions Dialog"
+    width="1000"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Configuration">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <letter
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="false"
+                        anchor="98%"
+                        fieldLabel="Letter"
+                        hideLabel="false"
+                        name="./letter"
+                        validateOnBlur="true"
+                        xtype="textfield"/>
+                    <terms
+                        jcr:primaryType="cq:Widget"
+                        addItemLabel="Add Terms"
+                        anchor="98%"
+                        fieldDescription="Click the '+' to add a new term"
+                        fieldLabel="Terms List"
+                        minItems="{Long}1"
+                        name="./definitions"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            xtype="multifieldpanel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <titleDefinition
+                                    jcr:primaryType="nt:unstructured"
+                                    allowBlank="false"
+                                    anchor="98%"
+                                    fieldLabel="Title"
+                                    key="title"
+                                    validateOnBlur="true"
+                                    xtype="textfield"/>
+                                <definition
+                                    jcr:primaryType="nt:unstructured"
+                                    allowBlank="false"
+                                    anchor="98%"
+                                    fieldLabel="Definition"
+                                    key="definition"
+                                    validateOnBlur="true"
+                                    xtype="textarea"/>
+                            </items>
+                        </fieldConfig>
+                    </terms>
+                    <termsfield
+                        jcr:primaryType="nt:unstructured"
+                        ignoreData="true"
+                        name="./definitions@TypeHint"
+                        value="String[]"
+                        xtype="hidden"/>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>

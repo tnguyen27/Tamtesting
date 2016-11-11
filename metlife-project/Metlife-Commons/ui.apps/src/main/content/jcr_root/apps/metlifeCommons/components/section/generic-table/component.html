@@ -1,0 +1,71 @@
+{%#if content.title%}
+<!-- Overlay & Rate Table -->
+<div class="container rate-table">
+    <div class="row wrapper">
+        <div class="width-80">
+			{%#if content.EqualTo_0%}
+			<div class="two-column-table-layout">
+                <div class="two-column-table">
+			{%else%}
+			<div class="overlay-table-layout">
+                <div class="overlay-table">
+			{%/if%}
+					<h2>{%content.title%}</h2>
+
+                    <div class="rate_table clearfix">
+                        <div class="content col-xs-12 col-sm-12 col-lg-12">
+                            <div class="content_corner">
+                                <div class="content_container">
+                                    <table class="content_table"></table>
+                                </div>
+                            </div>
+                            <div class="content_top">
+                                <div class="content_container">
+                                    <div class="window">
+                                        <table class="content_table"></table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content_left">
+                                <div class="content_container">
+                                    <table class="content_table table-striped"></table>
+                                </div>
+                            </div>
+                            <div class="content_body">
+                                <div class="content_container">
+                                    <div class="window">
+                                        <table class="content_table table-striped"></table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content_temp">
+                            	{%#if content.TableCSV_0%}
+									<table>
+                                    	<tbody>
+                                        {%#each content.TableCSV_0%}
+     										{%#each this%}
+                                            <tr>
+                                            	{%#each this%}
+												<td>{%this%}</td>
+                                                {%/each%}
+                                            </tr>
+     										{%/each%}
+										{%/each%}
+                                        </tbody>
+                                    </table>
+                                {%else%}
+                                {%{content.table}%}
+                                {%/if%}
+                            </div>
+                        </div>
+                        <div class="controls col-xs-12 col-sm-12 col-lg-12">
+                            <ol class="carousel-indicators block"></ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Component -->
+        </div>
+    </div>
+</div>
+{%/if%}

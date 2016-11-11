@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    twoLevelCuratedPathRefsKeyNames="[global.americasCountries,global.asiaCountries,global.europeCountries,global.middleEastAndAfricaCountries]"
+    xk_addIdToElements="[global.americasLabel,global.americasCountries,global.asiaLabel,global.asiaCountries,global.europeLabel,global.europeCountries,global.middleEastAndAfricaLabel,global.middleEastAndAfricaCountries]"/>

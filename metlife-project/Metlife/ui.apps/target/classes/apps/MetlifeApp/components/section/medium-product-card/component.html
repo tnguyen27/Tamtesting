@@ -1,0 +1,45 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Medium Product Component
+* ------------------------------------------------------------------------------ *
+%}
+
+<div>
+    <a href="{% content.link %}"
+       class="clearfix"
+       target="{%content.target%}"
+       id="{%content.linkId%}Image">
+        {%#if content.imagePath %}
+        <img src="{% content.link %}"
+             data-src="{% content.imagePath %}"
+             alt="{% content.altText %}" class="lazy" target="{%content.target%}">
+        <noscript>
+            <img src="{% content.imagePath %}"
+                 alt="{% content.altText %}">
+        </noscript>
+        {%/if%}
+    </a>
+</div>
+<div class="product-module__top">
+    <a href="{% content.link %}"
+       id="{%content.linkId%}Title"
+       target="{%content.target%}"
+       class="brand-gray-4th product-module__medium__header">{% content.headline %}
+    </a>
+    {%#if content.bullets %}
+    <div class="product-module__list product-module__list--medium">
+        <ul>
+            {%#each content.bullets %}
+            <li>{% this %}</li>
+            {%/each%}
+        </ul>
+    </div>
+    {%/if%}
+</div>
+<div class="product-module__bottom">
+    <a href="{% content.link %}"
+       id="{%content.linkId%}"
+       target="{%content.target%}"
+       class="product-module__action product-module__action--medium">{% content.buttonText %}
+    </a>
+</div>

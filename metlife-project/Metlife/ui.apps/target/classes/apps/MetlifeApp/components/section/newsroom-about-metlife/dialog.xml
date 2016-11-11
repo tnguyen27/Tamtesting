@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Dialog News Room About MetLife Component"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="MetLife Resources">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Title"
+                        name="./titleResource"
+                        xtype="textfield"/>
+                    <text
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Text"
+                        name="./textResource"
+                        xtype="richtext"/>
+                </items>
+            </tab1>
+            <tab3
+                jcr:primaryType="cq:Panel"
+                title="About Metlife">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Title"
+                        name="./titleAbout"
+                        xtype="textfield"/>
+                    <text
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Text"
+                        name="./textAbout"
+                        xtype="richtext"/>
+                </items>
+            </tab3>
+            <tab2
+                jcr:primaryType="cq:Panel"
+                title="MetLife Group Disclaimer">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <text
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Text"
+                        name="./textAboutDisclaimer"
+                        xtype="richtext"/>
+                </items>
+            </tab2>
+        </items>
+    </items>
+</jcr:root>

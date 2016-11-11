@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="700"
+    title="Banner Carousel Dialog"
+    width="700"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <configurationTab
+                jcr:primaryType="cq:Panel"
+                title="Configuration">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <homeSliderLinks
+                        jcr:primaryType="cq:Widget"
+                        anchor="95%"
+                        fieldLabel="Banner Carousel"
+                        maxItems="{Long}4"
+                        name="./homeSliderLinks"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            xtype="multifieldpanel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <A_Image
+                                    jcr:primaryType="nt:unstructured"
+                                    allowBlank="false"
+                                    anchor="95%"
+                                    fieldLabel="Image"
+                                    key="homeSliderImage"
+                                    name="./homeSliderImages/fileReferences"
+                                    rootPath="/content/dam"
+                                    validateOnBlur="true"
+                                    xtype="pathfield"/>
+                                <B_AltText
+                                    jcr:primaryType="nt:unstructured"
+                                    allowBlank="false"
+                                    anchor="95%"
+                                    fieldLabel="Alt Text"
+                                    key="altText"
+                                    xtype="textfield"/>
+                            </items>
+                        </fieldConfig>
+                    </homeSliderLinks>
+                    <homeSliderLinksId
+                        jcr:primaryType="nt:unstructured"
+                        ignoreData="true"
+                        name="./homeSliderLinks@TypeHint"
+                        value="String[]"
+                        xtype="hidden"/>
+                    <imageNode
+                        jcr:primaryType="nt:unstructured"
+                        ignoreData="true"
+                        name="./homeSliderImages/sling:resourceType"
+                        value="xumakbase/components/section/base"
+                        xtype="hidden"/>
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        anchor="95%"
+                        fieldLabel="Title"
+                        name="./firstLineImageCaption"
+                        xtype="textfield"/>
+                    <subtitle
+                        jcr:primaryType="cq:Widget"
+                        anchor="95%"
+                        fieldLabel="Subtitle"
+                        name="./secondLineImageCaption"
+                        xtype="textfield"/>
+                    <rotation-interval
+                        jcr:primaryType="nt:unstructured"
+                        allowDecimals="false"
+                        allowNegative="false"
+                        anchor="95%"
+                        fieldDescription="Seconds"
+                        fieldLabel="Rotation time"
+                        name="./rotationTime"
+                        xtype="numberfield"/>
+                </items>
+            </configurationTab>
+        </items>
+    </items>
+</jcr:root>

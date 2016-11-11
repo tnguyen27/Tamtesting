@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0">
+    <scr:component name="com.metlife.commons.logiclesstemplates.processors.AddListContainerConfigurationContextProcessor" activate="activate">
+        <implementation class="com.metlife.commons.logiclesstemplates.processors.AddListContainerConfigurationContextProcessor"/>
+        <service servicefactory="false">
+            <provide interface="com.xumak.base.templatingsupport.ContextProcessor"/>
+        </service>
+        <property name="service.vendor" value="Adobe"/>
+        <property name="service.pid" value="com.metlife.commons.logiclesstemplates.processors.AddListContainerConfigurationContextProcessor"/>
+        <reference name="configurationProvider" interface="com.xumak.base.configuration.XCQBConfigurationProvider" cardinality="1..1" policy="static" bind="bindConfigurationProvider" unbind="unbindConfigurationProvider"/>
+    </scr:component>
+</components>

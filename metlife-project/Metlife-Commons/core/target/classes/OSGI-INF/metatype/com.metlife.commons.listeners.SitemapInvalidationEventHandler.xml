@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.0.0" localization="OSGI-INF/metatype/com.metlife.commons.listeners.SitemapInvalidationEventHandler">
+    <OCD id="com.metlife.commons.listeners.SitemapInvalidationEventHandler" name="%com.metlife.commons.listeners.SitemapInvalidationEventHandler.name" description="%com.metlife.commons.listeners.SitemapInvalidationEventHandler.description">
+        <AD id="event.topics" type="String" default="com/day/cq/replication" name="%com.metlife.commons.listeners.SitemapInvalidationEventHandler.event.topics.name" description="%com.metlife.commons.listeners.SitemapInvalidationEventHandler.event.topics.description"/>
+    </OCD>
+    <Designate pid="com.metlife.commons.listeners.SitemapInvalidationEventHandler">
+        <Object ocdref="com.metlife.commons.listeners.SitemapInvalidationEventHandler"/>
+    </Designate>
+</metatype:MetaData>

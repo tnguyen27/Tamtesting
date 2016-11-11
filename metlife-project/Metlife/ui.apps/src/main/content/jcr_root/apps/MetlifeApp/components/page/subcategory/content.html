@@ -1,0 +1,34 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Sub Category Page Template
+* ------------------------------------------------------------------------------ *
+%}
+
+{%! Sub Category Page Subnav %}
+{%#include "subnav-node" as="MetlifeApp/components/section/subcategory-subnav"%}{%/include%}
+
+{%! Bread Crumb %}
+{%#if page.disableBreadcrumb%}
+    {%#if content.EqualTo_4%}  {%! if page.disableBreadcrumb==enable  %}
+        {%#include "bread-crumb" as="MetlifeApp/components/section/bread-crumb"%}{%/include%}
+    {%/if%}
+{%else%}
+    {%#if global.activeBreadCrumb%} {%! if global.disableBreadcrumb==enable  %}
+        {%#include "bread-crumb" as="MetlifeApp/components/section/bread-crumb"%}{%/include%}
+    {%/if%}
+{%/if%}
+
+{%! Click to Chat %}
+{%#include "click-to-chat-on-page-title" as="MetlifeApp/components/section/click-to-chat-on-page-title"%}{%/include%}
+
+{%! Page Title %}
+{%#include "page-title" as="MetlifeApp/components/section/page-title"%}{%/include%}
+
+{%! Sub Category Product Card Parsys %}
+{%#include "product-card-parsys" as="foundation/components/parsys"%}{%/include%}
+
+{%! Content Parsys %}
+{%#include "content-parsys" as="foundation/components/parsys"%}{%/include%}
+
+{%! Contact A Rep Lead Form with Image %}
+{%!	{%#include "contact-with-image" as="MetlifeApp/components/section/forms/contact-with-image-form"%}{%/include%}	%}

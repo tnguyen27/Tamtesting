@@ -1,0 +1,29 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Newsroom File Download Component
+* ------------------------------------------------------------------------------ *
+%}
+
+<div class="article_text">
+    <div class="container">
+        <div class="row">
+            <div class="file-container">
+                {%#if content.pdflinkSpooled%}
+                <div>
+                    {%#each content.pdflinkSpooled %}
+                        <a href="{%this%}" target="{%content.target%}">
+                            <img src="{% content.imagePath %}"
+                                 alt="{% content.altText %}">
+                        </a>
+                    {%/each%}
+                </div>
+                {%/if%}
+                <div>
+                    {%#each content.pdflinkSpooled %}
+                        <a href="{% this %}" target="{%content.target%}" download>{%content.label%}</a><span>{%content.description%}</span>
+                    {%/each%}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

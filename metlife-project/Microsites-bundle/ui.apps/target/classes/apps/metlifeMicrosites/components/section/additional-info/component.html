@@ -1,0 +1,27 @@
+<div class="row wrapper">
+	<div class="width-80">
+        {%#if content.title%}
+        <h2 class="text-center content-header">{%content.title%}</h2>
+        {%/if%}
+
+        {%#if content.subtitle%}
+        <p class="text-center brand-gray-2nd">{%content.subtitle%}</p>
+        {%/if%}
+
+        {%{content.FPText}%}
+	</div>
+</div>
+
+<div class="row wrapper content__action text-center">
+    {%#if content.primaryCtaLinkText%}
+	<a href="{%content.primaryCtaLink%}" id="{%content.primaryCtaLinkId%}" target="{%content.primaryCtaTarget%}" class="btn-brand-2nd text-center table">{%content.primaryCtaLinkText%}</a>
+    {%/if%}
+
+    {%#if content.secondaryCtaLinkText%}
+    <a href="{%content.secondaryCtaLink%}" id="{%content.secondaryCtaLinkId%}" target="{%content.secondaryCtaTarget%}" class="product-module__action">{%content.secondaryCtaLinkText%}</a>
+    {%/if%}
+
+    {%#if content.bottomText%}
+    <p class="content__action--copy">{%{content.bottomText}%}</p>
+    {%/if%}
+</div>

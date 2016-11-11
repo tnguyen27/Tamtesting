@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Panel"
+    title="MetLife Advanced">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <canonicalLink
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Canonical Link"
+            name="./canonicalLink"
+            xtype="textfield"/>
+        <pageFrom
+            jcr:primaryType="cq:Widget"
+            fieldDescription="This field is used on the side bar Contact form."
+            fieldLabel="Page from"
+            name="./pageFrom"
+            xtype="textfield"/>
+        <custom
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}true"
+            collapsible="{Boolean}true"
+            title="Custom Meta Property Tags"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <customTagsList
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Properties List"
+                    name="./customTagsList"
+                    xtype="multifield">
+                    <fieldConfig
+                        jcr:primaryType="cq:Widget"
+                        xtype="multifieldpanel">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <propertyName
+                                jcr:primaryType="nt:unstructured"
+                                allowBlank="false"
+                                anchor="100%"
+                                fieldLabel="Property"
+                                key="propertyName"
+                                xtype="textfield"/>
+                            <contentValue
+                                jcr:primaryType="nt:unstructured"
+                                allowBlank="false"
+                                anchor="100%"
+                                fieldLabel="Content"
+                                key="contentValue"
+                                xtype="textfield"/>
+                        </items>
+                    </fieldConfig>
+                </customTagsList>
+                <tagsld
+                    jcr:primaryType="nt:unstructured"
+                    ignoreData="true"
+                    name="./customTagsList@TypeHint"
+                    value="String[]"
+                    xtype="hidden"/>
+            </items>
+        </custom>
+        <metaName
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}true"
+            collapsible="{Boolean}true"
+            title="Custom Meta Name Tags"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <nameTagsList
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Names List"
+                    name="./nameTagsList"
+                    xtype="multifield">
+                    <fieldConfig
+                        jcr:primaryType="cq:Widget"
+                        xtype="multifieldpanel">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <propertyName
+                                jcr:primaryType="nt:unstructured"
+                                allowBlank="false"
+                                anchor="100%"
+                                fieldLabel="Name"
+                                key="name"
+                                xtype="textfield"/>
+                            <contentValue
+                                jcr:primaryType="nt:unstructured"
+                                allowBlank="false"
+                                anchor="100%"
+                                fieldLabel="Content"
+                                key="contentValue"
+                                xtype="textfield"/>
+                        </items>
+                    </fieldConfig>
+                </nameTagsList>
+                <tagsld
+                    jcr:primaryType="nt:unstructured"
+                    ignoreData="true"
+                    name="./nameTagsList@TypeHint"
+                    value="String[]"
+                    xtype="hidden"/>
+            </items>
+        </metaName>
+        <robotconfig
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}true"
+            collapsible="{Boolean}true"
+            title="Robots configuration"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <index
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="noindex"
+                    fieldLabel="Index options"
+                    name="./index"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <index
+                            jcr:primaryType="nt:unstructured"
+                            text="Index"
+                            value="index"/>
+                        <noindex
+                            jcr:primaryType="nt:unstructured"
+                            text="No index"
+                            value="noindex"/>
+                    </options>
+                </index>
+                <follow
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="nofollow"
+                    fieldLabel="Follow options"
+                    name="./follow"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <follow
+                            jcr:primaryType="nt:unstructured"
+                            text="Follow"
+                            value="follow"/>
+                        <nofollow
+                            jcr:primaryType="nt:unstructured"
+                            text="No follow"
+                            value="nofollow"/>
+                    </options>
+                </follow>
+            </items>
+        </robotconfig>
+        <livePerson
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}true"
+            collapsible="{Boolean}true"
+            title="Live Person Configuration"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <livePersonPageId
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Live Person ID"
+                    name="./livePersonPageId"
+                    xtype="textfield"/>
+            </items>
+        </livePerson>
+        <header
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}true"
+            collapsible="{Boolean}true"
+            title="Vendor script configuration in header"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <externalJavascript
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="External Javascript"
+                    name="./headerExternalJavascript"
+                    xtype="multifield">
+                    <fieldConfig
+                        jcr:primaryType="cq:Widget"
+                        xtype="multifieldpanel">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <scriptPath
+                                jcr:primaryType="nt:unstructured"
+                                allowBlank="false"
+                                anchor="100%"
+                                fieldLabel="Path"
+                                key="scriptPath"
+                                xtype="pathfield"/>
+                        </items>
+                    </fieldConfig>
+                </externalJavascript>
+                <externalCss
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="External CSS"
+                    name="./headerExternalCss"
+                    xtype="multifield">
+                    <fieldConfig
+                        jcr:primaryType="cq:Widget"
+                        xtype="multifieldpanel">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <scriptPath
+                                jcr:primaryType="nt:unstructured"
+                                allowBlank="false"
+                                anchor="100%"
+                                fieldLabel="Path"
+                                key="scriptPath"
+                                xtype="pathfield"/>
+                        </items>
+                    </fieldConfig>
+                </externalCss>
+                <jsCode
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Custom Javascript"
+                    name="./headerJsCode"
+                    xtype="textarea"/>
+                <cssCode
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Custom CSS"
+                    name="./headerCssCode"
+                    xtype="textarea"/>
+            </items>
+        </header>
+        <footer
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}true"
+            collapsible="{Boolean}true"
+            title="Vendor script configuration in footer"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <externalJavascript
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="External Javascript"
+                    name="./footerExternalJavascript"
+                    xtype="multifield">
+                    <fieldConfig
+                        jcr:primaryType="cq:Widget"
+                        xtype="multifieldpanel">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <scriptPath
+                                jcr:primaryType="nt:unstructured"
+                                allowBlank="false"
+                                anchor="100%"
+                                fieldLabel="Path"
+                                key="scriptPath"
+                                xtype="pathfield"/>
+                        </items>
+                    </fieldConfig>
+                </externalJavascript>
+                <externalCss
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="External CSS"
+                    name="./footerExternalCss"
+                    xtype="multifield">
+                    <fieldConfig
+                        jcr:primaryType="cq:Widget"
+                        xtype="multifieldpanel">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <scriptPath
+                                jcr:primaryType="nt:unstructured"
+                                allowBlank="false"
+                                anchor="100%"
+                                fieldLabel="Path"
+                                key="scriptPath"
+                                xtype="pathfield"/>
+                        </items>
+                    </fieldConfig>
+                </externalCss>
+                <jsCode
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Custom Javascript"
+                    name="./footerJsCode"
+                    xtype="textarea"/>
+                <cssCode
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Custom CSS"
+                    name="./footerCssCode"
+                    xtype="textarea"/>
+            </items>
+        </footer>
+    </items>
+</jcr:root>

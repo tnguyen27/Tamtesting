@@ -1,0 +1,15 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Microsite HTML Base - Body
+* ------------------------------------------------------------------------------ *
+%}
+
+<body ng-app="XCQBApp" xk-path="{% page.path %}" class="{%#each page.bodyClasses %}{% this %} {%/each %}">
+    {%> scriptsinitbody %}
+    {%> siteglobalbutton %}
+    {%> header %}
+    {%> content %}
+    {%> disclaimer %}
+    {%> footer %}
+    {%> scriptsendbody %}
+</body>

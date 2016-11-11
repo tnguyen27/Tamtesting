@@ -1,0 +1,11 @@
+<div class="container product-module-large-wrapper {%content.backgroundColor%} {%content.mobilePaddingTop%} {%content.mobilePaddingBottom%} {%content.tabletPaddingTop%} {%content.tabletPaddingBottom%} {%content.desktopPaddingTop%} {%content.desktopPaddingBottom%}">
+    <div class="row wrapper product-module">
+        {%#each list.tiles%}
+            {%#include title as="MetlifeApp/components/section/subcategory-tile"%}{%/include%}
+        {%/each%}
+    </div>
+</div>
+
+{%#if page.isEditMode%}
+<div style="clear:both;"></div>
+{%/if%}

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    heigth="600"
+    title="Section Header Component Dialog"
+    width="950"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <label
+                jcr:primaryType="cq:Panel"
+                title="Section Header Links">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <header-label
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Header Label"
+                        name="./header"
+                        xtype="textfield"/>
+                    <columns
+                        jcr:primaryType="cq:Widget"
+                        addItemLabel="Add Column"
+                        anchor="95%"
+                        fieldDescription="Click the '+' to add a new column"
+                        fieldLabel="Columns"
+                        hideLabel="false"
+                        maxItems="{Long}2"
+                        minItems="{Long}1"
+                        name="./columnLinks"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            xtype="multifieldpanel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <row
+                                    jcr:primaryType="cq:Widget"
+                                    addItemLabel="Add Row"
+                                    anchor="95%"
+                                    fieldDescription="Click the '+' to add a new row"
+                                    fieldLabel="Rows"
+                                    key="links"
+                                    maxItems="{Long}5"
+                                    minItems="{Long}1"
+                                    name="./labels"
+                                    xtype="multifield">
+                                    <fieldConfig
+                                        jcr:primaryType="cq:Widget"
+                                        xtype="multifieldpanel">
+                                        <items jcr:primaryType="cq:WidgetCollection">
+                                            <label
+                                                jcr:primaryType="nt:unstructured"
+                                                allowBlank="false"
+                                                anchor="98%"
+                                                fieldLabel="Label"
+                                                key="label"
+                                                validateOnBlur="true"
+                                                xtype="textfield"/>
+                                        </items>
+                                    </fieldConfig>
+                                </row>
+                            </items>
+                        </fieldConfig>
+                    </columns>
+                </items>
+            </label>
+            <configuration
+                jcr:primaryType="cq:Panel"
+                title="Bottom Text">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <disclaimerText
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Text"
+                        height="400"
+                        name="./bottomText"
+                        xtype="richtext">
+                        <rtePlugins jcr:primaryType="nt:unstructured">
+                            <styles
+                                jcr:primaryType="nt:unstructured"
+                                features="*">
+                                <styles jcr:primaryType="cq:WidgetCollection">
+                                    <number
+                                        jcr:primaryType="nt:unstructured"
+                                        cssName="section__number"
+                                        text="Section Number"/>
+                                </styles>
+                            </styles>
+                        </rtePlugins>
+                    </disclaimerText>
+                </items>
+            </configuration>
+        </items>
+    </items>
+</jcr:root>

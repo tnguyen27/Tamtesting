@@ -1,0 +1,120 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Metlife HTML Base - Header
+* ------------------------------------------------------------------------------ *
+%}
+
+{%! Cookie Banner %}
+{%#if global.activeCookieBanner%}
+    {%>cookiebanner%}
+{%/if%}
+
+{%! Global Header %}
+<div class="row global-header">
+    <div class="col-xs-4 col-sm-5 global-header__left">
+        {%#if global.activeMegamenu%}
+            <div class="col megamenu-trigger"
+                 id="{%global.megaMenuLabelId%}"
+                 title="MENU" data-target="megamenu">
+                <a href="#" class="megamenu-trigger__link">
+                    <svg class="icon icon-menu megamenu-trigger__icon">
+                        <use xlink:href="/static/images/icons-metlife.svg#icon-menu"></use>
+                    </svg>
+                    <svg class="icon icon-close megamenu-trigger__icon">
+                        <use xlink:href="/static/images/icons-metlife.svg#icon-close"></use>
+                    </svg>
+                    <span class="megamenu-trigger__label js-megaMenuToggle">{%global.megaMenuLabel%}</span>
+                    <span class="megamenu-trigger__label js-megaMenuToggle hidden">{%global.megaMenuCloseLabel%}</span>
+                </a>
+            </div>
+        {%/if%}
+        {%#if global.activeHome%}
+            <div class="col home-trigger" title="HOME" data-target="home">
+                <a href="{% global.homeLink %}"
+                   id="{%global.homeLinkId%}"
+                   class="home-trigger__link">
+                    <svg class="icon icon-homepage home-trigger__icon">
+                        <use xlink:href="/static/images/icons-metlife.svg#icon-homepage"></use>
+                    </svg>
+                    <span class="home-trigger__label">{%global.homeLabel%}</i></span>
+                </a>
+            </div>
+        {%/if%}
+        {%#if global.activeSearch%}
+            <div class="col search-trigger" title="SEARCH" data-target="search">
+                <span class="search-trigger__icon"><svg class="icon icon-search js-searchIcon">
+                    <use xlink:href="/static/images/icons-metlife.svg#icon-search"></use>
+                </svg></span>
+            <span class="search-trigger__label">{%global.searchLabel%}</span>
+            <form name="metSearchForm" id="metSearchForm" class="search-trigger__container"
+                  action="{% global.searchLink %}"
+                  data-path-to-search-results="{% global.searchLink %}">
+                <input type="text"
+                       id="searchInPage"
+                       class="search-trigger__search-box  search_openTwo {%#if global.legacySearch%} js-oldSearch {%/if%}"
+                       autocomplete="off"
+                       onkeyup="setThemePageIDS();ss_handleKey(event);drawTextBox('',event);"
+                       placeholder="{% global.searchPlaceholderLabel %}"
+                       name="query"
+                       data-placeholder=""
+                       data-search-url="{%global.dataSuggestionURL%}"
+                       data-suggestions-site="{%global.dataSuggestionsSite%}"
+                       data-suggestions-frontend="{%global.dataSuggestionsFrontEnd%}">
+                <input id="overlayerback" class="search-trigger__search-box" autocomplete="off" type="text">
+                <a href="#" class="search_location_image" id="{%global.searchLinkId%}">
+                    <svg class="icon brand-1st icon-search js-searchIconMobile">
+                        <use xlink:href="/static/images/icons-metlife.svg#icon-search"></use>
+                    </svg>
+                </a>
+            </form>
+        </div>
+        {%/if%}
+    </div>
+    {%#if global.activeLogo%}
+        {%> logo %}
+    {%/if%}
+    <div id="{%page.livePersonPageId%}"></div>
+    <div class="col-xs-4 col-sm-5 global-header__right">
+        {%#if page.activeContact%}
+            {%#if content.EqualTo_22%} {%! if page.activeContact==enable %}
+                <div class="col contact-trigger pull-right" title="CONTACT" data-target="contact-container">
+                    <a href="#" id="{%global.contactLabelId%}"
+                       class="contact-trigger__label">{%#if global.contactLabel%}{%global.contactLabel%}{%else%}Contact{%/if%}
+                    </a>
+                </div>
+            {%/if%}
+        {%else%}
+            {%#if global.activeContact%}
+                <div class="col contact-trigger pull-right" title="CONTACT" data-target="contact-container">
+                    <a href="#" id="{%global.contactLabelId%}"
+                       class="contact-trigger__label">{%#if global.contactLabel%}{%global.contactLabel%}{%else%}Contact{%/if%}
+                    </a>
+                </div>
+            {%/if%}
+        {%/if%}
+        {%#if global.activeLogIn%}
+            <div class="col login-trigger pull-right {%#if content.EqualTo_21%}linkOnly{%/if%}" title="LOGIN"
+                 data-target="login-container">
+                <a class="login-trigger__label"
+                   href="{%#if content.EqualTo_21%}{%global.loginPagePath%}{%else%}#{%/if%}"
+                   target="{%global.loginTarget%}"
+                   id="{%global.loginPagePathId%}">{%#if global.loginPageLabel%}{%global.loginPageLabel%}{%else%}Log in{%/if%}
+                    <svg class="icon icon-secure-locked">
+                        <use xlink:href="/static/images/icons-metlife.svg#icon-secure-locked"></use>
+                    </svg>
+                </a>
+            </div>
+        {%/if%}
+    </div>
+</div>
+
+{%! Login %}
+{%> login %}
+
+{%! Contact Sidebar %}
+{%#if global.activeContact%}
+	{%#include "contact-side-bar-static" as="MetlifeApp/components/section/static/contact-sidebar-form"%}{%/include%}
+{%/if%}
+
+{%! Mega Menu %}
+{%>mega-menu%}

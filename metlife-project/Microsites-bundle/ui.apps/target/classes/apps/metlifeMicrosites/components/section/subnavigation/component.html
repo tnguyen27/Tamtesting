@@ -1,0 +1,28 @@
+<!--Subnav -->
+    <nav class="row subnav subnav--microsite">
+        <ul class="subnav__list">
+            <li class="subnav__list__item">
+                <a href="{%page.link%}"
+                   class="subnav__list__item__anchor">
+                    <p class="subnav__list__item__anchor__label">
+                        <svg class="icon icon-homepage">
+                            <use xlink:href="/static/images/icons-metlife.svg#icon-homepage"></use>
+                        </svg>
+                        {%page.title%}
+                    </p>
+                </a>
+            </li>
+            {%#each list.pages%}
+                <li class="subnav__list__item">
+                    <a href="{%this.path%}.html"
+                       class="subnav__list__item__anchor"
+                       target="{%#if this.target%}{%this.target%}{%else%}_self{%/if%}"
+                       id="{%elementId%}">
+                       <p class="subnav__list__item__anchor__label">
+                           {%this.navigationTitle%}
+                       </p>
+                    </a>
+                </li>
+            {%/each%}
+        </ul>
+    </nav>

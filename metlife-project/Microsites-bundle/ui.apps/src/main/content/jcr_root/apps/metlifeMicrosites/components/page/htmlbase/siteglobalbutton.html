@@ -1,0 +1,15 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Microsite HTML Base - Site Global Button
+* ------------------------------------------------------------------------------ *
+%}
+
+<!-- TODO use angular js -->
+{%#if page.isClassicUIMode %}
+    {%#if page.isDesignMode %}
+    	<button id="site-global-button" data-globaldialogpath="/apps/MetlifeApp/components/page/htmlbase/global_dialog" data-globalpath="{%component.globalPath%}">Global Properties</button>
+    {%/if%}
+{%/if%}
+
+{%#if page.isTouchUIMode %}
+{%/if%}

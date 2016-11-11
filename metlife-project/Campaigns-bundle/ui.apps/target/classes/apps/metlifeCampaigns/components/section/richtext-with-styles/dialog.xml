@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="550"
+    title="Richtext Component Dialog"
+    width="750"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <configuration
+                jcr:primaryType="cq:Panel"
+                title="Configuration">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <textContent
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Text"
+                        height="400"
+                        name="./textContent"
+                        xtype="richtext">
+                        <rtePlugins jcr:primaryType="nt:unstructured">
+                            <styles
+                                jcr:primaryType="nt:unstructured"
+                                features="*">
+                                <styles jcr:primaryType="cq:WidgetCollection">
+                                    <gray-color
+                                        jcr:primaryType="nt:unstructured"
+                                        cssName="brand-gray-5th"
+                                        text="Gray Color Text"/>
+                                    <nothing-style
+                                        jcr:primaryType="nt:unstructured"
+                                        cssName="black-color-text-campaign"
+                                        text="Black Color Text"/>
+                                    <checkmark-blue
+                                        jcr:primaryType="nt:unstructured"
+                                        cssName="blueCheckmark"
+                                        text="Blue Checkmark"/>
+                                    <checkmark-green
+                                        jcr:primaryType="nt:unstructured"
+                                        cssName="greenCheckmark"
+                                        text="Green Checkmark"/>
+                                </styles>
+                            </styles>
+                        </rtePlugins>
+                    </textContent>
+                </items>
+            </configuration>
+        </items>
+    </items>
+</jcr:root>

@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="700"
+    title="Contact Form Dialog"
+    width="700"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <fields
+                jcr:primaryType="cq:Panel"
+                title="Form Fields">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <first-name
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="Placeholder for First Name field"
+                        fieldLabel="First Name"
+                        name="./firstName"
+                        xtype="textfield"/>
+                    <last-name
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="Placeholder for Last Name field"
+                        fieldLabel="Last Name"
+                        name="./lastName"
+                        xtype="textfield"/>
+                    <birthdate
+                        jcr:primaryType="cq:Widget"
+                        collapsed="{Boolean}false"
+                        collapsible="{Boolean}true"
+                        title="Birthdate"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <birthdate-day
+                                jcr:primaryType="nt:unstructured"
+                                fieldDescription="Placeholder for Birthdate Day field"
+                                fieldLabel="Day"
+                                name="./birthdateDay"
+                                xtype="textfield"/>
+                            <birthdate-month
+                                jcr:primaryType="nt:unstructured"
+                                fieldDescription="Placeholder for Birthdate Month field"
+                                fieldLabel="Month"
+                                name="./birthdateMonth"
+                                xtype="textfield"/>
+                            <birthdate-year
+                                jcr:primaryType="nt:unstructured"
+                                fieldDescription="Placeholder for Birthdate Year field"
+                                fieldLabel="Year"
+                                name="./birthdateYear"
+                                xtype="textfield"/>
+                        </items>
+                    </birthdate>
+                    <email
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="Placeholder for Email field"
+                        fieldLabel="Email"
+                        name="./email"
+                        xtype="textfield"/>
+                    <phone
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="Placeholder for Phone field"
+                        fieldLabel="Phone"
+                        name="./phone"
+                        xtype="textfield"/>
+                    <mobile-phone
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="Placeholder for Mobile Phone field"
+                        fieldLabel="Mobile Phone"
+                        name="./mobilePhone"
+                        xtype="textfield"/>
+                    <contact-method
+                        jcr:primaryType="cq:Widget"
+                        collapsed="{Boolean}false"
+                        collapsible="{Boolean}true"
+                        title="Preferred Contact Method"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <label
+                                jcr:primaryType="nt:unstructured"
+                                fieldDescription="Placeholder for Preferred Contact Method field"
+                                fieldLabel="Default value"
+                                name="./contactMethod"
+                                xtype="textfield"/>
+                            <list
+                                jcr:primaryType="nt:unstructured"
+                                allowBlank="false"
+                                fieldDescription="Path to the Preferred Contact Method list"
+                                fieldLabel="List path"
+                                name="./contactMethodList"
+                                rootPath="/etc/acs-commons/lists/metlife/form-configuration/static-forms"
+                                rootTitle="Lists"
+                                xtype="pathfield"/>
+                        </items>
+                    </contact-method>
+                    <city
+                        jcr:primaryType="cq:Widget"
+                        collapsed="{Boolean}false"
+                        collapsible="{Boolean}true"
+                        title="City"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <label
+                                jcr:primaryType="nt:unstructured"
+                                fieldDescription="Placeholder for City field"
+                                fieldLabel="Default value"
+                                name="./city"
+                                xtype="textfield"/>
+                            <list
+                                jcr:primaryType="nt:unstructured"
+                                allowBlank="false"
+                                fieldDescription="Path to the City list"
+                                fieldLabel="List path"
+                                name="./cityList"
+                                rootPath="/etc/acs-commons/lists/metlife/form-configuration/static-forms"
+                                rootTitle="Lists"
+                                xtype="pathfield"/>
+                        </items>
+                    </city>
+                    <party-type-code
+                        jcr:primaryType="cq:Widget"
+                        collapsed="{Boolean}false"
+                        collapsible="{Boolean}true"
+                        title="Party Type Code"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <party-type-code
+                                jcr:primaryType="nt:unstructured"
+                                fieldDescription="Label value"
+                                fieldLabel="Label"
+                                name="./partyTypeCode"
+                                xtype="textfield"/>
+                            <party-type-code-yes
+                                jcr:primaryType="nt:unstructured"
+                                fieldDescription="Placeholder for Yes option"
+                                fieldLabel="Option Yes"
+                                name="./partyTypeCodeYes"
+                                xtype="textfield"/>
+                            <party-type-code-no
+                                jcr:primaryType="nt:unstructured"
+                                fieldDescription="Placeholder for No option"
+                                fieldLabel="Option No"
+                                name="./partyTypeCodeNo"
+                                xtype="textfield"/>
+                            <party-type-code-id
+                                jcr:primaryType="nt:unstructured"
+                                fieldDescription="Placeholder for No option"
+                                fieldLabel="ID Number"
+                                name="./partyTypeCodeId"
+                                xtype="textfield"/>
+                            <party-type-code-description
+                                jcr:primaryType="nt:unstructured"
+                                fieldDescription="Message displayed if option Yes is selected"
+                                fieldLabel="Description"
+                                name="./partyTypeCodeDescription"
+                                xtype="richtext"/>
+                        </items>
+                    </party-type-code>
+                    <lead-based-on
+                        jcr:primaryType="cq:Widget"
+                        collapsed="{Boolean}false"
+                        collapsible="{Boolean}true"
+                        title="Lead Based On"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <lead-based-on
+                                jcr:primaryType="nt:unstructured"
+                                fieldDescription="Label value"
+                                fieldLabel="Label"
+                                name="./leadBasedOn"
+                                xtype="textfield"/>
+                            <lead-based-on-individual
+                                jcr:primaryType="nt:unstructured"
+                                fieldDescription="Placeholder for Individual option"
+                                fieldLabel="Option Individual"
+                                name="./leadBasedOnIndividual"
+                                xtype="textfield"/>
+                            <lead-based-on-company
+                                jcr:primaryType="nt:unstructured"
+                                fieldDescription="Placeholder for Company option"
+                                fieldLabel="Option Company"
+                                name="./leadBasedOnCompany"
+                                xtype="textfield"/>
+                            <lead-based-on-policy-number
+                                jcr:primaryType="nt:unstructured"
+                                fieldDescription="Placeholder for Policy Number"
+                                fieldLabel="Policy Number"
+                                name="./leadBasedOnPolicyNumber"
+                                xtype="textfield"/>
+                            <lead-based-on-employer-name
+                                jcr:primaryType="nt:unstructured"
+                                fieldDescription="Placeholder for Employer Name"
+                                fieldLabel="Company Name"
+                                name="./leadBasedOnEmployerName"
+                                xtype="textfield"/>
+                            <lead-based-on-employer-size
+                                jcr:primaryType="nt:unstructured"
+                                fieldDescription="Placeholder for Employer Size"
+                                fieldLabel="Employer Size"
+                                name="./leadBasedOnEmployerSize"
+                                xtype="textfield"/>
+                            <lead-based-on-description
+                                jcr:primaryType="nt:unstructured"
+                                fieldDescription="Placeholder for Lead Description field"
+                                fieldLabel="Description"
+                                name="./leadBasedOnDescription"
+                                xtype="textfield"/>
+                        </items>
+                    </lead-based-on>
+                </items>
+            </fields>
+            <labels
+                jcr:primaryType="cq:Panel"
+                title="Form Labels">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <header
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="Header description"
+                        fieldLabel="Header"
+                        name="./header"
+                        xtype="textfield"/>
+                    <required
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="Mandatory text displayed in subtitle"
+                        fieldLabel="Mandatory text"
+                        name="./subtitle"
+                        xtype="textfield"/>
+                    <disclaimer
+                        jcr:primaryType="cq:Widget"
+                        collapsed="{Boolean}false"
+                        collapsible="{Boolean}true"
+                        title="Disclaimer"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <disclaimer
+                                jcr:primaryType="nt:unstructured"
+                                fieldDescription="Disclaimer description"
+                                hideLabel="{Boolean}true"
+                                name="./disclaimer"
+                                xtype="richtext"/>
+                        </items>
+                    </disclaimer>
+                    <thank-you-message-title
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="Thank you message title displayed after the form is submitted"
+                        fieldLabel="Thank you message Title"
+                        name="./thankYouMessageTitle"
+                        xtype="textfield"/>
+                    <thank-you-message-content
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="Thank you message content displayed after the form is submitted"
+                        fieldLabel="Thank you message content"
+                        name="./thankYouMessageContent"
+                        xtype="textfield"/>
+                    <error-message-title
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="Error message title displayed after the form is submitted"
+                        fieldLabel="Error message title"
+                        name="./errorMessageTitle"
+                        xtype="textfield"/>
+                    <error-message-content
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="Error message content displayed after the form is submitted"
+                        fieldLabel="Error message content"
+                        name="./errorMessageContent"
+                        xtype="textfield"/>
+                    <send-button
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription=""
+                        fieldLabel="Send Button Label"
+                        name="./sendButton"
+                        xtype="textfield"/>
+                    <other-contact-options
+                        jcr:primaryType="cq:Widget"
+                        collapsed="{Boolean}false"
+                        collapsible="{Boolean}true"
+                        title="Other Contact Options"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <contact-phone
+                                jcr:primaryType="cq:Widget"
+                                collapsed="{Boolean}true"
+                                title="Contact Phone"
+                                xtype="dialogfieldset"/>
+                            <phone
+                                jcr:primaryType="cq:Widget"
+                                anchor="95%"
+                                fieldLabel="Phone Others Contacts"
+                                name="./phoneOthers"
+                                xtype="textfield"/>
+                            <contact-link
+                                jcr:primaryType="cq:Widget"
+                                collapsed="{Boolean}true"
+                                title="Contact Link"
+                                xtype="dialogfieldset"/>
+                            <link-label
+                                jcr:primaryType="cq:Widget"
+                                anchor="95%"
+                                fieldLabel="Label"
+                                name="./linkLabel"
+                                xtype="textfield"/>
+                            <link
+                                jcr:primaryType="cq:Widget"
+                                anchor="95%"
+                                fieldLabel="Link"
+                                linkPattern="\{0}.html"
+                                name="./link"
+                                rootPath="/content/metlife"
+                                rootTitle="MetLife"
+                                xtype="pathfield"/>
+                            <link-target
+                                jcr:primaryType="cq:Widget"
+                                anchor="95%"
+                                defaultValue="_self"
+                                fieldLabel="Open in"
+                                name="./target"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <self
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Same Page"
+                                        value="_self"/>
+                                    <blank
+                                        jcr:primaryType="nt:unstructured"
+                                        text="New Page"
+                                        value="_blank"/>
+                                </options>
+                            </link-target>
+                        </items>
+                    </other-contact-options>
+                </items>
+            </labels>
+        </items>
+    </items>
+</jcr:root>

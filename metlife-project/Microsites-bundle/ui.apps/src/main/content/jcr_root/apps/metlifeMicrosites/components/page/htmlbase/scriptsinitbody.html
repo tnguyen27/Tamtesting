@@ -1,0 +1,20 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Microsite HTML Base - Scripts Init Body
+* ------------------------------------------------------------------------------ *
+%}
+
+{%! Click Tale %}
+{%#if page.vendorJourney%}
+    {%#if content.EqualTo_8%}   {%! if page.vendorJourney==enable  %}
+        <script type="text/javascript">
+            var WRInitTime = (new Date()).getTime();
+        </script>
+    {%/if%}
+{%else%}
+    {%#if content.EqualTo_9%}   {%! global.vendorJourney==enable %}
+        <script type="text/javascript">
+            var WRInitTime = (new Date()).getTime();
+        </script>
+    {%/if%}
+{%/if%}

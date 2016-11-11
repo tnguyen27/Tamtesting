@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Panel"
+    title="General">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <more_titles
+            jcr:primaryType="cq:Widget"
+            collapsible="{Boolean}false"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <pagetitle
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Browser Title"
+                    name="./pageTitle"
+                    xtype="textfield"/>
+                <title
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Page Title"
+                    name="./jcr:title"
+                    xtype="textfield"/>
+                <subtitle
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Subtitle"
+                    name="./subtitle"
+                    xtype="textfield"/>
+                <navtitle
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Navigation Title"
+                    name="./navTitle"
+                    xtype="textfield"/>
+                <hideinnav
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Hide in Navigation"
+                    inputValue="true"
+                    name="./hideInNav"
+                    type="checkbox"
+                    xtype="selection"/>
+                <hideinxml
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Hide in XML"
+                    inputValue="true"
+                    name="./hideInXML"
+                    type="checkbox"
+                    xtype="selection"/>
+                <description
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Description"
+                    name="./jcr:description"
+                    xtype="textarea"/>
+                <imageresourcetype
+                    jcr:primaryType="cq:Widget"
+                    ignoreData="true"
+                    name="./image/sling:resourceType"
+                    value="foundation/components/image"
+                    xtype="hidden"/>
+                <tags
+                    jcr:primaryType="cq:Widget"
+                    cls="cq-propsdialog-tags"
+                    fieldLabel="Meta Keywords"
+                    name="./cq:tags"
+                    xtype="tags"/>
+            </items>
+        </more_titles>
+        <legalDoc
+            jcr:primaryType="cq:Widget"
+            collapsible="{Boolean}true"
+            title="Legal Documents (US Only)"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <legalDocId
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="LD Number"
+                    name="./legalDocId"
+                    xtype="textfield"/>
+                <legalDocExpDate
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="LD Expiration Date"
+                    name="./legalDocExpDate"
+                    xtype="textarea"/>
+            </items>
+        </legalDoc>
+    </items>
+</jcr:root>

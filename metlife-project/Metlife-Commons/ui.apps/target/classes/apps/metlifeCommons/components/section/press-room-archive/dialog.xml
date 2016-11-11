@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="500"
+    title="Press Release Archive Config"
+    width="500"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <configuration
+                jcr:primaryType="cq:Panel"
+                title="Press Room Archive Configuration">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Title"
+                        name="./title"
+                        xtype="textfield"/>
+                    <yearFilter
+                        jcr:primaryType="cq:Widget"
+                        collapsible="{Boolean}true"
+                        title="Year Filter"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <label
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Label"
+                                name="./yearLabel"
+                                xtype="textfield"/>
+                            <value
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Default value"
+                                name="./yearFilterDefault"
+                                xtype="textfield"/>
+                        </items>
+                    </yearFilter>
+                    <monthFilter
+                        jcr:primaryType="cq:Widget"
+                        collapsible="{Boolean}true"
+                        title="Month Filter"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <label
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Label"
+                                name="./monthLabel"
+                                xtype="textfield"/>
+                            <value
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Default value"
+                                name="./monthFilterDefault"
+                                xtype="textfield"/>
+                            <month
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Months lists path"
+                                name="./month"
+                                rootPath="/etc/acs-commons/lists/metlife"
+                                xtype="pathfield"/>
+                        </items>
+                    </monthFilter>
+                    <topicsFilter
+                        jcr:primaryType="cq:Widget"
+                        collapsible="{Boolean}true"
+                        title="Topics Filter"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <label
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Label"
+                                name="./topicsLabel"
+                                xtype="textfield"/>
+                            <value
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Default value"
+                                name="./topicsFilterDefault"
+                                xtype="textfield"/>
+                            <topics
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Topics list path"
+                                name="./topics"
+                                rootPath="/etc/acs-commons/lists/metlife"
+                                xtype="pathfield"/>
+                        </items>
+                    </topicsFilter>
+                    <no-results-message
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="No Results Message"
+                        name="./noResultsMessage"
+                        xtype="richtext"/>
+                    <load-more-label
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Load More Label"
+                        name="./loadMoreLabel"
+                        xtype="textfield"/>
+                </items>
+            </configuration>
+        </items>
+    </items>
+</jcr:root>

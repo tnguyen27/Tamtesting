@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="500"
+    title="General Content"
+    width="700"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <config
+                jcr:primaryType="cq:Widget"
+                title="Configuration"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <enabledExpand
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Enable Expand More Content"
+                        name="./enableExpandContent"
+                        type="checkbox"
+                        xtype="selection"/>
+                    <expandLinkLabel
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="{Boolean}true"
+                        anchor="98%"
+                        fieldLabel="Expand Label"
+                        name="./expandLinkLabel"
+                        xtype="textfield"/>
+                    <collapseLinkLabel
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="{Boolean}true"
+                        anchor="98%"
+                        fieldLabel="Collapse Label"
+                        name="./collapseLinkLabel"
+                        xtype="textfield"/>
+                </items>
+            </config>
+        </items>
+    </items>
+</jcr:root>

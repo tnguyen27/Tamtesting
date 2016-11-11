@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.0.0">
+    <scr:component name="com.metlife.commons.servlet.GenericListServlet">
+        <implementation class="com.metlife.commons.servlet.GenericListServlet"/>
+        <service servicefactory="false">
+            <provide interface="javax.servlet.Servlet"/>
+            <provide interface="javax.servlet.ServletConfig"/>
+            <provide interface="java.io.Serializable"/>
+        </service>
+        <property name="service.description" value="MetLife Generic List Servlet"/>
+        <property name="sling.servlet.selectors" value="topics"/>
+        <property name="sling.servlet.extensions" value="json"/>
+        <property name="sling.servlet.resourceTypes" value="metlifeCommons/components/section/press-article"/>
+        <property name="service.vendor" value="Adobe"/>
+        <property name="service.pid" value="com.metlife.commons.servlet.GenericListServlet"/>
+    </scr:component>
+</components>

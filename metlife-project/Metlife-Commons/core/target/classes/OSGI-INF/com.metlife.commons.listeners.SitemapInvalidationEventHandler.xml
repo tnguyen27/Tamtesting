@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.0.0">
+    <scr:component immediate="true" name="com.metlife.commons.listeners.SitemapInvalidationEventHandler">
+        <implementation class="com.metlife.commons.listeners.SitemapInvalidationEventHandler"/>
+        <service servicefactory="false">
+            <provide interface="com.metlife.commons.listeners.SitemapInvalidationEventHandler"/>
+            <provide interface="org.osgi.service.event.EventHandler"/>
+        </service>
+        <property name="event.topics" value="com/day/cq/replication"/>
+        <property name="service.vendor" value="Adobe"/>
+        <property name="service.pid" value="com.metlife.commons.listeners.SitemapInvalidationEventHandler"/>
+        <reference name="sitemapInvalidationService" interface="com.metlife.commons.services.SitemapInvalidationService" cardinality="1..1" policy="static" bind="bindSitemapInvalidationService" unbind="unbindSitemapInvalidationService"/>
+        <reference name="resourceResolverFactory" interface="org.apache.sling.api.resource.ResourceResolverFactory" cardinality="1..1" policy="static" bind="bindResourceResolverFactory" unbind="unbindResourceResolverFactory"/>
+    </scr:component>
+</components>

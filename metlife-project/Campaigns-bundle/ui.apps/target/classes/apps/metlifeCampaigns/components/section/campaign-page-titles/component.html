@@ -1,0 +1,13 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Campaign Page Title
+* ------------------------------------------------------------------------------ *
+%}
+
+<div class="container campaign-card-title-wrapper" data-comp-spacing="campaign-card-title">
+	<h1 class="campaign-card-content-title">{%content.pagetitle%}</h1>
+	{%#if content.pagenumberPhone%}
+		<a href="tel:+{%content.pagenumberPhone%}" class="campaign-card-content-title campaign-tel">{%content.pagenumberPhone%}</a>
+	{%/if%}
+	<h2 class="text-bold campaign-card-content__subtitle">{%content.pagesubtitle%}</h2>
+</div>

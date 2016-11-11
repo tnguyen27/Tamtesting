@@ -1,0 +1,13 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Campaign Rich Text with Styles Component
+* ------------------------------------------------------------------------------ *
+%}
+
+{%#if content.textContent%}
+	<div class="container richtext-with-styles-wrapper" data-comp-spacing="richtext-with-styles">
+		<div class="campaign-d-content-section campaign-card-addendum">
+    		{%{content.textContent}%}
+    	</div>
+    </div>
+{%/if%}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.0.0">
+    <scr:component name="com.metlife.commons.servlet.FormsLibraryServlet">
+        <implementation class="com.metlife.commons.servlet.FormsLibraryServlet"/>
+        <service servicefactory="false">
+            <provide interface="javax.servlet.Servlet"/>
+            <provide interface="javax.servlet.ServletConfig"/>
+            <provide interface="java.io.Serializable"/>
+        </service>
+        <property name="service.description" value="MetLife Forms Library Servlet"/>
+        <property name="sling.servlet.selectors" value="results"/>
+        <property name="sling.servlet.extensions" value="json"/>
+        <property name="sling.servlet.resourceTypes" value="metlifeCommons/components/section/forms-library"/>
+        <property name="service.vendor" value="Adobe"/>
+        <property name="service.pid" value="com.metlife.commons.servlet.FormsLibraryServlet"/>
+    </scr:component>
+</components>
