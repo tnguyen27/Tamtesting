@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-    jcr:primaryType="nt:unstructured"
-    multiLinksPathRefsKeyNames="[global.langSelLinkText,global.langSelLinkType,global.langSelInternalLink,global.langSelExternalLink,global.langSelTargetLink]"
-    xk_containerClasses="[language_selector col-sm-4 col-xs-6]"
-    xk_placeholderTriggers="[global.languageList]"/>
