@@ -1,6 +1,6 @@
 *.iml
 *.class
-target/*
+**/target/
 *.vlt
 *.jar
 *.war
@@ -14,3 +14,6 @@ target/*
 stat.file
 .idea/*
 .classpath
+*inputFiles.lst
+
+
