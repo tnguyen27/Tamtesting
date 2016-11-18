@@ -55,7 +55,7 @@ import java.util.Set;
  * ----------------------------------------------------------------------------
  * Version | Date       | Developer             | Changes
  * 1.0     | 24/08/2015 | eburrion@xumak.com    | Initial Creation.
- * 1.0     | 02/18/2016 | jmorataya@xumak.com   | Adapted to metlife (latam
+ * 1.0     | 02/18/2016 | jmorataya@xumak.com   | Adapted to metlifeDam (latam
  * original)
  * 1.1     | 26/08/2016 | jagarcia@xumak.com    | evaluate conditions equals to null, when the first parameter is not
  *                                              | found in the content model and the second parameter is equal

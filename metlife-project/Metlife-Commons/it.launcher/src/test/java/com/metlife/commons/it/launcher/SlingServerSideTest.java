@@ -27,7 +27,7 @@ import org.junit.runner.RunWith;
 public class SlingServerSideTest extends SlingServerSideTestsBase 
 implements SlingRemoteTestParameters, SlingTestsCountChecker {
     
-    public static final String TEST_SELECTOR = "com.metlife.commons.it.tests";
+    public static final String TEST_SELECTOR = "com.metlifeDam.commons.it.tests";
     public static final int TESTS_AT_THIS_PATH = 1;
     
     public void checkNumberOfTests(int numberOfTestsExecuted) {

@@ -31,7 +31,7 @@ import java.util.Set;
  *
  * Example:
  * xk_copyPageConfiguration: [
- *          node::metlifeMicrosites/components/page/homepage::logo-metlife,
+ *          node::metlifeMicrosites/components/page/homepage::logo-metlifeDam,
  *          property::metlifeMicrosites/components/page/homepage::logoLinkMetLife
  *          ]
  *
@@ -41,7 +41,7 @@ import java.util.Set;
  *    is a parent of the destination page)
  *
  * 2) If found, it will look at the first parameter "node" or "property"
- *    if it is a node it will search for the node ("logo-metlife") in the parent page
+ *    if it is a node it will search for the node ("logo-metlifeDam") in the parent page
  *    if it is a property it will search for the property ("logoLinkMetlife") in the parent page
  *
  * 3) If the node or property is found

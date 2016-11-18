@@ -59,7 +59,7 @@ import java.util.Random;
         @Property(name = "sso.enabled", value = "false"),
         @Property(name = "service.ranking", intValue = {SSOAuthenticationHandler.RANKING}),
         @Property(name = "idpUrl",
-        value = "https://ssofed-qa.metlife.com/affwebservices/public/saml2sso?SPID=https://author.metlife.xumak.com"),
+        value = "https://ssofed-qa.metlifeDam.com/affwebservices/public/saml2sso?SPID=https://author.metlifeDam.xumak.com"),
         @Property(name = "idpUrls", value = {""}, cardinality = SSOAuthenticationHandler.PATH_CARDINALITY),
         @Property(name = "sso.redirect", value = "/siteadmin"),
         @Property(name = "authtype", value = {"SAML"}),

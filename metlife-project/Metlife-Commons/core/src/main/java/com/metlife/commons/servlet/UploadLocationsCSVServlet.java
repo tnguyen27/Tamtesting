@@ -101,7 +101,7 @@ public class UploadLocationsCSVServlet extends SlingSafeMethodsServlet {
      * LOCATIONS_PATH.
      * Constant String that references the csv uploaded locations.
      */
-    private static final String LOCATIONS_PATH = "/etc/metlife/locations";
+    private static final String LOCATIONS_PATH = "/etc/metlifeDam/locations";
     /**
      * EXPECTED_HEADER_FIELDS.
      * Immutable list containing the name of the accepted header fields

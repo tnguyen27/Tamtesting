@@ -55,7 +55,7 @@ public class AddLocationsContextProcessor
                 + LOCATIONS_PATH_KEY_NAME)) {
 
             //the page path where the locations will be stored. Should be
-            // something lile /etc/metlife/locations
+            // something lile /etc/metlifeDam/locations
             final String locationsPath = contentModel.getAsString(
                     Constants.CONTENT + Constants.DOT
                     + LOCATIONS_PATH_KEY_NAME);

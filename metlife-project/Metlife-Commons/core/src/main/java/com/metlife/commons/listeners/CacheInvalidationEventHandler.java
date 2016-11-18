@@ -30,7 +30,7 @@ import java.util.List;
  * --------------------------------------------------------------------------------------
  * Version | Date       | Developer     | Changes
  * 1.0     | 14/12/2015 | Edwin Burrion | Initial Creation
- * 1.1     | 01/08/2016 | Rainman Sian  | Adapted to metlife
+ * 1.1     | 01/08/2016 | Rainman Sian  | Adapted to metlifeDam
  * --------------------------------------------------------------------------------------
  */
 

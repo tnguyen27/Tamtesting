@@ -52,7 +52,7 @@ import com.xumak.base.Constants;
                 + "Servlet"),
         @Property(name = ProxyServlet.METLIFE_SERVICE_URL_PN,
                 label = "Authorization Server URL",
-                value = "http://metlife-get-a-quote.mybluemix"
+                value = "http://metlifeDam-get-a-quote.mybluemix"
                         + ".net/MetQuoteService/GetAQuote"),
 
 })
