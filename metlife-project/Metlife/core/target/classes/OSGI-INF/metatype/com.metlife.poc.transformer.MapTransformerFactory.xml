@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.0.0" localization="OSGI-INF/metatype/com.metlife.poc.transformer.MapTransformerFactory">
-    <OCD id="com.metlife.poc.transformer.MapTransformerFactory" name="%com.metlife.poc.transformer.MapTransformerFactory.name" description="%com.metlife.poc.transformer.MapTransformerFactory.description">
-        <AD id="activateRewriter" type="Boolean" default="false" name="%com.metlife.poc.transformer.MapTransformerFactory.activateRewriter.name" description="%com.metlife.poc.transformer.MapTransformerFactory.activateRewriter.description"/>
-        <AD id="rewriter.element" type="String" default="img:src" name="%com.metlife.poc.transformer.MapTransformerFactory.rewriter.element.name" description="%com.metlife.poc.transformer.MapTransformerFactory.rewriter.element.description" cardinality="2147483647"/>
-    </OCD>
-    <Designate pid="com.metlife.poc.transformer.MapTransformerFactory">
-        <Object ocdref="com.metlife.poc.transformer.MapTransformerFactory"/>
-    </Designate>
-</metatype:MetaData>

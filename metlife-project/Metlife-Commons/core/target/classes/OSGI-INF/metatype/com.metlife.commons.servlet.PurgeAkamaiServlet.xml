@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.0.0" localization="OSGI-INF/metatype/com.metlife.commons.servlet.PurgeAkamaiServlet">
-    <OCD id="com.metlife.commons.servlet.PurgeAkamaiServlet" name="%com.metlife.commons.servlet.PurgeAkamaiServlet.name" description="%com.metlife.commons.servlet.PurgeAkamaiServlet.description"/>
-    <Designate pid="com.metlife.commons.servlet.PurgeAkamaiServlet">
-        <Object ocdref="com.metlife.commons.servlet.PurgeAkamaiServlet"/>
-    </Designate>
-</metatype:MetaData>

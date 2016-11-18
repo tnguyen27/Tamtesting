@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.0.0" localization="OSGI-INF/metatype/com.metlife.poc.servlets.ProximityServlet">
-    <OCD id="com.metlife.poc.servlets.ProximityServlet" name="%com.metlife.poc.servlets.ProximityServlet.name" description="%com.metlife.poc.servlets.ProximityServlet.description"/>
-    <Designate pid="com.metlife.poc.servlets.ProximityServlet">
-        <Object ocdref="com.metlife.poc.servlets.ProximityServlet"/>
-    </Designate>
-</metatype:MetaData>

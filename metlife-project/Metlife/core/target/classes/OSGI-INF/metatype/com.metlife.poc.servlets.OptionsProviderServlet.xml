@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.0.0" localization="OSGI-INF/metatype/com.metlife.poc.servlets.OptionsProviderServlet">
-    <OCD id="com.metlife.poc.servlets.OptionsProviderServlet" name="%com.metlife.poc.servlets.OptionsProviderServlet.name" description="%com.metlife.poc.servlets.OptionsProviderServlet.description"/>
-    <Designate pid="com.metlife.poc.servlets.OptionsProviderServlet">
-        <Object ocdref="com.metlife.poc.servlets.OptionsProviderServlet"/>
-    </Designate>
-</metatype:MetaData>

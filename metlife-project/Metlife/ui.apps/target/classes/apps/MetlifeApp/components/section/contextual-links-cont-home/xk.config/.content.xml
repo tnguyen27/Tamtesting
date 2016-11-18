@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-    jcr:primaryType="nt:unstructured"
-    xk_addIdToElements="[content.contextualLinks]"
-    xk_deserializeJSON="[content.contextualLinks]"
-    xk_multiplyFactor="{Long}1000"
-    xk_placeholderTriggers="[content.contextualLinks,content.title,content.description]"
-    xk_spoolContentImages="contextualLinkImages"
-    xk_updatedMultifieldProperty="[content.contextualLinkImagesSpooled>content.contextualLinks.contextualLinkImageSpooled]"/>

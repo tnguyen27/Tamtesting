@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.0.0" localization="OSGI-INF/metatype/com.metlife.poc.servlets.FormProxyServlet">
-    <OCD id="com.metlife.poc.servlets.FormProxyServlet" name="%com.metlife.poc.servlets.FormProxyServlet.name" description="%com.metlife.poc.servlets.FormProxyServlet.description">
-        <AD id="web2LeadUrl" type="String" default="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" name="%com.metlife.poc.servlets.FormProxyServlet.web2LeadUrl.name" description="%com.metlife.poc.servlets.FormProxyServlet.web2LeadUrl.description"/>
-    </OCD>
-    <Designate pid="com.metlife.poc.servlets.FormProxyServlet">
-        <Object ocdref="com.metlife.poc.servlets.FormProxyServlet"/>
-    </Designate>
-</metatype:MetaData>

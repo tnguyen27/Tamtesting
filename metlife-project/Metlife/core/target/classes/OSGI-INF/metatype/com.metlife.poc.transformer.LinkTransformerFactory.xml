@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.0.0" localization="OSGI-INF/metatype/com.metlife.poc.transformer.LinkTransformerFactory">
-    <OCD id="com.metlife.poc.transformer.LinkTransformerFactory" name="%com.metlife.poc.transformer.LinkTransformerFactory.name" description="%com.metlife.poc.transformer.LinkTransformerFactory.description">
-        <AD id="activateRewriter" type="Boolean" default="false" name="%com.metlife.poc.transformer.LinkTransformerFactory.activateRewriter.name" description="%com.metlife.poc.transformer.LinkTransformerFactory.activateRewriter.description"/>
-        <AD id="rewriter.attributes" type="String" default="href" name="%com.metlife.poc.transformer.LinkTransformerFactory.rewriter.attributes.name" description="%com.metlife.poc.transformer.LinkTransformerFactory.rewriter.attributes.description" cardinality="2147483647"/>
-    </OCD>
-    <Designate pid="com.metlife.poc.transformer.LinkTransformerFactory">
-        <Object ocdref="com.metlife.poc.transformer.LinkTransformerFactory"/>
-    </Designate>
-</metatype:MetaData>

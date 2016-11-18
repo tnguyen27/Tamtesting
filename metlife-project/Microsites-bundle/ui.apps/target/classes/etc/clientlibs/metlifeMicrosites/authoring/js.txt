@@ -1,6 +1,0 @@
-#base=js
-
-authoring.js
-small-promo-card.js
-hide-display-tabs.js
-hide-pathfield.js

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-    jcr:primaryType="nt:unstructured"
-    twoLevelCuratedPathRefsKeyNames="[content.findAVisionOptions,content.findADentistOptions]"
-    xk_addGenericList="[content.planOptions,content.networkOptions]"
-    xk_addIdToElements="[content.officeLink,content.dentistLabel,content.visionProvLabel,content.overlayLabel,content.submitLabel]"
-    xk_clientAccessible="true"
-    xk_countListProperties="[content.enableOffice,content.enableDentist,content.enableVision]"
-    xk_evaluateEqualsCondition="[content.countProperties==1,content.countProperties==2,content.countProperties==3]"/>

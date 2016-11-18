@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.0.0" localization="OSGI-INF/metatype/com.xumak.aem.akamai.ccu.impl.AkamaiEventHandler">
-    <OCD id="com.xumak.aem.akamai.ccu.impl.AkamaiEventHandler" name="%com.xumak.aem.akamai.ccu.impl.AkamaiEventHandler.name" description="%com.xumak.aem.akamai.ccu.impl.AkamaiEventHandler.description">
-        <AD id="event.topics" type="String" default="com/day/cq/replication" name="%com.xumak.aem.akamai.ccu.impl.AkamaiEventHandler.event.topics.name" description="%com.xumak.aem.akamai.ccu.impl.AkamaiEventHandler.event.topics.description"/>
-    </OCD>
-    <Designate pid="com.xumak.aem.akamai.ccu.impl.AkamaiEventHandler">
-        <Object ocdref="com.xumak.aem.akamai.ccu.impl.AkamaiEventHandler"/>
-    </Designate>
-</metatype:MetaData>
