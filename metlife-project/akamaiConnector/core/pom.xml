@@ -241,5 +241,60 @@
             <version>0.7-groovy-2.0</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.codehaus.groovy.modules.http-builder</groupId>
+            <artifactId>http-builder</artifactId>
+            <version>0.7</version>
+        </dependency>
+
+        <dependency>
+            <!-- Only needed for JSON parsing -->
+            <groupId>net.sf.json-lib</groupId>
+            <artifactId>json-lib</artifactId>
+            <version>2.3</version>
+            <classifier>jdk15</classifier>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.jruby</groupId>
+                    <artifactId>jruby</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>xmlunit</groupId>
+                    <artifactId>xmlunit</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>xom</groupId>
+                    <artifactId>xom</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>net.sourceforge.nekohtml</groupId>
+            <artifactId>nekohtml</artifactId>
+            <version>1.9.16</version>
+        </dependency>
+
+        <dependency>
+            <groupId>xml-resolver</groupId>
+            <artifactId>xml-resolver</artifactId>
+            <version>1.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>xerces</groupId>
+            <artifactId>xercesImpl</artifactId>
+            <version>2.6.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+            <version>1.8.0</version>
+        </dependency>
+        <dependency>
+            <groupId>net.sf.ezmorph</groupId>
+            <artifactId>ezmorph</artifactId>
+            <version>1.0.6</version>
+        </dependency>
     </dependencies>
 </project>
