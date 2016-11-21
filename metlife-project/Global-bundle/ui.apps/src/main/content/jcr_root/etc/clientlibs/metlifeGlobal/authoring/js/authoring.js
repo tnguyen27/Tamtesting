@@ -1,1 +1,0 @@
-/* Metlife Global authoring.js */
