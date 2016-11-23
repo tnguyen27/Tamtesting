@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-    jcr:primaryType="nt:unstructured"
-    xk_addGenericList="[content.ageSelect,content.ocupationList,content.benefitList,premiunFList,content.ageList,content.coverageList,content.stateList,content.monthList,content.daySelect,content.genderList,content.termList,content.healthList,content.tobaccoList,content.unitList,content.occupationList,content.premiunFList]"
-    xk_AddHashProperty="content.path"
-    xk_clientAccessible="true"/>

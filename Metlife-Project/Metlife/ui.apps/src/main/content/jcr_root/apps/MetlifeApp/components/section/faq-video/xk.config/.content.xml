@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-    jcr:primaryType="nt:unstructured"
-    twoLevelCuratedPathRefsKeyNames="[content.qalist]"
-    xk_addIdToElements="[content.faqtitle,content.qalist]"
-    xk_evaluateEqualsCondition="[content.videotype==option_a]"
-    xk_generateValueFromLabel="[content.viewalltext]"
-    xk_placeholderTriggers="[content.videotitle,content.faqtitle,content.title]"/>

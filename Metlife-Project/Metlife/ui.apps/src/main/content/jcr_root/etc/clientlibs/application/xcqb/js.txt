@@ -1,3 +1,0 @@
-#base=.
-script.js
-

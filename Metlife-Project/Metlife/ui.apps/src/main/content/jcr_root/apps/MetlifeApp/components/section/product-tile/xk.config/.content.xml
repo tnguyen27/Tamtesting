@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-    jcr:primaryType="nt:unstructured"
-    xk_addIdToElements="[content.link,content.linkText]"
-    xk_containerClasses="product-row__tile bg-white box-shadow"
-    xk_evaluateEqualsCondition="[content.optionText==linkText,content.optionText==numberText,content.optionText==textOnly]"
-    xk_placeholderTriggers="[content.title]"/>

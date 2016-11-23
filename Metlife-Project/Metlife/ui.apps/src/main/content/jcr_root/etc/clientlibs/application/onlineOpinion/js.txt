@@ -1,3 +1,0 @@
-#base=js
-oo_engine.min.js
-oo_conf.js

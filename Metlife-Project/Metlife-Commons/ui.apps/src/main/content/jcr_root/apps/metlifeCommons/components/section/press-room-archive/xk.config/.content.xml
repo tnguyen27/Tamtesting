@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-    jcr:primaryType="nt:unstructured"
-    xk_addGenericList="[content.month,content.topics]"
-    xk_clientModelProperties="[content,page,global,design,styling,statistics,list]"
-    xk_extraListPropertyNames="[publishedDate,topics,articleTitle]"
-    xk_GetChildrenFromPath="[design.rootPath]"
-    xk_placeholderTriggers="[content.topics,content.month]"/>

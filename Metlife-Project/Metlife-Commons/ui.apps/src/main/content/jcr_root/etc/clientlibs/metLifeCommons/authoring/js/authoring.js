@@ -1,5 +1,0 @@
-MetlifeCommons = {
-    Components: {},
-    Forms: {},
-    Global: {}
-};
