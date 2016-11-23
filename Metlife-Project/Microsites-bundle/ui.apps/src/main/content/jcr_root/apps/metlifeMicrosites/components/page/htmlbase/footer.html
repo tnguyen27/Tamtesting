@@ -1,0 +1,64 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Microsite HTML Base - Footer
+* ------------------------------------------------------------------------------ *
+%}
+
+<div class="container bg-gray-1st global-footer global-footer--microsite">
+    <div class="wrapper">
+        <div class="row footer-legal">
+            {%#if page.enableLogoFooter %}
+	            <div class="col-xs-12 col-sm-12 col-md-2">
+	                <a href="{%page.footerlogoLink%}"
+	                   id="{%page.footerlogoLinkId%}"
+	                   class="footer-legal__logo"
+	                   target="{%page.targetLogo%}">
+	                    <img class="img-responsive"
+	                         src="{% page.footerImagePath %}"
+	                         alt="{% page.footerlogoAltText %}">
+	                </a>
+	                <a href="{%page.footerlabelLink%}"
+	                   id="{%page.footerlabelLinkId%}"
+	                   class="footer-legal__call footer-legal__call--microsite"
+	                   target="{%page.targetLabel%}">{%page.footerLogoLabel%}</a>
+	            </div>
+            {%/if%}
+            <div class="col-xs-12 col-sm-12 col-md-10 footer-legal__copy">
+                <div class="footer-legal__link">
+                    {%#if page.enableBulletsFooter %}
+	                    {%#each page.footerbulletlinks %}
+		                    <a href="{% path %}"
+		                       id="{%elementId%}"
+		                       target="{%target%}">
+		                        {% navigationTitle %}
+		                    </a>
+		                    {%#if @last%}
+		                    	<span class="footer-legal__bullet hidden visible-xs">&#8226;</span>
+		                    {%else%}
+		                    	<span class="footer-legal__bullet"></span>
+		                    {%/if%}
+	                    {%/each%}
+                    {%/if%}
+                    {%#if page.vendorFeedback%}
+	                    <a href="{%page.linkFeedback%}"
+	                       id="{%page.linkFeedbackId%}"
+	                       class="hidden visible-xs">{%page.onlineOpinionMobileLabel%}</a>
+                    {%/if%}
+                </div>
+                <div class="footer-legal__copyright">
+                    {%#if page.enableLegalDisclaimer %}
+                    	{%{page.footerLegalDisclaimerReplaced}%}
+                    {%/if%}
+                    {%page.legalDocId%} {%page.legalDocExpDate%}
+                    <br>
+                    {%#if page.enablePeanutsDisclaimer %}
+                    	{%{page.footerPeanutsDisclaimerReplaced}%}
+                    {%/if%}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{%> scripts %}
+{%>footerscripts %}

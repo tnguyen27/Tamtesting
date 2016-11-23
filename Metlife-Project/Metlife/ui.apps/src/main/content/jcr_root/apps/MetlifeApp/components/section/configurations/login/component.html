@@ -1,0 +1,158 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Login Configuration Component
+* ------------------------------------------------------------------------------ *
+%}
+
+<div class="xk-container">
+    <div class="xk-title">Tooltip for accounts</div>
+        <div class="xk-block">
+            <div class="xk-element">
+                <span class="xk-subtitle">Login Title</span>
+                <p><strong>Login title:</strong> {%content.loginTitle%}</p>
+            </div>
+            <div class="xk-element">
+                <span class="xk-subtitle">Active account type</span>
+                <p><strong>Activate account type:</strong> {%content.activateLoginType%}</p>
+            </div>
+    {%#if content.activateLoginType%}
+                <div class="xk-element">
+                    <span class="xk-subtitle">For Individuals tooltip text</span>
+                        <p><strong>First copy text:</strong> {%content.individualCopyFirst%}</p>
+                        <p><strong>Second copy text:</strong> {%content.individualCopySecond%}</p>
+                </div>
+                <div class="xk-element">
+                    <span class="xk-subtitle">For Businesses tooltip text</span>
+                        <p><strong>First copy text:</strong> {%content.businessesCopyFirst%}</p>
+                        <p><strong>Second copy text:</strong> {%content.businessesCopySecond%}</p>
+                        <p><strong>Third copy text:</strong> {%content.businessesCopyThird%}</p>
+                </div>
+                <div class="xk-element">
+                    <span class="xk-subtitle">For brokers tooltip text</span>
+                        <p><strong>First copy text:</strong> {%content.brokersCopyFirst%}</p>
+                        <p><strong>Second copy text:</strong> {%content.brokersCopySecond%}</p>
+                </div>
+        </div>
+    <div class="xk-title">Messages</div>
+        <div class="xk-block">
+            <div class="xk-element">
+                <span class="xk-subtitle">Forget for individuals link</span>
+                    <p><strong>Link text:</strong> {%content.forgetForIndividualsText%}</p>
+                    <p><strong>Link:</strong> {%content.linkForIndividuals%}</p>
+                    <p><strong>Open in:</strong> {%content.target1%}</p>
+            </div>
+            <div class="xk-element">
+                <span class="xk-subtitle">Forget for businesses link</span>
+                    <p><strong>Link text:</strong> {%content.forgetForBusinessesText%}</p>
+                    <p><strong>Link:</strong> {%content.linkForBusinesses%}</p>
+                    <p><strong>Open in:</strong> {%content.target2%}</p>
+            </div>
+            <div class="xk-element">
+                <span class="xk-subtitle">Forget for businesses link</span>
+                    <p><strong>Link text:</strong> {%content.forgetForBrokersText%}</p>
+                    <p><strong>Link:</strong> {%content.linkForBrokers%}</p>
+                    <p><strong>Open in:</strong> {%content.target3%}</p>
+            </div>
+            <div class="xk-element">
+                <span class="xk-subtitle">Login pop out message for individuals</span>
+                    <p><strong>Message:</strong> {%content.titleLinkForIndividuals%}</p>
+                    <p><strong>Link text:</strong> {%content.titleLinkForIndividuals%}</p>
+                    <p><strong>Link:</strong> {%content.individualsLink%}</p>
+                    <p><strong>Open in:</strong> {%content.target4%}</p>
+            </div>
+            <div class="xk-element">
+                <span class="xk-subtitle">Login pop out message for businesses</span>
+                    <p><strong>Message:</strong> {%content.titleLinkForBusinesses%}</p>
+                    <p><strong>Link text:</strong> {%content.textLinkForBusinesses%}</p>
+                    <p><strong>Link:</strong> {%content.businessesLink%}</p>
+                    <p><strong>Open in:</strong> {%content.target5%}</p>
+            </div>
+            <div class="xk-element">
+                <span class="xk-subtitle">Login pop out message for brokers</span>
+                    <p><strong>Message:</strong> {%content.titleLinkForBrokers%}</p>
+                    <p><strong>Link text:</strong> {%content.textLinkForBrokers%}</p>
+                    <p><strong>Link:</strong> {%content.brokersLink%}</p>
+                    <p><strong>Open in:</strong> {%content.target6%}</p>
+            </div>
+            <div class="xk-element">
+                <span class="xk-subtitle">Without login link</span>
+                    <p><strong>Link text:</strong> {%content.withoutSigningTextLink%}</p>
+                    <p><strong>Link:</strong> {%content.withoutSigningLink%}</p>
+                    <p><strong>Open in:</strong> {%content.target7%}</p>
+            </div>
+        </div>
+    {%/if%}
+    <div class="xk-title">Button & alert config</div>
+        <div class="xk-block">
+            <p><strong>Button Text:</strong> {%content.buttonText%}</p>
+            <p><strong>Button Color:</strong> {%content.buttonColor%}</p>
+            <p><strong>Username Disclaimer:</strong> {%content.usernameDisclaimer%}</p>
+            <p><strong>Password Disclaimer:</strong> {%content.passwordDisclaimer%}</p>
+            <div class="xk-element">
+                <span class="xk-subtitle">Alert configuration</span>
+                    <p><strong>Activate alert:</strong> {%content.activeAlert%}</p>
+                    <p><strong>Title:</strong> {%content.titleAlert%}</p>
+                    <p><strong>Alert Message:</strong> {%content.textMessageAlert%}</p>
+            </div>
+        </div>
+    <div class="xk-title">Footer config</div>
+        <div class="xk-block">
+            <p><strong>Title:</strong> {%content.loginFooterTitle%}</p>
+            <p><strong>Contact text:</strong> {%content.loginFooterContactText%}</p>
+            <div class="xk-element">
+                <span class="xk-subtitle">Alert configuration</span>
+                    <p><strong>Text:</strong> {%content.footerMobileText%}</p>
+                    <p><strong>Link text:</strong> {%content.footerMobileLinkText%}</p>
+                    <p><strong>Link:</strong> {%content.footerMobileLink%}</p>
+                    <p><strong>Open in:</strong> {%content.target%}</p>
+            </div>
+        </div>
+    <div class="xk-title">First Column Links</div>
+        <div class="xk-element">
+            <ul>
+                {%#each content.familyLinks1%}
+                <p><strong>Sub Item title:</strong> {%subItemTitle%}</p>
+                <ul>
+                    {%#each this.links%}
+                        <span class="xk-subtitle">Links</span>
+                            <li><p><strong>Link text:</strong> {%linkText%}</p></li>
+                            <li><p><strong>Link:</strong> {%link%}</p></li>
+                            <li><p><strong>Open in:</strong> {%target%}</p></li>
+                    {%/each%}
+                </ul>
+                {%/each%}
+            </ul>
+        </div>
+    <div class="xk-title">Second Column Links</div>
+    <div class="xk-element">
+        <ul>
+            {%#each content.familyLinks2%}
+            <p><strong>Sub Item title:</strong> {%subItemTitle%}</p>
+            <ul>
+                {%#each this.links%}
+                <span class="xk-subtitle">Links</span>
+                <li><p><strong>Link text:</strong> {%linkText%}</p></li>
+                <li><p><strong>Link:</strong> {%link%}</p></li>
+                <li><p><strong>Open in:</strong> {%target%}</p></li>
+                {%/each%}
+            </ul>
+            {%/each%}
+        </ul>
+    </div>
+    <div class="xk-title">Third Column Links</div>
+    <div class="xk-element">
+        <ul>
+            {%#each content.familyLinks3%}
+            <p><strong>Sub Item title:</strong> {%subItemTitle%}</p>
+            <ul>
+                {%#each this.links%}
+                <span class="xk-subtitle">Links</span>
+                <li><p><strong>Link text:</strong> {%linkText%}</p></li>
+                <li><p><strong>Link:</strong> {%link%}</p></li>
+                <li><p><strong>Open in:</strong> {%target%}</p></li>
+                {%/each%}
+            </ul>
+            {%/each%}
+        </ul>
+    </div>
+</div>

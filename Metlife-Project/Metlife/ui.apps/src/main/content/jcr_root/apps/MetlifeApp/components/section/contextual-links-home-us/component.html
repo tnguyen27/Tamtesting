@@ -1,0 +1,31 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Home Page Contextual Links Container (US)
+* ------------------------------------------------------------------------------ *
+%}
+
+<div class="container" data-comp-spacing="contextual-links-home-us">
+    <div class="row wrapper more-content">
+        <h2 class="more-content__title hidden-xs">{% content.titleContLinkus %}</h2>
+        {%#each content.contextualLinksHome%}
+            <div class="more-content__section">
+                <a href="{%linkHome%}"
+                   target="{% targetHome %}"
+                   id="{%elementId%}">
+                    <img src="{% imagePath %}"
+                                 alt="{%altTextHome%}"
+                                 class="img-responsive hidden-xs">
+                    <img src="{% mobileImagePath %}"
+                         alt="{% altTextHome %}"
+                         class="img-responsive visible-xs">
+                </a>
+                <a href="{%linkHome%}"
+                   target="{% targetHome %}"
+                   id="{%elementId%}">{%descriptionHome%}</a>
+                <a href="{%bottomLink%}"
+                   target="{%target%}"
+                   id="{%elementId%}">{%labelLink%}</a>
+            </div>
+        {%/each%}
+    </div>
+</div>

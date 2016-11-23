@@ -1,0 +1,15 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Related Content Links Component
+* ------------------------------------------------------------------------------ *
+%}
+
+<div class="media-card__content media-card__content--link-list">
+    <h2>{% content.labelsLinks %}</h2>
+    {%#each content.relatedContentLinks%}
+        <a href="{% linkContent %}"
+           id="{%elementId%}"
+           class="media-card__content__link"
+           target="{%target%}">{% titleLink %}</a>
+    {%/each%}
+</div>

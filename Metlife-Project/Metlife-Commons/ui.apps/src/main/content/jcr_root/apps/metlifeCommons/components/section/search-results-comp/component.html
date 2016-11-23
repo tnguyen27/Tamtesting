@@ -1,0 +1,52 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Search Results Component
+* ------------------------------------------------------------------------------ *
+%}
+
+{%#if page.isEditMode%}<div class="placeholder-wrapper-search-results">{%/if%}
+<div class="container" data-comp-spacing="search-results-comp">
+    <div class="row wrapper">
+        <div class="form-item text-center form-item--search-filter">
+            <div class="form-item__search inline-block">
+                {%> search-input %}
+            </div>
+            <button class="btn-brand-2nd search-filter__button js-searchSubmit"
+                    data-front-end="{%global.dataFrontEnd%}" data-site="{%global.dataSite%}" data-search-ajax-url="{%global.dataSearchURL%}">
+                <svg class="icon icon-search blue">
+                    <use xlink:href="/static/images/icons-metlife.svg#icon-search"></use>
+                </svg>
+                {%content.searchLabel%}
+            </button>
+        </div>
+        <div class="search-results-container">
+            <div class="form-item__display display-text  hidden">
+                <span>0</span> {%content.ofLabel%}<span>0</span>
+                <span class="hidden-xs">&nbsp;| {%content.displayingLabel%}&nbsp;</span>
+                <div class="form-icon-wrapper hidden-xs">
+                    <svg class="icon">
+                        <use xlink:href="/static/images/icons-metlife.svg#icon-select-arrows"></use>
+                    </svg>
+                    <select class="form-item__display__page-count page-count drop-down form-control hidden-xs">
+                    {%#each content.displayResultsOptions%}
+                    <option value="{%this%}">{%this%}</option>
+                    {%/each%}
+                </select>
+                </div>
+
+            </div>
+            <div class="no-results hidden">
+                <span>{%content.noResultsTitle%}</span>
+                <span>{%{content.noResultsText}%}</span>
+            </div>
+            <div class="search-results-container__correction-text hidden">
+                {%content.didYouMeanText%}<span class="js-searchSuggestion"></span>{%content.didYouMeanPunctuation%}
+            </div>
+            <div class="results_pagination hidden"></div>
+        </div>
+        {%#if content.staticForm%}
+        	{%#include "{% content.staticForm %}" as="metlifeGlobal/components/section/baseContactFormCard"%}{%/include%}
+        {%/if%}
+    </div>
+</div>
+{%#if page.isEditMode%}</div>{%/if%}

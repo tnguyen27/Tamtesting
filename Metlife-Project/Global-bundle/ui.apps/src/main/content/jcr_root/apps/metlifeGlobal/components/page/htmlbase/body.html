@@ -1,0 +1,12 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Global HTML Base - Body
+* ------------------------------------------------------------------------------ *
+%}
+
+<body ng-app="XCQBApp" xk-path="{% page.path %}" class="{%#each page.bodyClasses %}{% this %} {%/each %}">
+    {%> siteglobalbutton %}
+    {%> header %}
+    {%> content %}
+    {%> footer %}
+</body>

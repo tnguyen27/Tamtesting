@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    xk_defaultForms="[content.file1,content.file2,content.file3,content.file4,content.file5]"
+    xk_formsDirectory="content.formsPath"
+    xk_iconsList="/etc/acs-commons/lists/metlife/typeoffileicons"
+    xk_placeholderTriggers="[content.filterLabel,content.filterValue,content.previousLabel,content.nextLabel]"/>

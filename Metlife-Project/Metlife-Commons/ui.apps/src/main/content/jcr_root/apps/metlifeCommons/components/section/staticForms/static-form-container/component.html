@@ -1,0 +1,8 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Static Form Container Component
+* ------------------------------------------------------------------------------ *
+%}
+
+<h1>Static Component Elements </h1> 
+{%#if content.component %} {%#include "form" as=content.component%}{%/include%} {%/if%}

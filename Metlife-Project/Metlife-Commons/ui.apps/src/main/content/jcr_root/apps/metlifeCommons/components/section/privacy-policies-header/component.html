@@ -1,0 +1,33 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Privacy Policies Header Component
+* ------------------------------------------------------------------------------ *
+%}
+
+<div class="container" data-comp-spacing="privacy-policy-header">
+	<div class="row wrapper privacy-policy-index">
+		<div class="width-80">
+			{%{content.policyheaderdescription}%}
+	        <div class="privacy-policy-index__linkContainer clearfix">
+	        	{%#each content.policyheaderlinks%}
+	            	{%#if this.newPage%}
+						<a href="{%this.linkvalue%}" target="{%target%}">{%this.linklabel%}</a>
+	                {%else%}
+	                	<a href="#{%this.linklabel_value%}" target="{%target%}">{%this.linklabel%}</a>
+	                {%/if%}
+				{%/each%}
+	        </div>
+	        {%#each content.policyheaderlinks%}
+				{%#unless this.newPage%}
+					{%#if this.policy_value%}
+					<div class="privacy-policies-section" id="{%this.linklabel_value%}">
+			    		<h3 class="privacy-policies-section__title">{%this.linklabel%}</h3>
+						{%#include policy_value as="metlifeCommons/components/section/privacy-policy"%}{%/include%}
+			    	</div>
+				    {%/if%}
+			    {%/unless%}
+			{%/each%}
+		</div>
+    </div>
+ </div>
+

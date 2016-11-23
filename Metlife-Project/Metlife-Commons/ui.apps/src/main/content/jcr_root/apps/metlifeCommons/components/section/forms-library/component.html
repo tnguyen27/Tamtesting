@@ -1,0 +1,80 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Forms Library Component
+* ------------------------------------------------------------------------------ *
+%}
+
+<div class="container" data-comp-spacing="forms-library">
+	<div class="row wrapper form-library">
+		<div class="width-80">
+		    <div class="list-filter text-center">
+		        <div class="form-item__label--large">
+		            <span>{%content.filterLabel%}</span>
+		            <div class="form-icon-wrapper">
+		                <select class="inline-block form-item__field--large form-library js-formLib" data-forms-lib-url="{%content.path%}.results.json?products=" data-forms-query-parameter="">
+		                    <option value="all" disabled selected>{%content.filterValue%}</option>
+		                    {%#each content.categories%}
+		                    <option value="{%categoryValue%}">{%categoryName%}</option>
+		                    {%/each%}
+		                </select>
+		                <svg class="icon">
+		                    <use xlink:href="/static/images/icons-metlife.svg#icon-select-arrows"></use>
+		                </svg>
+		            </div>
+		        </div>
+		    </div>
+		    <div class="list">
+		        <div class="lists">
+		        	<div data-form-library-msg="all">
+		                <h2 class="list__title">{%content.defaultCategoryTitle%}</h2>
+		            </div>
+		        	{%#each content.categories%}
+		            <div data-form-library-msg="{%categoryValue%}">
+		                {%#include categoryTitle as="metlifeCommons/components/section/forms-library-category-title"%}{%/include%}
+		            </div>
+		            {%/each%}
+		        </div>
+		        <div class="results_content">
+		        	{%#each content.defaultFiles%}
+		            <div class="row list__item">
+		                <span class="list__item__date">{%file_category_title%}</span>
+		                <div class="list__item--left">
+		                    <a href="{%file_url%}" target="_blank" class="list__item__title text-bold">{%file_title%}</a>
+		                    <p>{%file_description%}</p>
+		                </div>
+		                <div class="list__item--right">
+		                    <a href="{%file_url%}" target="_blank">
+		                        <img src="/static/images/{%form_icon_path%}" class="document-icon">
+		                    </a>
+		                    <a href="{%file_url%}" target="_blank" class="hidden-xs download-link">{%content.downloadText%}</a>
+		                    <span class="block document-size">({%file_type%}-{%file_size%})</span>
+		                </div>
+		                <span class="clearfix"></span>
+		            </div>
+		            {%/each%}
+		        </div>
+		    </div>
+			<div class="results_pagination hidden"></div>
+			<div>
+				<div data-form-library-msg="all"></div>
+		        {%#each content.categories%}
+		            <div data-form-library-msg="{%categoryValue%}">
+		                {%#include categoryOther as="metlifeCommons/components/section/forms-library-category-others"%}{%/include%}
+		            </div>
+		        {%/each%}
+			</div>
+		</div>
+	</div>
+</div>
+
+{%#if content.formsLibraryDisclaimer%}
+<div class="container" data-comp-spacing="forms-library-disclaimer">
+	<div class="row wrapper">
+		<div class="width-80">
+		    <div class="section-title text-center">
+		        {%{content.formsLibraryDisclaimer}%}
+		    </div>
+		</div>
+	</div>
+</div>
+{%/if%}

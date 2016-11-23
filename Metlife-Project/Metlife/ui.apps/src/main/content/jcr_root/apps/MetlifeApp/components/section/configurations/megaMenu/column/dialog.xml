@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Column"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <title
+                jcr:primaryType="cq:Panel"
+                title="Title">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <label
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Title"
+                        name="./title"
+                        xtype="textfield"/>
+                    <link
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Link"
+                        linkPattern="\{0}.html"
+                        name="./link"
+                        rootPath="/content/metlife"
+                        rootTitle="MetLife"
+                        xtype="pathfield"/>
+                    <links-target
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="false"
+                        anchor="95%"
+                        defaultValue="_self"
+                        fieldLabel="Open in"
+                        key="mainTarget"
+                        name="./mainTarget"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <self
+                                jcr:primaryType="nt:unstructured"
+                                text="Same Page"
+                                value="_self"/>
+                            <blank
+                                jcr:primaryType="nt:unstructured"
+                                text="New Page"
+                                value="_blank"/>
+                        </options>
+                    </links-target>
+                </items>
+            </title>
+            <listLink
+                jcr:primaryType="cq:Panel"
+                title="Link List">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <links
+                        jcr:primaryType="cq:Widget"
+                        addItemLabel="Add Link"
+                        fieldDescription="Click the '+' to add a new link"
+                        fieldLabel="Links"
+                        name="./links"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            xtype="multifieldpanel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <label
+                                    jcr:primaryType="nt:unstructured"
+                                    allowBlank="false"
+                                    anchor="98%"
+                                    fieldLabel="Label"
+                                    key="innerLabel"
+                                    validateOnBlur="true"
+                                    xtype="textfield"/>
+                                <link
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="false"
+                                    anchor="98%"
+                                    fieldLabel="Link"
+                                    key="innerLink"
+                                    linkPattern="\{0}.html"
+                                    rootPath="/content/metlife"
+                                    xtype="pathfield"/>
+                                <link-target
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="false"
+                                    anchor="95%"
+                                    defaultValue="_self"
+                                    fieldLabel="Open in"
+                                    key="innerTarget"
+                                    name="./target"
+                                    rootTitle="MetLife"
+                                    type="select"
+                                    xtype="selection">
+                                    <options jcr:primaryType="cq:WidgetCollection">
+                                        <self
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Same Page"
+                                            value="_self"/>
+                                        <blank
+                                            jcr:primaryType="nt:unstructured"
+                                            text="New Page"
+                                            value="_blank"/>
+                                    </options>
+                                </link-target>
+                            </items>
+                        </fieldConfig>
+                    </links>
+                </items>
+            </listLink>
+        </items>
+    </items>
+</jcr:root>

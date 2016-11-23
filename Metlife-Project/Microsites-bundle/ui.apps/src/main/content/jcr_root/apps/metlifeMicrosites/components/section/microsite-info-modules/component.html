@@ -1,0 +1,18 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Microsite - Product Module Container Component
+* ------------------------------------------------------------------------------ *
+%}
+
+<div class="container" data-comp-spacing="microsite-info-modules">
+    <div class="row wrapper product-module">
+    {%#each list.tiles%}
+        {%#include title as="MetlifeApp/components/section/subcategory-tile"%}{%/include%}
+    {%/each%}
+    </div>
+    <div class="row wrapper disclaimer disclaimer--product-module">
+    	<p class="text-center">
+        	{%content.infoModuleDisclaimer%}
+        </p>
+    </div>
+</div>

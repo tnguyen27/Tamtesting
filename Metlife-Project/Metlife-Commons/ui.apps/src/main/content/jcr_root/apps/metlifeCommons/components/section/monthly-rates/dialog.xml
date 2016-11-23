@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="{Long}700"
+    title="Monthly Rates"
+    width="{Long}900"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Configuration">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Title"
+                        name="./title"
+                        xtype="textfield"/>
+                    <selecttable
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="modaltable"
+                        fieldLabel="Table type"
+                        name="./selecttable"
+                        type="radiogroup"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <radiobutton1
+                                jcr:primaryType="cq:Widget"
+                                text="Modal Table"
+                                value="modaltable"/>
+                            <radiobutton2
+                                jcr:primaryType="cq:Widget"
+                                text="Expandable Table"
+                                value="expandabletable"/>
+                        </options>
+                    </selecttable>
+                    <buttontext
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Expand button text label"
+                        name="./buttontext"
+                        xtype="textfield"/>
+                    <buttonclosetext
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="Close"
+                        fieldDescription="Apply just for expandable table."
+                        fieldLabel="Button Close Text"
+                        name="./buttonclosetext"
+                        xtype="textfield"/>
+                </items>
+            </tab1>
+            <tab5
+                jcr:primaryType="cq:Panel"
+                title="Left Table Preview">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <lefttitle
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Title"
+                        name="./titleleft"
+                        xtype="textfield"/>
+                    <table
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Table"
+                        height="{Long}500"
+                        name="./lefttablepreview"
+                        xtype="tableedit2"/>
+                </items>
+            </tab5>
+            <tab4
+                jcr:primaryType="cq:Panel"
+                title="Right Table Preview">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <righttitle
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Title"
+                        name="./titleright"
+                        xtype="textfield"/>
+                    <table
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Table"
+                        height="{Long}500"
+                        name="./righttablepreview"
+                        xtype="tableedit2"/>
+                </items>
+            </tab4>
+            <tab2
+                jcr:primaryType="cq:Panel"
+                title="Left Table">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <table
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Table"
+                        height="{Long}500"
+                        name="./lefttable"
+                        xtype="tableedit2"/>
+                    <csvpath
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="[If you select a CSV file the manual table is ignored.]"
+                        fieldLabel="CSV File"
+                        name="./leftcsvpath"
+                        rootPath="/content/dam/metlifecom"
+                        rootTitle="MetLife"
+                        xtype="pathfield"/>
+                </items>
+            </tab2>
+            <tab3
+                jcr:primaryType="cq:Panel"
+                title="Right Table">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <table
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Table"
+                        height="{Long}500"
+                        name="./righttable"
+                        xtype="tableedit2"/>
+                    <csvpath
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="[If you select a CSV file the manual table is ignored.]"
+                        fieldLabel="CSV File"
+                        name="./rightcsvpath"
+                        rootPath="/content/dam/metlifecom"
+                        rootTitle="MetLife"
+                        xtype="pathfield"/>
+                </items>
+            </tab3>
+        </items>
+    </items>
+</jcr:root>

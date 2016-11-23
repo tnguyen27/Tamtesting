@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="400"
+    title="Location Dentist"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <information
+                jcr:primaryType="cq:Panel"
+                title="Information">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <office-name
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="false"
+                        fieldLabel="Office Name"
+                        name="./officeName"
+                        xtype="textfield"/>
+                    <address
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Address"
+                        name="./address"
+                        xtype="textarea">
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            change="function(){&#xa;  var value = this.getValue();&#xa;  if(value){&#xa;    value = value.split(' ').join('+');&#xa;  }&#xa;    window.valueAddressGeo = value;&#xa;&#xa;}"/>
+                    </address>
+                    <city
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="City"
+                        name="./city"
+                        xtype="textfield">
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            change="function(){&#xa;  var value = this.getValue();&#xa;  if(value){&#xa;    value = value.split(' ').join('+');&#xa;    &#xa;  }&#xa;window.valueCityGeo = value;&#xa;}"/>
+                    </city>
+                    <state
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="State"
+                        name="./state"
+                        xtype="textfield">
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            change="function(){&#xa;  var value = this.getValue();&#xa;  if(value){&#xa;    value = value.split(' ').join('+');&#xa;  }&#xa;  window.valueStateGeo = value;&#xa;}"/>
+                    </state>
+                    <country
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Country"
+                        name="./country"
+                        xtype="textfield"/>
+                    <zip
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Zip"
+                        name="./zip"
+                        xtype="textfield"/>
+                    <phone
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Phone"
+                        name="./phone"
+                        xtype="textfield"/>
+                    <alternate-phone
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Alternate Phone"
+                        name="./alternatePhone"
+                        xtype="textfield"/>
+                    <fax
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Fax"
+                        name="./fax"
+                        xtype="textfield"/>
+                    <gender
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Gender"
+                        name="./gender"
+                        xtype="textfield"/>
+                    <languages
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Languages"
+                        name="./languages"
+                        xtype="textfield"/>
+                    <education
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Education"
+                        name="./education"
+                        xtype="textfield"/>
+                </items>
+            </information>
+            <additional-info
+                jcr:primaryType="cq:Panel"
+                title="Additional Info">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <email
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="E-mail"
+                        name="./email"
+                        xtype="textfield"/>
+                    <secondary-email
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Secondary E-mail"
+                        name="./secondaryEmail"
+                        xtype="textfield"/>
+                    <url
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="URL"
+                        name="./url"
+                        xtype="textfield"/>
+                    <main-contact
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Main Contact"
+                        name="./mainContact"
+                        xtype="textfield"/>
+                    <working-hours
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Working Hours"
+                        name="./workingHours"
+                        xtype="textfield"/>
+                    <additional-info
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Additional Info"
+                        name="./additionalInfo"
+                        xtype="textarea"/>
+                </items>
+            </additional-info>
+            <location-info
+                jcr:primaryType="cq:Panel"
+                title="Location Info">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <latitude
+                        jcr:primaryType="cq:Widget"
+                        allowDecimals="true"
+                        allowNegative="true"
+                        decimalPrecision="15"
+                        fieldLabel="Latitude"
+                        name="./latitude"
+                        readOnly="{Boolean}true"
+                        xtype="numberfield"/>
+                    <longitude
+                        jcr:primaryType="cq:Widget"
+                        allowDecimals="true"
+                        allowNegative="true"
+                        decimalPrecision="15"
+                        fieldDescription="The latitude and longitude, they are filled using the &quot;Address&quot; (lacate this input in the first tab). &lt;/br>&lt;/br>"
+                        fieldLabel="Longitude"
+                        name="./longitude"
+                        readOnly="{Boolean}true"
+                        xtype="numberfield"/>
+                    <initial-zoom
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Initial Zoom"
+                        name="./initialZoom"
+                        xtype="numberfield"/>
+                </items>
+            </location-info>
+            <specialties
+                jcr:primaryType="cq:Panel"
+                title="Specialties">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <specialties
+                        jcr:primaryType="cq:Widget"
+                        addItemLabel="Add Specialty"
+                        hideLabel="true"
+                        name="./specialties"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            options="$PATH.options.json"
+                            type="select"
+                            xtype="selection"/>
+                    </specialties>
+                    <specialties-hint
+                        jcr:primaryType="nt:unstructured"
+                        ignoreData="true"
+                        name="./specialties@TypeHint"
+                        value="String[]"
+                        xtype="hidden"/>
+                </items>
+            </specialties>
+        </items>
+        <listeners
+            jcr:primaryType="nt:unstructured"
+            beforetabchange="function(){&#xa;&#xa;  var buildingURL;&#xa;  var address = window.valueAddressGeo;&#xa;  var city = window.valueCityGeo;&#xa;  var state = window.valueStateGeo;&#xa;  if(typeof  address != 'undefined'){&#xa;    buildingURL = address;&#xa;  }&#xa;  if(typeof  city != 'undefined'){&#xa;    buildingURL = buildingURL+&quot;+&quot;+city;&#xa;  }&#xa;  if(typeof  state != 'undefined'){&#xa;    buildingURL = buildingURL+&quot;+&quot;+state;&#xa;  }&#xa;&#xa;  var locaInfoTab = this.getComponent(2);&#xa;  if(locaInfoTab &amp;&amp; buildingURL){&#xa;    var lat = locaInfoTab.getComponent(0);&#xa;    var log = locaInfoTab.getComponent(1);&#xa;&#xa;    var urlValue = &quot;/bin/internal/geoDecoding?address=&quot; + buildingURL;&#xa;    $.ajax({url: urlValue, success: function(result){&#xa;        var status = result.status;&#xa;        var latitude = result.latitude;&#xa;        var longitude = result.longitude;&#xa;&#xa;        if(status){&#xa;            lat.setValue(latitude);&#xa;            log.setValue(longitude);&#xa;        }&#xa;    }});&#xa;  }&#xa;&#xa;}"/>
+    </items>
+    <listeners
+        jcr:primaryType="nt:unstructured"
+        loadcontent="function(){&#xa;  &#xa;  var infTab = this.getComponent(0).getComponent(0);&#xa;&#xa;  var one = infTab.getComponent(1);&#xa;  var two = infTab.getComponent(2);&#xa;  var three = infTab.getComponent(3);&#xa;&#xa;  window.valueAddressGeo = one.getValue();&#xa;  window.valueCityGeo = two.getValue();&#xa;  window.valueStateGeo = three.getValue();&#xa;&#xa;}"/>
+</jcr:root>

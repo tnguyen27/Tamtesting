@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Panel"
+    title="Vendor Code Configuration">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <googleanalytics
+            jcr:primaryType="cq:Widget"
+            collapsible="{Boolean}true"
+            title="Google Analytics"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <apply
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="true"
+                    fieldLabel="Apply"
+                    name="./apply"
+                    type="checkbox"
+                    xtype="selection"/>
+                <trackingId
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="false"
+                    anchor="95%"
+                    fieldDescription="Add the UA-XXXXX-Y Key"
+                    fieldLabel="Tracking ID"
+                    name="./trackingId"
+                    xtype="textfield"/>
+            </items>
+        </googleanalytics>
+        <vendorconfig
+            jcr:primaryType="cq:Widget"
+            collapsible="{Boolean}true"
+            title="Vendor configurations"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <enabledTesting
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Vendor for A/B testing"
+                    fieldLabel="Enable Optimost"
+                    name="./vendorABTesting"
+                    type="checkbox"
+                    xtype="selection"/>
+                <enabledJourney
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Vendor for user journey recordings"
+                    fieldLabel="Enable Click Tale"
+                    name="./vendorJourney"
+                    type="checkbox"
+                    xtype="selection"/>
+                <enabledFeedback
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Vendor for capturing user feedback"
+                    fieldLabel="Enable Opinion lab"
+                    name="./vendorFeedback"
+                    type="checkbox"
+                    xtype="selection"/>
+                <enabledMeasuring
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Vendor for measuring performance of pages"
+                    fieldLabel="Enable Dynatrace"
+                    name="./vendorMeasuring"
+                    type="checkbox"
+                    xtype="selection"/>
+                <enabledTagging
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Vendor for tagging"
+                    fieldLabel="Enable Ensighten"
+                    name="./vendorTagging"
+                    type="checkbox"
+                    xtype="selection"/>
+            </items>
+        </vendorconfig>
+        <analyticsconfig
+            jcr:primaryType="cq:Widget"
+            collapsible="{Boolean}true"
+            title="Analytics configurations"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <analytics
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Activate Analytics Tag Code"
+                    fieldLabel="Analytics Tag"
+                    name="./analyticsTag"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <enable
+                            jcr:primaryType="nt:unstructured"
+                            text="Enable"
+                            value="enable"/>
+                        <disable
+                            jcr:primaryType="nt:unstructured"
+                            text="Disable"
+                            value="disable"/>
+                    </options>
+                </analytics>
+                <environmentType
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="staging"
+                    fieldDescription="You can enable on Staging or Production environments."
+                    fieldLabel="Environment Type"
+                    name="./environmentType"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <staging
+                            jcr:primaryType="nt:unstructured"
+                            text="Staging"
+                            value="staging"/>
+                        <production
+                            jcr:primaryType="nt:unstructured"
+                            text="Production"
+                            value="production"/>
+                    </options>
+                </environmentType>
+            </items>
+        </analyticsconfig>
+        <gsaSearch
+            jcr:primaryType="cq:Widget"
+            collapsible="{Boolean}true"
+            title="Google Search Analytics Configuration"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <dataSite
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="{Boolean}true"
+                    fieldLabel="Enter the data site for search results"
+                    name="./dataSite"
+                    xtype="textfield"/>
+                <dataFrontEnd
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="{Boolean}true"
+                    fieldLabel="Enter the data front end for search results"
+                    name="./dataFrontEnd"
+                    xtype="textfield"/>
+                <dataSearchURL
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="{Boolean}true"
+                    fieldLabel="Enter the data ajax search url"
+                    name="./dataSearchURL"
+                    xtype="textfield"/>
+                <dataSuggestionsFrontEnd
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="{Boolean}true"
+                    fieldLabel="Enter the data front end for suggestions"
+                    name="./dataSuggestionsFrontEnd"
+                    xtype="textfield"/>
+                <dataSuggestionsSite
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="{Boolean}true"
+                    fieldLabel="Enter the data site for suggestions"
+                    name="./dataSuggestionsSite"
+                    xtype="textfield"/>
+                <dataSuggestionURL
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="{Boolean}true"
+                    fieldLabel="Enter the data ajax suggestion url"
+                    name="./dataSuggestionURL"
+                    xtype="textfield"/>
+            </items>
+        </gsaSearch>
+        <generalConfig
+            jcr:primaryType="cq:Widget"
+            path="/apps/metlifeCommons/components/page/htmlbase/vendorscripts/items.infinity.json"
+            xtype="cqinclude"/>
+        <enableUSTheme
+            jcr:primaryType="cq:Widget"
+            collapsible="{Boolean}true"
+            title="Enable US Theme"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <enableUsTheme
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Apply US when checked"
+                    fieldLabel="Enable"
+                    name="./enableUSTheme"
+                    type="checkbox"
+                    xtype="selection"/>
+            </items>
+        </enableUSTheme>
+    </items>
+</jcr:root>

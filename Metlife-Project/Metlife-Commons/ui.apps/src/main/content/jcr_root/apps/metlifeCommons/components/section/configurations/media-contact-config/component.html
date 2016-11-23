@@ -1,0 +1,14 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Media Contact Configuration
+* ------------------------------------------------------------------------------ *
+%}
+
+{%#unless content.company%}<h4>Double Click to edit the contact.</h4>{%/unless%}
+<div class="media-contact__item">
+    <span class="media-contact__item__title"><b>Company:</b> {%content.company%}</span>
+
+    <div><b>Name:</b> {%content.contactName%}</div>
+    <div><b>Phone:</b> {%content.phone%}</div>
+    <div><b>Email:</b> <a href="mailto:{%content.email%}">{%content.email%}</a></div>
+</div>

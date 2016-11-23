@@ -1,0 +1,15 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Form Personal Detail Update Component
+* ------------------------------------------------------------------------------ *
+%}
+
+<div class="container" data-comp-spacing="form-personal-detail-update">
+    <div class="row wrapper">
+        <div class="updateInfoForm">
+            {%#if content.staticForm%}
+            {%#include "{% content.staticForm %}" as="metlifeGlobal/components/section/baseContactFormCard"%}{%/include%}
+            {%/if%}
+        </div>
+    </div>
+</div>

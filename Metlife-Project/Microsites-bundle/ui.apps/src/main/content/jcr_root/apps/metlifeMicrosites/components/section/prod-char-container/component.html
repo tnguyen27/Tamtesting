@@ -1,0 +1,56 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Microsite - Product Comparison Chart Container Component
+* ------------------------------------------------------------------------------ *
+%}
+
+<div class="container" data-comp-spacing="prod-char-container">
+	<div class="row wrapper">
+		<div class="width-80">
+			<div class="product-comparison-chart-title hidden-xs">
+			    <p>{% content.title %}</p>
+			</div>
+			<div class="product-comparison-chart searchable">
+				<div class="microsite-product-chart clearfix">
+			        <div class="product_chart col-xs-12">
+			            <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2 life_insurance_col1">
+			                <div class="microsite-column-category left-col-mcc"></div>
+			                <div class="column-cell">{% content.titleColumn %}</div>
+			                {%#each content.rows%}
+			                    <div class="product_chart_key1 column-cell">
+			                        <span><b>{% title %} &mdash;</b></span>
+			                        <span>{% subTitle %}</span>
+			                    </div>
+			                {%/each%}
+			            </div>
+			            <div class="carousel slide carousel--microsite" id="micrositeComparisonChartCarousel" 
+			            	 data-interval="false" data-ride="carousel">
+			                <div class="carousel-inner">
+				            {%#each list.tiles%}
+				            	{%#include title as="metlifeMicrosites/components/section/prod-comp-chart"%}{%/include%}
+				            {%/each%}
+			                </div>
+			            </div>
+			        </div>
+			        <a class="left carousel-control hidden-sm hidden-lg"
+			           href="#micrositeComparisonChartCarousel" data-slide="prev">
+			            <svg class="icon icon-chevron-left blue">
+			                <use xlink:href="/static/images/icons-metlife.svg#icon-chevron-left"></use>
+			            </svg>
+			            <span class="sr-only">Prev</span>
+			        </a>
+			        <a class="right carousel-control hidden-sm hidden-lg"
+			           href="#micrositeComparisonChartCarousel" data-slide="next">
+			            <svg class="icon icon-chevron-right blue">
+			                <use xlink:href="/static/images/icons-metlife.svg#icon-chevron-right"></use>
+			            </svg>
+			            <span class="sr-only">Next</span>
+			        </a>
+				</div>
+			</div>
+		    <div class="disclaimer disclaimer--product-comparison-chart">
+		    	{%{content.disclaimer}%}
+		    </div>		
+		</div>
+	</div>
+</div>

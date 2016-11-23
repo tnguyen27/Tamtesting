@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Panel"
+    title="Template Configuration">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <activateconfig
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}false"
+            collapsible="{Boolean}true"
+            title="Activate or deactivate elements"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <homeDisclaimer
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="auto"
+                    fieldLabel="Disclaimer configuration"
+                    name="./homeDisclaimer"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <enable
+                            jcr:primaryType="nt:unstructured"
+                            text="Enable"
+                            value="enable"/>
+                        <disable
+                            jcr:primaryType="nt:unstructured"
+                            text="Disable"
+                            value="disable"/>
+                        <auto
+                            jcr:primaryType="nt:unstructured"
+                            text="Auto"
+                            value="auto"/>
+                    </options>
+                </homeDisclaimer>
+                <disableBreadcrumb
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Breadcrumb options"
+                    name="./disableBreadcrumb"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <ebable
+                            jcr:primaryType="nt:unstructured"
+                            text="Enable"
+                            value="enable"/>
+                        <disabled
+                            jcr:primaryType="nt:unstructured"
+                            text="Disabled"
+                            value="disabled"/>
+                    </options>
+                </disableBreadcrumb>
+                <disableFarmsite
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Farmsite options"
+                    name="./disableFarmsite"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <enable
+                            jcr:primaryType="nt:unstructured"
+                            text="Enable"
+                            value="enable"/>
+                        <disable
+                            jcr:primaryType="nt:unstructured"
+                            text="Disable"
+                            value="disable"/>
+                    </options>
+                </disableFarmsite>
+            </items>
+        </activateconfig>
+        <contactconfig
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}false"
+            collapsible="{Boolean}true"
+            title="Contact configuration"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <departmentName
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Department Name"
+                    name="./departmentName"
+                    xtype="textfield"/>
+                <contactName
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Contact Name"
+                    name="./contactName"
+                    xtype="textfield"/>
+                <designationContact
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Designation of the Contact"
+                    name="./designationContact"
+                    xtype="textfield"/>
+                <phoneNumber
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Phone Number of the Contact"
+                    name="./phoneNumber"
+                    xtype="textfield"/>
+                <emailId
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Email ID of the Contact"
+                    name="./emailId"
+                    xtype="textfield"/>
+            </items>
+        </contactconfig>
+        <vendorconfig
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}false"
+            collapsible="{Boolean}true"
+            title="Vendor configurations"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <testing
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Vendor for A/B testing"
+                    fieldLabel="Optimost"
+                    name="./vendorABTesting"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <enable
+                            jcr:primaryType="nt:unstructured"
+                            text="Enable"
+                            value="enable"/>
+                        <disable
+                            jcr:primaryType="nt:unstructured"
+                            text="Disable"
+                            value="disable"/>
+                        <auto
+                            jcr:primaryType="nt:unstructured"
+                            text="Auto"/>
+                    </options>
+                </testing>
+                <journey
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Vendor for user journey recordings"
+                    fieldLabel="Click Tale"
+                    name="./vendorJourney"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <enable
+                            jcr:primaryType="nt:unstructured"
+                            text="Enable"
+                            value="enable"/>
+                        <disable
+                            jcr:primaryType="nt:unstructured"
+                            text="Disable"
+                            value="disable"/>
+                        <auto
+                            jcr:primaryType="nt:unstructured"
+                            text="Auto"/>
+                    </options>
+                </journey>
+                <feedback
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Vendor for capturing user feedback"
+                    fieldLabel="Opinion lab"
+                    name="./vendorFeedback"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <enable
+                            jcr:primaryType="nt:unstructured"
+                            text="Enable"
+                            value="enable"/>
+                        <disable
+                            jcr:primaryType="nt:unstructured"
+                            text="Disable"
+                            value="disable"/>
+                        <auto
+                            jcr:primaryType="nt:unstructured"
+                            text="Auto"/>
+                    </options>
+                </feedback>
+                <measuring
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Vendor for measuring performance of pages"
+                    fieldLabel="Dynatrace"
+                    name="./vendorMeasuring"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <enable
+                            jcr:primaryType="nt:unstructured"
+                            text="Enable"
+                            value="enable"/>
+                        <disable
+                            jcr:primaryType="nt:unstructured"
+                            text="Disable"
+                            value="disable"/>
+                        <auto
+                            jcr:primaryType="nt:unstructured"
+                            text="Auto"/>
+                    </options>
+                </measuring>
+                <tagging
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Vendor for tagging"
+                    fieldLabel="Ensighten"
+                    name="./vendorTagging"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <enable
+                            jcr:primaryType="nt:unstructured"
+                            text="Enable"
+                            value="enable"/>
+                        <disable
+                            jcr:primaryType="nt:unstructured"
+                            text="Disable"
+                            value="disable"/>
+                        <auto
+                            jcr:primaryType="nt:unstructured"
+                            text="Auto"/>
+                    </options>
+                </tagging>
+                <analytics
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Activate Analytics Tag Code"
+                    fieldLabel="Analytics Tag"
+                    name="./analyticsTag"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <enable
+                            jcr:primaryType="nt:unstructured"
+                            text="Enable"
+                            value="enable"/>
+                        <disable
+                            jcr:primaryType="nt:unstructured"
+                            text="Disable"
+                            value="disable"/>
+                        <auto
+                            jcr:primaryType="nt:unstructured"
+                            text="Auto"/>
+                    </options>
+                </analytics>
+            </items>
+        </vendorconfig>
+    </items>
+</jcr:root>

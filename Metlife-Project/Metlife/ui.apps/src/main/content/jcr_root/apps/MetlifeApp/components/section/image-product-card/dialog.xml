@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="500"
+    title="Image Product Card"
+    width="700"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <main-content
+                jcr:primaryType="cq:Panel"
+                title="Main Content">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <intro
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="false"
+                        anchor="90%"
+                        fieldLabel="Intro"
+                        name="./imageProductCardIntro"
+                        xtype="textfield"/>
+                    <content
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="false"
+                        anchor="90%"
+                        fieldLabel="Content"
+                        name="./imageProductCardContent"
+                        xtype="richtext">
+                        <rtePlugins jcr:primaryType="nt:unstructured">
+                            <subsuperscript
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                        </rtePlugins>
+                    </content>
+                    <button-label
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="true"
+                        anchor="90%"
+                        fieldLabel="Button Label"
+                        name="./imageProductCardButtonLabel"
+                        xtype="textfield"/>
+                    <button-link
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="true"
+                        anchor="90%"
+                        fieldLabel="Link"
+                        linkPattern="\{0}.html"
+                        name="./imageProductCardPath"
+                        rootPath="/content/metlife"
+                        rootTitle="MetLife"
+                        xtype="pathfield"/>
+                    <link-target
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="false"
+                        anchor="90%"
+                        defaultValue="_self"
+                        fieldLabel="Open in"
+                        key="target"
+                        name="./target"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <self
+                                jcr:primaryType="nt:unstructured"
+                                text="Same Page"
+                                value="_self"/>
+                            <blank
+                                jcr:primaryType="nt:unstructured"
+                                text="New Page"
+                                value="_blank"/>
+                        </options>
+                    </link-target>
+                </items>
+            </main-content>
+            <image
+                jcr:primaryType="cq:Widget"
+                allowBlank="{Boolean}false"
+                cropParameter="./imageCrop"
+                ddGroups="media"
+                fileNameParameter="./fileName"
+                fileReferenceParameter="./fileReference"
+                mapParameter="./imageMap"
+                name="./file"
+                requestSuffix=".img.png"
+                rotateParameter="./imageRotate"
+                title="Desktop/Tablet Image"
+                xtype="html5smartimage"/>
+            <secondimage
+                jcr:primaryType="cq:Widget"
+                cropParameter="./secondimage/imageCrop"
+                ddGroups="media"
+                fileNameParameter="./secondimage/fileName"
+                fileReferenceParameter="./secondimage/fileReference"
+                mapParameter="./secondimage/imageMap"
+                name="./secondimage/file"
+                requestSuffix="/secondimage.img.png"
+                rotateParameter="./secondimage/imageRotate"
+                title="Mobile Image"
+                xtype="html5smartimage"/>
+            <resourcetypetab
+                jcr:primaryType="cq:Panel"
+                title="test">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <secondimageresourcetype
+                        jcr:primaryType="nt:unstructured"
+                        ignoreData="true"
+                        name="./secondimage/sling:resourceType"
+                        value="foundation/components/image"
+                        xtype="hidden"/>
+                </items>
+                <listeners
+                    jcr:primaryType="nt:unstructured"
+                    afterrender="function(t){t.findParentByType(&quot;tabpanel&quot;).hideTabStripItem(t);}"/>
+            </resourcetypetab>
+        </items>
+    </items>
+</jcr:root>

@@ -1,0 +1,31 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Category Banner Component
+* ------------------------------------------------------------------------------ *
+%}
+
+<div class="container" data-comp-spacing="category-banner">
+    <div class="row wrapper white promocard in_view">
+        {%#if content.headline%}
+            <div class="promocard__image {%#unless content.imagePosition%}col-sm-push-6{%/unless%} bg clickable" 
+                data-redirect="{%content.link%}"
+                id="{%content.linkId%}Image"
+                data-target="{%content.target%}" title="Image Alt"
+                style="background-image: url('{%content.imagePath%}');"></div>
+                <div class="promocard__content {%#unless content.imagePosition%}col-sm-pull-6{%/unless%}">
+                <div class="promocard__content__header">{%content.headline%}</div>
+                <div class="promocard__content__text">{%content.description%}</div>
+                {%#if content.buttonText%}
+                    <a href="{%content.link%}" 
+                        class="btn {%content.buttonColor%}"
+                        target="{%content.target%}"
+                        id="{%content.linkId%}">{%content.buttonText%}</a>
+            	{%/if%}
+            </div>
+        {%/if%}
+    </div>
+</div>
+
+{%#if page.isEditMode%}
+    <div style="clear:both;"></div>
+{%/if%}

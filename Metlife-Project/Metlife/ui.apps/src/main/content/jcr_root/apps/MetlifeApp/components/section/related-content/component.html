@@ -1,0 +1,17 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Related Content Container Component
+* ------------------------------------------------------------------------------ *
+%}
+
+<div class="container" data-comp-spacing="related-content">
+    <div class="row wrapper related-links">
+        {%#each list.tiles%}
+            {%#if type%}
+                {%#include title as="MetlifeApp/components/section/related-content-links"%}{%/include%}
+            {%else%}
+                {%#include title as="MetlifeApp/components/section/related-content-image"%}{%/include%}
+            {%/if%}
+        {%/each%}
+    </div>
+</div>

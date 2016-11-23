@@ -1,0 +1,19 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Microsite - CTA Boxes Container
+* ------------------------------------------------------------------------------ *
+%}
+
+<div class="container" data-comp-spacing="cta-boxes-container">
+	<div class="row wrapper cta-box-component">
+	    <div class="cta-box-module">
+		{%#each list.tiles%}
+	       	{%#include title as="metlifeMicrosites/components/section/cta-boxes"%}{%/include%}
+	    {%/each%}
+	    </div>
+	</div>
+</div>
+
+{%#if page.isEditMode%}
+<div style="clear:both;"></div>
+{%/if%}

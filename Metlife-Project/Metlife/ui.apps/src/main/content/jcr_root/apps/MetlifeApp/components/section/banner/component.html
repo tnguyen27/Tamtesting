@@ -1,0 +1,27 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Banner Component - Skinny/Large
+* ------------------------------------------------------------------------------ *
+%}
+
+<div class="container" data-comp-spacing="banner">
+    <div class="row wrapper in_view">
+        <div class="product-row__tile--img-tile box-shadow {%#if content.large %} large-promo-tile {% else %} skinny-promo-tile {%/if%}">
+        {%#if content.headline%}
+            {%#if content.large %}
+                {%#if content.left %}
+                    {%> leftbannerLarge %}
+                {%else%}
+                    {%> rightBannerLarge %}
+                {%/if%}
+            {%else%}
+                {%> leftbanner %}
+            {%/if%}
+        {%/if%}
+        </div>
+    </div>
+</div>
+
+{%#if page.isEditMode%}
+    <div style="clear:both;"></div>
+{%/if%}

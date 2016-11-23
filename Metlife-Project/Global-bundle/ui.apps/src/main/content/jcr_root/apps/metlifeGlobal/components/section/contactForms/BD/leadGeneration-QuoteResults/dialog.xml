@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="500"
+    title="Static contact -bd configurations"
+    width="700"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <placeholders
+                jcr:primaryType="cq:Panel"
+                title="Placeholders">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <firstName
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="First Name"
+                        fieldLabel="Name"
+                        name="./firstName"
+                        xtype="textfield"/>
+                    <lastName
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Last Name"
+                        fieldLabel="Last name"
+                        name="./lastName"
+                        xtype="textfield"/>
+                    <middleName
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Middle Name"
+                        fieldLabel="Middle Name"
+                        name="./middleName"
+                        xtype="textfield"/>
+                    <city
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="City"
+                        fieldLabel="City"
+                        name="./district"
+                        xtype="textfield"/>
+                    <email
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Email"
+                        fieldLabel="Email"
+                        name="./email"
+                        xtype="textfield"/>
+                    <phone
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Phone ( 123-123-1234)"
+                        fieldLabel="Phone"
+                        name="./phone"
+                        xtype="textfield"/>
+                    <termsandconditions
+                        jcr:primaryType="cq:Widget"
+                        collapsed="{Boolean}false"
+                        collapsible="{Boolean}false"
+                        title="Terms &amp; Conditions Configuration"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <t_x0026_c-label
+                                jcr:primaryType="nt:unstructured"
+                                allowBlank="true"
+                                fieldLabel="Terms and Conditions Label"
+                                name="./termsAndConditions"
+                                xtype="textfield"/>
+                            <link-url
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="true"
+                                fieldLabel="Link URL"
+                                linkPattern="\{0}.html"
+                                name="./linkurl"
+                                rootPath="/content/metlife/bd"
+                                rootTitle="MetLife"
+                                xtype="pathfield"/>
+                            <opening
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="_blank"
+                                fieldLabel="Open in"
+                                name="./viewall"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <this-page
+                                        jcr:primaryType="nt:unstructured"
+                                        text="This page"
+                                        value="_self"/>
+                                    <new-page
+                                        jcr:primaryType="nt:unstructured"
+                                        text="New page"
+                                        value="_blank"/>
+                                </options>
+                            </opening>
+                        </items>
+                    </termsandconditions>
+                </items>
+            </placeholders>
+            <labels
+                jcr:primaryType="cq:Panel"
+                title="Labels">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Ask us to call you"
+                        fieldLabel="Title"
+                        name="./title"
+                        xtype="textfield"/>
+                    <subtitle
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="All fields are required"
+                        fieldLabel="Subtitle"
+                        name="./subtitle"
+                        xtype="textfield"/>
+                    <buttonLabel
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Enviar"
+                        fieldLabel="Button label"
+                        name="./buttonLabel"
+                        xtype="textfield"/>
+                    <processLabel
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Processing"
+                        fieldLabel="Process Text Label"
+                        name="./processTxt"
+                        xtype="textfield"/>
+                    <thanksMessage
+                        jcr:primaryType="cq:Widget"
+                        collapsed="{Boolean}false"
+                        collapsible="{Boolean}true"
+                        title="Configuration for thank you messages after submitted"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <thankYouMessageTitle
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="Thank you for contacting us."
+                                fieldLabel="Title"
+                                name="./thankYouMessageTitle"
+                                xtype="textfield"/>
+                            <thankYouMessageContent
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="Someone from MetLife will be reaching shortly to provide you help."
+                                fieldLabel="Subtitle"
+                                name="./thankYouMessageContent"
+                                xtype="textfield"/>
+                        </items>
+                    </thanksMessage>
+                    <errorsMessage
+                        jcr:primaryType="cq:Widget"
+                        collapsed="{Boolean}false"
+                        collapsible="{Boolean}true"
+                        title="Configuration for error messages after submitted"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <errorMessageTitle
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="Error!"
+                                fieldLabel="Title"
+                                name="./errorMessageTitle"
+                                xtype="textfield"/>
+                            <errorMessageContent
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="An error occured while submitting your information."
+                                fieldLabel="Subtitle"
+                                name="./errorMessageContent"
+                                xtype="textfield"/>
+                        </items>
+                    </errorsMessage>
+                </items>
+            </labels>
+        </items>
+    </items>
+</jcr:root>

@@ -1,0 +1,557 @@
+.xk-placeholder {
+    background:#DDD;
+    border: 2px solid #A2A0A0;
+    color:#2377C5;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    padding: 10px;
+}
+
+/**
+Monthly Rates Container
+**/
+
+.monthly-rates.xk-placeholder:before {
+    content: 'Empty Monthly Rates Component';
+    font-size: 15px;
+}
+.monthly-rates.xk-placeholder {
+    min-height: 150px;
+    width: 85%;
+}
+
+.cq-wcm-edit  div.monthly_rates_component div[class*='cq-placeholder-'] {
+    display: none !important;
+}
+
+.generic-table.xk-placeholder:before {
+    content: 'Empty Generic Table Component';
+    font-size: 15px;
+    display: table;
+}
+.generic-table.xk-placeholder {
+    min-height: 150px;
+    width: 100%;
+
+}
+
+.cq-wcm-edit  div.generic_table_component div[class*='cq-placeholder-'] {
+    display: none !important;
+}
+
+.faq-with-filter-component.xk-placeholder:before {
+    content: 'Empty FAQ with filter';
+    font-size: 15px;
+}
+.faq-with-filter-component.xk-placeholder {
+    min-height: 150px;
+    width: 85%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: center;
+}
+.faq-with-filter-component.xk-placeholder > div {
+    display:none;
+}
+
+/**
+Pressroom media contacts
+**/
+
+.pressroom-media-contact.xk-placeholder:before {
+    content: 'Empty Media Contacts';
+    font-size: 15px;
+}
+.pressroom-media-contact.xk-placeholder {
+    height: 100px;
+    width: 1040px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: center;
+}
+.pressroom-media-contact.xk-placeholder > div{
+    display: none;
+}
+
+/**
+Pressroom media contact row
+**/
+
+.pressroom-media-contact-row.xk-placeholder:before {
+    content: 'Empty Media Contact Row';
+    font-size: 15px;
+}
+.pressroom-media-contact-row.xk-placeholder {
+    height: 100px;
+    width: 1040px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: center;
+}
+
+/*
+    File Download Component
+*/
+.press-file-download.xk-placeholder:before {
+    content: 'File Download Component';
+    font-size: 16px;
+    display: table;
+}
+.press-file-download.xk-placeholder{
+    height: 70px;
+    width: 1040px;
+}
+
+.press-file-download.xk-placeholder > div{
+    display: none;
+}
+
+/*
+    Back Link Component
+*/
+.back-link.xk-placeholder:before {
+    content: 'Empty Back Link Component';
+    font-size: 16px;
+    display: table;
+}
+
+.back-link.xk-placeholder{
+    height: 100px;
+    width: 1040px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: center;
+}
+.back-link.xk-placeholder > div{
+    display: none;
+}
+
+/*
+    Video Component
+*/
+.pressroom-video.xk-placeholder:before {
+    content: 'Empty Video Component';
+    font-size: 16px;
+    display: table;
+}
+.pressroom-video.xk-placeholder{
+    height: 426px;
+    width: 1040px;
+}
+
+.pressroom-video.xk-placeholder > div{
+    display: none;
+}
+
+/*
+    Image Component
+*/
+.pressroom-image.xk-placeholder:before {
+    content: 'Empty Image Component';
+    font-size: 16px;
+    display: table;
+}
+.pressroom-image.xk-placeholder{
+    height: 426px;
+    width: 1040px;
+}
+
+.pressroom-image.xk-placeholder > div{
+     display: none;
+}
+
+/*
+    Disclaimer Component for Pressroom
+*/
+.disclaimer-article.xk-placeholder:before {
+    content: 'Empty Disclaimer Component';
+    font-size: 16px;
+    display: table;
+}
+.disclaimer-article.xk-placeholder{
+    height: 168px;
+    width: 1040px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: center;
+}
+.disclaimer-article.xk-placeholder > div{
+    display: none;
+}
+
+/*
+    Press Article Component for Pressroom
+*/
+.press-article.xk-placeholder:before {
+    content: 'Empty Press Article Component';
+    font-size: 16px;
+    display: table;
+}
+.press-article.xk-placeholder{
+    height: 168px;
+    width: 1040px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: center;
+}
+.press-article.xk-placeholder > div{
+    display: none;
+}
+
+/*
+    Contact Component
+*/
+.pressroom-contact.xk-placeholder:before {
+    content: 'Empty Contact Component';
+    font-size: 16px;
+    display: table;
+}
+.pressroom-contact.xk-placeholder{
+    height: 100px;
+    width: 1040px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: center;
+}
+.pressroom-contact.xk-placeholder > div{
+    display: none;
+}
+
+/*
+    Press Room Archive Search Component
+*/
+.press-room-archive.xk-placeholder:before {
+    content: 'Empty Archive Component';
+    font-size: 16px;
+    display: table;
+}
+.press-room-archive.xk-placeholder{
+    height: 100px;
+    width: 1040px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: center;
+}
+.press-room-archive.xk-placeholder > div{
+    display: none;
+}
+
+/*
+    Privacy Policies Component
+*/
+.privacy-policies-header.xk-placeholder:before {
+    content: 'Empty Privacy Policies Component';
+    font-size: 16px;
+    display: table;
+}
+.privacy-policies-header.xk-placeholder{
+    height: 100px;
+    width: 1040px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: center;
+}
+.privacy-policies-header.xk-placeholder > div{
+    display: none;
+}
+
+/*
+    Privacy Policy Description Component
+*/
+.privacy-policy-description.xk-placeholder:before {
+    content: 'Empty Privacy Policy Description Component';
+    font-size: 16px;
+    display: table;
+}
+.privacy-policy-description.xk-placeholder{
+    height: 75px;
+    width: 750px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: center;
+}
+.privacy-policy-description.xk-placeholder > div{
+    display: none;
+}
+
+/*
+    Privacy Policy Component
+*/
+.privacy-policy.xk-placeholder:before {
+    content: 'Enable Privacy Policy Component';
+    font-size: 16px;
+    display: table;
+}
+.privacy-policy.xk-placeholder{
+    height: 100px;
+    width: 750px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: center;
+}
+.privacy-policy.xk-placeholder > div{
+    display: none;
+}
+
+/*
+    404 Not Found Page Component
+*/
+.notFoundPage.xk-placeholder:before {
+    content: 'Empty 404 Component';
+    font-size: 16px;
+    display: table;
+}
+.notFoundPage.xk-placeholder{
+    height: 260px;
+    width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: center;
+}
+.notFoundPage.xk-placeholder > div{
+    display: none;
+}
+
+/*
+    Glossary Letter List Component
+*/
+.glossary-letter-list.xk-placeholder:before {
+    content: 'Glossary Letter List Component';
+    font-size: 16px;
+    display: table;
+}
+.glossary-letter-list.xk-placeholder{
+    height: 75px;
+    width: 1040px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: center;
+}
+.glossary-letter-list.xk-placeholder > div{
+    display: none;
+}
+
+/*
+    Glossary Definitions List Component
+*/
+.glossary-definitions.xk-placeholder:before {
+    content: 'Glossary Definitions List Component';
+    font-size: 16px;
+    display: table;
+}
+.glossary-definitions.xk-placeholder{
+    height: 234px;
+    width: 1040px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: center;
+}
+.glossary-definitions.xk-placeholder > div{
+    display: none;
+}
+
+/**
+    Glossary Definitions Parsys
+**/
+
+.cq-wcm-edit .glossary-parsys .new.section{
+    margin-top: 20px;
+    padding-top: -20px;
+    padding-bottom: -40px;
+
+}
+.cq-wcm-edit .glossary-parsys .new.section:after{
+    content: 'Glossary Definitions Parsys Ends';
+    line-height:20px;
+    background:#DDD;
+    color:#2377C5;
+    width: 100%;
+    font-weight: bold;
+    display:block;
+
+}
+
+/*
+    Text Video-selector
+*/
+.text-video.xk-placeholder:before {
+    content: 'Empty Text And Video Component';
+    font-size: 16px;
+    margin: 0 auto;
+}
+.text-video.xk-placeholder{
+    height: 300px;
+    width: 1040px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: center;
+}
+.text-video.xk-placeholder > div{
+    display: none;
+}
+
+/*
+    Contact Us/Section Header Container
+*/
+.contactus-section-header-container.xk-placeholder:before {
+    content: 'Empty Contact Us Container';
+    font-size: 16px;
+    display: table;
+}
+.contactus-section-header-container.xk-placeholder{
+    height: 426px;
+    width: 100%;
+    text-align: center;
+}
+
+.contactus-section-header-container.xk-placeholder > div{
+    display: none;
+}
+
+/*
+    Contact Us/Section Header Component
+*/
+.contactus-section-header.xk-placeholder:before {
+    content: 'Empty Contact';
+    font-size: 16px;
+    display: table;
+}
+.contactus-section-header.xk-placeholder{
+    height: 200px;
+    width: 200px;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: center;
+}
+
+.contactus-section-header.xk-placeholder > div{
+    display: none;
+}
+
+.cq-wcm-edit .section .contactus-section-header-container {
+    padding-right: 0px;
+
+}
+
+/* Placeholder for RTF General Content Component */
+.rtf-general-content.xk-placeholder:before {
+    content: 'Empty: RTF General Content Component';
+    font-size: 16px;
+}
+.rtf-general-content.xk-placeholder{
+    height: 100px;
+    width: 100%;
+    text-align: center;
+}
+
+/*
+General content component
+*/
+
+.general-content.xk-placeholder:before {
+    content: 'Empty General Content Component';
+    font-size: 16px;
+    padding-left: 65px;
+}
+
+.general-content .expanded.clearfix:before {
+    content: 'Default expanded content start';
+    width: 100%;
+    font-weight: bold;
+}
+.general-content .expanded.clearfix:after {
+    content: 'Default expanded content end';
+    width: 100%;
+    font-weight: bold;
+}
+
+.general-content .unexpanded.clearfix:before {
+    content: 'Default hidden content start';
+    width: 100%;
+    font-weight: bold;
+}
+.general-content .unexpanded.clearfix:after {
+    content: 'Default hidden content end';
+    width: 100%;
+    font-weight: bold;
+}
+
+/*
+    Contact Us Directory Component
+*/
+.contact-us-directory.xk-placeholder:before {
+    content: 'Empty Directory Component';
+    font-size: 16px;
+    margin: 0 auto;
+}
+.contact-us-directory.xk-placeholder{
+    height: 300px;
+    width: 1040px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: center;
+}
+.contact-us-directory.xk-placeholder > div{
+    display: none;
+}
+
+/* Placeholder for Sitemap Component */
+.sitemap.xk-placeholder:before {
+    content: 'Empty: Sitemap Component';
+    font-size: 16px;
+}
+.sitemap.xk-placeholder{
+    height: 90px;
+    width: 90%;
+    text-align: center;
+}
+
+/* Forms library  */
+.forms-library.xk-placeholder:before {
+    content: 'Empty Forms library';
+    font-size: 16px;
+}
+.forms-library.xk-placeholder > div {
+    display: none;
+}
+
+.forms-library-category-title.xk-placeholder:before {
+    content: 'Forms library category title and description empty';
+    font-size: 16px;
+}
+.forms-library-category-others.xk-placeholder:before {
+    content: 'Forms library category other information empty';
+    font-size: 16px;
+}

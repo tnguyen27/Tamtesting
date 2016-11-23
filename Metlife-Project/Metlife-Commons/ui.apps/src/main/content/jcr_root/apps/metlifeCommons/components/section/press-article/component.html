@@ -1,0 +1,23 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Press Article Component
+* ------------------------------------------------------------------------------ *
+%}
+
+<div class="container" data-comp-spacing="press-article">
+	<div class="row wrapper">
+		{%#if content.articlePrimaryHeading%}
+		    <h2 class="article-title">
+		        {%page.articleTitle%}
+		    </h2>
+		{%/if%}
+		{%#if content.articleSubtitle%}
+		    <p class="article-lead">
+		        {%content.articleSubtitle%}
+		    </p>
+		{%/if%}
+		<h3 class="article-date">{%page.location%} {%page.publishedDate%}</h3>
+		
+		{%{content.bodyTextArticle}%}
+	</div>
+</div>

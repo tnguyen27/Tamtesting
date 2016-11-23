@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="600"
+    title="Form configuration"
+    width="700"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <configuration
+                jcr:primaryType="cq:Panel"
+                title="Configuration">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <image-title
+                        jcr:primaryType="nt:unstructured"
+                        anchor="98%"
+                        fieldLabel="Image Title"
+                        name="./imageTitle"
+                        xtype="textfield"/>
+                    <image-subtitle
+                        jcr:primaryType="nt:unstructured"
+                        anchor="98%"
+                        fieldLabel="Image Subtitle"
+                        name="./imageSubTitle"
+                        xtype="textfield"/>
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        anchor="98%"
+                        fieldLabel="Title"
+                        name="./title"
+                        xtype="textfield"/>
+                    <sub-title
+                        jcr:primaryType="nt:unstructured"
+                        anchor="98%"
+                        fieldLabel="Subtitle"
+                        name="./subTitle"
+                        xtype="textfield"/>
+                    <contact-disclaimer
+                        jcr:primaryType="nt:unstructured"
+                        anchor="98%"
+                        fieldLabel="Contact Disclaimer"
+                        name="./contactDisclaimer"
+                        xtype="richtext"/>
+                    <thanks-message
+                        jcr:primaryType="nt:unstructured"
+                        anchor="98%"
+                        fieldLabel="Thanks Message"
+                        name="./thanksMessage"
+                        xtype="textfield"/>
+                    <thanks-sub-message
+                        jcr:primaryType="nt:unstructured"
+                        anchor="98%"
+                        fieldLabel="Thanks Submessage"
+                        name="./thanksSubMessage"
+                        xtype="textfield"/>
+                    <error-message
+                        jcr:primaryType="nt:unstructured"
+                        anchor="98%"
+                        fieldLabel="Error Message"
+                        name="./errorMessage"
+                        xtype="textfield"/>
+                    <error-submessage
+                        jcr:primaryType="nt:unstructured"
+                        anchor="98%"
+                        fieldLabel="Error Submessage"
+                        name="./errorSubMessage"
+                        xtype="textfield"/>
+                    <contact-details
+                        jcr:primaryType="nt:unstructured"
+                        anchor="98%"
+                        fieldLabel="Contact Details"
+                        name="./contactDetails"
+                        xtype="richtext"/>
+                    <image-alt
+                        jcr:primaryType="nt:unstructured"
+                        anchor="98%"
+                        fieldLabel="Image Alt"
+                        name="./imageAlt"
+                        xtype="textfield"/>
+                </items>
+            </configuration>
+            <image
+                jcr:primaryType="cq:Widget"
+                allowBlank="{Boolean}false"
+                cropParameter="./imageCrop"
+                ddGroups="media"
+                fileNameParameter="./fileName"
+                fileReferenceParameter="./fileReference"
+                mapParameter="./imageMap"
+                name="./file"
+                requestSuffix=".img.png"
+                rotateParameter="./imageRotate"
+                title="Image"
+                xtype="html5smartimage"/>
+        </items>
+    </items>
+</jcr:root>

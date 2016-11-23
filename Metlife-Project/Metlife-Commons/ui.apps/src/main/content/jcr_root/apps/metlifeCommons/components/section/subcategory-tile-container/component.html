@@ -1,0 +1,17 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Sub Category Tile Container Component
+* ------------------------------------------------------------------------------ *
+%}
+
+<div class="container" data-comp-spacing="subcategory-tile-container">
+    <div class="row wrapper product-module in_view">
+        {%#each list.tiles%}
+            {%#include title as="MetlifeApp/components/section/subcategory-tile"%}{%/include%}
+        {%/each%}
+    </div>
+</div>
+
+{%#if page.isEditMode%}
+<div style="clear:both;"></div>
+{%/if%}

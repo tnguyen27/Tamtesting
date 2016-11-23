@@ -1,0 +1,124 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Product Card Component
+* ------------------------------------------------------------------------------ *
+%}
+
+<div class="container" data-comp-spacing="product-card-tile">
+    <div class="row wrapper in_view">
+        <div class="product-card">
+            {%#if content.imagePath%}
+                {%#if content.secondImagePath%}
+                    <div class="title text-center product-card__img bg-brand-1st white"
+                         data-backgroundmobile-src="{%content.secondImagePath%}"
+                         data-backgrounddesktop-src="{%content.imagePath%}">
+                    </div>
+                {%else%}
+                    <div class="title text-center product-card__img bg-brand-1st white"
+                         data-backgroundmobile-src="{%content.imagePath%}" data-backgrounddesktop-src="{%content.imagePath%}">
+                    </div>
+                {%/if%}
+            {%else%}
+                <div class="title text-center bg-brand-1st white ">
+                    <h3>{% content.productTitle%}</h3>
+                </div>
+            {%/if%}
+            <div class="content">
+                <div class="content-body">
+                    <span class="hidden-xs intro">{%content.productIntro%}</span>
+                    {%#if content.productTextInputLabel %}
+                        <div class="company-search-container">
+                            <p class="company-search-label"><b>{%content.productTextInputLabel%}</b></p>
+                            <div class="company-search-input-container">
+                                <input type="search" id="companyName" class="comapny-name-search"
+                                       placeholder="{%content.productTextInputPlaceholder%}">
+                                <button class="btn-brand-2nd" type="submit"
+                                        onclick="getCode(document.getElementById('companyName').value);">
+                                    {%content.productInputButtonLabel%}
+                                </button>
+                                <div class="shadow" id="shadow">
+                                    <div class="output" id="output">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {%/if%}
+                    {%{content.productContent}%}
+                    {%#if content.productReadFaqsLabel %}
+                        <a class="hidden-xs read-more"
+                           href="#"
+                           id="mobile-{%content.productContentButtonLinkId%}"><strong>{%content.productReadFaqsLabel%}</strong></a>
+                    {%/if%}
+                    {%#if content.productContentButtonLabel %}
+                        <div class="content-body__action">
+                            <a href="{%content.productContentButtonLink%}"
+                               class="btn-brand-2nd"
+                               target="{%content.target%}"
+                               id="{%content.productContentButtonLinkId%}">{%content.productContentButtonLabel%}</a>
+                        </div>
+                    {%/if%}
+                </div>
+                {%#if content.productExpandLabel%}
+                    <div class="expand-open-close">
+                        <div class="expand-content">
+                            <span class="expand-content__intro">{%content.productExpandedIntroLabel%}</span>
+                            {%{content.productExpandedContent}%}
+                        </div>
+                        <div class="expand-open hidden-xs">
+                            <svg class="icon icon-arrow-down">
+                                <use xlink:href="/static/images/icons-metlife.svg#icon-arrow-down"></use>
+                            </svg>
+                            <span>{%content.productExpandLabel%}</span>
+                        </div>
+                        <div class="expand-close hidden-xs">
+                            <svg class="icon icon-arrow-up">
+                                <use xlink:href="/static/images/icons-metlife.svg#icon-arrow-up"></use>
+                            </svg>
+                            <span>{%content.productCloseLabel%}</span>
+                        </div>
+                    </div>
+                {%/if%}
+            </div>
+            {%#if content.productActionButtonLabel %}
+                <div class="action text-center">
+                    <p>{%{content.productActionTopText}%}</p>
+                    <a class="btn-brand-2nd table"
+                       href="{%content.productActionButtonLink%}"
+                       target="{%content.targetButton%}"
+                       id="{%content.productActionButtonLinkId%}">{%content.productActionButtonLabel%}</a>
+                    {%#if content.productActionBottomText %}
+                        {%#if content.productActionBottomLink %}
+                            <p>
+                                <a href="{%content.productActionBottomLink%}"
+                                   target="{%content.targetBottom%}"
+                                   id="{%content.productActionBottomLinkId%}">{%content.productActionBottomText%}</a>
+                            </p>
+                        {%else%}
+                            <p>{%content.productActionBottomText%}</p>
+                        {%/if%}
+                    {%/if%}
+                    {%#unless content.isLivePersonCall %}
+                        <a class="btn-brand-1st table"
+                           id="{%content.productActionSecondButtonLinkId%}"
+                           href="{%content.productActionSecondButtonLink%}" target="{%content.targetSecond%}"><span>{%content.productActionSecondButtonLabel%}</span>
+                            <svg class="icon icon-chat">
+                                <use xlink:href="/static/images/icons-metlife.svg#icon-chat"></use>
+                            </svg>
+                        </a>
+                    {%/unless%}
+                    {%#unless content.isLivePersonChat %}
+                        <a class="btn-brand-1st table"
+                           id="{%content.productActionThirdButtonLinkId%}"
+                           href="{%content.productActionThirdButtonLink%}" target="{%content.targetThird%}"><span>{%content.productActionThirdButtonLabel%}</span>
+                            <svg class="icon icon-chat">
+                                <use xlink:href="/static/images/icons-metlife.svg#icon-chat"></use>
+                            </svg>
+                        </a>
+                    {%/unless%}
+                    <div id="{%content.callLivePerson%}"></div>
+                    <div id="{%content.chatLivePerson%}"></div>
+                </div>
+            {%/if%}
+        </div>
+    </div>
+</div>

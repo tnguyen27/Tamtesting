@@ -1,0 +1,27 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Mega Menu Configuration Component
+* ------------------------------------------------------------------------------ *
+%}
+
+<div class="xk-container">
+<div class="xk-title">Mega Menu Configurations</div>
+<div class="xk-block">
+    <span class="xk-subtitle">First Row</span>
+    <b>Columns</b><br/>
+    {%#each content.numberColumnsFirstRowIteration%}
+        {%#include this as="MetlifeApp/components/section/configurations/megaMenu/column"%}{%/include%}
+    {%/each%}
+</div>
+<div class="xk-block">
+    <span class="xk-subtitle">Second Row</span>
+    <b>Columns</b><br/>
+    {%#each content.numberColumnsSecondRowIteration%}
+        {%#include this as="MetlifeApp/components/section/configurations/megaMenu/column"%}{%/include%}
+    {%/each%}
+    <b>Promos</b><br/>
+    {%#each content.numberPromosSecondRowIteration%}
+        {%#include this as="MetlifeApp/components/section/configurations/megaMenu/promo"%}{%/include%}
+    {%/each%}
+</div>
+</div>

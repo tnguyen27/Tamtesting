@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="400"
+    title="Video"
+    width="800"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <video
+                jcr:primaryType="cq:Panel"
+                title="Video">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <brightcove-video-id
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="false"
+                        fieldDescription="Enter the video id for brightcove. (eg: 3891257518001 )"
+                        fieldLabel="Brightcove video ID"
+                        maxLength="150"
+                        name="./brightCoveVideoId"
+                        xtype="textfield"/>
+                    <brightcove-video-account
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="Enter the video account for brightcove. (eg: 64298592001 )"
+                        fieldLabel="Brightcove video account"
+                        hidden="{Boolean}false"
+                        item-id="3-items"
+                        maxLength="150"
+                        name="./brightcovevideoaccount"
+                        xtype="textfield"/>
+                    <isBrightcove
+                        jcr:primaryType="nt:unstructured"
+                        name="./isBrightcove"
+                        xtype="hidden"/>
+                    <video-description
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="Enter the video description."
+                        fieldLabel="Video Description"
+                        name="./videoDescription"
+                        xtype="textarea"/>
+                    <video-duration
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="Enter the video duration. (eg: 1:23)"
+                        fieldLabel="Video Duration"
+                        name="./videoDuration"
+                        xtype="textfield"/>
+                </items>
+            </video>
+        </items>
+    </items>
+</jcr:root>

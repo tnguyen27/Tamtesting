@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="500"
+    title="Product Card"
+    width="700"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <main-content
+                jcr:primaryType="cq:Panel"
+                title="Main Content">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="false"
+                        anchor="98%"
+                        fieldLabel="Title"
+                        name="./productTitle"
+                        xtype="textfield"/>
+                    <intro
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="false"
+                        anchor="98%"
+                        fieldLabel="Intro"
+                        name="./productIntro"
+                        xtype="textfield"/>
+                    <content
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="false"
+                        anchor="98%"
+                        fieldLabel="Content"
+                        name="./productContent"
+                        xtype="richtext">
+                        <rtePlugins jcr:primaryType="nt:unstructured">
+                            <subsuperscript
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                        </rtePlugins>
+                    </content>
+                    <read-faqs-label
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="true"
+                        anchor="98%"
+                        fieldLabel="Read FAQs Label"
+                        name="./productReadFaqsLabel"
+                        xtype="textfield"/>
+                    <content-button-label
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="true"
+                        anchor="98%"
+                        fieldLabel="Content Button Label"
+                        name="./productContentButtonLabel"
+                        xtype="textfield"/>
+                    <content-button-link
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="true"
+                        anchor="98%"
+                        fieldLabel="Content Button Link"
+                        linkPattern="\{0}.html"
+                        name="./productContentButtonLink"
+                        rootPath="/content/metlife"
+                        rootTitle="MetLife"
+                        xtype="pathfield"/>
+                    <link-target
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="false"
+                        anchor="95%"
+                        defaultValue="_self"
+                        fieldLabel="Open in"
+                        key="target"
+                        name="./target"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <self
+                                jcr:primaryType="nt:unstructured"
+                                text="Same Page"
+                                value="_self"/>
+                            <blank
+                                jcr:primaryType="nt:unstructured"
+                                text="New Page"
+                                value="_blank"/>
+                        </options>
+                    </link-target>
+                    <text-input-label
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="true"
+                        anchor="98%"
+                        fieldLabel="Text Input Label"
+                        name="./productTextInputLabel"
+                        xtype="textfield"/>
+                    <text-input-placeholder
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="true"
+                        anchor="98%"
+                        fieldLabel="Text Input Placeholder"
+                        name="./productTextInputPlaceholder"
+                        xtype="textfield"/>
+                    <input-button-label
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="true"
+                        anchor="98%"
+                        fieldLabel="Input Button Label"
+                        name="./productInputButtonLabel"
+                        xtype="textfield"/>
+                </items>
+            </main-content>
+            <expanded-content
+                jcr:primaryType="cq:Panel"
+                title="Expanded Content">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <expand-label
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="true"
+                        anchor="98%"
+                        fieldLabel="Expand Label"
+                        name="./productExpandLabel"
+                        xtype="textfield"/>
+                    <close-label
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="true"
+                        anchor="98%"
+                        fieldLabel="Close Label"
+                        name="./productCloseLabel"
+                        xtype="textfield"/>
+                    <expanded-intro-label
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="true"
+                        anchor="98%"
+                        fieldLabel="Expanded Intro Label"
+                        name="./productExpandedIntroLabel"
+                        xtype="textfield"/>
+                    <expanded-content
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="true"
+                        anchor="98%"
+                        fieldLabel="Expanded Content"
+                        name="./productExpandedContent"
+                        xtype="richtext">
+                        <rtePlugins jcr:primaryType="nt:unstructured">
+                            <subsuperscript
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                        </rtePlugins>
+                    </expanded-content>
+                </items>
+            </expanded-content>
+            <action
+                jcr:primaryType="cq:Panel"
+                title="Action">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <button-label
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="true"
+                        fieldLabel="Button Label"
+                        name="./productActionButtonLabel"
+                        xtype="textfield"/>
+                    <button-link
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="true"
+                        fieldLabel="Button Link"
+                        linkPattern="\{0}.html"
+                        name="./productActionButtonLink"
+                        rootPath="/content/metlife"
+                        rootTitle="MetLife"
+                        xtype="pathfield"/>
+                    <link-target-button
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="false"
+                        defaultValue="_self"
+                        fieldLabel="Open in"
+                        key="target"
+                        name="./targetButton"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <self
+                                jcr:primaryType="nt:unstructured"
+                                text="Same Page"
+                                value="_self"/>
+                            <blank
+                                jcr:primaryType="nt:unstructured"
+                                text="New Page"
+                                value="_blank"/>
+                        </options>
+                    </link-target-button>
+                    <top-text
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="true"
+                        fieldLabel="Top Text"
+                        height="100"
+                        name="./productActionTopText"
+                        xtype="richtext">
+                        <rtePlugins jcr:primaryType="nt:unstructured">
+                            <subsuperscript
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                        </rtePlugins>
+                    </top-text>
+                    <bottom-text
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="true"
+                        fieldLabel="Bottom Text"
+                        name="./productActionBottomText"
+                        xtype="textfield"/>
+                    <bottom-link
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="true"
+                        fieldLabel="Bottom Link"
+                        linkPattern="\{0}.html"
+                        name="./productActionBottomLink"
+                        rootPath="/content/metlife"
+                        rootTitle="MetLife"
+                        xtype="pathfield"/>
+                    <link-target-bottom
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="false"
+                        defaultValue="_self"
+                        fieldLabel="Open in"
+                        key="target"
+                        name="./targetBottom"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <self
+                                jcr:primaryType="nt:unstructured"
+                                text="Same Page"
+                                value="_self"/>
+                            <blank
+                                jcr:primaryType="nt:unstructured"
+                                text="New Page"
+                                value="_blank"/>
+                        </options>
+                    </link-target-bottom>
+                    <buttonCall
+                        jcr:primaryType="cq:Widget"
+                        collapsed="{Boolean}false"
+                        collapsible="{Boolean}true"
+                        title="Button Call Configuration"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <isLivePersonCall
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Is Live Person Button"
+                                name="./isLivePersonCall"
+                                type="checkbox"
+                                xtype="selection">
+                                <listeners
+                                    jcr:primaryType="nt:unstructured"
+                                    loadcontent="function(field, record, path) {Metlife.Components.ProductCardTile.loadContent(field, record, path);}"
+                                    selectionchanged="function(selection, value, isChanged) { Metlife.Components.ProductCardTile.selectionChanged(selection, value, isChanged);}"/>
+                            </isLivePersonCall>
+                            <second-button-label
+                                jcr:primaryType="nt:unstructured"
+                                allowBlank="true"
+                                fieldLabel="Second Button Label"
+                                itemId="productActionSecondButtonLabel"
+                                name="./productActionSecondButtonLabel"
+                                xtype="textfield"/>
+                            <second-button-link
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="true"
+                                fieldLabel="Second Button Link"
+                                itemId="productActionSecondButtonLink"
+                                linkPattern="\{0}.html"
+                                name="./productActionSecondButtonLink"
+                                rootPath="/content/metlife"
+                                rootTitle="MetLife"
+                                xtype="pathfield"/>
+                            <link-target-second
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="false"
+                                anchor="100%"
+                                defaultValue="_self"
+                                fieldLabel="Open in"
+                                itemId="targetSecond"
+                                key="target"
+                                name="./targetSecond"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <self
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Same Page"
+                                        value="_self"/>
+                                    <blank
+                                        jcr:primaryType="nt:unstructured"
+                                        text="New Page"
+                                        value="_blank"/>
+                                </options>
+                            </link-target-second>
+                            <callLivePerson
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Call ID"
+                                itemId="callLivePerson"
+                                name="./callLivePerson"
+                                xtype="textfield"/>
+                        </items>
+                    </buttonCall>
+                    <buttonChat
+                        jcr:primaryType="cq:Widget"
+                        collapsed="{Boolean}false"
+                        collapsible="{Boolean}true"
+                        title="Button Chat Configuration"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <isLivePersonChat
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Is Live Person Button"
+                                name="./isLivePersonChat"
+                                type="checkbox"
+                                xtype="selection">
+                                <listeners
+                                    jcr:primaryType="nt:unstructured"
+                                    loadcontent="function(field, record, path) {Metlife.Components.ProductCardTileChatButton.loadContent(field, record, path);}"
+                                    selectionchanged="function(selection, value, isChanged) { Metlife.Components.ProductCardTileChatButton.selectionChanged(selection, value, isChanged);}"/>
+                            </isLivePersonChat>
+                            <third-button-label
+                                jcr:primaryType="nt:unstructured"
+                                allowBlank="true"
+                                fieldLabel="Third Button Label"
+                                itemId="productActionThirdButtonLabel"
+                                name="./productActionThirdButtonLabel"
+                                xtype="textfield"/>
+                            <third-button-link
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="true"
+                                fieldLabel="Third Button Link"
+                                itemId="productActionThirdButtonLink"
+                                linkPattern="\{0}.html"
+                                name="./productActionThirdButtonLink"
+                                rootPath="/content/metlife"
+                                rootTitle="MetLife"
+                                xtype="pathfield"/>
+                            <link-target-third
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="false"
+                                defaultValue="_self"
+                                fieldLabel="Open in"
+                                itemId="targetThird"
+                                name="./targetThird"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <self
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Same Page"
+                                        value="_self"/>
+                                    <blank
+                                        jcr:primaryType="nt:unstructured"
+                                        text="New Page"
+                                        value="_blank"/>
+                                </options>
+                            </link-target-third>
+                            <chatLivePerson
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Chat ID"
+                                itemId="chatLivePerson"
+                                name="./chatLivePerson"
+                                xtype="textfield"/>
+                        </items>
+                    </buttonChat>
+                </items>
+            </action>
+            <image
+                jcr:primaryType="cq:Widget"
+                cropParameter="./imageCrop"
+                ddGroups="[media]"
+                fileNameParameter="./fileName"
+                fileReferenceParameter="./fileReference"
+                mapParameter="./imageMap"
+                name="./file"
+                requestSuffix=".img.png"
+                rotateParameter="./imageRotate"
+                title="Desktop/Tablet Image"
+                xtype="html5smartimage"/>
+            <secondimage
+                jcr:primaryType="cq:Widget"
+                cropParameter="./secondimage/imageCrop"
+                ddGroups="media"
+                fileNameParameter="./secondimage/fileName"
+                fileReferenceParameter="./secondimage/fileReference"
+                mapParameter="./secondimage/imageMap"
+                name="./secondimage/file"
+                requestSuffix="/secondimage.img.png"
+                rotateParameter="./secondimage/imageRotate"
+                title="Mobile Image"
+                xtype="html5smartimage"/>
+            <resourcetypetab
+                jcr:primaryType="cq:Panel"
+                title="test">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <secondimageresourcetype
+                        jcr:primaryType="nt:unstructured"
+                        ignoreData="true"
+                        name="./secondimage/sling:resourceType"
+                        value="foundation/components/image"
+                        xtype="hidden"/>
+                </items>
+                <listeners
+                    jcr:primaryType="nt:unstructured"
+                    afterrender="function(t){t.findParentByType(&quot;tabpanel&quot;).hideTabStripItem(t);}"/>
+            </resourcetypetab>
+        </items>
+    </items>
+</jcr:root>

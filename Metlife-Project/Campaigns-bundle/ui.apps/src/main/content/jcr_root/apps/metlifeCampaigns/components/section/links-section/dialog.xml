@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="500"
+    title="Buttons Configuration"
+    width="700"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <configTab
+                jcr:primaryType="cq:Panel"
+                title="Configuration">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <linksList
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Links Elements"
+                        maxItems="{Long}1"
+                        name="./linksList"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            xtype="multifieldpanel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <linkLabel
+                                    jcr:primaryType="cq:Widget"
+                                    anchor="98%"
+                                    fieldLabel="Link Label"
+                                    key="linkLabel"
+                                    xtype="textfield"/>
+                                <linkValue
+                                    jcr:primaryType="cq:Widget"
+                                    anchor="98%"
+                                    fieldLabel="Link"
+                                    key="linkValue"
+                                    linkPattern="\{0}.html"
+                                    xtype="pathfield"/>
+                                <linkTarget
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="false"
+                                    anchor="98%"
+                                    defaultValue="_self"
+                                    fieldLabel="Open in"
+                                    key="target"
+                                    type="select"
+                                    xtype="selection">
+                                    <options jcr:primaryType="cq:WidgetCollection">
+                                        <self
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Same Page"
+                                            value="_self"/>
+                                        <blank
+                                            jcr:primaryType="nt:unstructured"
+                                            text="New Page"
+                                            value="_blank"/>
+                                    </options>
+                                </linkTarget>
+                            </items>
+                        </fieldConfig>
+                    </linksList>
+                    <linksListId
+                        jcr:primaryType="nt:unstructured"
+                        ignoreData="true"
+                        name="./linksList@TypeHint"
+                        value="String[]"
+                        xtype="hidden"/>
+                    <LivePersonButton
+                        jcr:primaryType="nt:unstructured"
+                        collapsed="{Boolean}false"
+                        collapsible="{Boolean}true"
+                        title="Click To Chat Button"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <enabledCTC
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Enable Click To Call"
+                                name="./enableCTCButton"
+                                type="checkbox"
+                                xtype="selection"/>
+                            <livePersonPageId
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Live Person ID"
+                                name="./livePersonPageId"
+                                xtype="textfield"/>
+                            <ctcText
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Click To Chat Button Text"
+                                name="./ctcButtonText"
+                                xtype="textfield"/>
+                        </items>
+                    </LivePersonButton>
+                </items>
+            </configTab>
+        </items>
+    </items>
+</jcr:root>

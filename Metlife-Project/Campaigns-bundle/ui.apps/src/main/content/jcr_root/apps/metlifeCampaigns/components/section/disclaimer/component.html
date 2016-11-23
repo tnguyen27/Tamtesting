@@ -1,0 +1,13 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Campaign Disclaimer
+* ------------------------------------------------------------------------------ *
+%}
+
+{%#if content.disclaimerText%}
+    <div class="container" data-comp-spacing="disclaimer">
+        <div class="row wrapper disclaimer">
+            {%{content.disclaimerText}%}
+        </div>
+    </div>
+{%/if%}

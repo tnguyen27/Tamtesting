@@ -1,0 +1,26 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Press Article Media Contact Component
+* ------------------------------------------------------------------------------ *
+%}
+
+<div class="container" data-comp-spacing="pressroom-media-contact">
+    <div class="wrapper row media-contact">
+        <div class="media-contact__list">
+            {%#if content.categories %}
+                {%#each content.categories %}
+                    <div class="media-contact__list__section">
+                        <div class="media-contact__list__section__title">
+                            {%this.category%}
+                        </div>
+                        <div class="media-contact__list__section__content">
+                            {%#each this.categories-items %}
+                                {%#include this as="metlifeCommons/components/section/pressroom-media-contact-row"%}{%/include%}
+                            {%/each%}
+                        </div>
+                    </div>
+                {%/each%}
+            {%/if%}
+        </div>
+    </div>
+</div>

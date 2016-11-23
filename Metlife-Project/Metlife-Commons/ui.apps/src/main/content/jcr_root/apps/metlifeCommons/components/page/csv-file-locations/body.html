@@ -1,0 +1,17 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* CSV File Locations - Body
+* ------------------------------------------------------------------------------ *
+%}
+
+<body>
+    <h1>Location List - {% page.title %}</h1>
+
+    {%#include "choose-file" as="metlifeCommons/components/section/choose-locations-csv-file" %}{%/include%}
+
+    <ul style="width:700px;">
+    	{%#include "locations" as="foundation/components/parsys" %}{%/include%}
+    </ul>
+</body>
+
+

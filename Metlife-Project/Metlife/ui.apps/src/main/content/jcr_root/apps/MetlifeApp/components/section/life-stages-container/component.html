@@ -1,0 +1,46 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Life Stages Container Component
+* ------------------------------------------------------------------------------ *
+%}
+
+<div class="container" data-comp-spacing="life-stages-container">
+    <div class="row wrapper divider--snoopy">
+        <h2 class="divider--snoopy__title">
+            <svg class="icon">
+                <use xlink:href="/static/images/icons-metlife.svg#icon-snoopy-1"></use>
+            </svg>
+            {% content.title %}
+        </h2>
+        <p class="divider--snoopy__copy">{% content.subTitle %}</p>
+    </div>
+    <div class="row wrapper carousel--tabs">
+        <div class="carousel slide" id="lifeStages" data-carousel="lifeStages">
+            <div class="carousel-inner">
+                {%#each list.tiles %}
+                    <div class="col-xs-12 carousel-item" data-target="{%this.index%}">
+                        {%#include title as="MetlifeApp/components/section/life-stages-tab" prefix="tab" %}{%/include%}
+                    </div>
+                {%/each%}
+            </div>
+            <a class="carousel-control left" href="#lifeStages" data-slide="prev">
+                <svg class="icon brand-4th">
+                    <use xlink:href="/static/images/icons-metlife.svg#icon-prev"></use>
+                </svg>
+                <span class="sr-only">Prev</span>
+            </a>
+            <a class="carousel-control right" href="#lifeStages" data-slide="next">
+                <svg class="icon brand-4th">
+                    <use xlink:href="/static/images/icons-metlife.svg#icon-next"></use>
+                </svg>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+        <div class="carousel--tabs__items">
+            {%#each list.tiles %}
+                {%#include title as="MetlifeApp/components/section/life-stages-card" prefix="card" %}{%/include%}
+            {%/each%}
+        </div>
+    </div>
+</div>

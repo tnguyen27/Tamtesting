@@ -1,0 +1,40 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Microsite - Additional Info Component
+* ------------------------------------------------------------------------------ *
+%}
+
+<div class="container" data-comp-spacing="additional-info">
+	<div class="row wrapper content--microsite">
+		<div class="width-80">
+			<div class="content-header text-center">
+				{%#if content.title%}
+		        	<h2>{%content.title%}</h2>
+		        {%/if%}
+		        {%#if content.subtitle%}
+		        	<p class="brand-gray-2nd">{%content.subtitle%}</p>
+		        {%/if%}
+			</div>
+			<div class="content">
+				{%{content.FPText}%}
+			</div>
+			<div class="content__action text-center">
+			    {%#if content.primaryCtaLinkText%}
+					<a href="{%content.primaryCtaLink%}" 
+						id="{%content.primaryCtaLinkId%}" 
+						target="{%content.primaryCtaTarget%}" 
+						class="btn-brand-2nd table">{%content.primaryCtaLinkText%}</a>
+			    {%/if%}
+			    {%#if content.secondaryCtaLinkText%}
+			    	<a href="{%content.secondaryCtaLink%}" 
+				    	id="{%content.secondaryCtaLinkId%}" 
+				    	target="{%content.secondaryCtaTarget%}" 
+				    	class="product-module__action">{%content.secondaryCtaLinkText%}</a>
+			    {%/if%}
+			    {%#if content.bottomText%}
+			    	<p class="content__action--copy">{%{content.bottomText}%}</p>
+			    {%/if%}
+			</div>	        
+		</div>
+	</div>
+</div>

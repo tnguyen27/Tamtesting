@@ -1,0 +1,29 @@
+{%#if global.customSitelinkSearchbox %}
+<!-- Custom Sitebox Search Script -->
+<script type="application/ld+json">
+{
+   "@context": "http://schema.org",
+   "@type": "WebSite",
+   "url": "{%global.sitelinkSearchboxURL%}",
+   "potentialAction": {
+     "@type": "SearchAction",
+     "target": "{%global.sitelinkSearchboxTarget%}{search_term}",
+     "query-input": "required name=search_term"
+   }
+}
+</script>
+{%else%}
+<!-- Default Sitebox Search script -->
+<script type="application/ld+json">
+{
+   "@context": "http://schema.org",
+   "@type": "WebSite",
+   "url": "https://www.metlife.com",
+   "potentialAction": {
+     "@type": "SearchAction",
+     "target": "https://www.metlife.com/searchresults?query={search_term}",
+     "query-input": "required name=search_term"
+   }
+}
+</script>
+{%/if%}

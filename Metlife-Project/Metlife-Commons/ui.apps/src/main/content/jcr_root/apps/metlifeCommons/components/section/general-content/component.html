@@ -1,0 +1,44 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Generic Content Component
+* ------------------------------------------------------------------------------ *
+%}
+
+<div class="container" data-comp-spacing="general-content">
+	<div class="row wrapper general-content">
+		<div class="width-80">
+           	<div class="expanded clearfix">
+				{%#include "expanded" as="foundation/components/parsys"%}{%/include%}
+               </div>
+               {%#if content.enableExpandContent%}
+                   <div class="unexpanded clearfix">
+                       {%#include "unexpanded" as="foundation/components/parsys"%}{%/include%}
+                   </div>
+			{%/if%}
+			{%#if content.enableExpandContent%}
+				<div class="expand_button">
+					<div class="expand_button_open">
+						<div>
+							<span>
+								<svg class="icon icon-arrow-down">
+									<use xlink:href="/static/images/icons-metlife.svg#icon-arrow-down"></use>
+								</svg>
+							</span>
+							<span>{%content.expandLinkLabel%}</span>
+						</div>
+					</div>
+					<div class="expand_button_close hidden">
+						<div>
+							<span>
+								<svg class="icon icon-arrow-up">
+									<use xlink:href="/static/images/icons-metlife.svg#icon-arrow-up"></use>
+								</svg>
+							</span>
+							<span>{%content.collapseLinkLabel%}</span>
+						</div>
+					</div>
+				</div>
+			{%/if%}
+		</div>
+	</div>
+</div>

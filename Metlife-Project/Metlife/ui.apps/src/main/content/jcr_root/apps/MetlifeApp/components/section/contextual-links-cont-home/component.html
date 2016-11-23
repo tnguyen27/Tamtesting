@@ -1,0 +1,19 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Home Page Contextual Links Container (Global)
+* ------------------------------------------------------------------------------ *
+%}
+
+<div class="container" data-comp-spacing="contextual-links-cont-home">
+    <div class="row wrapper more-content">
+        <h2 class="more-content__title hidden-xs">{% content.title %}</h2>
+        {%#each content.contextualLinks %}
+            <div class="more-content__section">
+                <img  alt="{% altText %}" src="{% contextualLinkImageSpooled %}" class="img-responsive {%#unless contextualLinkImage %} cq-image-placeholder {%/unless%}">
+                <a href="{% link %}" 
+                id="{%elementId%}"
+                target="{% this.target %}">{% description %}</a>
+            </div>
+        {%/each%}
+    </div>
+</div>

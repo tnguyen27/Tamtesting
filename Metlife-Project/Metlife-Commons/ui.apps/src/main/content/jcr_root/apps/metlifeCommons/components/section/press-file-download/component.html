@@ -1,0 +1,25 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* File Download Component for Press Article Template
+* ------------------------------------------------------------------------------ *
+%}
+
+<div class="container" data-comp-spacing="press-file-download">
+    <div class="row video-text__document">
+	    <div class="wrapper--news-article">
+		    {%#if content.pdflinkIcon%}
+				<img src="/static/images/{% content.pdflinkIcon %}"
+		             data-src="/static/images/{% content.pdflinkIcon %}"
+		             alt="{% content.altText %}">
+		    {%/if%}
+	        <div class="video-text__document__descriptor video-text__document__descriptor--full">
+	            {%#each content.pdflinkSpooled %}
+	                <a href="{% this %}"
+	                   target="{%content.target%}"
+	                   id="{%content.pdflinkId%}">{%content.pdflinkTitle%}</a>
+	                <div>( {%content.pdflinkType%} - {%content.pdflinkSize%} )</div>
+	            {%/each%}
+	        </div>
+	    </div>
+	</div>
+</div>

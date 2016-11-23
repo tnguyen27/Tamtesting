@@ -1,0 +1,22 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Glossary Container Component
+* ------------------------------------------------------------------------------ *
+%}
+
+<div class="container" data-comp-spacing="glossary-container">
+	{%#include "letter-list" as="metlifeCommons/components/section/glossary-letter-list"%}{%/include%}
+    <div class="row wrapper">
+		<div class="width-80">
+			<div class="glossary">
+			    {%#if page.isEditOrDesignMode%}
+			        <div style="width:1040px; margin-right: auto; margin-left: auto;">
+			    {%/if%}
+			        {%#include "glossary-parsys" as="metlifeCommons/components/section/glossaryDefinitionsParsys/parsys"%}{%/include%}
+			    {%#if page.isEditOrDesignMode%}
+			        </div>
+			    {%/if%}
+		    </div>
+		</div>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+{%!
+* ------------------------------------------------------------------------------ *
+* Microsite HTML Base - Header
+* ------------------------------------------------------------------------------ *
+%}
+
+<div class="container ">
+    <div class="row wrapper microsite-header">
+        <div class="megamenu-trigger" title="MENU" data-target="micrositemenu">
+            <svg class="icon icon-menu megamenu-trigger__icon microsite-trigger__icon">
+                <use xlink:href="/static/images/icons-metlife.svg#icon-menu"></use>
+            </svg>
+            <svg class="icon icon-close megamenu-trigger__icon microsite-trigger__icon--close">
+                <use xlink:href="/static/images/icons-metlife.svg#icon-close"></use>
+            </svg>
+            <span class="megamenu-trigger__label microsite-trigger__label">MENU</span>
+        </div>
+        <div class="microsite-header__logos">
+            <a href="{%page.logoLinkMetLife%}"
+               class="microsite-header__logos__img"
+               id="{%page.logoLinkMetLifeId%}" target="{%page.targetMetlife%}">
+                <h1>
+                    <img src="{%page.logoMetlifeImagePath%}"
+                         alt="{%page.logoAltTextMetLife%}">
+                </h1>
+            </a>
+            {%#if page.activeLogoOther%}
+                <a href="{%page.logoLinkOther%}"
+                   class="microsite-header__logos__img"
+                   id="{%page.logoLinkOtherId%}" target="{%page.targetOther%}">
+                    <img src="{%page.logoOtherImagePath%}"
+                         alt="{%page.logoAltTextOther%}">
+                </a>
+            {%/if%}
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    xk_placeholderTriggers="[content.cnt1]"
+    xk_resourcePath="[content.cnt1>>jcr:content/contact,content.cnt2>>jcr:content/contact,content.cnt3>>jcr:content/contact,content.cnt4>>jcr:content/contact]"/>

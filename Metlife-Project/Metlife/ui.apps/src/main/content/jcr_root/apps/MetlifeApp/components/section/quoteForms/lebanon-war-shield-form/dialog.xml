@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Lebanon War Shield Form"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Tab 1">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <ageGroup
+                        jcr:primaryType="cq:Widget"
+                        collapsed="true"
+                        collapsible="true"
+                        title="Age"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <Placeholder
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Age Placeholder"
+                                name="./agePlaceholder"
+                                xtype="textfield"/>
+                            <select
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="Select the list to be used on the field."
+                                fieldLabel="List"
+                                name="./ageList"
+                                rootPath="/etc/acs-commons/lists/metlife/quote-tool"
+                                xtype="pathfield"/>
+                            <errorLabel
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Error Label"
+                                name="./ageErrorLabel"
+                                xtype="textfield"/>
+                        </items>
+                    </ageGroup>
+                    <occupationGroup
+                        jcr:primaryType="cq:Widget"
+                        collapsed="true"
+                        collapsible="true"
+                        title="Occupation"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <Placeholder
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Placeholder"
+                                name="./occupationPlaceholder"
+                                xtype="textfield"/>
+                            <select
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="Select the list to be used on the field."
+                                fieldLabel="Occupation List"
+                                name="./occupationList"
+                                rootPath="/etc/acs-commons/lists/metlife/quote-tool"
+                                xtype="pathfield"/>
+                            <errorLabel
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Error Label"
+                                name="./OccupationErrorLabel"
+                                xtype="textfield"/>
+                        </items>
+                    </occupationGroup>
+                    <unitGroup
+                        jcr:primaryType="cq:Widget"
+                        collapsed="true"
+                        collapsible="true"
+                        title="Units"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <Placeholder
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Placeholder"
+                                name="./unitPlaceholder"
+                                xtype="textfield"/>
+                            <select
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="Select the list to be used on the field."
+                                fieldLabel="Unit List"
+                                name="./unitList"
+                                rootPath="/etc/acs-commons/lists/metlife/quote-tool"
+                                xtype="pathfield"/>
+                            <errorLabel
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Error Label"
+                                name="./unitErrorLabel"
+                                xtype="textfield"/>
+                        </items>
+                    </unitGroup>
+                    <dataproduct
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="leb_warShield"
+                        name="./dataproduct"
+                        value="leb_warShield"
+                        xtype="hidden"/>
+                    <pathtoresults
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="false"
+                        anchor="95%"
+                        fieldLabel="Path to results"
+                        linkPattern="\{0}.html"
+                        name="./submit_btn_link"
+                        rootPath="/content/metlife"
+                        rootTitle="MetLife"
+                        xtype="pathfield"/>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>

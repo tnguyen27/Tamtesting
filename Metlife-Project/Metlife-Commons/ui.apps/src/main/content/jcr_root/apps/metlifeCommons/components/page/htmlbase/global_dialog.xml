@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="600"
+    title="Global Properties"
+    width="950"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <A_header
+                jcr:primaryType="cq:Panel"
+                path="/apps/MetlifeApp/components/page/htmlbase/global_dialog/items/items/header.infinity.json"
+                xtype="cqinclude"/>
+            <B_footer
+                jcr:primaryType="cq:Panel"
+                path="/apps/MetlifeApp/components/page/htmlbase/global_dialog/items/items/footer.infinity.json"
+                xtype="cqinclude"/>
+            <D_countries-and-languages
+                jcr:primaryType="cq:Panel"
+                path="/apps/MetlifeApp/components/page/htmlbase/global_dialog/items/items/countries-and-languages.infinity.json"
+                xtype="cqinclude"/>
+            <E_cookieBannerConfiguration
+                jcr:primaryType="cq:Panel"
+                path="/apps/MetlifeApp/components/page/htmlbase/global_dialog/items/items/cookieBanner.infinity.json"
+                xtype="cqinclude"/>
+            <G_footer-farm-links
+                jcr:primaryType="cq:Panel"
+                path="/apps/MetlifeApp/components/page/htmlbase/global_dialog/items/items/footer-farms-links.infinity.json"
+                xtype="cqinclude"/>
+            <I_scroll-for-more
+                jcr:primaryType="cq:Panel"
+                path="/apps/MetlifeApp/components/page/htmlbase/global_dialog/items/items/scroll-for-more.infinity.json"
+                xtype="cqinclude"/>
+            <vendor-scripts
+                jcr:primaryType="cq:Widget"
+                path="/apps/MetlifeApp/components/page/htmlbase/vendorscripts.infinity.json"
+                xtype="cqinclude"/>
+            <J_form-config
+                jcr:primaryType="cq:Panel"
+                path="/apps/MetlifeApp/components/page/htmlbase/global_dialog/items/items/form-config.infinity.json"
+                xtype="cqinclude"/>
+        </items>
+    </items>
+</jcr:root>
